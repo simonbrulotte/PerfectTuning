@@ -1,14 +1,14 @@
 lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o: \
  ../lv_examples/lv_tutorial/7_fonts/arial_ascii_20.c \
- C:/Users/TophersAlien/workspace/Projet/lvgl/lv_misc/lv_font.h \
- c:\users\tophersalien\workspace\projet\lv_conf.h \
- C:/Users/TophersAlien/workspace/Projet/lvgl/lv_misc/lv_fonts/lv_symbol_def.h \
- c:\users\tophersalien\workspace\projet\lv_conf.h
+ C:/PerfectTuning/Projet/lvgl/lv_misc/lv_font.h \
+ c:\perfecttuning\projet\lv_conf.h \
+ C:/PerfectTuning/Projet/lvgl/lv_misc/lv_fonts/lv_symbol_def.h \
+ c:\perfecttuning\projet\lv_conf.h
 
-C:/Users/TophersAlien/workspace/Projet/lvgl/lv_misc/lv_font.h:
+C:/PerfectTuning/Projet/lvgl/lv_misc/lv_font.h:
 
-c:\users\tophersalien\workspace\projet\lv_conf.h:
+c:\perfecttuning\projet\lv_conf.h:
 
-C:/Users/TophersAlien/workspace/Projet/lvgl/lv_misc/lv_fonts/lv_symbol_def.h:
+C:/PerfectTuning/Projet/lvgl/lv_misc/lv_fonts/lv_symbol_def.h:
 
-c:\users\tophersalien\workspace\projet\lv_conf.h:
+c:\perfecttuning\projet\lv_conf.h:

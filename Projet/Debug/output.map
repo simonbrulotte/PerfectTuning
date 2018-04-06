@@ -163,7 +163,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 Drivers/BSP/Components/adv7533/adv7533.o
  .debug_macro   0x00000000       0xff Drivers/BSP/Components/adv7533/adv7533.o
  .debug_line    0x00000000      0x4b4 Drivers/BSP/Components/adv7533/adv7533.o
- .debug_str     0x00000000     0x3d9d Drivers/BSP/Components/adv7533/adv7533.o
+ .debug_str     0x00000000     0x3d8e Drivers/BSP/Components/adv7533/adv7533.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/adv7533/adv7533.o
  .debug_frame   0x00000000      0x1b8 Drivers/BSP/Components/adv7533/adv7533.o
  .ARM.attributes
@@ -213,7 +213,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a Drivers/BSP/Components/exc7200/exc7200.o
  .debug_macro   0x00000000      0x1df Drivers/BSP/Components/exc7200/exc7200.o
  .debug_line    0x00000000      0x3bc Drivers/BSP/Components/exc7200/exc7200.o
- .debug_str     0x00000000     0x3672 Drivers/BSP/Components/exc7200/exc7200.o
+ .debug_str     0x00000000     0x3663 Drivers/BSP/Components/exc7200/exc7200.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/exc7200/exc7200.o
  .debug_frame   0x00000000       0xcc Drivers/BSP/Components/exc7200/exc7200.o
  .ARM.attributes
@@ -276,7 +276,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df Drivers/BSP/Components/ft5336/ft5336.o
  .debug_macro   0x00000000      0x39e Drivers/BSP/Components/ft5336/ft5336.o
  .debug_line    0x00000000      0x49f Drivers/BSP/Components/ft5336/ft5336.o
- .debug_str     0x00000000     0x4c01 Drivers/BSP/Components/ft5336/ft5336.o
+ .debug_str     0x00000000     0x4bf2 Drivers/BSP/Components/ft5336/ft5336.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/ft5336/ft5336.o
  .debug_frame   0x00000000      0x17c Drivers/BSP/Components/ft5336/ft5336.o
  .ARM.attributes
@@ -435,7 +435,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o
  .debug_macro   0x00000000      0x4d0 Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o
  .debug_line    0x00000000      0x8e9 Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o
- .debug_str     0x00000000     0x61eb Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o
+ .debug_str     0x00000000     0x61dc Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o
  .debug_frame   0x00000000      0x59c Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o
  .ARM.attributes
@@ -498,7 +498,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa0 Drivers/BSP/Components/ov9655/ov9655.o
  .debug_macro   0x00000000       0xca Drivers/BSP/Components/ov9655/ov9655.o
  .debug_line    0x00000000      0x3f6 Drivers/BSP/Components/ov9655/ov9655.o
- .debug_str     0x00000000     0x3d3f Drivers/BSP/Components/ov9655/ov9655.o
+ .debug_str     0x00000000     0x3d30 Drivers/BSP/Components/ov9655/ov9655.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/ov9655/ov9655.o
  .debug_frame   0x00000000       0x7c Drivers/BSP/Components/ov9655/ov9655.o
  .ARM.attributes
@@ -541,7 +541,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xa0 Drivers/BSP/Components/s5k5cag/s5k5cag.o
  .debug_macro   0x00000000       0x94 Drivers/BSP/Components/s5k5cag/s5k5cag.o
  .debug_line    0x00000000      0x45f Drivers/BSP/Components/s5k5cag/s5k5cag.o
- .debug_str     0x00000000     0x3d5b Drivers/BSP/Components/s5k5cag/s5k5cag.o
+ .debug_str     0x00000000     0x3d4c Drivers/BSP/Components/s5k5cag/s5k5cag.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/s5k5cag/s5k5cag.o
  .debug_frame   0x00000000       0x74 Drivers/BSP/Components/s5k5cag/s5k5cag.o
  .ARM.attributes
@@ -597,7 +597,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df Drivers/BSP/Components/st7735/st7735.o
  .debug_macro   0x00000000      0x1d2 Drivers/BSP/Components/st7735/st7735.o
  .debug_line    0x00000000      0x494 Drivers/BSP/Components/st7735/st7735.o
- .debug_str     0x00000000     0x3c75 Drivers/BSP/Components/st7735/st7735.o
+ .debug_str     0x00000000     0x3c66 Drivers/BSP/Components/st7735/st7735.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/st7735/st7735.o
  .debug_frame   0x00000000      0x17c Drivers/BSP/Components/st7735/st7735.o
  .ARM.attributes
@@ -711,7 +711,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df Drivers/BSP/Components/st7789h2/st7789h2.o
  .debug_macro   0x00000000       0xd6 Drivers/BSP/Components/st7789h2/st7789h2.o
  .debug_line    0x00000000      0x6bc Drivers/BSP/Components/st7789h2/st7789h2.o
- .debug_str     0x00000000     0x7cff Drivers/BSP/Components/st7789h2/st7789h2.o
+ .debug_str     0x00000000     0x7cf0 Drivers/BSP/Components/st7789h2/st7789h2.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/st7789h2/st7789h2.o
  .debug_frame   0x00000000      0x244 Drivers/BSP/Components/st7789h2/st7789h2.o
  .ARM.attributes
@@ -811,7 +811,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df Drivers/BSP/Components/stmpe811/stmpe811.o
  .debug_macro   0x00000000      0x253 Drivers/BSP/Components/stmpe811/stmpe811.o
  .debug_line    0x00000000      0x60e Drivers/BSP/Components/stmpe811/stmpe811.o
- .debug_str     0x00000000     0x4590 Drivers/BSP/Components/stmpe811/stmpe811.o
+ .debug_str     0x00000000     0x4581 Drivers/BSP/Components/stmpe811/stmpe811.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/stmpe811/stmpe811.o
  .debug_frame   0x00000000      0x384 Drivers/BSP/Components/stmpe811/stmpe811.o
  .ARM.attributes
@@ -864,7 +864,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df Drivers/BSP/Components/ts3510/ts3510.o
  .debug_macro   0x00000000       0x1c Drivers/BSP/Components/ts3510/ts3510.o
  .debug_line    0x00000000      0x3d5 Drivers/BSP/Components/ts3510/ts3510.o
- .debug_str     0x00000000     0x36ca Drivers/BSP/Components/ts3510/ts3510.o
+ .debug_str     0x00000000     0x36bb Drivers/BSP/Components/ts3510/ts3510.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/ts3510/ts3510.o
  .debug_frame   0x00000000       0xdc Drivers/BSP/Components/ts3510/ts3510.o
  .ARM.attributes
@@ -924,7 +924,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 Drivers/BSP/Components/wm8994/wm8994.o
  .debug_macro   0x00000000       0xbe Drivers/BSP/Components/wm8994/wm8994.o
  .debug_line    0x00000000      0x57f Drivers/BSP/Components/wm8994/wm8994.o
- .debug_str     0x00000000     0x3bf3 Drivers/BSP/Components/wm8994/wm8994.o
+ .debug_str     0x00000000     0x3be4 Drivers/BSP/Components/wm8994/wm8994.o
  .comment       0x00000000       0x80 Drivers/BSP/Components/wm8994/wm8994.o
  .debug_frame   0x00000000      0x16c Drivers/BSP/Components/wm8994/wm8994.o
  .ARM.attributes
@@ -1345,8 +1345,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
  .debug_macro   0x00000000       0x29 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
  .debug_macro   0x00000000      0x28f Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
- .debug_line    0x00000000     0x1286 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
- .debug_str     0x00000000   0x114b80 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
+ .debug_line    0x00000000     0x122b Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
+ .debug_str     0x00000000   0x114b71 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
  .comment       0x00000000       0x80 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
  .debug_frame   0x00000000      0x544 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
  .ARM.attributes
@@ -1516,8 +1516,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x156 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
  .debug_macro   0x00000000      0x1de Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
  .debug_macro   0x00000000       0x28 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
- .debug_line    0x00000000      0x99f Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
- .debug_str     0x00000000   0x11115a Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
+ .debug_line    0x00000000      0x954 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
+ .debug_str     0x00000000   0x11114b Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
  .comment       0x00000000       0x80 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
  .debug_frame   0x00000000       0xb8 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o
  .ARM.attributes
@@ -2698,8 +2698,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
- .debug_line    0x00000000     0x11ed Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
- .debug_str     0x00000000   0x111424 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
+ .debug_line    0x00000000     0x11a2 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
+ .debug_str     0x00000000   0x111415 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
  .debug_frame   0x00000000      0x62c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o
  .ARM.attributes
@@ -3198,8 +3198,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
- .debug_line    0x00000000      0xefe Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
- .debug_str     0x00000000   0x11064d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
+ .debug_line    0x00000000      0xeb3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
+ .debug_str     0x00000000   0x11063e Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
  .debug_frame   0x00000000       0x74 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o
  .ARM.attributes
@@ -3595,8 +3595,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
- .debug_line    0x00000000      0xa91 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
- .debug_str     0x00000000   0x11066a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
+ .debug_line    0x00000000      0xa46 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
+ .debug_str     0x00000000   0x11065b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
  .debug_frame   0x00000000      0x16c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o
  .ARM.attributes
@@ -3782,8 +3782,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
- .debug_line    0x00000000      0xa80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
- .debug_str     0x00000000   0x110721 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
+ .debug_line    0x00000000      0xa35 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
+ .debug_str     0x00000000   0x110712 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
  .debug_frame   0x00000000      0x188 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o
  .ARM.attributes
@@ -4346,8 +4346,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
- .debug_line    0x00000000      0x935 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
- .debug_str     0x00000000   0x1109f3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
+ .debug_line    0x00000000      0x8ea Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
+ .debug_str     0x00000000   0x1109e4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
  .debug_frame   0x00000000       0x60 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o
  .ARM.attributes
@@ -4880,8 +4880,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
- .debug_line    0x00000000      0x9c9 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
- .debug_str     0x00000000   0x1107f4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
+ .debug_line    0x00000000      0x97e Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
+ .debug_str     0x00000000   0x1107e5 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
  .debug_frame   0x00000000      0x134 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o
  .ARM.attributes
@@ -5587,8 +5587,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
- .debug_line    0x00000000      0xfff Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
- .debug_str     0x00000000   0x110c6a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
+ .debug_line    0x00000000      0xfb4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
+ .debug_str     0x00000000   0x110c5b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
  .debug_frame   0x00000000      0x434 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o
  .ARM.attributes
@@ -5737,8 +5737,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
- .debug_line    0x00000000      0x86d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
- .debug_str     0x00000000   0x1102cb Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
+ .debug_line    0x00000000      0x822 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
+ .debug_str     0x00000000   0x1102bc Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
  .ARM.attributes
                 0x00000000       0x37 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o
@@ -6065,8 +6065,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
- .debug_line    0x00000000      0x86a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
- .debug_str     0x00000000   0x1102c8 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
+ .debug_line    0x00000000      0x81f Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
+ .debug_str     0x00000000   0x1102b9 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
  .ARM.attributes
                 0x00000000       0x37 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
@@ -6214,8 +6214,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
- .debug_line    0x00000000      0x86d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
- .debug_str     0x00000000   0x1102cb Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
+ .debug_line    0x00000000      0x822 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
+ .debug_str     0x00000000   0x1102bc Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
  .ARM.attributes
                 0x00000000       0x37 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
@@ -6459,8 +6459,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
  .debug_macro   0x00000000      0x2a3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
  .debug_macro   0x00000000      0x156 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
- .debug_line    0x00000000     0x1217 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
- .debug_str     0x00000000   0x110f7a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
+ .debug_line    0x00000000     0x11cc Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
+ .debug_str     0x00000000   0x110f6b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
  .comment       0x00000000       0x80 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
  .debug_frame   0x00000000      0x488 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o
  .ARM.attributes
@@ -7430,7 +7430,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a Utilities/Fonts/font12.o
  .debug_macro   0x00000000      0x1df Utilities/Fonts/font12.o
  .debug_line    0x00000000      0x2ca Utilities/Fonts/font12.o
- .debug_str     0x00000000     0x3578 Utilities/Fonts/font12.o
+ .debug_str     0x00000000     0x3569 Utilities/Fonts/font12.o
  .comment       0x00000000       0x80 Utilities/Fonts/font12.o
  .ARM.attributes
                 0x00000000       0x37 Utilities/Fonts/font12.o
@@ -7458,7 +7458,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a Utilities/Fonts/font16.o
  .debug_macro   0x00000000      0x1df Utilities/Fonts/font16.o
  .debug_line    0x00000000      0x2ca Utilities/Fonts/font16.o
- .debug_str     0x00000000     0x3578 Utilities/Fonts/font16.o
+ .debug_str     0x00000000     0x3569 Utilities/Fonts/font16.o
  .comment       0x00000000       0x80 Utilities/Fonts/font16.o
  .ARM.attributes
                 0x00000000       0x37 Utilities/Fonts/font16.o
@@ -7486,7 +7486,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a Utilities/Fonts/font20.o
  .debug_macro   0x00000000      0x1df Utilities/Fonts/font20.o
  .debug_line    0x00000000      0x2ca Utilities/Fonts/font20.o
- .debug_str     0x00000000     0x3578 Utilities/Fonts/font20.o
+ .debug_str     0x00000000     0x3569 Utilities/Fonts/font20.o
  .comment       0x00000000       0x80 Utilities/Fonts/font20.o
  .ARM.attributes
                 0x00000000       0x37 Utilities/Fonts/font20.o
@@ -7530,7 +7530,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x6a Utilities/Fonts/font8.o
  .debug_macro   0x00000000      0x1df Utilities/Fonts/font8.o
  .debug_line    0x00000000      0x2c9 Utilities/Fonts/font8.o
- .debug_str     0x00000000     0x3576 Utilities/Fonts/font8.o
+ .debug_str     0x00000000     0x3567 Utilities/Fonts/font8.o
  .comment       0x00000000       0x80 Utilities/Fonts/font8.o
  .ARM.attributes
                 0x00000000       0x37 Utilities/Fonts/font8.o
@@ -7546,8 +7546,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_apps/benchmark/benchmark.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_apps/benchmark/benchmark.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_apps/benchmark/benchmark.o
- .debug_line    0x00000000       0x93 lv_examples/lv_apps/benchmark/benchmark.o
- .debug_str     0x00000000     0x2690 lv_examples/lv_apps/benchmark/benchmark.o
+ .debug_line    0x00000000       0x84 lv_examples/lv_apps/benchmark/benchmark.o
+ .debug_str     0x00000000     0x2681 lv_examples/lv_apps/benchmark/benchmark.o
  .comment       0x00000000       0x80 lv_examples/lv_apps/benchmark/benchmark.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_apps/benchmark/benchmark.o
@@ -7611,8 +7611,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 lv_examples/lv_apps/benchmark/benchmark_bg.o
  .debug_macro   0x00000000      0x136 lv_examples/lv_apps/benchmark/benchmark_bg.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_apps/benchmark/benchmark_bg.o
- .debug_line    0x00000000      0x511 lv_examples/lv_apps/benchmark/benchmark_bg.o
- .debug_str     0x00000000     0x7b43 lv_examples/lv_apps/benchmark/benchmark_bg.o
+ .debug_line    0x00000000      0x4b9 lv_examples/lv_apps/benchmark/benchmark_bg.o
+ .debug_str     0x00000000     0x7b34 lv_examples/lv_apps/benchmark/benchmark_bg.o
  .comment       0x00000000       0x80 lv_examples/lv_apps/benchmark/benchmark_bg.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_apps/benchmark/benchmark_bg.o
@@ -7812,8 +7812,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_apps/sysmon/sysmon.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_apps/sysmon/sysmon.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_apps/sysmon/sysmon.o
- .debug_line    0x00000000      0x99d lv_examples/lv_apps/sysmon/sysmon.o
- .debug_str     0x00000000     0x80a1 lv_examples/lv_apps/sysmon/sysmon.o
+ .debug_line    0x00000000      0x820 lv_examples/lv_apps/sysmon/sysmon.o
+ .debug_str     0x00000000     0x8092 lv_examples/lv_apps/sysmon/sysmon.o
  .comment       0x00000000       0x80 lv_examples/lv_apps/sysmon/sysmon.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_apps/sysmon/sysmon.o
@@ -7891,8 +7891,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_apps/terminal/terminal.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_apps/terminal/terminal.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_apps/terminal/terminal.o
- .debug_line    0x00000000      0x8ad lv_examples/lv_apps/terminal/terminal.o
- .debug_str     0x00000000     0x80a7 lv_examples/lv_apps/terminal/terminal.o
+ .debug_line    0x00000000      0x826 lv_examples/lv_apps/terminal/terminal.o
+ .debug_str     0x00000000     0x8098 lv_examples/lv_apps/terminal/terminal.o
  .comment       0x00000000       0x80 lv_examples/lv_apps/terminal/terminal.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_apps/terminal/terminal.o
@@ -7970,8 +7970,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_apps/tpcal/tpcal.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_apps/tpcal/tpcal.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_apps/tpcal/tpcal.o
- .debug_line    0x00000000      0x993 lv_examples/lv_apps/tpcal/tpcal.o
- .debug_str     0x00000000     0x809e lv_examples/lv_apps/tpcal/tpcal.o
+ .debug_line    0x00000000      0x81d lv_examples/lv_apps/tpcal/tpcal.o
+ .debug_str     0x00000000     0x808f lv_examples/lv_apps/tpcal/tpcal.o
  .comment       0x00000000       0x80 lv_examples/lv_apps/tpcal/tpcal.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_apps/tpcal/tpcal.o
@@ -8049,8 +8049,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_group/lv_test_group.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_group/lv_test_group.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_group/lv_test_group.o
- .debug_line    0x00000000      0x8bd lv_examples/lv_tests/lv_test_group/lv_test_group.o
- .debug_str     0x00000000     0x80b7 lv_examples/lv_tests/lv_test_group/lv_test_group.o
+ .debug_line    0x00000000      0x836 lv_examples/lv_tests/lv_test_group/lv_test_group.o
+ .debug_str     0x00000000     0x80a8 lv_examples/lv_tests/lv_test_group/lv_test_group.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_group/lv_test_group.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_group/lv_test_group.o
@@ -8118,8 +8118,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xd7 lv_examples/lv_tests/lv_test_misc/lv_test_task.o
  .debug_macro   0x00000000       0x16 lv_examples/lv_tests/lv_test_misc/lv_test_task.o
  .debug_macro   0x00000000      0x18b lv_examples/lv_tests/lv_test_misc/lv_test_task.o
- .debug_line    0x00000000      0x416 lv_examples/lv_tests/lv_test_misc/lv_test_task.o
- .debug_str     0x00000000     0x6c2d lv_examples/lv_tests/lv_test_misc/lv_test_task.o
+ .debug_line    0x00000000      0x407 lv_examples/lv_tests/lv_test_misc/lv_test_task.o
+ .debug_str     0x00000000     0x6c1e lv_examples/lv_tests/lv_test_misc/lv_test_task.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_misc/lv_test_task.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_misc/lv_test_task.o
@@ -8199,8 +8199,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
  .debug_macro   0x00000000       0x16 lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
- .debug_line    0x00000000      0x8f2 lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
- .debug_str     0x00000000     0x811a lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
+ .debug_line    0x00000000      0x865 lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
+ .debug_str     0x00000000     0x810b lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_obj/lv_test_obj.o
@@ -8278,8 +8278,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
- .debug_line    0x00000000      0x8c4 lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
- .debug_str     0x00000000     0x80be lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
+ .debug_line    0x00000000      0x83d lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
+ .debug_str     0x00000000     0x80af lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_bar/lv_test_bar.o
@@ -8357,8 +8357,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
- .debug_line    0x00000000      0x8c4 lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
- .debug_str     0x00000000     0x80be lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
+ .debug_line    0x00000000      0x83d lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
+ .debug_str     0x00000000     0x80af lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_btn/lv_test_btn.o
@@ -8460,8 +8460,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
- .debug_line    0x00000000      0x961 lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
- .debug_str     0x00000000     0x924a lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
+ .debug_line    0x00000000      0x8e8 lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
+ .debug_str     0x00000000     0x923b lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_btnm/lv_test_btnm.o
@@ -8539,8 +8539,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
- .debug_line    0x00000000      0x8c1 lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
- .debug_str     0x00000000     0x80bb lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
+ .debug_line    0x00000000      0x83a lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
+ .debug_str     0x00000000     0x80ac lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_cb/lv_test_cb.o
@@ -8618,8 +8618,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
- .debug_line    0x00000000      0x8ca lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
- .debug_str     0x00000000     0x80c4 lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
+ .debug_line    0x00000000      0x843 lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
+ .debug_str     0x00000000     0x80b5 lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_chart/lv_test_chart.o
@@ -8697,8 +8697,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
- .debug_line    0x00000000      0x8c7 lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
- .debug_str     0x00000000     0x80c1 lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
+ .debug_line    0x00000000      0x840 lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
+ .debug_str     0x00000000     0x80b2 lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_cont/lv_test_cont.o
@@ -8776,8 +8776,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
- .debug_line    0x00000000      0x8cd lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
- .debug_str     0x00000000     0x80c7 lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
+ .debug_line    0x00000000      0x846 lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
+ .debug_str     0x00000000     0x80b8 lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_ddlist/lv_test_ddlist.o
@@ -8855,8 +8855,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
- .debug_line    0x00000000      0x8ca lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
- .debug_str     0x00000000     0x80c4 lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
+ .debug_line    0x00000000      0x843 lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
+ .debug_str     0x00000000     0x80b5 lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_gauge/lv_test_gauge.o
@@ -8920,8 +8920,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
  .debug_macro   0x00000000      0x136 lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
- .debug_line    0x00000000      0x524 lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
- .debug_str     0x00000000     0x7b56 lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
+ .debug_line    0x00000000      0x4cc lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
+ .debug_str     0x00000000     0x7b47 lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_img/img_flower_icon.o
@@ -8999,8 +8999,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
- .debug_line    0x00000000      0x8b6 lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
- .debug_str     0x00000000     0x80be lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
+ .debug_line    0x00000000      0x83d lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
+ .debug_str     0x00000000     0x80af lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_img/lv_test_img.o
@@ -9084,8 +9084,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
- .debug_line    0x00000000      0x8fb lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
- .debug_str     0x00000000     0x8659 lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
+ .debug_line    0x00000000      0x874 lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
+ .debug_str     0x00000000     0x864a lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
  .debug_frame   0x00000000       0x5c lv_examples/lv_tests/lv_test_objx/lv_test_kb/lv_test_kb.o
  .ARM.attributes
@@ -9164,8 +9164,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
- .debug_line    0x00000000      0x8ca lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
- .debug_str     0x00000000     0x80c4 lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
+ .debug_line    0x00000000      0x843 lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
+ .debug_str     0x00000000     0x80b5 lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_label/lv_test_label.o
@@ -9243,8 +9243,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
- .debug_line    0x00000000      0x8c4 lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
- .debug_str     0x00000000     0x80be lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
+ .debug_line    0x00000000      0x83d lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
+ .debug_str     0x00000000     0x80af lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_led/lv_test_led.o
@@ -9322,8 +9322,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
- .debug_line    0x00000000      0x8c7 lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
- .debug_str     0x00000000     0x80c1 lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
+ .debug_line    0x00000000      0x840 lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
+ .debug_str     0x00000000     0x80b2 lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_line/lv_test_line.o
@@ -9401,8 +9401,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
- .debug_line    0x00000000      0x8c7 lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
- .debug_str     0x00000000     0x80c1 lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
+ .debug_line    0x00000000      0x840 lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
+ .debug_str     0x00000000     0x80b2 lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_list/lv_test_list.o
@@ -9504,8 +9504,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
- .debug_line    0x00000000      0x967 lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
- .debug_str     0x00000000     0x9250 lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
+ .debug_line    0x00000000      0x8ee lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
+ .debug_str     0x00000000     0x9241 lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_lmeter/lv_test_lmeter.o
@@ -9583,8 +9583,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
- .debug_line    0x00000000      0x8c7 lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
- .debug_str     0x00000000     0x80c1 lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
+ .debug_line    0x00000000      0x840 lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
+ .debug_str     0x00000000     0x80b2 lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_mbox/lv_test_mbox.o
@@ -9662,8 +9662,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
- .debug_line    0x00000000      0x8c7 lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
- .debug_str     0x00000000     0x80c1 lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
+ .debug_line    0x00000000      0x840 lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
+ .debug_str     0x00000000     0x80b2 lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_page/lv_test_page.o
@@ -9741,8 +9741,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
- .debug_line    0x00000000      0x8cd lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
- .debug_str     0x00000000     0x80c7 lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
+ .debug_line    0x00000000      0x846 lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
+ .debug_str     0x00000000     0x80b8 lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_roller/lv_test_roller.o
@@ -9824,8 +9824,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
- .debug_line    0x00000000      0x906 lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
- .debug_str     0x00000000     0x86c0 lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
+ .debug_line    0x00000000      0x87f lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
+ .debug_str     0x00000000     0x86b1 lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
  .debug_frame   0x00000000       0x3c lv_examples/lv_tests/lv_test_objx/lv_test_slider/lv_test_slider.o
  .ARM.attributes
@@ -9928,8 +9928,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
- .debug_line    0x00000000      0x95b lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
- .debug_str     0x00000000     0x9244 lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
+ .debug_line    0x00000000      0x8e2 lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
+ .debug_str     0x00000000     0x9235 lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_sw/lv_test_sw.o
@@ -10007,8 +10007,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
- .debug_line    0x00000000      0x8c1 lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
- .debug_str     0x00000000     0x80bb lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
+ .debug_line    0x00000000      0x83a lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
+ .debug_str     0x00000000     0x80ac lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_ta/lv_test_ta.o
@@ -10086,8 +10086,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
- .debug_line    0x00000000      0x8d0 lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
- .debug_str     0x00000000     0x80ca lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
+ .debug_line    0x00000000      0x849 lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
+ .debug_str     0x00000000     0x80bb lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_tabview/lv_test_tabview.o
@@ -10165,8 +10165,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
- .debug_line    0x00000000      0x8c4 lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
- .debug_str     0x00000000     0x80be lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
+ .debug_line    0x00000000      0x83d lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
+ .debug_str     0x00000000     0x80af lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_objx/lv_test_win/lv_test_win.o
@@ -10268,8 +10268,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
- .debug_line    0x00000000      0x95a lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
- .debug_str     0x00000000     0x9243 lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
+ .debug_line    0x00000000      0x8e1 lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
+ .debug_str     0x00000000     0x9234 lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_stress/lv_test_stress.o
@@ -10347,8 +10347,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
- .debug_line    0x00000000      0x8bd lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
- .debug_str     0x00000000     0x80b7 lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
+ .debug_line    0x00000000      0x836 lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
+ .debug_str     0x00000000     0x80a8 lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
  .comment       0x00000000       0x80 lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tests/lv_test_theme/lv_test_theme.o
@@ -10364,8 +10364,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
- .debug_line    0x00000000       0xab lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
- .debug_str     0x00000000     0x26a8 lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
+ .debug_line    0x00000000       0x9c lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
+ .debug_str     0x00000000     0x2699 lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/0_porting/lv_tutorial_porting.o
@@ -10443,8 +10443,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
- .debug_line    0x00000000      0x8cc lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
- .debug_str     0x00000000     0x80c6 lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
+ .debug_line    0x00000000      0x845 lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
+ .debug_str     0x00000000     0x80b7 lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/10_keyboard/lv_tutorial_keyboard.o
@@ -10460,8 +10460,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
- .debug_line    0x00000000       0xb7 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
- .debug_str     0x00000000     0x26b4 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
+ .debug_line    0x00000000       0xa8 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
+ .debug_str     0x00000000     0x26a5 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o
@@ -10477,8 +10477,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
- .debug_line    0x00000000       0xab lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
- .debug_str     0x00000000     0x269f lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
+ .debug_line    0x00000000       0x9c lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
+ .debug_str     0x00000000     0x2690 lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/2_objects/lv_tutorial_objects.o
@@ -10494,8 +10494,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
- .debug_line    0x00000000       0xa8 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
- .debug_str     0x00000000     0x26a5 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
+ .debug_line    0x00000000       0x99 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
+ .debug_str     0x00000000     0x2696 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/3_styles/lv_tutorial_styles.o
@@ -10511,8 +10511,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
- .debug_line    0x00000000       0xa8 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
- .debug_str     0x00000000     0x26a5 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
+ .debug_line    0x00000000       0x99 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
+ .debug_str     0x00000000     0x2696 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/4_themes/lv_tutorial_themes.o
@@ -10576,8 +10576,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
  .debug_macro   0x00000000      0x136 lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
- .debug_line    0x00000000      0x51e lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
- .debug_str     0x00000000     0x7b50 lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
+ .debug_line    0x00000000      0x4c6 lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
+ .debug_str     0x00000000     0x7b41 lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/5_antialiasing/apple_icon_alpha.o
@@ -10641,8 +10641,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
  .debug_macro   0x00000000      0x136 lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
- .debug_line    0x00000000      0x51f lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
- .debug_str     0x00000000     0x7b51 lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
+ .debug_line    0x00000000      0x4c7 lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
+ .debug_str     0x00000000     0x7b42 lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/5_antialiasing/apple_icon_chroma.o
@@ -10658,8 +10658,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
- .debug_line    0x00000000       0xba lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
- .debug_str     0x00000000     0x26b7 lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
+ .debug_line    0x00000000       0xab lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
+ .debug_str     0x00000000     0x26a8 lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/5_antialiasing/lv_tutorial_antialiasing.o
@@ -10675,8 +10675,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
- .debug_line    0x00000000       0xa8 lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
- .debug_str     0x00000000     0x26ab lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
+ .debug_line    0x00000000       0x99 lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
+ .debug_str     0x00000000     0x269c lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/6_images/lv_tutorial_images.o
@@ -10740,8 +10740,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 lv_examples/lv_tutorial/6_images/red_flower.o
  .debug_macro   0x00000000      0x136 lv_examples/lv_tutorial/6_images/red_flower.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tutorial/6_images/red_flower.o
- .debug_line    0x00000000      0x512 lv_examples/lv_tutorial/6_images/red_flower.o
- .debug_str     0x00000000     0x7b44 lv_examples/lv_tutorial/6_images/red_flower.o
+ .debug_line    0x00000000      0x4ba lv_examples/lv_tutorial/6_images/red_flower.o
+ .debug_str     0x00000000     0x7b35 lv_examples/lv_tutorial/6_images/red_flower.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/6_images/red_flower.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/6_images/red_flower.o
@@ -10774,8 +10774,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
  .debug_macro   0x00000000      0x174 lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
  .debug_macro   0x00000000      0x136 lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
- .debug_line    0x00000000      0x3a8 lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
- .debug_str     0x00000000     0x4688 lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
+ .debug_line    0x00000000      0x37b lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
+ .debug_str     0x00000000     0x4679 lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/7_fonts/arial_ascii_20.o
@@ -10808,8 +10808,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
  .debug_macro   0x00000000      0x174 lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
  .debug_macro   0x00000000      0x136 lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
- .debug_line    0x00000000      0x3ab lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
- .debug_str     0x00000000     0x4694 lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
+ .debug_line    0x00000000      0x37e lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
+ .debug_str     0x00000000     0x4685 lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/7_fonts/arial_cyrillic_20.o
@@ -10842,8 +10842,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lv_examples/lv_tutorial/7_fonts/arial_math_20.o
  .debug_macro   0x00000000      0x174 lv_examples/lv_tutorial/7_fonts/arial_math_20.o
  .debug_macro   0x00000000      0x136 lv_examples/lv_tutorial/7_fonts/arial_math_20.o
- .debug_line    0x00000000      0x3a7 lv_examples/lv_tutorial/7_fonts/arial_math_20.o
- .debug_str     0x00000000     0x469f lv_examples/lv_tutorial/7_fonts/arial_math_20.o
+ .debug_line    0x00000000      0x37a lv_examples/lv_tutorial/7_fonts/arial_math_20.o
+ .debug_str     0x00000000     0x4690 lv_examples/lv_tutorial/7_fonts/arial_math_20.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/7_fonts/arial_math_20.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/7_fonts/arial_math_20.o
@@ -10859,8 +10859,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
- .debug_line    0x00000000       0xa5 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
- .debug_str     0x00000000     0x26a2 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
+ .debug_line    0x00000000       0x96 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
+ .debug_str     0x00000000     0x2693 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/7_fonts/lv_tutorial_fonts.o
@@ -10938,8 +10938,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x2e lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
  .debug_macro   0x00000000       0x10 lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
  .debug_macro   0x00000000       0x1c lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
- .debug_line    0x00000000      0x8d1 lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
- .debug_str     0x00000000     0x80ca lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
+ .debug_line    0x00000000      0x84a lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
+ .debug_str     0x00000000     0x80bb lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/8_animations/lv_tutorial_animations.o
@@ -10955,8 +10955,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x24 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
  .debug_macro   0x00000000      0x8c8 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
  .debug_macro   0x00000000       0x40 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
- .debug_line    0x00000000       0xb4 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
- .debug_str     0x00000000     0x26b1 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
+ .debug_line    0x00000000       0xa5 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
+ .debug_str     0x00000000     0x26a2 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
  .comment       0x00000000       0x80 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
  .ARM.attributes
                 0x00000000       0x37 lv_examples/lv_tutorial/9_responsive/lv_tutorial_responsive.o
@@ -11456,7 +11456,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x8c8 lvgl/lv_draw/lv_draw_rbasic.o
  .debug_macro   0x00000000      0x240 lvgl/lv_draw/lv_draw_rbasic.o
  .debug_line    0x00000000       0x78 lvgl/lv_draw/lv_draw_rbasic.o
- .debug_str     0x00000000     0x2d2f lvgl/lv_draw/lv_draw_rbasic.o
+ .debug_str     0x00000000     0x2d20 lvgl/lv_draw/lv_draw_rbasic.o
  .comment       0x00000000       0x80 lvgl/lv_draw/lv_draw_rbasic.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_draw/lv_draw_rbasic.o
@@ -11819,7 +11819,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_color.o
  .debug_macro   0x00000000       0xd3 lvgl/lv_misc/lv_color.o
  .debug_line    0x00000000      0x36b lvgl/lv_misc/lv_color.o
- .debug_str     0x00000000     0x41fd lvgl/lv_misc/lv_color.o
+ .debug_str     0x00000000     0x41ee lvgl/lv_misc/lv_color.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_color.o
  .debug_frame   0x00000000       0x58 lvgl/lv_misc/lv_color.o
  .ARM.attributes
@@ -11997,7 +11997,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 lvgl/lv_misc/lv_math.o
  .debug_macro   0x00000000       0x22 lvgl/lv_misc/lv_math.o
  .debug_line    0x00000000      0x32e lvgl/lv_misc/lv_math.o
- .debug_str     0x00000000     0x35e8 lvgl/lv_misc/lv_math.o
+ .debug_str     0x00000000     0x35d9 lvgl/lv_misc/lv_math.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_math.o
  .debug_frame   0x00000000       0x40 lvgl/lv_misc/lv_math.o
  .ARM.attributes
@@ -12097,7 +12097,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x11 lvgl/lv_misc/lv_templ.o
  .debug_macro   0x00000000      0x8c8 lvgl/lv_misc/lv_templ.o
  .debug_line    0x00000000       0x3b lvgl/lv_misc/lv_templ.o
- .debug_str     0x00000000     0x25cc lvgl/lv_misc/lv_templ.o
+ .debug_str     0x00000000     0x25bd lvgl/lv_misc/lv_templ.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_templ.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_templ.o
@@ -12131,7 +12131,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_trigo.o
  .debug_macro   0x00000000       0x10 lvgl/lv_misc/lv_trigo.o
  .debug_line    0x00000000      0x2ef lvgl/lv_misc/lv_trigo.o
- .debug_str     0x00000000     0x3528 lvgl/lv_misc/lv_trigo.o
+ .debug_str     0x00000000     0x3519 lvgl/lv_misc/lv_trigo.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_trigo.o
  .debug_frame   0x00000000       0x20 lvgl/lv_misc/lv_trigo.o
  .ARM.attributes
@@ -12289,8 +12289,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
- .debug_line    0x00000000      0x3a0 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
- .debug_str     0x00000000     0x4634 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
+ .debug_line    0x00000000      0x362 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
+ .debug_str     0x00000000     0x4625 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o
@@ -12322,8 +12322,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
- .debug_line    0x00000000      0x3a9 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
- .debug_str     0x00000000     0x463d lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
+ .debug_line    0x00000000      0x36b lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
+ .debug_str     0x00000000     0x462e lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o
@@ -12355,8 +12355,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
- .debug_line    0x00000000      0x3aa lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
- .debug_str     0x00000000     0x463e lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
+ .debug_line    0x00000000      0x36c lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
+ .debug_str     0x00000000     0x462f lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o
@@ -12410,8 +12410,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
- .debug_line    0x00000000      0x3a9 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
- .debug_str     0x00000000     0x463d lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
+ .debug_line    0x00000000      0x36b lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
+ .debug_str     0x00000000     0x462e lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o
@@ -12443,8 +12443,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
- .debug_line    0x00000000      0x3aa lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
- .debug_str     0x00000000     0x463e lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
+ .debug_line    0x00000000      0x36c lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
+ .debug_str     0x00000000     0x462f lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o
@@ -12476,8 +12476,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
- .debug_line    0x00000000      0x3a0 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
- .debug_str     0x00000000     0x4634 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
+ .debug_line    0x00000000      0x362 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
+ .debug_str     0x00000000     0x4625 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o
@@ -12509,8 +12509,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
- .debug_line    0x00000000      0x3a9 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
- .debug_str     0x00000000     0x463d lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
+ .debug_line    0x00000000      0x36b lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
+ .debug_str     0x00000000     0x462e lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o
@@ -12542,8 +12542,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
- .debug_line    0x00000000      0x3aa lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
- .debug_str     0x00000000     0x463e lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
+ .debug_line    0x00000000      0x36c lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
+ .debug_str     0x00000000     0x462f lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o
@@ -12575,8 +12575,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
- .debug_line    0x00000000      0x3a0 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
- .debug_str     0x00000000     0x4634 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
+ .debug_line    0x00000000      0x362 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
+ .debug_str     0x00000000     0x4625 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o
@@ -12608,8 +12608,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
- .debug_line    0x00000000      0x3a9 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
- .debug_str     0x00000000     0x463d lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
+ .debug_line    0x00000000      0x36b lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
+ .debug_str     0x00000000     0x462e lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o
@@ -12641,8 +12641,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
- .debug_line    0x00000000      0x3aa lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
- .debug_str     0x00000000     0x463e lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
+ .debug_line    0x00000000      0x36c lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
+ .debug_str     0x00000000     0x462f lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o
@@ -12674,8 +12674,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
- .debug_line    0x00000000      0x3a0 lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
- .debug_str     0x00000000     0x4634 lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
+ .debug_line    0x00000000      0x362 lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
+ .debug_str     0x00000000     0x4625 lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o
@@ -12729,8 +12729,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
- .debug_line    0x00000000      0x3a0 lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
- .debug_str     0x00000000     0x4634 lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
+ .debug_line    0x00000000      0x362 lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
+ .debug_str     0x00000000     0x4625 lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o
@@ -12762,8 +12762,8 @@ Discarded input sections
  .debug_macro   0x00000000      0x1df lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
  .debug_macro   0x00000000      0x174 lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
  .debug_macro   0x00000000      0x136 lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
- .debug_line    0x00000000      0x3a0 lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
- .debug_str     0x00000000     0x4634 lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
+ .debug_line    0x00000000      0x362 lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
+ .debug_str     0x00000000     0x4625 lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
  .comment       0x00000000       0x80 lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o
@@ -13063,8 +13063,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x23 lvgl/lv_objx/lv_cb.o
  .debug_macro   0x00000000       0x3a lvgl/lv_objx/lv_cb.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_cb.o
- .debug_line    0x00000000      0x8c8 lvgl/lv_objx/lv_cb.o
- .debug_str     0x00000000     0x87d6 lvgl/lv_objx/lv_cb.o
+ .debug_line    0x00000000      0x7e4 lvgl/lv_objx/lv_cb.o
+ .debug_str     0x00000000     0x87c7 lvgl/lv_objx/lv_cb.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_cb.o
  .debug_frame   0x00000000       0xf4 lvgl/lv_objx/lv_cb.o
  .ARM.attributes
@@ -13293,7 +13293,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0xd0 lvgl/lv_objx/lv_ddlist.o
  .debug_ranges  0x00000000      0x128 lvgl/lv_objx/lv_ddlist.o
- .debug_macro   0x00000000      0x2ef lvgl/lv_objx/lv_ddlist.o
+ .debug_macro   0x00000000      0x2eb lvgl/lv_objx/lv_ddlist.o
  .debug_macro   0x00000000      0x8c8 lvgl/lv_objx/lv_ddlist.o
  .debug_macro   0x00000000      0x240 lvgl/lv_objx/lv_ddlist.o
  .debug_macro   0x00000000      0x174 lvgl/lv_objx/lv_ddlist.o
@@ -13323,8 +13323,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x3a lvgl/lv_objx/lv_ddlist.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_ddlist.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_ddlist.o
- .debug_line    0x00000000      0xcc8 lvgl/lv_objx/lv_ddlist.o
- .debug_str     0x00000000     0x8c4d lvgl/lv_objx/lv_ddlist.o
+ .debug_line    0x00000000      0xa95 lvgl/lv_objx/lv_ddlist.o
+ .debug_str     0x00000000     0x8c3e lvgl/lv_objx/lv_ddlist.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_ddlist.o
  .debug_frame   0x00000000      0x2a4 lvgl/lv_objx/lv_ddlist.o
  .ARM.attributes
@@ -13445,8 +13445,8 @@ Discarded input sections
  .debug_macro   0x00000000       0xd7 lvgl/lv_objx/lv_gauge.o
  .debug_macro   0x00000000       0x16 lvgl/lv_objx/lv_gauge.o
  .debug_macro   0x00000000      0x18b lvgl/lv_objx/lv_gauge.o
- .debug_line    0x00000000      0xa22 lvgl/lv_objx/lv_gauge.o
- .debug_str     0x00000000     0x9889 lvgl/lv_objx/lv_gauge.o
+ .debug_line    0x00000000      0x956 lvgl/lv_objx/lv_gauge.o
+ .debug_str     0x00000000     0x987a lvgl/lv_objx/lv_gauge.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_gauge.o
  .debug_frame   0x00000000      0x18c lvgl/lv_objx/lv_gauge.o
  .ARM.attributes
@@ -13742,8 +13742,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x12 lvgl/lv_objx/lv_led.o
  .debug_macro   0x00000000       0x23 lvgl/lv_objx/lv_led.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_led.o
- .debug_line    0x00000000      0x789 lvgl/lv_objx/lv_led.o
- .debug_str     0x00000000     0x8288 lvgl/lv_objx/lv_led.o
+ .debug_line    0x00000000      0x6a3 lvgl/lv_objx/lv_led.o
+ .debug_str     0x00000000     0x8279 lvgl/lv_objx/lv_led.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_led.o
  .debug_frame   0x00000000       0xf0 lvgl/lv_objx/lv_led.o
  .ARM.attributes
@@ -13832,8 +13832,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x23 lvgl/lv_objx/lv_line.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_line.o
  .debug_macro   0x00000000       0x1c lvgl/lv_objx/lv_line.o
- .debug_line    0x00000000      0x70a lvgl/lv_objx/lv_line.o
- .debug_str     0x00000000     0x81a5 lvgl/lv_objx/lv_line.o
+ .debug_line    0x00000000      0x68a lvgl/lv_objx/lv_line.o
+ .debug_str     0x00000000     0x8196 lvgl/lv_objx/lv_line.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_line.o
  .debug_frame   0x00000000      0x108 lvgl/lv_objx/lv_line.o
  .ARM.attributes
@@ -14004,8 +14004,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_lmeter.o
  .debug_macro   0x00000000       0x3a lvgl/lv_objx/lv_lmeter.o
  .debug_macro   0x00000000       0x16 lvgl/lv_objx/lv_lmeter.o
- .debug_line    0x00000000      0x850 lvgl/lv_objx/lv_lmeter.o
- .debug_str     0x00000000     0x8548 lvgl/lv_objx/lv_lmeter.o
+ .debug_line    0x00000000      0x76a lvgl/lv_objx/lv_lmeter.o
+ .debug_str     0x00000000     0x8539 lvgl/lv_objx/lv_lmeter.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_lmeter.o
  .debug_frame   0x00000000      0x164 lvgl/lv_objx/lv_lmeter.o
  .ARM.attributes
@@ -14095,7 +14095,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x8c8 lvgl/lv_objx/lv_objx_templ.o
  .debug_macro   0x00000000      0x240 lvgl/lv_objx/lv_objx_templ.o
  .debug_line    0x00000000       0x63 lvgl/lv_objx/lv_objx_templ.o
- .debug_str     0x00000000     0x2d1c lvgl/lv_objx/lv_objx_templ.o
+ .debug_str     0x00000000     0x2d0d lvgl/lv_objx/lv_objx_templ.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_objx_templ.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_objx/lv_objx_templ.o
@@ -14222,7 +14222,7 @@ Discarded input sections
  .debug_aranges
                 0x00000000       0x70 lvgl/lv_objx/lv_roller.o
  .debug_ranges  0x00000000       0xa8 lvgl/lv_objx/lv_roller.o
- .debug_macro   0x00000000      0x2ed lvgl/lv_objx/lv_roller.o
+ .debug_macro   0x00000000      0x2e9 lvgl/lv_objx/lv_roller.o
  .debug_macro   0x00000000      0x8c8 lvgl/lv_objx/lv_roller.o
  .debug_macro   0x00000000      0x240 lvgl/lv_objx/lv_roller.o
  .debug_macro   0x00000000      0x174 lvgl/lv_objx/lv_roller.o
@@ -14252,8 +14252,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x3a lvgl/lv_objx/lv_roller.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_roller.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_roller.o
- .debug_line    0x00000000      0xb79 lvgl/lv_objx/lv_roller.o
- .debug_str     0x00000000     0x8d74 lvgl/lv_objx/lv_roller.o
+ .debug_line    0x00000000      0x946 lvgl/lv_objx/lv_roller.o
+ .debug_str     0x00000000     0x8d65 lvgl/lv_objx/lv_roller.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_roller.o
  .debug_frame   0x00000000      0x194 lvgl/lv_objx/lv_roller.o
  .ARM.attributes
@@ -14408,8 +14408,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x23 lvgl/lv_objx/lv_sw.o
  .debug_macro   0x00000000       0x3a lvgl/lv_objx/lv_sw.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_sw.o
- .debug_line    0x00000000      0x92f lvgl/lv_objx/lv_sw.o
- .debug_str     0x00000000     0x854b lvgl/lv_objx/lv_sw.o
+ .debug_line    0x00000000      0x84b lvgl/lv_objx/lv_sw.o
+ .debug_str     0x00000000     0x853c lvgl/lv_objx/lv_sw.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_sw.o
  .debug_frame   0x00000000       0xc0 lvgl/lv_objx/lv_sw.o
  .ARM.attributes
@@ -14514,6 +14514,7 @@ Discarded input sections
  .group         0x00000000        0x8 lvgl/lv_objx/lv_tabview.o
  .group         0x00000000        0x8 lvgl/lv_objx/lv_tabview.o
  .group         0x00000000        0x8 lvgl/lv_objx/lv_tabview.o
+ .group         0x00000000        0x8 lvgl/lv_objx/lv_tabview.o
  .text          0x00000000        0x0 lvgl/lv_objx/lv_tabview.o
  .text.lv_tabview_set_tab_load_action
                 0x00000000        0xc lvgl/lv_objx/lv_tabview.o
@@ -14556,6 +14557,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x12 lvgl/lv_objx/lv_tabview.o
  .debug_macro   0x00000000       0x23 lvgl/lv_objx/lv_tabview.o
  .debug_macro   0x00000000       0x3a lvgl/lv_objx/lv_tabview.o
+ .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_tabview.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_tabview.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_tabview.o
  .debug_macro   0x00000000       0x28 lvgl/lv_objx/lv_tabview.o
@@ -14665,8 +14667,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x3a lvgl/lv_objx/lv_win.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_win.o
  .debug_macro   0x00000000       0x10 lvgl/lv_objx/lv_win.o
- .debug_line    0x00000000      0xaab lvgl/lv_objx/lv_win.o
- .debug_str     0x00000000     0x8c41 lvgl/lv_objx/lv_win.o
+ .debug_line    0x00000000      0x93f lvgl/lv_objx/lv_win.o
+ .debug_str     0x00000000     0x8c32 lvgl/lv_objx/lv_win.o
  .comment       0x00000000       0x80 lvgl/lv_objx/lv_win.o
  .debug_frame   0x00000000      0x204 lvgl/lv_objx/lv_win.o
  .ARM.attributes
@@ -14779,8 +14781,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 lvgl/lv_themes/lv_theme_alien.o
  .debug_macro   0x00000000       0x10 lvgl/lv_themes/lv_theme_alien.o
  .debug_macro   0x00000000      0x136 lvgl/lv_themes/lv_theme_alien.o
- .debug_line    0x00000000      0x503 lvgl/lv_themes/lv_theme_alien.o
- .debug_str     0x00000000     0x7aa1 lvgl/lv_themes/lv_theme_alien.o
+ .debug_line    0x00000000      0x4ee lvgl/lv_themes/lv_theme_alien.o
+ .debug_str     0x00000000     0x7a92 lvgl/lv_themes/lv_theme_alien.o
  .comment       0x00000000       0x80 lvgl/lv_themes/lv_theme_alien.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_themes/lv_theme_alien.o
@@ -14840,8 +14842,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 lvgl/lv_themes/lv_theme_default.o
  .debug_macro   0x00000000       0x10 lvgl/lv_themes/lv_theme_default.o
  .debug_macro   0x00000000      0x136 lvgl/lv_themes/lv_theme_default.o
- .debug_line    0x00000000      0x505 lvgl/lv_themes/lv_theme_default.o
- .debug_str     0x00000000     0x7aa3 lvgl/lv_themes/lv_theme_default.o
+ .debug_line    0x00000000      0x4f0 lvgl/lv_themes/lv_theme_default.o
+ .debug_str     0x00000000     0x7a94 lvgl/lv_themes/lv_theme_default.o
  .comment       0x00000000       0x80 lvgl/lv_themes/lv_theme_default.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_themes/lv_theme_default.o
@@ -14901,8 +14903,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 lvgl/lv_themes/lv_theme_material.o
  .debug_macro   0x00000000       0x10 lvgl/lv_themes/lv_theme_material.o
  .debug_macro   0x00000000      0x136 lvgl/lv_themes/lv_theme_material.o
- .debug_line    0x00000000      0x506 lvgl/lv_themes/lv_theme_material.o
- .debug_str     0x00000000     0x7aa4 lvgl/lv_themes/lv_theme_material.o
+ .debug_line    0x00000000      0x4f1 lvgl/lv_themes/lv_theme_material.o
+ .debug_str     0x00000000     0x7a95 lvgl/lv_themes/lv_theme_material.o
  .comment       0x00000000       0x80 lvgl/lv_themes/lv_theme_material.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_themes/lv_theme_material.o
@@ -14962,8 +14964,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 lvgl/lv_themes/lv_theme_mono.o
  .debug_macro   0x00000000       0x10 lvgl/lv_themes/lv_theme_mono.o
  .debug_macro   0x00000000      0x136 lvgl/lv_themes/lv_theme_mono.o
- .debug_line    0x00000000      0x502 lvgl/lv_themes/lv_theme_mono.o
- .debug_str     0x00000000     0x7aa0 lvgl/lv_themes/lv_theme_mono.o
+ .debug_line    0x00000000      0x4ed lvgl/lv_themes/lv_theme_mono.o
+ .debug_str     0x00000000     0x7a91 lvgl/lv_themes/lv_theme_mono.o
  .comment       0x00000000       0x80 lvgl/lv_themes/lv_theme_mono.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_themes/lv_theme_mono.o
@@ -15023,8 +15025,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 lvgl/lv_themes/lv_theme_night.o
  .debug_macro   0x00000000       0x10 lvgl/lv_themes/lv_theme_night.o
  .debug_macro   0x00000000      0x136 lvgl/lv_themes/lv_theme_night.o
- .debug_line    0x00000000      0x503 lvgl/lv_themes/lv_theme_night.o
- .debug_str     0x00000000     0x7aa1 lvgl/lv_themes/lv_theme_night.o
+ .debug_line    0x00000000      0x4ee lvgl/lv_themes/lv_theme_night.o
+ .debug_str     0x00000000     0x7a92 lvgl/lv_themes/lv_theme_night.o
  .comment       0x00000000       0x80 lvgl/lv_themes/lv_theme_night.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_themes/lv_theme_night.o
@@ -15084,8 +15086,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 lvgl/lv_themes/lv_theme_templ.o
  .debug_macro   0x00000000       0x10 lvgl/lv_themes/lv_theme_templ.o
  .debug_macro   0x00000000      0x136 lvgl/lv_themes/lv_theme_templ.o
- .debug_line    0x00000000      0x503 lvgl/lv_themes/lv_theme_templ.o
- .debug_str     0x00000000     0x7aa1 lvgl/lv_themes/lv_theme_templ.o
+ .debug_line    0x00000000      0x4ee lvgl/lv_themes/lv_theme_templ.o
+ .debug_str     0x00000000     0x7a92 lvgl/lv_themes/lv_theme_templ.o
  .comment       0x00000000       0x80 lvgl/lv_themes/lv_theme_templ.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_themes/lv_theme_templ.o
@@ -15145,8 +15147,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x35 lvgl/lv_themes/lv_theme_zen.o
  .debug_macro   0x00000000       0x10 lvgl/lv_themes/lv_theme_zen.o
  .debug_macro   0x00000000      0x136 lvgl/lv_themes/lv_theme_zen.o
- .debug_line    0x00000000      0x501 lvgl/lv_themes/lv_theme_zen.o
- .debug_str     0x00000000     0x7a9f lvgl/lv_themes/lv_theme_zen.o
+ .debug_line    0x00000000      0x4ec lvgl/lv_themes/lv_theme_zen.o
+ .debug_str     0x00000000     0x7a90 lvgl/lv_themes/lv_theme_zen.o
  .comment       0x00000000       0x80 lvgl/lv_themes/lv_theme_zen.o
  .ARM.attributes
                 0x00000000       0x37 lvgl/lv_themes/lv_theme_zen.o
@@ -17597,7 +17599,7 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
                 0x00000fa0       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtn.o
 OUTPUT(Projet.elf elf32-littlearm)
 
-.debug_info     0x00000000    0x7131e
+.debug_info     0x00000000    0x7130f
  .debug_info    0x00000000      0x58d Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_info    0x0000058d     0x1174 Drivers/BSP/Components/otm8009a/otm8009a.o
  .debug_info    0x00001701     0x2431 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
@@ -17664,7 +17666,7 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_info    0x0006879e     0x3d8c lvgl/lv_objx/lv_ta.o
  .debug_info    0x0006c52a     0x39c8 lvgl/lv_objx/lv_tabview.o
  .debug_info    0x0006fef2     0x13ba lvgl/lv_themes/lv_theme.o
- .debug_info    0x000712ac       0x72 startup/startup_stm32f769xx.o
+ .debug_info    0x000712ac       0x63 startup/startup_stm32f769xx.o
 
 .debug_abbrev   0x00000000     0xcb7a
  .debug_abbrev  0x00000000      0x23a Drivers/BSP/Components/ft6x06/ft6x06.o
@@ -17998,7 +18000,7 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_ranges  0x000027f8       0x18 lvgl/lv_themes/lv_theme.o
  .debug_ranges  0x00002810       0x20 startup/startup_stm32f769xx.o
 
-.debug_macro    0x00000000    0x36337
+.debug_macro    0x00000000    0x36324
  .debug_macro   0x00000000       0x81 Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_macro   0x00000081       0x16 Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_macro   0x00000097      0x230 Drivers/BSP/Components/ft6x06/ft6x06.o
@@ -18142,211 +18144,211 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_macro   0x00035563      0x2d3 lvgl/lv_objx/lv_page.o
  .debug_macro   0x00035836      0x2fa lvgl/lv_objx/lv_slider.o
  .debug_macro   0x00035b30      0x2fa lvgl/lv_objx/lv_ta.o
- .debug_macro   0x00035e2a      0x33b lvgl/lv_objx/lv_tabview.o
- .debug_macro   0x00036165      0x1d2 lvgl/lv_themes/lv_theme.o
+ .debug_macro   0x00035e2a      0x328 lvgl/lv_objx/lv_tabview.o
+ .debug_macro   0x00036152      0x1d2 lvgl/lv_themes/lv_theme.o
 
-.debug_line     0x00000000    0x267fb
+.debug_line     0x00000000    0x247de
  .debug_line    0x00000000      0x3f4 Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_line    0x000003f4      0x375 Drivers/BSP/Components/otm8009a/otm8009a.o
- .debug_line    0x00000769      0xb49 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
- .debug_line    0x000012b2     0x102d Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
- .debug_line    0x000022df      0x9ba Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
- .debug_line    0x00002c99      0xb7e Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
- .debug_line    0x00003817      0xa5a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
- .debug_line    0x00004271      0xa7b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
- .debug_line    0x00004cec      0xb84 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
- .debug_line    0x00005870      0xda2 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o
- .debug_line    0x00006612     0x128e Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o
- .debug_line    0x000078a0      0x9f3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o
- .debug_line    0x00008293     0x1996 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o
- .debug_line    0x00009c29     0x1114 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o
- .debug_line    0x0000ad3d      0x8f6 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o
- .debug_line    0x0000b633      0x9ac Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o
- .debug_line    0x0000bfdf      0xae4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
- .debug_line    0x0000cac3      0xa3b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
- .debug_line    0x0000d4fe      0xb78 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
- .debug_line    0x0000e076      0xb1c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
- .debug_line    0x0000eb92      0xd55 Src/lcd_lvgl.o
- .debug_line    0x0000f8e7      0xeed Src/main.o
- .debug_line    0x000107d4      0xa09 Src/stm32f7xx_hal_msp.o
- .debug_line    0x000111dd      0x8df Src/stm32f7xx_it.o
- .debug_line    0x00011abc      0x88e Src/system_stm32f7xx.o
- .debug_line    0x0001234a      0x2ca Utilities/Fonts/font24.o
- .debug_line    0x00012614      0xb25 lv_examples/lv_apps/demo/demo.o
- .debug_line    0x00013139      0x512 lv_examples/lv_apps/demo/img_bubble_pattern.o
- .debug_line    0x0001364b      0x695 lvgl/lv_core/lv_group.o
- .debug_line    0x00013ce0      0x99d lvgl/lv_core/lv_indev.o
- .debug_line    0x0001467d      0xf55 lvgl/lv_core/lv_obj.o
- .debug_line    0x000155d2      0x757 lvgl/lv_core/lv_refr.o
- .debug_line    0x00015d29      0x6c6 lvgl/lv_core/lv_style.o
- .debug_line    0x000163ef      0x505 lvgl/lv_core/lv_vdb.o
- .debug_line    0x000168f4      0xd29 lvgl/lv_draw/lv_draw.o
- .debug_line    0x0001761d      0x9ee lvgl/lv_draw/lv_draw_vbasic.o
- .debug_line    0x0001800b      0x679 lvgl/lv_hal/lv_hal_disp.o
- .debug_line    0x00018684      0x4af lvgl/lv_hal/lv_hal_indev.o
- .debug_line    0x00018b33      0x353 lvgl/lv_hal/lv_hal_tick.o
- .debug_line    0x00018e86      0x516 lvgl/lv_misc/lv_anim.o
- .debug_line    0x0001939c      0x482 lvgl/lv_misc/lv_area.o
- .debug_line    0x0001981e      0x3a8 lvgl/lv_misc/lv_circ.o
- .debug_line    0x00019bc6      0x457 lvgl/lv_misc/lv_font.o
- .debug_line    0x0001a01d      0x65b lvgl/lv_misc/lv_fs.o
- .debug_line    0x0001a678      0x4b3 lvgl/lv_misc/lv_ll.o
- .debug_line    0x0001ab2b      0x4bd lvgl/lv_misc/lv_mem.o
- .debug_line    0x0001afe8      0x49a lvgl/lv_misc/lv_task.o
- .debug_line    0x0001b482      0x67e lvgl/lv_misc/lv_txt.o
- .debug_line    0x0001bb00      0x66c lvgl/lv_misc/lv_ufs.o
- .debug_line    0x0001c16c      0x3a0 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
- .debug_line    0x0001c50c      0x3a0 lvgl/lv_misc/lv_fonts/lv_font_symbol_20.o
- .debug_line    0x0001c8ac      0xa24 lvgl/lv_objx/lv_bar.o
- .debug_line    0x0001d2d0      0x9eb lvgl/lv_objx/lv_btn.o
- .debug_line    0x0001dcbb      0xc86 lvgl/lv_objx/lv_btnm.o
- .debug_line    0x0001e941      0xa9d lvgl/lv_objx/lv_chart.o
- .debug_line    0x0001f3de      0xa48 lvgl/lv_objx/lv_cont.o
- .debug_line    0x0001fe26      0x8cf lvgl/lv_objx/lv_img.o
- .debug_line    0x000206f5      0x9c2 lvgl/lv_objx/lv_kb.o
- .debug_line    0x000210b7      0xae0 lvgl/lv_objx/lv_label.o
- .debug_line    0x00021b97      0xb47 lvgl/lv_objx/lv_list.o
- .debug_line    0x000226de      0x961 lvgl/lv_objx/lv_mbox.o
- .debug_line    0x0002303f      0xc7b lvgl/lv_objx/lv_page.o
- .debug_line    0x00023cba      0xb2f lvgl/lv_objx/lv_slider.o
- .debug_line    0x000247e9      0xd8f lvgl/lv_objx/lv_ta.o
- .debug_line    0x00025578      0xce7 lvgl/lv_objx/lv_tabview.o
- .debug_line    0x0002625f      0x51d lvgl/lv_themes/lv_theme.o
- .debug_line    0x0002677c       0x7f startup/startup_stm32f769xx.o
+ .debug_line    0x00000769      0xafe Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
+ .debug_line    0x00001267      0xfbf Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .debug_line    0x00002226      0x96f Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
+ .debug_line    0x00002b95      0xaca Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
+ .debug_line    0x0000365f      0xa0f Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
+ .debug_line    0x0000406e      0xa30 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
+ .debug_line    0x00004a9e      0xb39 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
+ .debug_line    0x000055d7      0xd57 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o
+ .debug_line    0x0000632e     0x1243 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o
+ .debug_line    0x00007571      0x9a8 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o
+ .debug_line    0x00007f19     0x194b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o
+ .debug_line    0x00009864     0x10c9 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o
+ .debug_line    0x0000a92d      0x8ab Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o
+ .debug_line    0x0000b1d8      0x961 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o
+ .debug_line    0x0000bb39      0xa99 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
+ .debug_line    0x0000c5d2      0x9f0 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
+ .debug_line    0x0000cfc2      0xb2d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
+ .debug_line    0x0000daef      0xad1 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+ .debug_line    0x0000e5c0      0xc92 Src/lcd_lvgl.o
+ .debug_line    0x0000f252      0xdfd Src/main.o
+ .debug_line    0x0001004f      0x9be Src/stm32f7xx_hal_msp.o
+ .debug_line    0x00010a0d      0x885 Src/stm32f7xx_it.o
+ .debug_line    0x00011292      0x843 Src/system_stm32f7xx.o
+ .debug_line    0x00011ad5      0x2ca Utilities/Fonts/font24.o
+ .debug_line    0x00011d9f      0x9b6 lv_examples/lv_apps/demo/demo.o
+ .debug_line    0x00012755      0x4ba lv_examples/lv_apps/demo/img_bubble_pattern.o
+ .debug_line    0x00012c0f      0x658 lvgl/lv_core/lv_group.o
+ .debug_line    0x00013267      0x904 lvgl/lv_core/lv_indev.o
+ .debug_line    0x00013b6b      0xe54 lvgl/lv_core/lv_obj.o
+ .debug_line    0x000149bf      0x71a lvgl/lv_core/lv_refr.o
+ .debug_line    0x000150d9      0x689 lvgl/lv_core/lv_style.o
+ .debug_line    0x00015762      0x4f6 lvgl/lv_core/lv_vdb.o
+ .debug_line    0x00015c58      0xc0c lvgl/lv_draw/lv_draw.o
+ .debug_line    0x00016864      0x982 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_line    0x000171e6      0x63d lvgl/lv_hal/lv_hal_disp.o
+ .debug_line    0x00017823      0x4a0 lvgl/lv_hal/lv_hal_indev.o
+ .debug_line    0x00017cc3      0x353 lvgl/lv_hal/lv_hal_tick.o
+ .debug_line    0x00018016      0x516 lvgl/lv_misc/lv_anim.o
+ .debug_line    0x0001852c      0x482 lvgl/lv_misc/lv_area.o
+ .debug_line    0x000189ae      0x3a8 lvgl/lv_misc/lv_circ.o
+ .debug_line    0x00018d56      0x44d lvgl/lv_misc/lv_font.o
+ .debug_line    0x000191a3      0x65b lvgl/lv_misc/lv_fs.o
+ .debug_line    0x000197fe      0x4b3 lvgl/lv_misc/lv_ll.o
+ .debug_line    0x00019cb1      0x4bd lvgl/lv_misc/lv_mem.o
+ .debug_line    0x0001a16e      0x49a lvgl/lv_misc/lv_task.o
+ .debug_line    0x0001a608      0x674 lvgl/lv_misc/lv_txt.o
+ .debug_line    0x0001ac7c      0x66c lvgl/lv_misc/lv_ufs.o
+ .debug_line    0x0001b2e8      0x362 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+ .debug_line    0x0001b64a      0x362 lvgl/lv_misc/lv_fonts/lv_font_symbol_20.o
+ .debug_line    0x0001b9ac      0x8e6 lvgl/lv_objx/lv_bar.o
+ .debug_line    0x0001c292      0x893 lvgl/lv_objx/lv_btn.o
+ .debug_line    0x0001cb25      0xb48 lvgl/lv_objx/lv_btnm.o
+ .debug_line    0x0001d66d      0x9b7 lvgl/lv_objx/lv_chart.o
+ .debug_line    0x0001e024      0x926 lvgl/lv_objx/lv_cont.o
+ .debug_line    0x0001e94a      0x7d5 lvgl/lv_objx/lv_img.o
+ .debug_line    0x0001f11f      0x8de lvgl/lv_objx/lv_kb.o
+ .debug_line    0x0001f9fd      0xa7a lvgl/lv_objx/lv_label.o
+ .debug_line    0x00020477      0x9db lvgl/lv_objx/lv_list.o
+ .debug_line    0x00020e52      0x87d lvgl/lv_objx/lv_mbox.o
+ .debug_line    0x000216cf      0xab5 lvgl/lv_objx/lv_page.o
+ .debug_line    0x00022184      0x9f1 lvgl/lv_objx/lv_slider.o
+ .debug_line    0x00022b75      0xc51 lvgl/lv_objx/lv_ta.o
+ .debug_line    0x000237c6      0xa91 lvgl/lv_objx/lv_tabview.o
+ .debug_line    0x00024257      0x508 lvgl/lv_themes/lv_theme.o
+ .debug_line    0x0002475f       0x7f startup/startup_stm32f769xx.o
 
-.debug_str      0x00000000   0x12212c
- .debug_str     0x00000000     0x3ea9 Drivers/BSP/Components/ft6x06/ft6x06.o
-                               0x406f (size before relaxing)
- .debug_str     0x00003ea9      0xbc4 Drivers/BSP/Components/otm8009a/otm8009a.o
-                               0x409b (size before relaxing)
- .debug_str     0x00004a6d   0x10e917 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
-                             0x1121d7 (size before relaxing)
- .debug_str     0x00113384     0x2711 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
-                             0x114753 (size before relaxing)
- .debug_str     0x00115a95      0x461 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
-                             0x11165b (size before relaxing)
- .debug_str     0x00115ef6      0x366 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
-                             0x114004 (size before relaxing)
- .debug_str     0x0011625c      0x3b1 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
-                             0x110ec6 (size before relaxing)
- .debug_str     0x0011660d      0x41c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
-                             0x110f24 (size before relaxing)
- .debug_str     0x00116a29      0x307 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
-                             0x11087c (size before relaxing)
- .debug_str     0x00116d30      0x34a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o
-                             0x110a3f (size before relaxing)
- .debug_str     0x0011707a      0xa1a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o
-                             0x1113d0 (size before relaxing)
- .debug_str     0x00117a94      0x1f5 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o
-                             0x11070c (size before relaxing)
- .debug_str     0x00117c89      0xcec Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o
-                             0x1115a5 (size before relaxing)
- .debug_str     0x00118975      0x37d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o
-                             0x110a96 (size before relaxing)
- .debug_str     0x00118cf2       0x68 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o
-                             0x110882 (size before relaxing)
- .debug_str     0x00118d5a      0x1f3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o
-                             0x1107c8 (size before relaxing)
- .debug_str     0x00118f4d      0x38d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
-                             0x110872 (size before relaxing)
- .debug_str     0x001192da      0x105 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
-                             0x1107e9 (size before relaxing)
- .debug_str     0x001193df      0x2bc Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
-                             0x110b38 (size before relaxing)
- .debug_str     0x0011969b      0x394 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
-                             0x1109a0 (size before relaxing)
- .debug_str     0x00119a2f     0x109d Src/lcd_lvgl.o
-                             0x114fa0 (size before relaxing)
- .debug_str     0x0011aacc     0x169e Src/main.o
-                             0x1148d2 (size before relaxing)
- .debug_str     0x0011c16a      0x10b Src/stm32f7xx_hal_msp.o
-                             0x111dc9 (size before relaxing)
- .debug_str     0x0011c275       0x44 Src/stm32f7xx_it.o
-                             0x1108a2 (size before relaxing)
- .debug_str     0x0011c2b9       0x5a Src/system_stm32f7xx.o
-                             0x110531 (size before relaxing)
- .debug_str     0x0011c313       0x29 Utilities/Fonts/font24.o
-                               0x3578 (size before relaxing)
- .debug_str     0x0011c33c      0xdff lv_examples/lv_apps/demo/demo.o
-                               0x90a8 (size before relaxing)
- .debug_str     0x0011d13b       0xd8 lv_examples/lv_apps/demo/img_bubble_pattern.o
-                               0x7c4c (size before relaxing)
- .debug_str     0x0011d213      0x26f lvgl/lv_core/lv_group.o
-                               0x81aa (size before relaxing)
- .debug_str     0x0011d482      0x562 lvgl/lv_core/lv_indev.o
-                               0x8780 (size before relaxing)
- .debug_str     0x0011d9e4      0x6b8 lvgl/lv_core/lv_obj.o
-                               0x8fa6 (size before relaxing)
- .debug_str     0x0011e09c      0x223 lvgl/lv_core/lv_refr.o
-                               0x82be (size before relaxing)
- .debug_str     0x0011e2bf      0x198 lvgl/lv_core/lv_style.o
-                               0x7e23 (size before relaxing)
- .debug_str     0x0011e457       0x93 lvgl/lv_core/lv_vdb.o
-                               0x7221 (size before relaxing)
- .debug_str     0x0011e4ea      0x7fd lvgl/lv_draw/lv_draw.o
-                               0x98c9 (size before relaxing)
- .debug_str     0x0011ece7      0x29d lvgl/lv_draw/lv_draw_vbasic.o
-                               0x7e86 (size before relaxing)
- .debug_str     0x0011ef84       0x91 lvgl/lv_hal/lv_hal_disp.o
-                               0x7d65 (size before relaxing)
- .debug_str     0x0011f015       0x29 lvgl/lv_hal/lv_hal_indev.o
-                               0x73e7 (size before relaxing)
- .debug_str     0x0011f03e       0x4a lvgl/lv_hal/lv_hal_tick.o
-                               0x3ffa (size before relaxing)
- .debug_str     0x0011f088       0xdf lvgl/lv_misc/lv_anim.o
-                               0x6fc3 (size before relaxing)
- .debug_str     0x0011f167       0x5e lvgl/lv_misc/lv_area.o
-                               0x65f2 (size before relaxing)
- .debug_str     0x0011f1c5       0x1a lvgl/lv_misc/lv_circ.o
-                               0x6494 (size before relaxing)
- .debug_str     0x0011f1df       0xaa lvgl/lv_misc/lv_font.o
-                               0x4720 (size before relaxing)
- .debug_str     0x0011f289      0x13b lvgl/lv_misc/lv_fs.o
-                               0x7035 (size before relaxing)
- .debug_str     0x0011f3c4      0x137 lvgl/lv_misc/lv_ll.o
-                               0x66bb (size before relaxing)
- .debug_str     0x0011f4fb      0x155 lvgl/lv_misc/lv_mem.o
-                               0x6d45 (size before relaxing)
- .debug_str     0x0011f650      0x158 lvgl/lv_misc/lv_task.o
-                               0x4344 (size before relaxing)
- .debug_str     0x0011f7a8      0x1e3 lvgl/lv_misc/lv_txt.o
-                               0x7669 (size before relaxing)
- .debug_str     0x0011f98b      0x632 lvgl/lv_misc/lv_ufs.o
-                               0x873b (size before relaxing)
- .debug_str     0x0011ffbd       0x68 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
-                               0x4678 (size before relaxing)
- .debug_str     0x00120025       0x68 lvgl/lv_misc/lv_fonts/lv_font_symbol_20.o
-                               0x4678 (size before relaxing)
- .debug_str     0x0012008d      0x13d lvgl/lv_objx/lv_bar.o
-                               0x9783 (size before relaxing)
- .debug_str     0x001201ca      0x286 lvgl/lv_objx/lv_btn.o
-                               0x855d (size before relaxing)
- .debug_str     0x00120450      0x36a lvgl/lv_objx/lv_btnm.o
-                               0x890e (size before relaxing)
- .debug_str     0x001207ba      0x2ed lvgl/lv_objx/lv_chart.o
-                               0x864d (size before relaxing)
- .debug_str     0x00120aa7      0x19f lvgl/lv_objx/lv_cont.o
-                               0x87c1 (size before relaxing)
- .debug_str     0x00120c46      0x134 lvgl/lv_objx/lv_img.o
-                               0x85d9 (size before relaxing)
- .debug_str     0x00120d7a      0x26d lvgl/lv_objx/lv_kb.o
-                               0x8a2a (size before relaxing)
- .debug_str     0x00120fe7      0x3ff lvgl/lv_objx/lv_label.o
-                               0x8a24 (size before relaxing)
- .debug_str     0x001213e6      0x248 lvgl/lv_objx/lv_list.o
-                               0x8c2c (size before relaxing)
- .debug_str     0x0012162e      0x20c lvgl/lv_objx/lv_mbox.o
-                               0x8bca (size before relaxing)
- .debug_str     0x0012183a      0x1d6 lvgl/lv_objx/lv_page.o
-                               0x8a0b (size before relaxing)
- .debug_str     0x00121a10      0x1c8 lvgl/lv_objx/lv_slider.o
-                               0x8837 (size before relaxing)
- .debug_str     0x00121bd8      0x24b lvgl/lv_objx/lv_ta.o
-                               0x8ce8 (size before relaxing)
- .debug_str     0x00121e23      0x2c9 lvgl/lv_objx/lv_tabview.o
-                               0x91e8 (size before relaxing)
- .debug_str     0x001220ec       0x40 lvgl/lv_themes/lv_theme.o
-                               0x7ba1 (size before relaxing)
+.debug_str      0x00000000   0x12211d
+ .debug_str     0x00000000     0x3e9a Drivers/BSP/Components/ft6x06/ft6x06.o
+                               0x4060 (size before relaxing)
+ .debug_str     0x00003e9a      0xbc4 Drivers/BSP/Components/otm8009a/otm8009a.o
+                               0x408c (size before relaxing)
+ .debug_str     0x00004a5e   0x10e917 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
+                             0x1121c8 (size before relaxing)
+ .debug_str     0x00113375     0x2711 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+                             0x114744 (size before relaxing)
+ .debug_str     0x00115a86      0x461 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
+                             0x11164c (size before relaxing)
+ .debug_str     0x00115ee7      0x366 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
+                             0x113ff5 (size before relaxing)
+ .debug_str     0x0011624d      0x3b1 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
+                             0x110eb7 (size before relaxing)
+ .debug_str     0x001165fe      0x41c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
+                             0x110f15 (size before relaxing)
+ .debug_str     0x00116a1a      0x307 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
+                             0x11086d (size before relaxing)
+ .debug_str     0x00116d21      0x34a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o
+                             0x110a30 (size before relaxing)
+ .debug_str     0x0011706b      0xa1a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o
+                             0x1113c1 (size before relaxing)
+ .debug_str     0x00117a85      0x1f5 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o
+                             0x1106fd (size before relaxing)
+ .debug_str     0x00117c7a      0xcec Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o
+                             0x111596 (size before relaxing)
+ .debug_str     0x00118966      0x37d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o
+                             0x110a87 (size before relaxing)
+ .debug_str     0x00118ce3       0x68 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o
+                             0x110873 (size before relaxing)
+ .debug_str     0x00118d4b      0x1f3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o
+                             0x1107b9 (size before relaxing)
+ .debug_str     0x00118f3e      0x38d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
+                             0x110863 (size before relaxing)
+ .debug_str     0x001192cb      0x105 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
+                             0x1107da (size before relaxing)
+ .debug_str     0x001193d0      0x2bc Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
+                             0x110b29 (size before relaxing)
+ .debug_str     0x0011968c      0x394 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+                             0x110991 (size before relaxing)
+ .debug_str     0x00119a20     0x109d Src/lcd_lvgl.o
+                             0x114f91 (size before relaxing)
+ .debug_str     0x0011aabd     0x169e Src/main.o
+                             0x1148c3 (size before relaxing)
+ .debug_str     0x0011c15b      0x10b Src/stm32f7xx_hal_msp.o
+                             0x111dba (size before relaxing)
+ .debug_str     0x0011c266       0x44 Src/stm32f7xx_it.o
+                             0x110893 (size before relaxing)
+ .debug_str     0x0011c2aa       0x5a Src/system_stm32f7xx.o
+                             0x110522 (size before relaxing)
+ .debug_str     0x0011c304       0x29 Utilities/Fonts/font24.o
+                               0x3569 (size before relaxing)
+ .debug_str     0x0011c32d      0xdff lv_examples/lv_apps/demo/demo.o
+                               0x9099 (size before relaxing)
+ .debug_str     0x0011d12c       0xd8 lv_examples/lv_apps/demo/img_bubble_pattern.o
+                               0x7c3d (size before relaxing)
+ .debug_str     0x0011d204      0x26f lvgl/lv_core/lv_group.o
+                               0x819b (size before relaxing)
+ .debug_str     0x0011d473      0x562 lvgl/lv_core/lv_indev.o
+                               0x8771 (size before relaxing)
+ .debug_str     0x0011d9d5      0x6b8 lvgl/lv_core/lv_obj.o
+                               0x8f97 (size before relaxing)
+ .debug_str     0x0011e08d      0x223 lvgl/lv_core/lv_refr.o
+                               0x82af (size before relaxing)
+ .debug_str     0x0011e2b0      0x198 lvgl/lv_core/lv_style.o
+                               0x7e14 (size before relaxing)
+ .debug_str     0x0011e448       0x93 lvgl/lv_core/lv_vdb.o
+                               0x7212 (size before relaxing)
+ .debug_str     0x0011e4db      0x7fd lvgl/lv_draw/lv_draw.o
+                               0x98ba (size before relaxing)
+ .debug_str     0x0011ecd8      0x29d lvgl/lv_draw/lv_draw_vbasic.o
+                               0x7e77 (size before relaxing)
+ .debug_str     0x0011ef75       0x91 lvgl/lv_hal/lv_hal_disp.o
+                               0x7d56 (size before relaxing)
+ .debug_str     0x0011f006       0x29 lvgl/lv_hal/lv_hal_indev.o
+                               0x73d8 (size before relaxing)
+ .debug_str     0x0011f02f       0x4a lvgl/lv_hal/lv_hal_tick.o
+                               0x3feb (size before relaxing)
+ .debug_str     0x0011f079       0xdf lvgl/lv_misc/lv_anim.o
+                               0x6fb4 (size before relaxing)
+ .debug_str     0x0011f158       0x5e lvgl/lv_misc/lv_area.o
+                               0x65e3 (size before relaxing)
+ .debug_str     0x0011f1b6       0x1a lvgl/lv_misc/lv_circ.o
+                               0x6485 (size before relaxing)
+ .debug_str     0x0011f1d0       0xaa lvgl/lv_misc/lv_font.o
+                               0x4711 (size before relaxing)
+ .debug_str     0x0011f27a      0x13b lvgl/lv_misc/lv_fs.o
+                               0x7026 (size before relaxing)
+ .debug_str     0x0011f3b5      0x137 lvgl/lv_misc/lv_ll.o
+                               0x66ac (size before relaxing)
+ .debug_str     0x0011f4ec      0x155 lvgl/lv_misc/lv_mem.o
+                               0x6d36 (size before relaxing)
+ .debug_str     0x0011f641      0x158 lvgl/lv_misc/lv_task.o
+                               0x4335 (size before relaxing)
+ .debug_str     0x0011f799      0x1e3 lvgl/lv_misc/lv_txt.o
+                               0x765a (size before relaxing)
+ .debug_str     0x0011f97c      0x632 lvgl/lv_misc/lv_ufs.o
+                               0x872c (size before relaxing)
+ .debug_str     0x0011ffae       0x68 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+                               0x4669 (size before relaxing)
+ .debug_str     0x00120016       0x68 lvgl/lv_misc/lv_fonts/lv_font_symbol_20.o
+                               0x4669 (size before relaxing)
+ .debug_str     0x0012007e      0x13d lvgl/lv_objx/lv_bar.o
+                               0x9774 (size before relaxing)
+ .debug_str     0x001201bb      0x286 lvgl/lv_objx/lv_btn.o
+                               0x854e (size before relaxing)
+ .debug_str     0x00120441      0x36a lvgl/lv_objx/lv_btnm.o
+                               0x88ff (size before relaxing)
+ .debug_str     0x001207ab      0x2ed lvgl/lv_objx/lv_chart.o
+                               0x863e (size before relaxing)
+ .debug_str     0x00120a98      0x19f lvgl/lv_objx/lv_cont.o
+                               0x87b2 (size before relaxing)
+ .debug_str     0x00120c37      0x134 lvgl/lv_objx/lv_img.o
+                               0x85ca (size before relaxing)
+ .debug_str     0x00120d6b      0x26d lvgl/lv_objx/lv_kb.o
+                               0x8a1b (size before relaxing)
+ .debug_str     0x00120fd8      0x3ff lvgl/lv_objx/lv_label.o
+                               0x8a15 (size before relaxing)
+ .debug_str     0x001213d7      0x248 lvgl/lv_objx/lv_list.o
+                               0x8c1d (size before relaxing)
+ .debug_str     0x0012161f      0x20c lvgl/lv_objx/lv_mbox.o
+                               0x8bbb (size before relaxing)
+ .debug_str     0x0012182b      0x1d6 lvgl/lv_objx/lv_page.o
+                               0x89fc (size before relaxing)
+ .debug_str     0x00121a01      0x1c8 lvgl/lv_objx/lv_slider.o
+                               0x8828 (size before relaxing)
+ .debug_str     0x00121bc9      0x24b lvgl/lv_objx/lv_ta.o
+                               0x8cd9 (size before relaxing)
+ .debug_str     0x00121e14      0x2c9 lvgl/lv_objx/lv_tabview.o
+                               0x91d9 (size before relaxing)
+ .debug_str     0x001220dd       0x40 lvgl/lv_themes/lv_theme.o
+                               0x7b92 (size before relaxing)
 
 .comment        0x00000000       0x7f
  .comment       0x00000000       0x7f Drivers/BSP/Components/ft6x06/ft6x06.o

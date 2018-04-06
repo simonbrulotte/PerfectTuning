@@ -1,0 +1,10 @@
+/Drivers/
+/sources.mk
+/Src/
+/Utilities/
+/lv_examples/
+/lvgl/
+/makefile
+/objects.list
+/objects.mk
+/startup/
