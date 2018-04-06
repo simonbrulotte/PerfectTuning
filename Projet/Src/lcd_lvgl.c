@@ -217,6 +217,13 @@ static void DMA2D_Config(void)
 **********************/
 
 /**
+* @brief  Fonction d'initialisation pour la comfiguation complète du module LCD
+* @param  dma_handle: contient la configuration complète du DMA numéro 2 fait dans le main
+* @param  dma2d_handle: contient la configuration complète du DMA2D fait dans le main
+* @note   La fonction utilise les drivers que STM32 fournis dans le HAL
+* @retval Rien
+*/
+/**
 * Flush a color buffer
 * @param x1 left coordinate of the rectangle
 * @param x2 right coordinate of the rectangle
