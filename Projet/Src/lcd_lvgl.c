@@ -450,13 +450,11 @@ static bool touchpad_read(lv_indev_data_t *data)
 	return false;
 }
 
-//Commentaire 1
 
 /**
-* @brief  DMA conversion complete callback
-* @note   This function is executed when the transfer complete interrupt
-*         is generated
-* @retval None
+* @brief  Callback si le transfert DMA est complété.
+* @note   Cette fonction est exécutée lorsque l'interruption de fin de transfert est levée.
+* @retval Aucune
 */
 void DMA_TransferComplete(DMA_HandleTypeDef *hdma)
 {
@@ -491,10 +489,9 @@ void DMA_TransferError(DMA_HandleTypeDef *hdma)
 }
 
 /**
-  * @brief  Reload Event callback.
-  * @param  hltdc: pointer to a LTDC_HandleTypeDef structure that contains
-  *                the configuration information for the LTDC.
-  * @retval None
+  * @brief  Recharge l'événement du callback.
+  * @param  hltdc: Pointeur vers une structure LTDC_HandleTypeDef qui contient la configuration pour le LTDC.
+  * @retval Aucune
   */
 void HAL_LTDC_LineEventCallback(LTDC_HandleTypeDef *hltdc)
 {
