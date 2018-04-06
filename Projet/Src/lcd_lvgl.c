@@ -458,6 +458,11 @@ static bool touchpad_read(lv_indev_data_t *data)
 	return false; /*false: no more data to read because we are no buffering*/
 }
 
+<<<<<<< HEAD
+=======
+//Commentaire 1
+
+>>>>>>> 5403a550650b4b944ff998b61950f62f173de9f9
 /**
 * @brief  DMA conversion complete callback
 * @note   This function is executed when the transfer complete interrupt
