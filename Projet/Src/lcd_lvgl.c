@@ -425,11 +425,6 @@ static void gpu_mem_fill(lv_color_t * dest, uint32_t length, lv_color_t color)
 #endif
 
 /**
- * Read an input device
-
- * @return true: the device is pressed, false: released
- */
-/**
 * @brief  Fonction qui lit les coordonnés de l'écran tactile et l'integre dans la librairie
 * @param indev_id id of the input device to read
 * @param x put the x coordinate here
@@ -458,14 +453,7 @@ static bool touchpad_read(lv_indev_data_t *data)
 	return false; /*false: no more data to read because we are no buffering*/
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-//Commentaire 1
-=======
->>>>>>> 7164cb22ac726f12a749988df148b33f0178b4d0
 
->>>>>>> 5403a550650b4b944ff998b61950f62f173de9f9
 /**
 * @brief  Callback si le transfert DMA est complété.
 * @note   Cette fonction est exécutée lorsque l'interruption de fin de transfert est levée.
