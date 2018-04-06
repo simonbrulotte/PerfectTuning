@@ -87,7 +87,7 @@ DMA_HandleTypeDef *DMA_M2M;
 **********************/
 
 /**
-* @brief  Fonction d'initialisation pour la comfiguation complète du module LCD
+* @brief  Fonction d'initialisation pour la configuration complète du module LCD
 * @param  dma_handle: contient la configuration complète du DMA numéro 2 fait dans le main
 * @param  dma2d_handle: contient la configuration complète du DMA2D fait dans le main
 * @note   La fonction utilise les drivers que STM32 fournis dans le HAL
@@ -217,19 +217,14 @@ static void DMA2D_Config(void)
 **********************/
 
 /**
-* @brief  Fonction d'initialisation pour la comfiguation complète du module LCD
-* @param  dma_handle: contient la configuration complète du DMA numéro 2 fait dans le main
-* @param  dma2d_handle: contient la configuration complète du DMA2D fait dans le main
-* @note   La fonction utilise les drivers que STM32 fournis dans le HAL
-* @retval Rien
-*/
-/**
-* Flush a color buffer
+* @brief  Fonction qui écrit (met à jour) une partie de l'écran. La librairie graphique décide de l'emplacement à mettre à jour
 * @param x1 left coordinate of the rectangle
 * @param x2 right coordinate of the rectangle
 * @param y1 top coordinate of the rectangle
 * @param y2 bottom coordinate of the rectangle
 * @param color_p pointer to an array of colors
+* @note   C'est une fonction qui vient d'un exemple du créateur de la librairie graphique
+* @retval Rien
 */
 static void tft_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_color_t * color_p)
 {
@@ -269,21 +264,23 @@ static void tft_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_c
 	}
 	*/
 	HAL_StatusTypeDef err;
-	err = HAL_DMA_Start_IT(DMA_M2M,(uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],
+	err = HAL_DMA_Start_IT(DMA_M2M,(uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
 			  (x2_flush - x1_flush + 1));
-	if(err != HAL_OK)
+	if(err != HAL_OK)  //Si c'est une mauvaise config
 	{
 		while(1);	/*Halt on error*/
 	}
 }
 
 /**
-* Fill a rectangular area with a color
+* @brief  Fonction qui écrit (met à jour) une partie rectangle de l'écran. La librairie graphique décide de l'emplacement à mettre à jour
 * @param x1 left coordinate of the rectangle
 * @param x2 right coordinate of the rectangle
 * @param y1 top coordinate of the rectangle
 * @param y2 bottom coordinate of the rectangle
 * @param color fill color
+* @note   C'est une fonction qui vient d'un exemple du créateur de la librairie graphique
+* @retval Rien
 */
 static void tft_fill(int32_t x1, int32_t y1, int32_t x2, int32_t y2, lv_color_t color)
 {
@@ -305,19 +302,21 @@ static void tft_fill(int32_t x1, int32_t y1, int32_t x2, int32_t y2, lv_color_t 
 	/*Fill the remaining area*/
 	for (x = act_x1; x <= act_x2; x++) {
 		for (y = act_y1; y <= act_y2; y++) {
-			my_fb[y * TFT_HOR_RES + x] = color.full;
+			my_fb[y * TFT_HOR_RES + x] = color.full;  //Écrit directement dans le buffer de la SDRAM
 		}
 	}
 }
 
 
 /**
-* Put a color map to a rectangular area
+* @brief  Fonction qui écrit (met à jour) la couleur d'une partie rectangle de l'écran. La librairie graphique décide de l'emplacement à mettre à jour
 * @param x1 left coordinate of the rectangle
 * @param x2 right coordinate of the rectangle
 * @param y1 top coordinate of the rectangle
 * @param y2 bottom coordinate of the rectangle
 * @param color_p pointer to an array of colors
+* @note   C'est une fonction qui vient d'un exemple du créateur de la librairie graphique
+* @retval Rien
 */
 static void tft_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_color_t * color_p)
 {
@@ -357,7 +356,7 @@ static void tft_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_col
 	}
 	*/
 	HAL_StatusTypeDef err;
-	err = HAL_DMA_Start_IT(DMA_M2M,(uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],
+	err = HAL_DMA_Start_IT(DMA_M2M,(uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
 			  (x2_flush - x1_flush + 1));
 	if(err != HAL_OK)
 	{
@@ -369,13 +368,14 @@ static void tft_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_col
 
 
 #if TFT_USE_GPU != 0
-
 /**
-* Copy pixels to destination memory using opacity
+* @brief  Fonction qui utilise le DMA2D pour calculer la transparence de certains pixels de la SDRAM vers la SDRAM
 * @param dest a memory address. Copy 'src' here.
 * @param src pointer to pixel map. Copy it to 'dest'.
 * @param length number of pixels in 'src'
 * @param opa opacity (0, OPA_TRANSP: transparent ... 255, OPA_COVER, fully cover)
+* @note   C'est une fonction qui vient d'un exemple du créateur de la librairie graphique
+* @retval Rien
 */
 static void gpu_mem_blend(lv_color_t * dest, const lv_color_t * src, uint32_t length, lv_opa_t opa)
 {
@@ -391,15 +391,17 @@ static void gpu_mem_blend(lv_color_t * dest, const lv_color_t * src, uint32_t le
 
 	hdma2d_discovery.LayerCfg[1].InputAlpha = opa;
 	HAL_DMA2D_ConfigLayer(&hdma2d_discovery, 1);
-	HAL_DMA2D_BlendingStart(&hdma2d_discovery, (uint32_t)src, (uint32_t)dest, (uint32_t)dest, length, 1);
+	HAL_DMA2D_BlendingStart(&hdma2d_discovery, (uint32_t)src, (uint32_t)dest, (uint32_t)dest, length, 1);  //Démarre le DMA2D
 }
 
 /**
-* Copy pixels to destination memory using opacity
+* @brief  Fonction qui utilise le DMA2D pour calculer la transparence de certains pixels de la librairie vers la SDRAM
 * @param dest a memory address. Copy 'src' here.
 * @param src pointer to pixel map. Copy it to 'dest'.
 * @param length number of pixels in 'src'
 * @param opa opacity (0, OPA_TRANSP: transparent ... 255, OPA_COVER, fully cover)
+* @note   C'est une fonction qui vient d'un exemple du créateur de la librairie graphique
+* @retval Rien
 */
 static void gpu_mem_fill(lv_color_t * dest, uint32_t length, lv_color_t color)
 {
@@ -424,11 +426,17 @@ static void gpu_mem_fill(lv_color_t * dest, uint32_t length, lv_color_t color)
 
 /**
  * Read an input device
- * @param indev_id id of the input device to read
- * @param x put the x coordinate here
- * @param y put the y coordinate here
+
  * @return true: the device is pressed, false: released
  */
+/**
+* @brief  Fonction qui lit les coordonnés de l'écran tactile et l'integre dans la librairie
+* @param indev_id id of the input device to read
+* @param x put the x coordinate here
+* @param y put the y coordinate here
+* @note   C'est une fonction qui vient d'un exemple du créateur de la librairie graphique
+* @retval Rien
+*/
 static bool touchpad_read(lv_indev_data_t *data)
 {
 	static int16_t last_x = 0;
@@ -447,10 +455,8 @@ static bool touchpad_read(lv_indev_data_t *data)
 		data->state = LV_INDEV_STATE_REL;
 	}
 
-	return false;
+	return false; /*false: no more data to read because we are no buffering*/
 }
-
-//Commentaire Bidon 1
 
 /**
 * @brief  DMA conversion complete callback
