@@ -443,7 +443,7 @@ static bool touchpad_read(lv_indev_data_t *data)
 	return false;
 }
 
-//Commentaire Bidon 1
+//Commentaire Bidon
 
 /**
 * @brief  DMA conversion complete callback
