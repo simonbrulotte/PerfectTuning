@@ -36,19 +36,19 @@
  * Required for buffered drawing, opacity and anti-aliasing
  * VDB makes the double buffering, you don't need to deal with it!
  * Typical size: ~1/10 screen */
-#define LV_VDB_SIZE         60000 //40*1024  /*Size of VDB in pixel count (1/10 screen size is good for first)*/
+#define LV_VDB_SIZE         38400 //40*1024  /*Size of VDB in pixel count (1/10 screen size is good for first)*/
 #define LV_VDB_ADR          0                   /*Place VDB to a specific address (e.g. in external RAM) (0: allocate automatically into RAM)*/
 
 /* Use two Virtual Display buffers (VDB) parallelize rendering and flushing (optional)
  * The flushing should use DMA to write the frame buffer in the background*/
 #define LV_VDB_DOUBLE       1       /*1: Enable the use of 2 VDBs*/
-#define LV_VDB2_ADR         0xC0177000      /*Place VDB2 to a specific address (e.g. in external RAM) (0: allocate automatically into RAM)*/
+#define LV_VDB2_ADR         0  //0xC0177000      /*Place VDB2 to a specific address (e.g. in external RAM) (0: allocate automatically into RAM)*/
 
 /* Enable anti-aliasing (lines, and radiuses will be smoothed) */
 #define LV_ANTIALIAS        0       /*1: Enable anti-aliasing*/
 
 /*Screen refresh settings*/
-#define LV_REFR_PERIOD      16    /*Screen refresh period in milliseconds*/
+#define LV_REFR_PERIOD      40    /*Screen refresh period in milliseconds*/
 #define LV_INV_FIFO_SIZE    32    /*The average count of objects on a screen */
 
 /*=================
@@ -64,7 +64,7 @@
 #define LV_INDEV_LONG_PRESS_REP_TIME    100                    /*Repeated trigger period in long press [ms] */
 
 /*Color settings*/
-#define LV_COLOR_DEPTH     24                     /*Color depth: 1/8/16/24*/
+#define LV_COLOR_DEPTH     16                     /*Color depth: 1/8/16/24*/
 #define LV_COLOR_TRANSP    LV_COLOR_LIME          /*Images pixels with this color will not be drawn (with chroma keying)*/
 
 /*Text settings*/
@@ -73,7 +73,7 @@
 
 /*Graphics feature usage*/
 #define USE_LV_ANIMATION        1               /*1: Enable all animations*/
-#define USE_LV_SHADOW           0               /*1: Enable shadows*/
+#define USE_LV_SHADOW           1               /*1: Enable shadows*/
 #define USE_LV_GROUP            1               /*1: Enable object groups (for keyboards)*/
 #define USE_LV_GPU              1               /*1: Enable GPU interface*/
 #define USE_LV_REAL_DRAW        0               /*1: Enable function which draw directly to the frame buffer instead of VDB (required if LV_VDB_SIZE = 0)*/

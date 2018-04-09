@@ -53,10 +53,18 @@ static bool touchpad_read(lv_indev_data_t *data);
 *  STATIC VARIABLES
 **********************/
 //Écran LCD
-#if TFT_EXT_FB != 0
-static __IO uint32_t * my_fb = (__IO uint32_t*) (SDRAM_BANK_ADDR);
-#else
-static uint32_t my_fb[TFT_HOR_RES * TFT_VER_RES];
+#if LV_COLOR_DEPTH == 24
+	#if TFT_EXT_FB != 0
+	static __IO uint32_t * my_fb = (__IO uint32_t*) (SDRAM_BANK_ADDR);
+	#else
+	static uint32_t my_fb[TFT_HOR_RES * TFT_VER_RES];
+	#endif
+#elif LV_COLOR_DEPTH == 16
+	#if TFT_EXT_FB != 0
+	static __IO uint16_t * my_fb = (__IO uint16_t*) (SDRAM_BANK_ADDR);
+	#else
+	static uint16_t my_fb[TFT_HOR_RES * TFT_VER_RES];
+	#endif
 #endif
 
 
@@ -104,10 +112,16 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 	lv_disp_drv_init(&disp_drv);
 
 #if TFT_EXT_FB != 0
-	//BSP_SDRAM_Init();
+	//BSP_SDRAM_Init();  //Initialisé lors de l'init de l'écran
 #endif
 	BSP_LCD_InitEx(LCD_ORIENTATION_PORTRAIT);
+
+#if LV_COLOR_DEPTH == 24
 	BSP_LCD_LayerDefaultInit(0, (uint32_t) my_fb);
+#elif LV_COLOR_DEPTH == 16
+	BSP_LCD_LayerDefaultInit(0, (uint16_t) my_fb);
+#endif
+
 	BSP_LCD_Clear(LCD_COLOR_WHITE);
 
 	disp_drv.disp_fill = tft_fill;
@@ -179,7 +193,13 @@ static void DMA2D_Config(void)
 {
 	/* Configure the DMA2D Mode, Color Mode and output offset */
 	hdma2d_discovery.Init.Mode = DMA2D_M2M_BLEND;
+
+#if LV_COLOR_DEPTH == 24
 	hdma2d_discovery.Init.ColorMode = DMA2D_ARGB8888;
+#elif LV_COLOR_DEPTH == 16
+	hdma2d_discovery.Init.ColorMode = DMA2D_OUTPUT_RGB565;
+#endif
+
 	hdma2d_discovery.Init.OutputOffset = 0x0;
 
 	/* DMA2D Callbacks Configuration */
@@ -189,13 +209,25 @@ static void DMA2D_Config(void)
 	/* Foreground Configuration */
 	hdma2d_discovery.LayerCfg[1].AlphaMode = DMA2D_REPLACE_ALPHA;
 	hdma2d_discovery.LayerCfg[1].InputAlpha = 0xFF;
+
+#if LV_COLOR_DEPTH == 24
 	hdma2d_discovery.LayerCfg[1].InputColorMode = DMA2D_INPUT_ARGB8888;
+#elif LV_COLOR_DEPTH == 16
+	hdma2d_discovery.LayerCfg[1].InputColorMode = DMA2D_INPUT_RGB565;
+#endif
+
 	hdma2d_discovery.LayerCfg[1].InputOffset = 0x0;
 
 	/* Background Configuration */
 	hdma2d_discovery.LayerCfg[0].AlphaMode = DMA2D_REPLACE_ALPHA;
 	hdma2d_discovery.LayerCfg[0].InputAlpha = 0xFF;
+
+#if LV_COLOR_DEPTH == 24
 	hdma2d_discovery.LayerCfg[0].InputColorMode = DMA2D_INPUT_ARGB8888;
+#elif LV_COLOR_DEPTH == 16
+	hdma2d_discovery.LayerCfg[0].InputColorMode = DMA2D_INPUT_RGB565;
+#endif
+
 	hdma2d_discovery.LayerCfg[0].InputOffset = 0x0;
 
 	hdma2d_discovery.Instance = DMA2D;
@@ -264,8 +296,19 @@ static void tft_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_c
 	}
 	*/
 	HAL_StatusTypeDef err;
-	err = HAL_DMA_Start_IT(DMA_M2M,(uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
-			  (x2_flush - x1_flush + 1));
+
+#if LV_COLOR_DEPTH == 24
+	err = HAL_DMA_Start_IT(DMA_M2M,
+						  (uint32_t)buf_to_flush,
+						  (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
+						  (x2_flush - x1_flush + 1));
+#elif LV_COLOR_DEPTH == 16
+	err = HAL_DMA_Start_IT(DMA_M2M,
+							  (uint16_t)buf_to_flush,
+							  (uint16_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
+							  (x2_flush - x1_flush + 1));
+#endif
+
 	if(err != HAL_OK)  //Si c'est une mauvaise config
 	{
 		while(1);	/*Halt on error*/
@@ -356,8 +399,19 @@ static void tft_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_col
 	}
 	*/
 	HAL_StatusTypeDef err;
-	err = HAL_DMA_Start_IT(DMA_M2M,(uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
-			  (x2_flush - x1_flush + 1));
+
+#if LV_COLOR_DEPTH == 24   //Démarre le DMA
+	err = HAL_DMA_Start_IT(DMA_M2M,
+							  (uint32_t)buf_to_flush,
+							  (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],
+							  (x2_flush - x1_flush + 1));
+#elif LV_COLOR_DEPTH == 16
+	err = HAL_DMA_Start_IT(DMA_M2M,
+							  (uint16_t)buf_to_flush,
+							  (uint16_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
+							  (x2_flush - x1_flush + 1));
+#endif
+
 	if(err != HAL_OK)
 	{
 		while(1);	/*Halt on error*/
@@ -391,7 +445,22 @@ static void gpu_mem_blend(lv_color_t * dest, const lv_color_t * src, uint32_t le
 
 	hdma2d_discovery.LayerCfg[1].InputAlpha = opa;
 	HAL_DMA2D_ConfigLayer(&hdma2d_discovery, 1);
-	HAL_DMA2D_BlendingStart(&hdma2d_discovery, (uint32_t)src, (uint32_t)dest, (uint32_t)dest, length, 1);  //Démarre le DMA2D
+
+#if LV_COLOR_DEPTH == 24
+	HAL_DMA2D_BlendingStart(&hdma2d_discovery,
+							   (uint32_t)src,
+							   (uint32_t)dest,
+							   (uint32_t)dest,
+							   length,
+							   1);  //Démarre le DMA2D
+#elif LV_COLOR_DEPTH == 16
+	HAL_DMA2D_BlendingStart(&hdma2d_discovery,
+							   (uint16_t)src,
+							   (uint16_t)dest,
+							   (uint16_t)dest,
+							   length,
+							   1);  //Démarre le DMA2D
+#endif
 }
 
 /**
@@ -416,10 +485,24 @@ static void gpu_mem_fill(lv_color_t * dest, uint32_t length, lv_color_t color)
 		while (1);
 	}
 
-
 	hdma2d_discovery.LayerCfg[1].InputAlpha = 0xff;
 	HAL_DMA2D_ConfigLayer(&hdma2d_discovery, 1);
-	HAL_DMA2D_BlendingStart(&hdma2d_discovery, (uint32_t)lv_color_to24(color), (uint32_t)dest, (uint32_t)dest, length, 1);
+
+#if LV_COLOR_DEPTH == 24
+	HAL_DMA2D_BlendingStart(&hdma2d_discovery,
+							   (uint32_t)lv_color_to24(color),
+							   (uint32_t)dest,
+							   (uint32_t)dest,
+							   length,
+							   1);
+#elif LV_COLOR_DEPTH == 16
+	HAL_DMA2D_BlendingStart(&hdma2d_discovery,
+							   (uint16_t)lv_color_to24(color),
+							   (uint16_t)dest,
+							   (uint16_t)dest,
+							   length,
+							   1);
+#endif
 }
 
 #endif
@@ -465,7 +548,7 @@ void DMA_TransferComplete(DMA_HandleTypeDef *hdma)
 
 	if (y_fill_act > y2_fill) {
 		lv_flush_ready();
-		hdsi_discovery.Instance->WCR |= 0b100;
+		//hdsi_discovery.Instance->WCR |= 0b100;
 	}
 	else
 	{
@@ -473,10 +556,19 @@ void DMA_TransferComplete(DMA_HandleTypeDef *hdma)
 		/*##-7- Start the DMA transfer using the interrupt mode ####################*/
 		/* Configure the source, destination and buffer size DMA fields and Start DMA Stream transfer */
 		/* Enable All the DMA interrupts */
+
+#if LV_COLOR_DEPTH == 24
 		if (HAL_DMA_Start_IT(hdma, (uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush], (x2_flush - x1_flush + 1)) != HAL_OK)
 		{
 			while (1);	/*Halt on error*/
 		}
+#elif LV_COLOR_DEPTH == 16
+		if (HAL_DMA_Start_IT(hdma, (uint16_t)buf_to_flush, (uint16_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush], (x2_flush - x1_flush + 1)) != HAL_OK)
+		{
+			while (1);	/*Halt on error*/
+		}
+#endif
+
 	}
 }
 
@@ -492,7 +584,9 @@ void DMA_TransferError(DMA_HandleTypeDef *hdma)
 }
 
 /**
-  * @brief  Recharge l'événement du callback.
+  * @brief  Recharge l'événement du callback. *Christopher: Je pensais que j'aurais été en mesure de savoir lorsque l'écran est rendu
+  * à écrire sur une ligne de l'écran en particulier. Ainsi, je pensais pouvoir optimiser le code pour ne pas avoir de conflit entre
+  * le DMA et le LTDC. *Sans succès
   * @param  hltdc: Pointeur vers une structure LTDC_HandleTypeDef qui contient la configuration pour le LTDC.
   * @retval Aucune
   */

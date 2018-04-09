@@ -40,6 +40,7 @@
 #include "stm32f7xx_hal.h"
 
 /* USER CODE BEGIN Includes */
+#include "lv_conf.h"
 #include "lvgl/lvgl.h"
 #include "lcd_lvgl.h"
 #include "lv_examples/lv_apps/demo/demo.h"
@@ -496,12 +497,18 @@ static void MX_DMA_Init(void)
   hdma_memtomem_dma2_stream0.Init.Direction = DMA_MEMORY_TO_MEMORY;
   hdma_memtomem_dma2_stream0.Init.PeriphInc = DMA_PINC_ENABLE;
   hdma_memtomem_dma2_stream0.Init.MemInc = DMA_MINC_ENABLE;
+#if LV_COLOR_DEPTH == 24
+  hdma_memtomem_dma2_stream0.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD; //DMA_PDATAALIGN_HALFWORD;
+  hdma_memtomem_dma2_stream0.Init.MemDataAlignment = DMA_PDATAALIGN_WORD;  //DMA_PDATAALIGN_HALFWORD;
+#elif LV_COLOR_DEPTH == 16
   hdma_memtomem_dma2_stream0.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
   hdma_memtomem_dma2_stream0.Init.MemDataAlignment = DMA_PDATAALIGN_HALFWORD;
+#endif
+
   hdma_memtomem_dma2_stream0.Init.Mode = DMA_NORMAL;
   hdma_memtomem_dma2_stream0.Init.Priority = DMA_PRIORITY_HIGH;
   hdma_memtomem_dma2_stream0.Init.FIFOMode = DMA_FIFOMODE_ENABLE;
-  hdma_memtomem_dma2_stream0.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_3QUARTERSFULL;
+  hdma_memtomem_dma2_stream0.Init.FIFOThreshold = DMA_FIFO_THRESHOLD_1QUARTERFULL; //DMA_FIFO_THRESHOLD_3QUARTERSFULL;
   hdma_memtomem_dma2_stream0.Init.MemBurst = DMA_MBURST_SINGLE;
   hdma_memtomem_dma2_stream0.Init.PeriphBurst = DMA_PBURST_SINGLE;
   if (HAL_DMA_Init(&hdma_memtomem_dma2_stream0) != HAL_OK)
