@@ -40,7 +40,7 @@
 static void tft_fill(int32_t x1, int32_t y1, int32_t x2, int32_t y2, lv_color_t color);
 static void tft_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_color_t * color_p);
 static void tft_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_color_t * color_p);
-#if TFT_USE_GPU != 0
+#if USE_LV_GPU != 0
 static void DMA2D_Config(void);
 static void gpu_mem_blend(lv_color_t * dest, const lv_color_t * src, uint32_t length, lv_opa_t opa);
 static void gpu_mem_fill(lv_color_t * dest, uint32_t length, lv_color_t color);
@@ -78,7 +78,7 @@ static const lv_color_t * buf_to_flush;
 //TouchScreen
 static TS_StateTypeDef  TS_State;
 
-#if TFT_USE_GPU != 0
+#if USE_LV_GPU != 0
 static DMA2D_HandleTypeDef *Dma2dHandle;
 #endif
 /**********************
@@ -104,7 +104,7 @@ DMA_HandleTypeDef *DMA_M2M;
 void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 {
 	DMA_M2M = dma_handle;
-	#if TFT_USE_GPU != 0
+	#if USE_LV_GPU != 0
 	Dma2dHandle = dma2d_handle;
 	#endif
 
@@ -119,7 +119,7 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 #if LV_COLOR_DEPTH == 24
 	BSP_LCD_LayerDefaultInit(0, (uint32_t) my_fb);
 #elif LV_COLOR_DEPTH == 16
-	BSP_LCD_LayerDefaultInit(0, (uint16_t) my_fb);
+	BSP_LCD_LayerDefaultInit(0, (uint32_t) my_fb);
 #endif
 
 	BSP_LCD_Clear(LCD_COLOR_WHITE);
@@ -127,7 +127,7 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 	disp_drv.disp_fill = tft_fill;
 	disp_drv.disp_map = tft_map;
 	disp_drv.disp_flush = tft_flush;
-#if TFT_USE_GPU != 0
+#if USE_LV_GPU != 0
 	DMA2D_Config();
 	disp_drv.mem_blend = gpu_mem_blend;
 	disp_drv.mem_fill = gpu_mem_fill;
@@ -148,7 +148,7 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
     lv_indev_drv_register(&indev_drv);
 }
 
-#if TFT_USE_GPU != 0
+#if USE_LV_GPU != 0
 /**
 * @brief  DMA2D Transfer completed callback
 * @param  hdma2d: DMA2D handle.
@@ -174,7 +174,7 @@ void DMA2D_TransferError(DMA2D_HandleTypeDef *hdma2d)
 }
 #endif
 
-#if TFT_USE_GPU != 0
+#if USE_LV_GPU != 0
 /**
 * @brief DMA2D configuration.
 * @note  This function Configure the DMA2D peripheral :
@@ -304,8 +304,8 @@ static void tft_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_c
 						  (x2_flush - x1_flush + 1));
 #elif LV_COLOR_DEPTH == 16
 	err = HAL_DMA_Start_IT(DMA_M2M,
-							  (uint16_t)buf_to_flush,
-							  (uint16_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
+							  (uint32_t)buf_to_flush,
+							  (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
 							  (x2_flush - x1_flush + 1));
 #endif
 
@@ -407,8 +407,8 @@ static void tft_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_col
 							  (x2_flush - x1_flush + 1));
 #elif LV_COLOR_DEPTH == 16
 	err = HAL_DMA_Start_IT(DMA_M2M,
-							  (uint16_t)buf_to_flush,
-							  (uint16_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
+							  (uint32_t)buf_to_flush,
+							  (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush],  //Démarre le DMA
 							  (x2_flush - x1_flush + 1));
 #endif
 
@@ -421,7 +421,7 @@ static void tft_map(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_col
 }
 
 
-#if TFT_USE_GPU != 0
+#if USE_LV_GPU != 0
 /**
 * @brief  Fonction qui utilise le DMA2D pour calculer la transparence de certains pixels de la SDRAM vers la SDRAM
 * @param dest a memory address. Copy 'src' here.
@@ -455,9 +455,9 @@ static void gpu_mem_blend(lv_color_t * dest, const lv_color_t * src, uint32_t le
 							   1);  //Démarre le DMA2D
 #elif LV_COLOR_DEPTH == 16
 	HAL_DMA2D_BlendingStart(&hdma2d_discovery,
-							   (uint16_t)src,
-							   (uint16_t)dest,
-							   (uint16_t)dest,
+							   (uint32_t)src,
+							   (uint32_t)dest,
+							   (uint32_t)dest,
 							   length,
 							   1);  //Démarre le DMA2D
 #endif
@@ -497,9 +497,9 @@ static void gpu_mem_fill(lv_color_t * dest, uint32_t length, lv_color_t color)
 							   1);
 #elif LV_COLOR_DEPTH == 16
 	HAL_DMA2D_BlendingStart(&hdma2d_discovery,
-							   (uint16_t)lv_color_to24(color),
-							   (uint16_t)dest,
-							   (uint16_t)dest,
+							   (uint32_t)lv_color_to24(color),
+							   (uint32_t)dest,
+							   (uint32_t)dest,
 							   length,
 							   1);
 #endif
@@ -563,7 +563,7 @@ void DMA_TransferComplete(DMA_HandleTypeDef *hdma)
 			while (1);	/*Halt on error*/
 		}
 #elif LV_COLOR_DEPTH == 16
-		if (HAL_DMA_Start_IT(hdma, (uint16_t)buf_to_flush, (uint16_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush], (x2_flush - x1_flush + 1)) != HAL_OK)
+		if (HAL_DMA_Start_IT(hdma, (uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush], (x2_flush - x1_flush + 1)) != HAL_OK)
 		{
 			while (1);	/*Halt on error*/
 		}

@@ -93,6 +93,7 @@ EndDependencies */
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f769i_discovery_lcd.h"
 #include "../../../Utilities/Fonts/fonts.h"
+#include "lv_conf.h"  //Ajout personnel
 /*
 #include "../../../Utilities/Fonts/font24.c"
 #include "../../../Utilities/Fonts/font20.c"
@@ -312,7 +313,7 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   /* Check the connected monitor */
   read_id = LCD_IO_GetID();
 
-#if defined(USE_LCD_HDMI)   
+#if defined(USE_LCD_HDMI)
   if(read_id == ADV7533_ID)
   {
     return BSP_LCD_HDMIInitEx(HDMI_FORMAT_720_576); 
@@ -387,7 +388,12 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   HFP  = OTM8009A_480X800_HFP;          /* 120 */   
 
   hdsivideo_handle.VirtualChannelID = LCD_OTM8009A_ID;
+
+#if LV_COLOR_DEPTH == 24  //Ajout personnel
   hdsivideo_handle.ColorCoding = LCD_DSI_PIXEL_DATA_FMT_RBG888;
+#elif LV_COLOR_DEPTH == 16
+  hdsivideo_handle.ColorCoding = LCD_DSI_PIXEL_DATA_FMT_RBG565;
+#endif
   hdsivideo_handle.VSPolarity = DSI_VSYNC_ACTIVE_HIGH;
   hdsivideo_handle.HSPolarity = DSI_HSYNC_ACTIVE_HIGH;
   hdsivideo_handle.DEPolarity = DSI_DATA_ENABLE_ACTIVE_HIGH;  
@@ -499,7 +505,11 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   /* Initialize the OTM8009A LCD Display IC Driver (KoD LCD IC Driver)
   *  depending on configuration set in 'hdsivideo_handle'.
   */
+#if LV_COLOR_DEPTH == 24
   OTM8009A_Init(OTM8009A_FORMAT_RGB888, orientation);
+#elif LV_COLOR_DEPTH == 16
+  OTM8009A_Init(OTM8009A_FORMAT_RBG565, orientation);
+#endif
 
 /***********************End OTM8009A Initialization****************************/ 
 
@@ -777,7 +787,11 @@ void BSP_LCD_LayerDefaultInit(uint16_t LayerIndex, uint32_t FB_Address)
   Layercfg.WindowX1 = BSP_LCD_GetXSize();
   Layercfg.WindowY0 = 0;
   Layercfg.WindowY1 = BSP_LCD_GetYSize(); 
+#if LV_COLOR_DEPTH == 24
   Layercfg.PixelFormat = LTDC_PIXEL_FORMAT_ARGB8888;
+#elif LV_COLOR_DEPTH == 16
+  Layercfg.PixelFormat = LTDC_PIXEL_FORMAT_RGB565;
+#endif
   Layercfg.FBStartAdress = FB_Address;
   Layercfg.Alpha = 255;
   Layercfg.Alpha0 = 0;

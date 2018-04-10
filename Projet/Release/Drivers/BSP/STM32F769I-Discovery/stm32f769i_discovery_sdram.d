@@ -37,7 +37,8 @@ Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o: \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dfsdm.h \
- D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dsi.h
+ D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dsi.h \
+ D:/Documents/GitHub/PerfectTuning/Projet/lv_conf.h
 
 ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.h:
 
@@ -114,3 +115,5 @@ D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f
 D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dfsdm.h:
 
 D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dsi.h:
+
+D:/Documents/GitHub/PerfectTuning/Projet/lv_conf.h:
