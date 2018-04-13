@@ -464,6 +464,14 @@ HAL_StatusTypeDef HAL_DMA_Start_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress,
   /* calculate DMA base and stream number */
   DMA_Base_Registers *regs = (DMA_Base_Registers *)hdma->StreamBaseAddress;
   
+  /*  //Debug personnel pour tester le double buffering
+  if(DstAddress == 0xD0000000)
+  {
+	  assert_param(IS_DMA_BUFFER_SIZE(DataLength));
+	  HAL_DMA_Abort(hdma);
+  }
+  */
+
   /* Check the parameters */
   assert_param(IS_DMA_BUFFER_SIZE(DataLength));
  

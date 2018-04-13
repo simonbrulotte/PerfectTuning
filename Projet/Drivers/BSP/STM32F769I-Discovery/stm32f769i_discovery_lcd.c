@@ -459,7 +459,7 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC;
   PeriphClkInitStruct.PLLSAI.PLLSAIN = 384;
   PeriphClkInitStruct.PLLSAI.PLLSAIR = 7;
-  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_2;
+  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_2;  //Div par 4 pour obtenir une clock de 27.43 MHz (environ) selon CubeMX
   HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct);
 
   /* Background value */
@@ -470,7 +470,9 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   hltdc_discovery.Instance = LTDC;
 
   //Ajout personnel
-  hltdc_discovery.Instance->IER |= 0b1;  //Pour activer les interrupts (p.607 Reference manuel)
+  //hltdc_discovery.Instance->IER |= 0b1;  //Pour activer les interrupts (p.606 Reference manuel)
+  //hltdc_discovery.Instance->LIPCR =
+  //HAL_LTDC_ProgramLineEvent(&hltdc_discovery, 0);
   //Fin ajout personnel
 
 
@@ -479,11 +481,6 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
 
   /* Initialize the LTDC */  
   HAL_LTDC_Init(&hltdc_discovery);
-
-  //Ajout personnel
-  HAL_NVIC_SetPriority(LTDC_IRQn, 0, 0); //Pour activer les interrupts (p.607 Reference manuel)
-  HAL_NVIC_EnableIRQ(LTDC_IRQn);
-  //Fin ajout personnel
 
   /* Enable the DSI host and wrapper after the LTDC initialization
      To avoid any synchronization issue, the DSI shall be started after enabling the LTDC */
@@ -1965,6 +1962,19 @@ static void LL_ConvertLineToARGB8888(void *pSrc, void *pDst, uint32_t xSize, uin
       }
     }
   }
+}
+
+//
+/**
+  * @brief  Fonction personnelle qui active les interrupts du module LTDC. Elle programme aussi la ligne sur laquelle le VSYNC génère un interrupt.
+  * @param  Rien
+  * @return Rien
+  */
+void BSP_LCD_SwapBuffer()
+{
+	__HAL_LTDC_ENABLE_IT(&hltdc_discovery, LTDC_IT_TE);
+	HAL_LTDC_ProgramLineEvent(&hltdc_discovery, 0);
+	//LTDC->SRCR = LTDC_SRCR_VBR;
 }
 
 /**

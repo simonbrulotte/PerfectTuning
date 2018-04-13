@@ -1,11 +1,24 @@
 /**
-* @file lcd_lvgl.c
-*
-*/
+ * Fichier lcd_lvgl.c du projet qui contient tout ce qu'il faut pour la gestion de l'interface graphique et de ses modules communs (DMA). Elle contient une fonction "main"
+ * (lvgl_init) qui s'occupe de démarrer et de configurer le tout. Elle appel en autre la librairie HAL de STM pour l'initialisation du "driver" de l'écran, le DSI, le LTDC et
+ * la SDRAM. Pour le reste, elle configure le DMA2D et utilise le DMA configurer dans le main (il faudrait apporter la configuration du DMA du main dans ce fichier).
+ *
+ * Sinon, elle initialise la librairie graphique little_lvgl et lie les fonctions nécessaire à cette dernière. Le fichier contient aussi les "callbacks" des modules DMA
+ * et LTDC.
+ *
+ * Selon la configuration de la librairie lvgl (lv_conf.h) le fichier peut configurer l'écran de façon à utiliser l'écran en ARGB8888 et RGB565 (RGB565 pas 100% fonctionnel,
+ * il faut désactiver l'accéleration GPU sinon la couleur n'est pas bonne).
+ *
+ * @Christopher Bullock-D'Arcy
+ * @version 1.0
+ * @Date 19 mars 2018
+ */
 
 /*********************
 *      INCLUDES
 *********************/
+#include <stdio.h>
+
 #include "lv_conf.h"
 #include "lvgl/lv_core/lv_vdb.h"
 #include "lvgl/lv_hal/lv_hal.h"
@@ -55,7 +68,7 @@ static bool touchpad_read(lv_indev_data_t *data);
 //Écran LCD
 #if LV_COLOR_DEPTH == 24
 	#if TFT_EXT_FB != 0
-	static __IO uint32_t * my_fb = (__IO uint32_t*) (SDRAM_BANK_ADDR);
+	__IO uint32_t * my_fb = (__IO uint32_t*) (SDRAM_BANK_ADDR);
 	#else
 	static uint32_t my_fb[TFT_HOR_RES * TFT_VER_RES];
 	#endif
@@ -146,7 +159,9 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
     indev_drv.read = touchpad_read;
     indev_drv.type = LV_INDEV_TYPE_POINTER;
     lv_indev_drv_register(&indev_drv);
-}
+
+    //BSP_LCD_SwapBuffer(); //Fonction qui programme l'interuption sur une ligne de l'écran et refresh le changement
+} 						  //sur la synchronisation verticale
 
 #if USE_LV_GPU != 0
 /**
@@ -313,6 +328,12 @@ static void tft_flush(int32_t x1, int32_t y1, int32_t x2, int32_t y2, const lv_c
 	{
 		while(1);	/*Halt on error*/
 	}
+
+	/*
+	char buf[10];
+	sprintf(buf, "%zu", my_fb);
+	BSP_LCD_DisplayStringAtLine(750, buf);
+	*/
 }
 
 /**
@@ -558,7 +579,7 @@ void DMA_TransferComplete(DMA_HandleTypeDef *hdma)
 		/* Enable All the DMA interrupts */
 
 #if LV_COLOR_DEPTH == 24
-		if (HAL_DMA_Start_IT(hdma, (uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush], (x2_flush - x1_flush + 1)) != HAL_OK)
+		if  (HAL_DMA_Start_IT(hdma, (uint32_t)buf_to_flush, (uint32_t)&my_fb[y_fill_act * TFT_HOR_RES + x1_flush], (x2_flush - x1_flush + 1)) != HAL_OK)
 		{
 			while (1);	/*Halt on error*/
 		}
@@ -584,14 +605,29 @@ void DMA_TransferError(DMA_HandleTypeDef *hdma)
 }
 
 /**
-  * @brief  Recharge l'événement du callback. *Christopher: Je pensais que j'aurais été en mesure de savoir lorsque l'écran est rendu
-  * à écrire sur une ligne de l'écran en particulier. Ainsi, je pensais pouvoir optimiser le code pour ne pas avoir de conflit entre
-  * le DMA et le LTDC. *Sans succès
+  * @brief  Interrupt callback du ldtc. Après configuration, un interrupt est généré par la synchronisation verticale de l'écran. C'est ce qui gère le double buffering.
+  * 		La fonction n'est pas utilisée, car la librairie n'écrit que sur une partie de l'écran. Ainsi, les deux buffers ne contiennent pas les mêmes données et du stuttering
+  * 		se fait sur l'écran.
   * @param  hltdc: Pointeur vers une structure LTDC_HandleTypeDef qui contient la configuration pour le LTDC.
   * @retval Aucune
   */
 void HAL_LTDC_LineEventCallback(LTDC_HandleTypeDef *hltdc)
 {
-	uint32_t ligneEcran;
-	ligneEcran = hltdc->Instance->LIPCR;
+	if(my_fb == 0xD0000000)  //((LTDC_LAYER(hltdc, 0)->CFBAR) == 0xC0000000)
+	{
+		//LTDC_LAYER(hltdc, 0)->CFBAR &= ~(LTDC_LxCFBAR_CFBADD);
+		LTDC_LAYER(hltdc, 0)->CFBAR = (0xD0000000);
+		my_fb = (__IO uint32_t*) 0xC0000000;
+	}
+	else
+	{
+		//LTDC_LAYER(hltdc, 0)->CFBAR &= ~(LTDC_LxCFBAR_CFBADD);
+		LTDC_LAYER(hltdc, 0)->CFBAR = (0xC0000000);
+		my_fb = (__IO uint32_t*) 0xD0000000;
+	}
+	//LTDC->SRCR = LTDC_SRCR_VBR;   //Reload sur un vertical sync
+	//__HAL_LTDC_RELOAD_CONFIG(hltdc);  //Semble reloader la configuration sur le champ
+
+	HAL_LTDC_ProgramLineEvent(hltdc, 0);
+	//my_fb = (__IO uint32_t) BSP_LCD_SwapBuffer();
 }

@@ -35,6 +35,16 @@
   *
   ******************************************************************************
   */
+
+/**
+ * Fichier main du projet qui initialise les différentes parties du discovery board. Actuellement, le main ne configure que quelques modules, car la librairie HAL
+ * de STM initialise des modules selon la "template" générée.
+ *
+ * @Christopher Bullock-D'Arcy
+ * @version 1.0
+ * @Date 19 mars 2018
+ */
+
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f7xx_hal.h"
@@ -148,7 +158,6 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
-	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
   }
   /* USER CODE END 3 */
 

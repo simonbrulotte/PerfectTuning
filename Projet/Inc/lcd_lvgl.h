@@ -1,7 +1,11 @@
 /**
-* @file lcd_lvgl.h
-*
-*/
+ * Fichier lcd_lvgl.h du projet qui contient les fonctions de son fichier .c . Les variables ne sont plus utilisées sauf SDRAM_BANK_ADDR, puisque c'est le pointeur où
+ * le buffer d'écran est mit en mémoire.
+ *
+ * @Christopher Bullock-D'Arcy
+ * @version 1.0
+ * @Date 19 mars 2018
+ */
 
 #ifndef LCD_LVGL
 #define LCD_LVGL

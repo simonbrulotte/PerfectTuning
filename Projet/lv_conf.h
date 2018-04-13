@@ -15,7 +15,7 @@
 #if LV_MEM_CUSTOM == 0
 #define LV_MEM_SIZE    (32U * 1024U)        /*Size memory used by `lv_mem_alloc` in bytes (>= 2kB)*/
 #define LV_MEM_ATTR                         /*Complier prefix for big array declaration*/
-#define LV_MEM_AUTO_DEFRAG  1               /*Automatically defrag on free*/
+#define LV_MEM_AUTO_DEFRAG  0               /*Automatically defrag on free*/
 #else       /*LV_MEM_CUSTOM*/
 #define LV_MEM_CUSTOM_INCLUDE <stdlib.h>   /*Header for the dynamic memory function*/
 #define LV_MEM_CUSTOM_ALLOC   malloc       /*Wrapper to malloc*/
@@ -36,19 +36,19 @@
  * Required for buffered drawing, opacity and anti-aliasing
  * VDB makes the double buffering, you don't need to deal with it!
  * Typical size: ~1/10 screen */
-#define LV_VDB_SIZE         60000 //40*1024  /*Size of VDB in pixel count (1/10 screen size is good for first)*/
+#define LV_VDB_SIZE         60*1024 //40*1024  /*Size of VDB in pixel count (1/10 screen size is good for first)*/
 #define LV_VDB_ADR          0                   /*Place VDB to a specific address (e.g. in external RAM) (0: allocate automatically into RAM)*/
 
 /* Use two Virtual Display buffers (VDB) parallelize rendering and flushing (optional)
  * The flushing should use DMA to write the frame buffer in the background*/
-#define LV_VDB_DOUBLE       1       /*1: Enable the use of 2 VDBs*/
+#define LV_VDB_DOUBLE              /*1: Enable the use of 2 VDBs*/
 #define LV_VDB2_ADR         0  //0xC0177000      /*Place VDB2 to a specific address (e.g. in external RAM) (0: allocate automatically into RAM)*/
 
 /* Enable anti-aliasing (lines, and radiuses will be smoothed) */
 #define LV_ANTIALIAS        0       /*1: Enable anti-aliasing*/
 
 /*Screen refresh settings*/
-#define LV_REFR_PERIOD      40    /*Screen refresh period in milliseconds*/
+#define LV_REFR_PERIOD      50    /*Screen refresh period in milliseconds*/
 #define LV_INV_FIFO_SIZE    32    /*The average count of objects on a screen */
 
 /*=================
