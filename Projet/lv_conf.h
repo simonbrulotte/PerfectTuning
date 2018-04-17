@@ -36,12 +36,12 @@
  * Required for buffered drawing, opacity and anti-aliasing
  * VDB makes the double buffering, you don't need to deal with it!
  * Typical size: ~1/10 screen */
-#define LV_VDB_SIZE         60*1024 //40*1024  /*Size of VDB in pixel count (1/10 screen size is good for first)*/
+#define LV_VDB_SIZE         40*1024 //40*1024  /*Size of VDB in pixel count (1/10 screen size is good for first)*/
 #define LV_VDB_ADR          0                   /*Place VDB to a specific address (e.g. in external RAM) (0: allocate automatically into RAM)*/
 
 /* Use two Virtual Display buffers (VDB) parallelize rendering and flushing (optional)
  * The flushing should use DMA to write the frame buffer in the background*/
-#define LV_VDB_DOUBLE              /*1: Enable the use of 2 VDBs*/
+#define LV_VDB_DOUBLE       1      /*1: Enable the use of 2 VDBs*/
 #define LV_VDB2_ADR         0  //0xC0177000      /*Place VDB2 to a specific address (e.g. in external RAM) (0: allocate automatically into RAM)*/
 
 /* Enable anti-aliasing (lines, and radiuses will be smoothed) */

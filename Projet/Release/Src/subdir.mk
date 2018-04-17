@@ -5,13 +5,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Src/lcd_lvgl.c \
+../Src/ledDriver.c \
 ../Src/main.c \
 ../Src/stm32f7xx_hal_msp.c \
 ../Src/stm32f7xx_it.c \
 ../Src/system_stm32f7xx.c 
 
+CPP_SRCS += \
+../Src/PixelArray.cpp \
+../Src/WS2812.cpp 
+
 OBJS += \
+./Src/PixelArray.o \
+./Src/WS2812.o \
 ./Src/lcd_lvgl.o \
+./Src/ledDriver.o \
 ./Src/main.o \
 ./Src/stm32f7xx_hal_msp.o \
 ./Src/stm32f7xx_it.o \
@@ -19,13 +27,26 @@ OBJS += \
 
 C_DEPS += \
 ./Src/lcd_lvgl.d \
+./Src/ledDriver.d \
 ./Src/main.d \
 ./Src/stm32f7xx_hal_msp.d \
 ./Src/stm32f7xx_it.d \
 ./Src/system_stm32f7xx.d 
 
+CPP_DEPS += \
+./Src/PixelArray.d \
+./Src/WS2812.d 
+
 
 # Each subdirectory must supply rules for building sources it contributes
+Src/%.o: ../Src/%.cpp
+	@echo 'Building file: $<'
+	@echo 'Invoking: MCU G++ Compiler'
+	@echo $(PWD)
+	arm-none-eabi-g++ -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"D:/Documents/GitHub/PerfectTuning/Projet/Inc" -I"D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"D:/Documents/GitHub/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"D:/Documents/GitHub/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"D:/Documents/GitHub/PerfectTuning/Projet" -I"D:/Documents/GitHub/PerfectTuning/Projet/lv_examples" -I"D:/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/Components" -I"D:/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"D:/Documents/GitHub/PerfectTuning/Projet/Utilities/Fonts" -I"D:/Documents/GitHub/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fno-exceptions -fno-rtti -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
 Src/%.o: ../Src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
