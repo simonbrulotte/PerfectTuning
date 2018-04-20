@@ -181,6 +181,7 @@ uint8_t BSP_SDRAM_Init(void)
     sdramstatus = SDRAM_OK;
   }
   
+  /*
   sdramHandle.Init.SDBank             = FMC_SDRAM_BANK2;
   if(HAL_SDRAM_Init(&sdramHandle, &Timing) != HAL_OK)
     {
@@ -190,6 +191,7 @@ uint8_t BSP_SDRAM_Init(void)
     {
       sdramstatus = SDRAM_OK;
     }
+    */
 
   /* SDRAM initialization sequence */
   BSP_SDRAM_Initialization_sequence(REFRESH_COUNT);

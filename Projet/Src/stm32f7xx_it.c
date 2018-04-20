@@ -36,7 +36,7 @@
 #include "stm32f7xx_it.h"
 
 /* USER CODE BEGIN 0 */
-#include "lvgl/lv_hal/lv_hal_tick.h"
+#include "../lvgl/lv_hal/lv_hal_tick.h"
 
 #define NB_MS_COUNTER_HANDLER 5
 char systickCounter = 0;
@@ -65,7 +65,7 @@ void SysTick_Handler(void)
   if(systickCounter >= NB_MS_COUNTER_HANDLER)
   {
 	  systickCounter = 0;
-	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
+	  //lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
   }
   systickCounter++;
   /* USER CODE END SysTick_IRQn 1 */

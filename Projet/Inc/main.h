@@ -356,7 +356,7 @@
 #define ARDUINO_MOSI_PWM_D11_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
-
+#define LED_NUMBER 24
 /* USER CODE END Private defines */
 
 void _Error_Handler(char *, int);

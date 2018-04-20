@@ -217,6 +217,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Projet/Debug/lvgl/lv_objx}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Projet/lv_examples}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Projet/Drivers/BSP}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Projet/Src}&quot;"/>
 								</option>
 								<option id="gnu.c.link.option.ldflags.1469763287" name="Linker flags" superClass="gnu.c.link.option.ldflags" value="-specs=nosys.specs -specs=nano.specs" valueType="string"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.linker.input.903774112" superClass="cdt.managedbuild.tool.gnu.c.linker.input">

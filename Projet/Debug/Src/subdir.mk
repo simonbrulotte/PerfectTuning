@@ -4,6 +4,8 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Src/PixelArray.c \
+../Src/WS2812.c \
 ../Src/lcd_lvgl.c \
 ../Src/main.c \
 ../Src/stm32f7xx_hal_msp.c \
@@ -11,6 +13,8 @@ C_SRCS += \
 ../Src/system_stm32f7xx.c 
 
 OBJS += \
+./Src/PixelArray.o \
+./Src/WS2812.o \
 ./Src/lcd_lvgl.o \
 ./Src/main.o \
 ./Src/stm32f7xx_hal_msp.o \
@@ -18,6 +22,8 @@ OBJS += \
 ./Src/system_stm32f7xx.o 
 
 C_DEPS += \
+./Src/PixelArray.d \
+./Src/WS2812.d \
 ./Src/lcd_lvgl.d \
 ./Src/main.d \
 ./Src/stm32f7xx_hal_msp.d \

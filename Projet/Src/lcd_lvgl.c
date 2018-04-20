@@ -613,6 +613,7 @@ void DMA_TransferError(DMA_HandleTypeDef *hdma)
   */
 void HAL_LTDC_LineEventCallback(LTDC_HandleTypeDef *hltdc)
 {
+	/*
 	if(my_fb == 0xD0000000)  //((LTDC_LAYER(hltdc, 0)->CFBAR) == 0xC0000000)
 	{
 		//LTDC_LAYER(hltdc, 0)->CFBAR &= ~(LTDC_LxCFBAR_CFBADD);
@@ -630,4 +631,5 @@ void HAL_LTDC_LineEventCallback(LTDC_HandleTypeDef *hltdc)
 
 	HAL_LTDC_ProgramLineEvent(hltdc, 0);
 	//my_fb = (__IO uint32_t) BSP_LCD_SwapBuffer();
+	 */
 }

@@ -356,7 +356,7 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   hdsi_discovery.Init.TXEscapeCkdiv = laneByteClk_kHz/15620; 
 
   //AJout personnel
-  hdsi_discovery.Instance->WCFGR &= 0b10111111;  //p.726 & 635
+  //hdsi_discovery.Instance->WCFGR &= 0b10111111;  //p.726 & 635
   //Fin ajout personnel
 
   HAL_DSI_Init(&(hdsi_discovery), &(dsiPllInit));

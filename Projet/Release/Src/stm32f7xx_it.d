@@ -37,7 +37,7 @@ Src/stm32f7xx_it.o: ../Src/stm32f7xx_it.c \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dfsdm.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dsi.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Inc/stm32f7xx_it.h \
- D:/Documents/GitHub/PerfectTuning/Projet/lvgl/lv_hal/lv_hal_tick.h
+ ../Src/../lvgl/lv_hal/lv_hal_tick.h
 
 D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 
@@ -115,4 +115,4 @@ D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f
 
 D:/Documents/GitHub/PerfectTuning/Projet/Inc/stm32f7xx_it.h:
 
-D:/Documents/GitHub/PerfectTuning/Projet/lvgl/lv_hal/lv_hal_tick.h:
+../Src/../lvgl/lv_hal/lv_hal_tick.h:
