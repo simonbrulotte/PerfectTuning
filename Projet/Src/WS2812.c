@@ -46,6 +46,13 @@ void initWS2812(int pin, int zeroHigh, int zeroLow, int oneHigh, int oneLow)
 		GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 		GPIO_InitStruct.Pull = GPIO_NOPULL;
     	HAL_GPIO_DeInit(GPIOJ, &GPIO_InitStruct);
+
+    	//Réinitialisation
+    	__outPin = pin;
+    	GPIO_InitStruct.Pin = __outPin;
+		GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+		GPIO_InitStruct.Pull = GPIO_NOPULL;
+		HAL_GPIO_Init(GPIOJ, &GPIO_InitStruct);
     }
 
     // Default values designed for K64f. Assumes GPIO toggle takes ~0.4us
