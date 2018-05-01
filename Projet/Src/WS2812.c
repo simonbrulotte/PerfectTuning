@@ -10,9 +10,10 @@
 int __zeroHigh, __zeroLow, __oneHigh, __oneLow;
 unsigned char __II;
 enum BrightnessControl __use_II;
-extern bool *__transmitBuf;
+bool *__transmitBuf;
 void __loadBuf(int buf[],int r_offset, int g_offset, int b_offset);
-int __outPin = -1;
+int __outPin;
+GPIO_TypeDef *__outPort;
 
 /**
 *   Constructor
@@ -25,33 +26,32 @@ int __outPin = -1;
 * @param oneLow How many NOPs to insert to ensure T1L is properly generated. See library description for more information.
 *
 */
-void initWS2812(int pin, int zeroHigh, int zeroLow, int oneHigh, int oneLow)
+void initWS2812(int pin, GPIO_TypeDef *port, int zeroHigh, int zeroLow, int oneHigh, int oneLow)
 {
 	GPIO_InitTypeDef GPIO_InitStruct;
 
     __transmitBuf[LED_NUMBER * FRAME_SIZE] = 0;
     __use_II = OFF;
     __II = 0xFF; // set global intensity to full
+    *__outPort = *port;
 
-    if(__outPin == -1){
+    if(__outPin == NULL){
 		__outPin = pin;
 
 		GPIO_InitStruct.Pin = __outPin;
 		GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-		GPIO_InitStruct.Pull = GPIO_NOPULL;
+		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
 		HAL_GPIO_Init(GPIOJ, &GPIO_InitStruct);
     }
     else{
-    	GPIO_InitStruct.Pin = __outPin;
-		GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-		GPIO_InitStruct.Pull = GPIO_NOPULL;
-    	HAL_GPIO_DeInit(GPIOJ, &GPIO_InitStruct);
+    	HAL_GPIO_DeInit(GPIOJ, (uint32_t)__outPin);
 
     	//Réinitialisation
     	__outPin = pin;
     	GPIO_InitStruct.Pin = __outPin;
 		GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-		GPIO_InitStruct.Pull = GPIO_NOPULL;
+		GPIO_InitStruct.Pull = GPIO_PULLUP;
 		HAL_GPIO_Init(GPIOJ, &GPIO_InitStruct);
     }
 
@@ -155,7 +155,7 @@ void write(int buf[]) {
     *
     */
 void write_offsets(int buf[],int r_offset, int g_offset, int b_offset) {
-    int i, j;
+    volatile int i, j;  //Volatile : Ajout par Julien pour empêcher l'optimisation du compilateur
 
     // Load the transmit buffer
     __loadBuf(buf, r_offset, g_offset, b_offset);
@@ -167,20 +167,28 @@ void write_offsets(int buf[],int r_offset, int g_offset, int b_offset) {
     for (i = 0; i < FRAME_SIZE * LED_NUMBER; i++) {
         j = 0;
         if (__transmitBuf[i]){
-        	__outPin = 1;
+        	//__outPin = 1;
+        	//HAL_GPIO_WritePin(ARD_D8_GPIO_Port, ARD_D8_Pin, GPIO_PIN_SET);
+        	ARD_D8_GPIO_Port->BSRR = ARD_D8_Pin;
             for (; j < __oneHigh; j++) {
             	asm("NOP");
             }
-            __outPin = 0;
+            //__outPin = 0;
+            //HAL_GPIO_WritePin(ARD_D8_GPIO_Port, ARD_D8_Pin, GPIO_PIN_RESET);
+            ARD_D8_GPIO_Port->BSRR = (uint32_t)ARD_D8_Pin << 16;
             for (; j < __oneLow; j++) {
             	asm("NOP");
             }
         } else {
-        	__outPin = 1;
+        	//__outPin = 1;
+        	//HAL_GPIO_WritePin(ARD_D8_GPIO_Port, ARD_D8_Pin, GPIO_PIN_SET);
+        	ARD_D8_GPIO_Port->BSRR = ARD_D8_Pin;
             for (; j < __zeroHigh; j++) {
             	asm("NOP");
             }
-            __outPin = 0;
+            //__outPin = 0;
+            //HAL_GPIO_WritePin(ARD_D8_GPIO_Port, ARD_D8_Pin, GPIO_PIN_RESET);
+            ARD_D8_GPIO_Port->BSRR = (uint32_t)ARD_D8_Pin << 16;
             for (; j < __zeroLow; j++) {
             	asm("NOP");
             }

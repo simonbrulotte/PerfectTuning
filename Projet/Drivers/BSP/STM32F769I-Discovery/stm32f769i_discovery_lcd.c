@@ -293,7 +293,7 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
 {
   DSI_PLLInitTypeDef dsiPllInit;
   static RCC_PeriphCLKInitTypeDef  PeriphClkInitStruct;
-  uint32_t LcdClock  = 27429; /*!< LcdClk = 27429 kHz */
+  uint32_t LcdClock  = 22000; //27429; /*!< LcdClk = 27429 kHz */  Selon la datasheet du driver RM67160, Fosc = 20.24 min, 22 Typ., 23.76 max
   uint16_t read_id = 0;
 
   uint32_t laneByteClk_kHz = 0;
@@ -346,11 +346,11 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
 
   dsiPllInit.PLLNDIV  = 100;
   dsiPllInit.PLLIDF   = DSI_PLL_IN_DIV5;
-  dsiPllInit.PLLODF  = DSI_PLL_OUT_DIV1;
-  laneByteClk_kHz = 62500; /* 500 MHz / 8 = 62.5 MHz = 62500 kHz */
+  dsiPllInit.PLLODF  = DSI_PLL_OUT_DIV1;  //DSI_PLL_OUT_DIV2; //DSI_PLL_OUT_DIV1;
+  laneByteClk_kHz = 62500;  //31250== écran drôle de couleur //62500; /* 500 MHz / 8 = 62.5 MHz = 62500 kHz */
 
   /* Set number of Lanes */
-  hdsi_discovery.Init.NumberOfLanes = DSI_TWO_DATA_LANES;
+  hdsi_discovery.Init.NumberOfLanes = DSI_ONE_DATA_LANE; //DSI_TWO_DATA_LANES;  //Modification pour l'écran rond
 
   /* TXEscapeCkdiv = f(LaneByteClk)/15.62 = 4 */
   hdsi_discovery.Init.TXEscapeCkdiv = laneByteClk_kHz/15620; 
@@ -397,7 +397,7 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   hdsivideo_handle.VSPolarity = DSI_VSYNC_ACTIVE_HIGH;
   hdsivideo_handle.HSPolarity = DSI_HSYNC_ACTIVE_HIGH;
   hdsivideo_handle.DEPolarity = DSI_DATA_ENABLE_ACTIVE_HIGH;  
-  hdsivideo_handle.Mode = DSI_VID_MODE_BURST; /* Mode Video burst ie : one LgP per line */
+  hdsivideo_handle.Mode = DSI_VID_MODE_NB_PULSES;//DSI_VID_MODE_BURST; /* Mode Video burst ie : one LgP per line */
   hdsivideo_handle.NullPacketSize = 0xFFF;
   hdsivideo_handle.NumberOfChunks = 0;
   hdsivideo_handle.PacketSize                = HACT; /* Value depending on display orientation choice portrait/landscape */ 
@@ -457,9 +457,9 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
     * LTDC clock frequency = PLLLCDCLK / LTDC_PLLSAI_DIVR_2 = 54.85 MHz / 2 = 27.429 MHz 
     */
   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC;
-  PeriphClkInitStruct.PLLSAI.PLLSAIN = 384;
-  PeriphClkInitStruct.PLLSAI.PLLSAIR = 7;
-  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_2;  //Div par 4 pour obtenir une clock de 27.43 MHz (environ) selon CubeMX
+  PeriphClkInitStruct.PLLSAI.PLLSAIN = 264;
+  PeriphClkInitStruct.PLLSAI.PLLSAIR = 6;
+  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_2;
   HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct);
 
   /* Background value */
@@ -502,11 +502,14 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   /* Initialize the OTM8009A LCD Display IC Driver (KoD LCD IC Driver)
   *  depending on configuration set in 'hdsivideo_handle'.
   */
+  /*
 #if LV_COLOR_DEPTH == 24
   OTM8009A_Init(OTM8009A_FORMAT_RGB888, orientation);
 #elif LV_COLOR_DEPTH == 16
   OTM8009A_Init(OTM8009A_FORMAT_RBG565, orientation);
 #endif
+*/
+  OTM8009A_Init_OLED();
 
 /***********************End OTM8009A Initialization****************************/ 
 

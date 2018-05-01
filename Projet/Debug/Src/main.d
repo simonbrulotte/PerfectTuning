@@ -131,7 +131,9 @@ Src/main.o: ../Src/main.c \
  D:/Documents/GitHub/PerfectTuning/Projet/lv_examples/lv_apps/demo/demo.h \
  d:\documents\github\perfecttuning\projet\lv_ex_conf.h \
  d:\documents\github\perfecttuning\projet\lvgl\lvgl.h \
- D:/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h
+ D:/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h \
+ D:/Documents/GitHub/PerfectTuning/Projet/Inc/PixelArray.h \
+ D:/Documents/GitHub/PerfectTuning/Projet/Inc/WS2812.h
 
 D:/Documents/GitHub/PerfectTuning/Projet/Inc/main.h:
 
@@ -398,3 +400,7 @@ d:\documents\github\perfecttuning\projet\lv_ex_conf.h:
 d:\documents\github\perfecttuning\projet\lvgl\lvgl.h:
 
 D:/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h:
+
+D:/Documents/GitHub/PerfectTuning/Projet/Inc/PixelArray.h:
+
+D:/Documents/GitHub/PerfectTuning/Projet/Inc/WS2812.h:

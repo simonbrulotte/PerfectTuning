@@ -2,7 +2,7 @@
 
 //Variables declarations
 
-extern int *pbuf;
+int *pbuf;
 int pbufsize;
 
 void __set_pixel_component(int index, int channel, int value);

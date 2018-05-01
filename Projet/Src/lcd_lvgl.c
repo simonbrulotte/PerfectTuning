@@ -127,7 +127,7 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 #if TFT_EXT_FB != 0
 	//BSP_SDRAM_Init();  //Initialisé lors de l'init de l'écran
 #endif
-	BSP_LCD_InitEx(LCD_ORIENTATION_PORTRAIT);
+	BSP_LCD_InitEx(LCD_ORIENTATION_LANDSCAPE);  //LCD_ORIENTATION_PORTRAIT);
 
 #if LV_COLOR_DEPTH == 24
 	BSP_LCD_LayerDefaultInit(0, (uint32_t) my_fb);
@@ -148,17 +148,16 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 	lv_disp_drv_register(&disp_drv);
 
 	// Debug setting pour voir si les méthode d'écriture sur le lcd fonctionnent tjrs
-
 	BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
 	BSP_LCD_SetTextColor(LCD_COLOR_BLUE);
-	BSP_LCD_FillRect(1, 1, 40, 40);
+	BSP_LCD_FillRect(1, 1, 250, 250);
 
-	BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
-	lv_indev_drv_t indev_drv;
-    lv_indev_drv_init(&indev_drv);
-    indev_drv.read = touchpad_read;
-    indev_drv.type = LV_INDEV_TYPE_POINTER;
-    lv_indev_drv_register(&indev_drv);
+	//BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
+	//lv_indev_drv_t indev_drv;
+    //lv_indev_drv_init(&indev_drv);
+    //indev_drv.read = touchpad_read;
+    //indev_drv.type = LV_INDEV_TYPE_POINTER;
+    //lv_indev_drv_register(&indev_drv);
 
     //BSP_LCD_SwapBuffer(); //Fonction qui programme l'interuption sur une ligne de l'écran et refresh le changement
 } 						  //sur la synchronisation verticale

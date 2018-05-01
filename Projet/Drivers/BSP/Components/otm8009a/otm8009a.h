@@ -86,33 +86,33 @@
   */
 
 /* Width and Height in Portrait mode */
-#define  OTM8009A_480X800_WIDTH             ((uint16_t)480)     /* LCD PIXEL WIDTH   */
-#define  OTM8009A_480X800_HEIGHT            ((uint16_t)800)     /* LCD PIXEL HEIGHT  */
+#define  OTM8009A_480X800_WIDTH             ((uint16_t)400) //((uint16_t)480)     /* LCD PIXEL WIDTH   */
+#define  OTM8009A_480X800_HEIGHT            ((uint16_t)400) //((uint16_t)800)     /* LCD PIXEL HEIGHT  */
 
 /* Width and Height in Landscape mode */
-#define  OTM8009A_800X480_WIDTH             ((uint16_t)800)     /* LCD PIXEL WIDTH   */
-#define  OTM8009A_800X480_HEIGHT            ((uint16_t)480)     /* LCD PIXEL HEIGHT  */
+#define  OTM8009A_800X480_WIDTH             ((uint16_t)400) //((uint16_t)800)     /* LCD PIXEL WIDTH   */
+#define  OTM8009A_800X480_HEIGHT            ((uint16_t)400) //((uint16_t)480)     /* LCD PIXEL HEIGHT  */
 
 /**
   * @brief  OTM8009A_480X800 Timing parameters for Portrait orientation mode
   */
-#define  OTM8009A_480X800_HSYNC             ((uint16_t)2)      /* Horizontal synchronization */
-#define  OTM8009A_480X800_HBP               ((uint16_t)34)     /* Horizontal back porch      */
-#define  OTM8009A_480X800_HFP               ((uint16_t)34)     /* Horizontal front porch     */
-#define  OTM8009A_480X800_VSYNC             ((uint16_t)1)      /* Vertical synchronization   */
-#define  OTM8009A_480X800_VBP               ((uint16_t)15)      /* Vertical back porch        */
-#define  OTM8009A_480X800_VFP               ((uint16_t)16)      /* Vertical front porch       */
+#define  OTM8009A_480X800_HSYNC             ((uint16_t)20)      /* Horizontal synchronization */
+#define  OTM8009A_480X800_HBP               ((uint16_t)40) //((uint16_t)34)     /* Horizontal back porch      */
+#define  OTM8009A_480X800_HFP               ((uint16_t)20) //((uint16_t)34)     /* Horizontal front porch     */
+#define  OTM8009A_480X800_VSYNC             ((uint16_t)4) //((uint16_t)1)      /* Vertical synchronization   */  //17 (pas 18) suite à la commande 44h (pdf driver oled)
+#define  OTM8009A_480X800_VBP               ((uint16_t)12) //((uint16_t)15)      /* Vertical back porch        */
+#define  OTM8009A_480X800_VFP               ((uint16_t)20) //((uint16_t)16)      /* Vertical front porch       */
 
 /**
   * @brief  OTM8009A_800X480 Timing parameters for Landscape orientation mode
   *         Same values as for Portrait mode in fact.
   */
-#define  OTM8009A_800X480_HSYNC             OTM8009A_480X800_VSYNC  /* Horizontal synchronization */
-#define  OTM8009A_800X480_HBP               OTM8009A_480X800_VBP    /* Horizontal back porch      */
-#define  OTM8009A_800X480_HFP               OTM8009A_480X800_VFP    /* Horizontal front porch     */
-#define  OTM8009A_800X480_VSYNC             OTM8009A_480X800_HSYNC  /* Vertical synchronization   */
-#define  OTM8009A_800X480_VBP               OTM8009A_480X800_HBP    /* Vertical back porch        */
-#define  OTM8009A_800X480_VFP               OTM8009A_480X800_HFP    /* Vertical front porch       */
+#define  OTM8009A_800X480_HSYNC             OTM8009A_480X800_HSYNC //OTM8009A_480X800_VSYNC  /* Horizontal synchronization */
+#define  OTM8009A_800X480_HBP               OTM8009A_480X800_HBP //OTM8009A_480X800_VBP    /* Horizontal back porch      */
+#define  OTM8009A_800X480_HFP               OTM8009A_480X800_HFP //OTM8009A_480X800_VFP    /* Horizontal front porch     */
+#define  OTM8009A_800X480_VSYNC             OTM8009A_480X800_VSYNC //OTM8009A_480X800_HSYNC  /* Vertical synchronization   */
+#define  OTM8009A_800X480_VBP               OTM8009A_480X800_VBP //OTM8009A_480X800_HBP    /* Vertical back porch        */
+#define  OTM8009A_800X480_VFP               OTM8009A_480X800_VFP //OTM8009A_480X800_HFP    /* Vertical front porch       */
 
 
 /* List of OTM8009A used commands                                  */
@@ -198,6 +198,7 @@
   */
 void DSI_IO_WriteCmd(uint32_t NbrParams, uint8_t *pParams);
 uint8_t OTM8009A_Init(uint32_t ColorCoding, uint32_t orientation);
+uint8_t OTM8009A_Init_OLED();
 void OTM8009A_IO_Delay(uint32_t Delay);
 /**
   * @}

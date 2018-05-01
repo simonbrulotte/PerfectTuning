@@ -17,7 +17,7 @@
 
 enum BrightnessControl { OFF, GLOBAL, PER_PIXEL };
 
-void initWS2812(int pin, int zeroHigh, int zeroLow, int oneHigh, int oneLow);
+void initWS2812(int pin, GPIO_TypeDef *port, int zeroHigh, int zeroLow, int oneHigh, int oneLow);
 void setDelays(int zeroHigh, int zeroLow, int oneHigh, int oneLow);
 void write_offsets(int buf[], int r_offset, int g_offset, int b_offset);
 void write(int buf[]);

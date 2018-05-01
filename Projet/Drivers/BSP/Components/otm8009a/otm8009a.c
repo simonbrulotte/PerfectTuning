@@ -157,6 +157,145 @@ const uint8_t ShortRegData51[] = {0xC6, 0x06};
   * @}
   */
 
+const uint8_t OledShortRegData1[] = {0xFE,0x04};
+const uint8_t OledShortRegData2[] = {0x00,0xdc};
+const uint8_t OledShortRegData3[] = {0x01,0x00};
+const uint8_t OledShortRegData4[] = {0x02,0x02};
+const uint8_t OledShortRegData5[] = {0x03,0x00};
+const uint8_t OledShortRegData6[] = {0x04,0x00};
+const uint8_t OledShortRegData7[] = {0x05,0x03};
+const uint8_t OledShortRegData8[] = {0x06,0x16};
+const uint8_t OledShortRegData9[] = {0x07,0x13};
+const uint8_t OledShortRegData10[] = {0x08,0x08};
+const uint8_t OledShortRegData11[] = {0x09,0xdc};
+const uint8_t OledShortRegData12[] = {0x0a,0x00};
+const uint8_t OledShortRegData13[] = {0x0b,0x02};
+const uint8_t OledShortRegData14[] = {0x0c,0x00};
+const uint8_t OledShortRegData15[] = {0x0d,0x00};
+const uint8_t OledShortRegData16[] = {0x0e,0x02};
+const uint8_t OledShortRegData17[] = {0x0f,0x16};
+const uint8_t OledShortRegData18[] = {0x10,0x18};
+const uint8_t OledShortRegData19[] = {0x11,0x08};
+const uint8_t OledShortRegData20[] = {0x12,0x92};
+const uint8_t OledShortRegData21[] = {0x13,0x00};
+const uint8_t OledShortRegData22[] = {0x14,0x02};
+const uint8_t OledShortRegData23[] = {0x15,0x05};
+const uint8_t OledShortRegData24[] = {0x16,0x40};
+const uint8_t OledShortRegData25[] = {0x17,0x03};
+const uint8_t OledShortRegData26[] = {0x18,0x16};
+const uint8_t OledShortRegData27[] = {0x19,0xd7};
+const uint8_t OledShortRegData28[] = {0x1a,0x01};
+const uint8_t OledShortRegData29[] = {0x1b,0x01};
+const uint8_t OledShortRegData30[] = {0x1c,0x00};
+const uint8_t OledShortRegData31[] = {0x1d,0x04};
+const uint8_t OledShortRegData32[] = {0x1e,0x00};
+const uint8_t OledShortRegData33[] = {0x1f,0x00};
+const uint8_t OledShortRegData34[] = {0x20,0x03};
+const uint8_t OledShortRegData35[] = {0x21,0x16};
+const uint8_t OledShortRegData36[] = {0x22,0x18};
+const uint8_t OledShortRegData37[] = {0x23,0x08};
+const uint8_t OledShortRegData38[] = {0x24,0xdc};
+const uint8_t OledShortRegData39[] = {0x25,0x00};
+const uint8_t OledShortRegData40[] = {0x26,0x04};
+const uint8_t OledShortRegData41[] = {0x27,0x00};
+const uint8_t OledShortRegData42[] = {0x28,0x00};
+const uint8_t OledShortRegData43[] = {0x29,0x01};
+const uint8_t OledShortRegData44[] = {0x2a,0x16};
+const uint8_t OledShortRegData45[] = {0x2b,0x18};
+const uint8_t OledShortRegData46[] = {0x2d,0x08};
+const uint8_t OledShortRegData47[] = {0x4c,0x99};
+const uint8_t OledShortRegData48[] = {0x4d,0x00};
+const uint8_t OledShortRegData49[] = {0x4e,0x00};
+const uint8_t OledShortRegData50[] = {0x4f,0x00};
+const uint8_t OledShortRegData51[] = {0x50,0x01};
+const uint8_t OledShortRegData52[] = {0x51,0x0A};
+const uint8_t OledShortRegData53[] = {0x52,0x00};
+const uint8_t OledShortRegData54[] = {0x5a,0xe4};
+const uint8_t OledShortRegData55[] = {0x5e,0x77};
+const uint8_t OledShortRegData56[] = {0x5f,0x77};
+const uint8_t OledShortRegData57[] = {0x60,0x34};
+const uint8_t OledShortRegData58[] = {0x61,0x02};
+const uint8_t OledShortRegData59[] = {0x62,0x81};
+const uint8_t OledShortRegData60[] = {0xFE,0x07};  //Page 6?
+const uint8_t OledShortRegData61[] = {0x07,0x6D};
+const uint8_t OledShortRegData62[] = {0xFE,0x01};
+const uint8_t OledShortRegData63[] = {0x05,0x15};
+const uint8_t OledShortRegData64[] = {0x0E,0x8B};
+const uint8_t OledShortRegData65[] = {0x0F,0x8B};
+const uint8_t OledShortRegData66[] = {0x10,0x11};
+const uint8_t OledShortRegData67[] = {0x11,0xA2};
+const uint8_t OledShortRegData68[] = {0x12,0xA0};
+const uint8_t OledShortRegData69[] = {0x14,0xA1};
+const uint8_t OledShortRegData70[] = {0x15,0x82};
+const uint8_t OledShortRegData71[] = {0x18,0x47};
+const uint8_t OledShortRegData72[] = {0x19,0x36};
+const uint8_t OledShortRegData73[] = {0x1A,0x10};
+const uint8_t OledShortRegData74[] = {0x1C,0x57};
+const uint8_t OledShortRegData75[] = {0x1D,0x02};
+const uint8_t OledShortRegData76[] = {0x21,0xF8};
+const uint8_t OledShortRegData77[] = {0x22,0x90};
+const uint8_t OledShortRegData78[] = {0x23,0x00};
+const uint8_t OledShortRegData79[] = {0x25,0x03};
+const uint8_t OledShortRegData80[] = {0x26,0x4a};
+const uint8_t OledShortRegData81[] = {0x2A,0x83};
+const uint8_t OledShortRegData82[] = {0X2B,0x4A};
+const uint8_t OledShortRegData83[] = {0x2D,0x12};
+const uint8_t OledShortRegData84[] = {0x2F,0x12};
+const uint8_t OledShortRegData85[] = {0x30,0x45};
+const uint8_t OledShortRegData86[] = {0x37,0x0C};
+const uint8_t OledShortRegData87[] = {0x3a,0x00};
+const uint8_t OledShortRegData88[] = {0x3b,0x20};
+const uint8_t OledShortRegData89[] = {0x3d,0x0B};
+const uint8_t OledShortRegData90[] = {0x3f,0x38};
+const uint8_t OledShortRegData91[] = {0x40,0x0B};
+const uint8_t OledShortRegData92[] = {0x41,0x0B};
+const uint8_t OledShortRegData93[] = {0x42,0x33};
+const uint8_t OledShortRegData94[] = {0x43,0x66};
+const uint8_t OledShortRegData95[] = {0x44,0x11};
+const uint8_t OledShortRegData96[] = {0x45,0x44};
+const uint8_t OledShortRegData97[] = {0x46,0x22};
+const uint8_t OledShortRegData98[] = {0x47,0x55};
+const uint8_t OledShortRegData99[] = {0x4c,0x33};
+const uint8_t OledShortRegData100[] = {0x4d,0x66};
+const uint8_t OledShortRegData101[] = {0x4e,0x11};
+const uint8_t OledShortRegData102[] = {0x4f,0x44};
+const uint8_t OledShortRegData103[] = {0x50,0x22};
+const uint8_t OledShortRegData104[] = {0x51,0x55};
+const uint8_t OledShortRegData105[] = {0x56,0x11};
+const uint8_t OledShortRegData106[] = {0x58,0x44};
+const uint8_t OledShortRegData107[] = {0x59,0x22};
+const uint8_t OledShortRegData108[] = {0x5a,0x55};
+const uint8_t OledShortRegData109[] = {0x5b,0x33};
+const uint8_t OledShortRegData110[] = {0x5c,0x66};
+const uint8_t OledShortRegData111[] = {0x61,0x11};
+const uint8_t OledShortRegData112[] = {0x62,0x44};
+const uint8_t OledShortRegData113[] = {0x63,0x22};
+const uint8_t OledShortRegData114[] = {0x64,0x55};
+const uint8_t OledShortRegData115[] = {0x65,0x33};
+const uint8_t OledShortRegData116[] = {0x66,0x66};
+const uint8_t OledShortRegData117[] = {0x6d,0x90};
+const uint8_t OledShortRegData118[] = {0x6e,0x40};
+const uint8_t OledShortRegData119[] = {0x70,0xA5};
+const uint8_t OledShortRegData120[] = {0x72,0x04};
+const uint8_t OledShortRegData121[] = {0x73,0x15};
+const uint8_t OledShortRegData122[] = {0x74,0x00};
+const uint8_t OledShortRegData123[] = {0x75,0xF8};
+const uint8_t OledShortRegData124[] = {0x76,0x90};
+const uint8_t OledShortRegData125[] = {0xFE,0x0A};
+const uint8_t OledShortRegData126[] = {0x29,0x10};
+const uint8_t OledShortRegData127[] = {0xFE,0x05};
+const uint8_t OledShortRegData128[] = {0x05,0x15}; //0x13};  //Selon la datasheet du IC, la valeur devrait être 20-21 (-2.5v, -2.4v) en décimale (0x14 ou 0x15) et non 0x13
+const uint8_t OledShortRegData129[] = {0xFE,0x00};
+const uint8_t OledShortRegData130[] = {0x35,0x00};
+const uint8_t OledShortRegData131[] = {0x11,};  //Arguement 2 est vide
+//Mettre un délai entre ces deux tableaux
+const uint8_t OledShortRegData132[] = {0x29,};  //Arguement 2 est vide
+const uint8_t OledShortRegData133[] = {0xC2, 0x01};  //Init DSI mode, FONCTIONNEL
+
+const uint8_t OledShortRegData134[] = {0x51, 0xF0};  //Brightness command (0x00 = lower, 0xFF = Higher) ***Semble non fonctionnel
+const uint8_t OledShortRegData135[] = {0x3a, 0x76};  //p.87, met l'écran en mode 24 bits. (bien que c'est le mode par défaut lors de l'init de l'écran)
+
+
 /* Private macros ------------------------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 /** @defgroup OTM8009A_Exported_Variables
@@ -429,6 +568,159 @@ uint8_t OTM8009A_Init(uint32_t ColorCoding, uint32_t orientation)
   /* Send Command GRAM memory write (no parameters) : this initiates frame write via other DSI commands sent by */
   /* DSI host from LTDC incoming pixels in video mode */
   DSI_IO_WriteCmd(0, (uint8_t *)ShortRegData45);
+
+  return 0;
+}
+
+/**
+  * @brief  Initializes the LCD KoD display part by communication in DSI mode in Video Mode
+  *         with IC Display Driver OTM8009A (see IC Driver specification for more information).
+  * @param  hdsi_eval : pointer on DSI configuration structure
+  * @param  hdsivideo_handle : pointer on DSI video mode configuration structure
+  * @retval Status
+  */
+uint8_t OTM8009A_Init_OLED()
+{
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData1);  //Commandes d'écran OLED selon le PDF
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData2);  //RM67160_initial_code_for_custom_V8...
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData3);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData4);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData5);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData6);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData7);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData8);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData9);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData10);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData11);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData12);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData13);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData14);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData15);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData16);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData17);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData18);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData19);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData20);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData21);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData22);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData23);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData24);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData25);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData26);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData27);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData28);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData29);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData30);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData31);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData32);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData33);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData34);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData35);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData36);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData37);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData38);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData39);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData40);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData41);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData42);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData43);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData44);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData45);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData46);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData47);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData48);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData49);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData50);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData51);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData52);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData53);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData54);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData55);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData56);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData57);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData58);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData59);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData60);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData61);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData62);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData63);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData64);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData65);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData66);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData67);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData68);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData69);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData70);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData71);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData72);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData73);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData74);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData75);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData76);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData77);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData78);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData79);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData80);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData81);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData82);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData83);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData84);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData85);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData86);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData87);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData88);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData89);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData90);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData91);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData92);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData93);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData94);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData95);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData96);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData97);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData98);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData99);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData100);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData101);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData102);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData103);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData104);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData105);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData106);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData107);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData108);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData109);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData110);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData111);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData112);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData113);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData114);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData115);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData116);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData117);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData118);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData119);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData120);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData121);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData122);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData123);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData124);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData125);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData126);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData127);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData128);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData129);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData130);
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData131);
+
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData133);  //Init en mode DSI, avec commande qui demande à ajuster le timming en mode auto (driver)
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData135);  //Mode 24 bits
+	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData134);  //Brightness
+
+  /* Wait for sleep out exit */
+  OTM8009A_IO_Delay(120);
+
+  DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData132);  //Commande de démarrage?
 
   return 0;
 }

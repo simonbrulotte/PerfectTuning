@@ -56,6 +56,9 @@
 #include "lv_examples/lv_apps/demo/demo.h"
 
 #include "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h"
+
+#include "PixelArray.h"
+#include "WS2812.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -152,6 +155,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
   /* USER CODE END WHILE */
