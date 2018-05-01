@@ -7,6 +7,7 @@ C_SRCS += \
 ../Src/PixelArray.c \
 ../Src/WS2812.c \
 ../Src/lcd_lvgl.c \
+../Src/ledDriver.c \
 ../Src/main.c \
 ../Src/stm32f7xx_hal_msp.c \
 ../Src/stm32f7xx_it.c \
@@ -16,6 +17,7 @@ OBJS += \
 ./Src/PixelArray.o \
 ./Src/WS2812.o \
 ./Src/lcd_lvgl.o \
+./Src/ledDriver.o \
 ./Src/main.o \
 ./Src/stm32f7xx_hal_msp.o \
 ./Src/stm32f7xx_it.o \
@@ -25,6 +27,7 @@ C_DEPS += \
 ./Src/PixelArray.d \
 ./Src/WS2812.d \
 ./Src/lcd_lvgl.d \
+./Src/ledDriver.d \
 ./Src/main.d \
 ./Src/stm32f7xx_hal_msp.d \
 ./Src/stm32f7xx_it.d \

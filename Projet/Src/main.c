@@ -57,8 +57,10 @@
 
 #include "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h"
 
-#include "PixelArray.h"
-#include "WS2812.h"
+//#include "PixelArray.h"
+//#include "WS2812.h"
+
+#include "ledDriver.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -150,6 +152,8 @@ int main(void)
   demo_create();  //Fonction qui crée le démo que la librairie propose pour le développement
   //benchmark_create();  //Mode alternatif au mode démo
 
+  ledDriver_init();  //Fonction qui s'occupe d'initialiser les DELs
+
   //HAL_DSI_Start(&hdsi);
   /* USER CODE END 2 */
 
@@ -162,7 +166,12 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
-	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
+	  //lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
+	  for(int i=0; i<24; i++)
+	  {
+		  ws2812_set_color(i, (255%i), (50%i), (80%i));
+	  }
+	  lightLedBar();
   }
   /* USER CODE END 3 */
 

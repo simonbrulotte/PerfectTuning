@@ -14,7 +14,8 @@ extern TIM_HandleTypeDef htim4;  //Variable intialisée comme externe dans le fic
 //vient de ws2812_handler.h
 #define N_LEDS (91)
 
-void initLedBar();
+//void initLedBar();
+void ledDriver_init();
 void ws2812_set_color( int ledIdx, uint8_t r, uint8_t g, uint8_t b );
 void lightLedBar();
 void turnOffBar();

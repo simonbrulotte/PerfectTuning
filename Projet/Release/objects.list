@@ -45,6 +45,7 @@
 "Src/PixelArray.o"
 "Src/WS2812.o"
 "Src/lcd_lvgl.o"
+"Src/ledDriver.o"
 "Src/main.o"
 "Src/stm32f7xx_hal_msp.o"
 "Src/stm32f7xx_it.o"

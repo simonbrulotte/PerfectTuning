@@ -42,6 +42,8 @@
 /* External variables --------------------------------------------------------*/
 extern DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
 extern LTDC_HandleTypeDef hltdc_discovery;
+extern TIM_HandleTypeDef htim3;
+extern DMA_HandleTypeDef hdma_tim3_ch3;
 
 /******************************************************************************/
 /*            Cortex-M7 Processor Interruption and Exception Handlers         */ 
@@ -58,7 +60,7 @@ void SysTick_Handler(void)
   HAL_IncTick();
   HAL_SYSTICK_IRQHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-  lv_tick_inc(1);
+  //lv_tick_inc(1);
   /* USER CODE END SysTick_IRQn 1 */
 }
 
@@ -93,5 +95,28 @@ void LTDC_IRQHandler(void)
 {
 	HAL_LTDC_IRQHandler(&hltdc_discovery);
 }
+
+void TIM3_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM3_IRQn 0 */
+
+  /* USER CODE END TIM3_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim3);
+  /* USER CODE BEGIN TIM3_IRQn 1 */
+
+  /* USER CODE END TIM3_IRQn 1 */
+}
+
+void DMA1_Stream7_IRQHandler(void)
+{
+	/* USER CODE BEGIN DMA1_Stream7_IRQn 0 */
+
+	/* USER CODE END DMA1_Stream7_IRQn 0 */
+	HAL_DMA_IRQHandler(&hdma_tim3_ch3);
+	/* USER CODE BEGIN DMA1_Stream7_IRQn 1 */
+
+	/* USER CODE END DMA1_Stream7_IRQn 1 */
+}
+
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

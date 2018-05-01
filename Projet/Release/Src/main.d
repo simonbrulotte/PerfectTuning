@@ -33,6 +33,8 @@ Src/main.o: ../Src/main.c \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sai.h \
+ D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h \
+ D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart_ex.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dfsdm.h \
@@ -132,8 +134,7 @@ Src/main.o: ../Src/main.c \
  d:\documents\github\perfecttuning\projet\lv_ex_conf.h \
  d:\documents\github\perfecttuning\projet\lvgl\lvgl.h \
  D:/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h \
- D:/Documents/GitHub/PerfectTuning/Projet/Inc/PixelArray.h \
- D:/Documents/GitHub/PerfectTuning/Projet/Inc/WS2812.h
+ D:/Documents/GitHub/PerfectTuning/Projet/Inc/ledDriver.h
 
 D:/Documents/GitHub/PerfectTuning/Projet/Inc/main.h:
 
@@ -202,6 +203,10 @@ D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f
 D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_pwr_ex.h:
 
 D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sai.h:
+
+D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h:
+
+D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:
 
 D:/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h:
 
@@ -401,6 +406,4 @@ d:\documents\github\perfecttuning\projet\lvgl\lvgl.h:
 
 D:/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h:
 
-D:/Documents/GitHub/PerfectTuning/Projet/Inc/PixelArray.h:
-
-D:/Documents/GitHub/PerfectTuning/Projet/Inc/WS2812.h:
+D:/Documents/GitHub/PerfectTuning/Projet/Inc/ledDriver.h:
