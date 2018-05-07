@@ -290,7 +290,7 @@ const uint8_t OledShortRegData130[] = {0x35,0x00};
 const uint8_t OledShortRegData131[] = {0x11,};  //Arguement 2 est vide
 //Mettre un délai entre ces deux tableaux
 const uint8_t OledShortRegData132[] = {0x29,};  //Arguement 2 est vide
-const uint8_t OledShortRegData133[] = {0xC2, 0x01};  //Init DSI mode, FONCTIONNEL
+const uint8_t OledShortRegData133[] = {0xC2, 0x03};  //Init DSI mode, FONCTIONNEL
 
 const uint8_t OledShortRegData134[] = {0x51, 0xF0};  //Brightness command (0x00 = lower, 0xFF = Higher) ***Semble non fonctionnel
 const uint8_t OledShortRegData135[] = {0x3a, 0x76};  //p.87, met l'écran en mode 24 bits. (bien que c'est le mode par défaut lors de l'init de l'écran)
@@ -713,9 +713,10 @@ uint8_t OTM8009A_Init_OLED()
 	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData130);
 	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData131);
 
-	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData133);  //Init en mode DSI, avec commande qui demande à ajuster le timming en mode auto (driver)
-	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData135);  //Mode 24 bits
-	DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData134);  //Brightness
+	//Les commandes commentées ci-dessous ne change rien (sauf Brightness pour plus tard)
+	//DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData133);  //Init en mode DSI, avec commande qui demande à ajuster le timming en mode auto (driver)
+	//DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData135);  //Mode 24 bits
+	//DSI_IO_WriteCmd(0, (uint8_t *)OledShortRegData134);  //Brightness
 
   /* Wait for sleep out exit */
   OTM8009A_IO_Delay(120);

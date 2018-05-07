@@ -99,7 +99,7 @@
 #define  OTM8009A_480X800_HSYNC             ((uint16_t)20)      /* Horizontal synchronization */
 #define  OTM8009A_480X800_HBP               ((uint16_t)40) //((uint16_t)34)     /* Horizontal back porch      */
 #define  OTM8009A_480X800_HFP               ((uint16_t)20) //((uint16_t)34)     /* Horizontal front porch     */
-#define  OTM8009A_480X800_VSYNC             ((uint16_t)4) //((uint16_t)1)      /* Vertical synchronization   */  //17 (pas 18) suite à la commande 44h (pdf driver oled)
+#define  OTM8009A_480X800_VSYNC             ((uint16_t)4)  //4) //((uint16_t)1)      /* Vertical synchronization   */  //17 (pas 18) suite à la commande 44h (pdf driver oled)
 #define  OTM8009A_480X800_VBP               ((uint16_t)12) //((uint16_t)15)      /* Vertical back porch        */
 #define  OTM8009A_480X800_VFP               ((uint16_t)20) //((uint16_t)16)      /* Vertical front porch       */
 

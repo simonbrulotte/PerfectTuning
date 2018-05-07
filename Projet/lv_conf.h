@@ -29,7 +29,7 @@
 /* Horizontal and vertical resolution of the library.*/
 #define LV_HOR_RES          (400)
 #define LV_VER_RES          (400)
-#define LV_DPI              406
+#define LV_DPI              200
 
 #define SDRAM_ADDR  (0xC0000000)
 /* Size of VDB (Virtual Display Buffer: the internal graphics buffer).
@@ -41,7 +41,7 @@
 
 /* Use two Virtual Display buffers (VDB) parallelize rendering and flushing (optional)
  * The flushing should use DMA to write the frame buffer in the background*/
-#define LV_VDB_DOUBLE       0      /*1: Enable the use of 2 VDBs*/
+#define LV_VDB_DOUBLE       1      /*1: Enable the use of 2 VDBs*/
 #define LV_VDB2_ADR         0  //0xC0177000      /*Place VDB2 to a specific address (e.g. in external RAM) (0: allocate automatically into RAM)*/
 
 /* Enable anti-aliasing (lines, and radiuses will be smoothed) */

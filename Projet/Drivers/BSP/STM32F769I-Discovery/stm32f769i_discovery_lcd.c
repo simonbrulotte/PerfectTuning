@@ -293,7 +293,7 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
 {
   DSI_PLLInitTypeDef dsiPllInit;
   static RCC_PeriphCLKInitTypeDef  PeriphClkInitStruct;
-  uint32_t LcdClock  = 22000; //27429; /*!< LcdClk = 27429 kHz */  Selon la datasheet du driver RM67160, Fosc = 20.24 min, 22 Typ., 23.76 max
+  uint32_t LcdClock  = 21000; //27429; /*!< LcdClk = 27429 kHz */  Selon la datasheet du driver RM67160, Fosc = 20.24 min, 22 Typ., 23.76 max
   uint16_t read_id = 0;
 
   uint32_t laneByteClk_kHz = 0;
@@ -397,7 +397,7 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
   hdsivideo_handle.VSPolarity = DSI_VSYNC_ACTIVE_HIGH;
   hdsivideo_handle.HSPolarity = DSI_HSYNC_ACTIVE_HIGH;
   hdsivideo_handle.DEPolarity = DSI_DATA_ENABLE_ACTIVE_HIGH;  
-  hdsivideo_handle.Mode = DSI_VID_MODE_NB_PULSES;//DSI_VID_MODE_BURST; /* Mode Video burst ie : one LgP per line */
+  hdsivideo_handle.Mode = DSI_VID_MODE_BURST; /* Mode Video burst ie : one LgP per line */
   hdsivideo_handle.NullPacketSize = 0xFFF;
   hdsivideo_handle.NumberOfChunks = 0;
   hdsivideo_handle.PacketSize                = HACT; /* Value depending on display orientation choice portrait/landscape */ 
@@ -457,9 +457,9 @@ uint8_t BSP_LCD_InitEx(LCD_OrientationTypeDef orientation)
     * LTDC clock frequency = PLLLCDCLK / LTDC_PLLSAI_DIVR_2 = 54.85 MHz / 2 = 27.429 MHz 
     */
   PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_LTDC;
-  PeriphClkInitStruct.PLLSAI.PLLSAIN = 264;
-  PeriphClkInitStruct.PLLSAI.PLLSAIR = 6;
-  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_2;
+  PeriphClkInitStruct.PLLSAI.PLLSAIN = 420; //384; //264;
+  PeriphClkInitStruct.PLLSAI.PLLSAIR = 5; //7; //6;
+  PeriphClkInitStruct.PLLSAIDivR = RCC_PLLSAIDIVR_4;
   HAL_RCCEx_PeriphCLKConfig(&PeriphClkInitStruct);
 
   /* Background value */

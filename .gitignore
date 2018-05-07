@@ -1,3 +1,11 @@
 Debug/
 Release/
 *.o
+*.mk
+*.o
+*.d
+*.mk
+*.map
+*.d
+*.d
+*.mk

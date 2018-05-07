@@ -166,12 +166,15 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
-	  //lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
+	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
+
+	  /*
 	  for(int i=0; i<24; i++)
 	  {
 		  ws2812_set_color(i, (255%i), (50%i), (80%i));
 	  }
 	  lightLedBar();
+	  */
   }
   /* USER CODE END 3 */
 

@@ -21,8 +21,8 @@
 /*********************
 *      DEFINES
 *********************/
-#define TFT_HOR_RES 480
-#define TFT_VER_RES 800
+#define TFT_HOR_RES OTM8009A_480X800_WIDTH
+#define TFT_VER_RES OTM8009A_480X800_HEIGHT
 
 #define TFT_EXT_FB		1		/*Frame buffer is located into an external SDRAM*/
 #define TFT_USE_GPU		1		/*Enable hardware accelerator*/

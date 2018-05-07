@@ -127,7 +127,7 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 #if TFT_EXT_FB != 0
 	//BSP_SDRAM_Init();  //Initialisé lors de l'init de l'écran
 #endif
-	BSP_LCD_InitEx(LCD_ORIENTATION_LANDSCAPE);  //LCD_ORIENTATION_PORTRAIT);
+	BSP_LCD_InitEx(LCD_ORIENTATION_PORTRAIT); //LCD_ORIENTATION_LANDSCAPE); //Ne change rien avec l'écran AMOLED
 
 #if LV_COLOR_DEPTH == 24
 	BSP_LCD_LayerDefaultInit(0, (uint32_t) my_fb);
@@ -152,6 +152,20 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 	BSP_LCD_SetTextColor(LCD_COLOR_BLUE);
 	BSP_LCD_FillRect(1, 1, 250, 250);
 
+	BSP_LCD_SetTextColor(LCD_COLOR_ORANGE);
+	BSP_LCD_FillRect(250, 250, 150, 150);
+
+	BSP_LCD_DisplayStringAt(10,210,"Test de l'écran AMOLED", CENTER_MODE);
+
+	HAL_Delay(1000);
+
+	BSP_LCD_SetTextColor(LCD_COLOR_BLUE);
+	BSP_LCD_FillRect(1, 1, 150, 150);
+
+	BSP_LCD_SetTextColor(LCD_COLOR_ORANGE);
+	BSP_LCD_FillRect(150, 150, 150, 150);
+
+	BSP_LCD_DisplayStringAt(30,150,"Test de l'ecran AMOLED", CENTER_MODE);
 	//BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
 	//lv_indev_drv_t indev_drv;
     //lv_indev_drv_init(&indev_drv);
