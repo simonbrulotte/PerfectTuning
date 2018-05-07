@@ -13,10 +13,7 @@
 #include "main.h"
 
 /* Defines  ------------------------------------------------------------------*/
-#define H_VAL 70
-#define L_VAL 35
-#define BITS_PER_LED (3*8)
-#define BIT_BUF_SIZE ((N_LEDS * BITS_PER_LED) + 5)
+
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim3;
@@ -93,7 +90,7 @@ void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 500;
+  htim3.Init.Period = 104;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
@@ -109,7 +106,7 @@ void MX_TIM3_Init(void)
   }
 
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 0;
+  sConfigOC.Pulse = 10;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_ENABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
@@ -142,6 +139,7 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef* htim_pwm)
     hdma_tim3_ch3.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
     hdma_tim3_ch3.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
     hdma_tim3_ch3.Init.Mode = DMA_NORMAL;
+    hdma_tim3_ch3.Init.MemBurst = DMA_MBURST_SINGLE;
     hdma_tim3_ch3.Init.Priority = DMA_PRIORITY_HIGH;
     hdma_tim3_ch3.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
     if (HAL_DMA_Init(&hdma_tim3_ch3) != HAL_OK)
@@ -242,7 +240,7 @@ void ws2812_set_color(int ledIdx, uint8_t r, uint8_t g, uint8_t b)
 	mask = 0x80;
 	while (mask)
 	{
-		ws2812BitBuf[i] = (mask & g) ? H_VAL : L_VAL;
+		ws2812BitBuf[i] = (mask & r) ? H_VAL : L_VAL;
 		mask >>= 1;
 		i++;
 	}
@@ -264,17 +262,20 @@ void ws2812_set_color(int ledIdx, uint8_t r, uint8_t g, uint8_t b)
 	mask = 0x80;
 	while (mask)
 	{
-		ws2812BitBuf[i] = (mask & r) ? H_VAL : L_VAL;
+		ws2812BitBuf[i] = (mask & b) ? H_VAL : L_VAL;
 		mask >>= 1;
 		i++;
 	}
 	mask = 0x80;
 	while (mask)
 	{
-		ws2812BitBuf[i] = (mask & b) ? H_VAL : L_VAL;
+		ws2812BitBuf[i] = (mask & g) ? H_VAL : L_VAL;
 		mask >>= 1;
 		i++;
 	}
+
+
+
 }
 
 void lightLedBar()

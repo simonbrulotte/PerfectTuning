@@ -8,6 +8,7 @@
  *      INCLUDES
  *********************/
 #include "demo.h"
+#include "ledDriver.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -24,7 +25,8 @@
 #define OFFSET_ENTRE_TEXTBOX 90
 #define OFFSET_LABEL_1 60
 #define OFFSET_ENTRE_LABEL_RGBI 90
-
+#define RANGE_GAUGE 6000
+#define RED_LINE 4500
 
 #define POSITION_Y_TEXTBOX_RGBI 155
 #define POSITION_Y_SLIDERS_RGBI 220
@@ -41,15 +43,16 @@
 
 
 
-
 /**********************
  *  STATIC PROTOTYPES
  **********************/
-
+void set_leds(void);
+static lv_res_t actionCheckBox(lv_obj_t * checkbox);
 static lv_res_t actionSlider_R(lv_obj_t * slider);
 static lv_res_t actionSlider_G(lv_obj_t * slider);
 static lv_res_t actionSlider_B(lv_obj_t * slider);
 static lv_res_t actionSlider_I(lv_obj_t * slider);
+static lv_res_t actionSlider_gauge(lv_obj_t * slider);
 
 /**********************
  *  STATIC VARIABLES
@@ -85,14 +88,12 @@ lv_obj_t * tabview;
  **********************/
 
 
-
-
 lv_obj_t * DEBUG;
 #define offset_ecran -135 // pour ajuster le offset pour cacher les tabviews
 
 void demo_create(void)
 {
-
+	turnOffBar();
 	/**********************
 	*
 	* CONFIGURATION TABVIEW
@@ -121,10 +122,7 @@ void demo_create(void)
 	lv_obj_t *tab1 = lv_tabview_add_tab(tabview, "Config");
 	lv_obj_t *tab2 = lv_tabview_add_tab(tabview, "Gauge");
 	lv_obj_t *tab3 = lv_tabview_add_tab(tabview, "Debug");
-
-
-
-
+	lv_obj_t *tab4 = lv_tabview_add_tab(tabview, "Led Setup");
 
 	//lv_obj_set_pos(tabview,0,offset_ecran);  // Puisque qu'on ne peut pas désactiver le tabview ,  on fait un offset à l'écran en déplacant la position de l'objet
 
@@ -145,15 +143,22 @@ void demo_create(void)
 	style_gauge.body.padding.hor = 10;                      /*Scale line length*/
 	style_gauge.body.padding.inner = 8 ;                    /*Scale label padding*/
 	style_gauge.body.border.color = LV_COLOR_HEX3(0x333);   /*Needle middle circle color*/
-	style_gauge.line.width = 3;
+	style_gauge.line.width = 4;
 	style_gauge.text.color = LV_COLOR_HEX3(0x333);
 	style_gauge.line.color = LV_COLOR_RED;                  /*Line color after the critical value*/
 
 	gauge = lv_gauge_create(tab2,NULL);
 	lv_obj_set_size(gauge,440,480);
 	lv_gauge_set_style(gauge, &style_gauge);
-	lv_gauge_set_range(gauge,0,9);
-	lv_gauge_set_critical_value(gauge, 8);
+	lv_gauge_set_range(gauge,0,RANGE_GAUGE);
+	lv_gauge_set_critical_value(gauge, RED_LINE);
+	lv_gauge_set_scale(gauge,240,(RANGE_GAUGE/200),(RANGE_GAUGE/1000)+1);
+
+	slider_gauge = lv_slider_create(tab2,NULL);
+	lv_obj_set_size(slider_gauge,400,60);
+	lv_obj_align(slider_gauge,gauge,LV_ALIGN_IN_BOTTOM_MID,0,0);
+	lv_slider_set_action(slider_gauge,actionSlider_gauge);
+	lv_slider_set_range(slider_gauge,0,RANGE_GAUGE);
 
 
 
@@ -173,6 +178,8 @@ void demo_create(void)
 	lv_cb_set_text(cbox_DELs,"Activer les DELs");
 
 	lv_obj_align(cbox_DELs,tabview,LV_ALIGN_CENTER,0,0);
+
+	lv_cb_set_action(cbox_DELs,actionCheckBox);
 
 
 	/*********************
@@ -278,6 +285,7 @@ static lv_res_t actionSlider_R(lv_obj_t * slider)
 	//
 	// AJOUTER CODE POUR CONTROLER DELs
 	//
+	set_leds();
 }
 
 static lv_res_t actionSlider_G(lv_obj_t * slider)
@@ -289,6 +297,8 @@ static lv_res_t actionSlider_G(lv_obj_t * slider)
 	//
 	// AJOUTER CODE POUR CONTROLER DELs
 	//
+	set_leds();
+
 }
 
 static lv_res_t actionSlider_B(lv_obj_t * slider)
@@ -300,6 +310,7 @@ static lv_res_t actionSlider_B(lv_obj_t * slider)
 	//
 	// AJOUTER CODE POUR CONTROLER DELs
 	//
+	set_leds();
 }
 
 static lv_res_t actionSlider_I(lv_obj_t * slider)
@@ -311,8 +322,47 @@ static lv_res_t actionSlider_I(lv_obj_t * slider)
 	//
 	// AJOUTER CODE POUR CONTROLER DELs
 	//
+	//set_leds();
 }
 
+static lv_res_t actionSlider_gauge(lv_obj_t * slider)
+{
+	int a=(lv_slider_get_value(slider));
+	lv_gauge_set_value(gauge,NULL,a);
+	//
+	// AJOUTER CODE POUR CONTROLER DELs
+	//
 
+}
+
+/*
+static lv_res_t actionCheckBox(lv_obj_t * checkbox)
+{
+	if (cbox_Ledon)
+	{
+		cbox_Ledon = false;
+		turnOffBar();
+	}
+	else
+	{
+		cbox_Ledon = true;
+		set_leds();
+
+	}
+}
+
+void set_leds()
+{
+	if (cbox_Ledon)
+	{
+		int i=0;
+		for (i=0;i<N_LEDS;i++)
+		{
+			ws2812_set_color(i,(uint8_t)lv_slider_get_value(slider_R),(uint8_t)lv_slider_get_value(slider_G),(uint8_t)lv_slider_get_value(slider_B));
+		}
+		led_flag = true;
+	}
+}
+*/
 
 #endif  /*USE_LV_DEMO*/

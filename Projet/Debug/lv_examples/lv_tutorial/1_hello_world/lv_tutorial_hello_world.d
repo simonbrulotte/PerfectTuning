@@ -1,8 +1,8 @@
 lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.o: \
  ../lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.c \
  ../lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.h \
- d:\documents\github\perfecttuning\projet\lv_ex_conf.h
+ c:\perfecttuning\projet\lv_ex_conf.h
 
 ../lv_examples/lv_tutorial/1_hello_world/lv_tutorial_hello_world.h:
 
-d:\documents\github\perfecttuning\projet\lv_ex_conf.h:
+c:\perfecttuning\projet\lv_ex_conf.h:

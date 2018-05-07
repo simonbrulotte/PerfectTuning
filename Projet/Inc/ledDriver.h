@@ -9,10 +9,14 @@
 #define LEDDRIVER_H_
 
 
-extern TIM_HandleTypeDef htim4;  //Variable intialisée comme externe dans le fichier tim.h du code exemple, mais je ne vois l'utilité de l'avoir jusqu'à maintenant
+//extern TIM_HandleTypeDef htim4;  //Variable intialisée comme externe dans le fichier tim.h du code exemple, mais je ne vois l'utilité de l'avoir jusqu'à maintenant
 
 //vient de ws2812_handler.h
-#define N_LEDS (91)
+#define N_LEDS (47)
+#define H_VAL 70
+#define L_VAL 35
+#define BITS_PER_LED (3*8)
+#define BIT_BUF_SIZE ((N_LEDS * (BITS_PER_LED)))// + 5)
 
 //void initLedBar();
 void ledDriver_init();

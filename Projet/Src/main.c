@@ -149,7 +149,7 @@ int main(void)
 
   lvgl_init(&hdma_memtomem_dma2_stream0, &hdma2d); //Fonction qui init l'écran et autres instances. Passe les typedef des différents modules pour
   	  	  	  	  	  	  	  	  	  	  	  	   //que lcd_lvgl se serve des configurations DMA existante. (c'est notre driver perso de lcd)
-  demo_create();  //Fonction qui crée le démo que la librairie propose pour le développement
+  demo2_create();  //Fonction qui crée le démo que la librairie propose pour le développement
   //benchmark_create();  //Mode alternatif au mode démo
 
   ledDriver_init();  //Fonction qui s'occupe d'initialiser les DELs
@@ -159,7 +159,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
+  int i=0;
   while (1)
   {
   /* USER CODE END WHILE */
@@ -168,13 +168,12 @@ int main(void)
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
 	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
 
-	  /*
-	  for(int i=0; i<24; i++)
+	  i++;
+	  if (i>=100)
 	  {
-		  ws2812_set_color(i, (255%i), (50%i), (80%i));
+		  lightLedBar();
+		  i=0;
 	  }
-	  lightLedBar();
-	  */
   }
   /* USER CODE END 3 */
 

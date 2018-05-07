@@ -33,7 +33,12 @@ extern "C" {
 /**
  * Create a demo application
  */
+
 void demo_create(void);
+void demo2_create(void);
+
+
+
 
 /**********************
  *      MACROS
