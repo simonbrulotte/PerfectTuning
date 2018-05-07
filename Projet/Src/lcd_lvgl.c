@@ -166,12 +166,12 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 	BSP_LCD_FillRect(150, 150, 150, 150);
 
 	BSP_LCD_DisplayStringAt(30,150,"Test de l'ecran AMOLED", CENTER_MODE);
-	//BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
-	//lv_indev_drv_t indev_drv;
-    //lv_indev_drv_init(&indev_drv);
-    //indev_drv.read = touchpad_read;
-    //indev_drv.type = LV_INDEV_TYPE_POINTER;
-    //lv_indev_drv_register(&indev_drv);
+	BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
+	lv_indev_drv_t indev_drv;
+    lv_indev_drv_init(&indev_drv);
+    indev_drv.read = touchpad_read;
+    indev_drv.type = LV_INDEV_TYPE_POINTER;
+    lv_indev_drv_register(&indev_drv);
 
     //BSP_LCD_SwapBuffer(); //Fonction qui programme l'interuption sur une ligne de l'écran et refresh le changement
 } 						  //sur la synchronisation verticale
