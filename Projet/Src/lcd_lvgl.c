@@ -174,6 +174,7 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
     lv_indev_drv_register(&indev_drv);
 
     //BSP_LCD_SwapBuffer(); //Fonction qui programme l'interuption sur une ligne de l'écran et refresh le changement
+
 } 						  //sur la synchronisation verticale
 
 #if USE_LV_GPU != 0
