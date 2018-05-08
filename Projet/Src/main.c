@@ -52,10 +52,10 @@
 /* USER CODE BEGIN Includes */
 #include "lv_conf.h"
 #include "lvgl/lvgl.h"
-#include "lcd_lvgl.h"
+//#include "lcd_lvgl.h"
 #include "lv_examples/lv_apps/demo/demo.h"
 
-#include "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h"
+//#include "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h"
 
 //#include "PixelArray.h"
 //#include "WS2812.h"
@@ -64,21 +64,20 @@
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
-
 DFSDM_Channel_HandleTypeDef hdfsdm1_channel0;
-
 DMA2D_HandleTypeDef hdma2d;
-
 DSI_HandleTypeDef hdsi;
-
 LTDC_HandleTypeDef hltdc;
-
 SAI_HandleTypeDef hsai_BlockA1;
-
 UART_HandleTypeDef huart3;
-
 DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
 SDRAM_HandleTypeDef hsdram2;
+
+//CAN_HandleTypeDef canDef;
+//HAL_CAN_StateTypeDef canState;
+CAN_InitTypeDef test;
+
+I2C_InitTypeDef gtestwev;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
@@ -98,6 +97,8 @@ static void MX_DFSDM1_Init(void);
 static void MX_SAI1_Init(void);
 
 /* USER CODE BEGIN PFP */
+extern void DMA_TransferError(DMA_HandleTypeDef *hdma);
+extern void DMA_TransferComplete(DMA_HandleTypeDef *hdma);
 /* Private function prototypes -----------------------------------------------*/
 
 /* USER CODE END PFP */
