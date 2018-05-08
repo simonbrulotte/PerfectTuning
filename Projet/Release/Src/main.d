@@ -20,6 +20,7 @@ Src/main.o: ../Src/main.c \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h \
+ D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash_ex.h \
@@ -127,13 +128,9 @@ Src/main.o: ../Src/main.c \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/lvgl/lv_objx/lv_lmeter.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/lvgl/lv_objx/lv_sw.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/lvgl/lv_objx/lv_slider.h \
- D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Inc/lcd_lvgl.h \
- d:\bibliotheque\documents\github\perfecttuning\projet\lvgl\lv_misc\lv_color.h \
- d:\bibliotheque\documents\github\perfecttuning\projet\lvgl\lv_misc\lv_area.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/lv_examples/lv_apps/demo/demo.h \
  d:\bibliotheque\documents\github\perfecttuning\projet\lv_ex_conf.h \
  d:\bibliotheque\documents\github\perfecttuning\projet\lvgl\lvgl.h \
- D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h \
  D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Inc/ledDriver.h
 
 D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Inc/main.h:
@@ -177,6 +174,8 @@ D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driv
 D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h:
 
 D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h:
+
+D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h:
 
 D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h:
 
@@ -392,18 +391,10 @@ D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/lvgl/lv_objx/lv_sw.h:
 
 D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/lvgl/lv_objx/lv_slider.h:
 
-D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Inc/lcd_lvgl.h:
-
-d:\bibliotheque\documents\github\perfecttuning\projet\lvgl\lv_misc\lv_color.h:
-
-d:\bibliotheque\documents\github\perfecttuning\projet\lvgl\lv_misc\lv_area.h:
-
 D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/lv_examples/lv_apps/demo/demo.h:
 
 d:\bibliotheque\documents\github\perfecttuning\projet\lv_ex_conf.h:
 
 d:\bibliotheque\documents\github\perfecttuning\projet\lvgl\lvgl.h:
-
-D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h:
 
 D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Inc/ledDriver.h:
