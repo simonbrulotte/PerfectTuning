@@ -1,6 +1,97 @@
-12:14:40 **** Incremental Build of configuration Debug for project Projet ****
+09:47:29 **** Incremental Build of configuration Debug for project Projet ****
 make -j all 
-make: Nothing to be done for 'all'.
+Building file: ../lv_examples/lv_apps/demo/demo2.c
+Invoking: MCU GCC Compiler
+C:\PerfectTuning\Projet\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
+../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
+../lv_examples/lv_apps/demo/demo2.c:125:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:131:6: warning: conflicting types for 'Principale'
+ void Principale ()
+      ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:125:2: note: previous implicit declaration of 'Principale' was here
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'Parametres':
+../lv_examples/lv_apps/demo/demo2.c:218:56: warning: passing argument 3 of 'lv_btn_set_action' from incompatible pointer type [-Wincompatible-pointer-types]
+    lv_btn_set_action(btnBack_Param,LV_BTN_ACTION_CLICK,click_Back);
+                                                        ^~~~~~~~~~
+In file included from c:\perfecttuning\projet\lvgl\lvgl.h:28:0,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\perfecttuning\projet\lvgl\lv_objx/lv_btn.h:118:6: note: expected 'lv_action_t {aka enum <anonymous> (*)(struct _lv_obj_t *)}' but argument is of type 'void (*)(lv_obj_t *) {aka void (*)(struct _lv_obj_t *)}'
+ void lv_btn_set_action(lv_obj_t * btn, lv_btn_action_t type, lv_action_t action);
+      ^~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:234:58: warning: passing argument 3 of 'lv_btn_set_action' from incompatible pointer type [-Wincompatible-pointer-types]
+    lv_btn_set_action(btn_Param_GAUGE,LV_BTN_ACTION_CLICK,click_Parametres_GAUGE);
+                                                          ^~~~~~~~~~~~~~~~~~~~~~
+In file included from c:\perfecttuning\projet\lvgl\lvgl.h:28:0,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\perfecttuning\projet\lvgl\lv_objx/lv_btn.h:118:6: note: expected 'lv_action_t {aka enum <anonymous> (*)(struct _lv_obj_t *)}' but argument is of type 'void (*)(lv_obj_t *) {aka void (*)(struct _lv_obj_t *)}'
+ void lv_btn_set_action(lv_obj_t * btn, lv_btn_action_t type, lv_action_t action);
+      ^~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:253:60: warning: passing argument 3 of 'lv_btn_set_action' from incompatible pointer type [-Wincompatible-pointer-types]
+    lv_btn_set_action(btnBack_Param_LED,LV_BTN_ACTION_CLICK,click_Back);
+                                                            ^~~~~~~~~~
+In file included from c:\perfecttuning\projet\lvgl\lvgl.h:28:0,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\perfecttuning\projet\lvgl\lv_objx/lv_btn.h:118:6: note: expected 'lv_action_t {aka enum <anonymous> (*)(struct _lv_obj_t *)}' but argument is of type 'void (*)(lv_obj_t *) {aka void (*)(struct _lv_obj_t *)}'
+ void lv_btn_set_action(lv_obj_t * btn, lv_btn_action_t type, lv_action_t action);
+      ^~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:510:60: warning: passing argument 3 of 'lv_btn_set_action' from incompatible pointer type [-Wincompatible-pointer-types]
+  lv_btn_set_action(btnBack_Param_GAUGE,LV_BTN_ACTION_CLICK,click_Back);
+                                                            ^~~~~~~~~~
+In file included from c:\perfecttuning\projet\lvgl\lvgl.h:28:0,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\perfecttuning\projet\lvgl\lv_objx/lv_btn.h:118:6: note: expected 'lv_action_t {aka enum <anonymous> (*)(struct _lv_obj_t *)}' but argument is of type 'void (*)(lv_obj_t *) {aka void (*)(struct _lv_obj_t *)}'
+ void lv_btn_set_action(lv_obj_t * btn, lv_btn_action_t type, lv_action_t action);
+      ^~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
+../lv_examples/lv_apps/demo/demo2.c:527:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres_DEL':
+../lv_examples/lv_apps/demo/demo2.c:539:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
+../lv_examples/lv_apps/demo/demo2.c:674:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:681:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'actionSlider':
+../lv_examples/lv_apps/demo/demo2.c:698:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:700:6: warning: conflicting types for 'set_leds'
+ void set_leds()
+      ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:674:3: note: previous implicit declaration of 'set_leds' was here
+   set_leds();
+   ^~~~~~~~
+Finished building: ../lv_examples/lv_apps/demo/demo2.c
+ 
+Building target: Projet.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
+Finished building target: Projet.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
+arm-none-eabi-size "Projet.elf"
+   text	   data	    bss	    dec	    hex	filename
+ 116548	    224	 375216	 491988	  781d4	Projet.elf
+ 
 
-12:14:42 Build Finished (took 1s.501ms)
+09:47:32 Build Finished (took 3s.865ms)
 

@@ -556,7 +556,7 @@ static bool touchpad_read(lv_indev_data_t *data)
 
 	BSP_TS_GetState(&TS_State);
 	if(TS_State.touchDetected != 0) {
-		data->point.x = TS_State.touchY[0];
+		data->point.x = TS_State.touchY[0] -80;
 		data->point.y = 400-TS_State.touchX[0];
 		last_x = data->point.x;
 		last_y = data->point.y;

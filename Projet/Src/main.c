@@ -105,6 +105,10 @@ static void MX_SAI1_Init(void);
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
+extern val_SliderR;
+extern val_SliderG;
+extern val_SliderB;
+extern led_flag;
 
 int main(void)
 {
@@ -153,6 +157,8 @@ int main(void)
   //benchmark_create();  //Mode alternatif au mode démo
 
   ledDriver_init();  //Fonction qui s'occupe d'initialiser les DELs
+  turnOffBar();
+  led_flag = true;
 
   //HAL_DSI_Start(&hdsi);
   /* USER CODE END 2 */
@@ -169,10 +175,20 @@ int main(void)
 	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
 
 	  i++;
-	  if (i>=100)
+	  if (i>=2)
 	  {
-		  lightLedBar();
-		  i=0;
+
+		  if (led_flag)
+		  {
+				int j=0;
+				for (j=0;j<N_LEDS;j++)
+				{
+					ws2812_set_color(j,val_SliderR,val_SliderG,val_SliderB);
+				}
+			  lightLedBar();
+			  i=0;
+			  led_flag = false;
+		  }
 	  }
   }
   /* USER CODE END 3 */
