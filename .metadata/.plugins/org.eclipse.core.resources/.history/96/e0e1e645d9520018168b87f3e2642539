@@ -106,10 +106,10 @@ extern void DMA_TransferComplete(DMA_HandleTypeDef *hdma);
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
-extern uint8_t val_SliderR;
-extern uint8_t val_SliderG;
-extern uint8_t val_SliderB;
-extern bool led_flag;
+extern val_SliderR;
+extern val_SliderG;
+extern val_SliderB;
+extern led_flag;
 
 int main(void)
 {
