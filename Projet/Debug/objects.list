@@ -44,7 +44,6 @@
 "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o"
 "Src/LedDriver.o"
 "Src/PixelArray.o"
-"Src/WS2812.o"
 "Src/lcd_lvgl.o"
 "Src/main.o"
 "Src/stm32f7xx_hal_msp.o"

@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lv_conf.h"
+#include <math.h>
 /*********************
  *      DEFINES
  *********************/
@@ -24,9 +25,11 @@
 #define ctnPrincipal_init_ver_gap (LV_VER_RES-(ctnPrincipal_nbBtn*(ctnPrinc_btnGap+ctnPrinc_btnHeight)))/2
 #define ctnPrincipal_nbBtn 3
 #define ctnPrinc_btnGap 20
+
 #define ctnPrinc_btnHeight 60
 #define ctnPrinc_btnWitdh 200
 #define ctnPrinc_btnTotalDst (ctnPrinc_btnHeight+ctnPrinc_btnGap)
+
 #define ctnNORTH LV_VER_RES
 #define ctnSUD -(LV_VER_RES)
 #define ctnOUEST -(LV_HOR_RES)
@@ -64,11 +67,10 @@ static lv_res_t actionSlider(lv_obj_t * slider);
 uint8_t val_SliderR=0;
 uint8_t val_SliderG=0;
 uint8_t val_SliderB=0;
-
+uint8_t val_SliderI=0;
 int delay_anim = 0;
 int level = 0;
 
-bool cbox_Ledon = false;
 bool led_flag=false;
 
 lv_obj_t * Actual_ctn;
@@ -122,7 +124,6 @@ void demo2_create()
 {
 	Principale();
 	Parametres();
-	initLedBar();
 }
 
 
@@ -168,13 +169,21 @@ void Parametres() // on place la variable initPosition dans
 {
 	int nb_Button=2;
 	int nb_slider = 4;
-	int slider_gap = 10;
-	int sliderRGB_Height = 180;
+	int slider_gap = 15;
+
+	int sliderRGB_Height = 140;
 	int sliderRGB_Width = 60;
-	int sliderLabel_Gap = 100;
+	int sliderLabel_Gap = 110;
+	int slider_Y_pos = LV_VER_RES - sliderRGB_Height - 100;
 	int current_X = (LV_HOR_RES-(nb_slider*(slider_gap+sliderRGB_Width)))/2;
 	int actual_slider_pos = current_X;
-	int slider_Y_pos = LV_VER_RES - sliderRGB_Height - 60;
+
+	int size_W_retour = 50;
+	int size_H_retour = 50;
+
+	int pos_X_retour = (LV_HOR_RES/2)-(size_W_retour/2);
+	int pos_Y_retour = 15;
+
 	static lv_style_t style_bg_R;
 	static lv_style_t style_indic_R;
 	static lv_style_t style_knob_R;
@@ -202,8 +211,8 @@ void Parametres() // on place la variable initPosition dans
 		lv_obj_set_hidden(ctnParametre,true);
 
 		lv_obj_t * btnBack_Param = lv_btn_create(ctnParametre,NULL);
-			lv_obj_set_size(btnBack_Param,50,50);
-			lv_obj_set_pos(btnBack_Param,350,0);
+			lv_obj_set_size(btnBack_Param,size_W_retour,size_H_retour);
+			lv_obj_set_pos(btnBack_Param,pos_X_retour,pos_Y_retour);
 			label = lv_label_create(btnBack_Param, NULL);
 			lv_label_set_text(label, "<-");
 			lv_btn_set_action(btnBack_Param,LV_BTN_ACTION_CLICK,click_Back);
@@ -225,11 +234,11 @@ void Parametres() // on place la variable initPosition dans
 			lv_btn_set_action(btn_Param_GAUGE,LV_BTN_ACTION_CLICK,click_Parametres_GAUGE);
 
 
-	// ***************************
-	//
-	// panneau du controle des led
-	//
-	// ***************************
+// ***************************
+//
+// panneau du controle des led
+//
+// ***************************
 
 	ctnParamLED = lv_cont_create(lv_scr_act(),NULL);
 		lv_obj_set_size(ctnParamLED,LV_HOR_RES,LV_VER_RES);
@@ -237,20 +246,17 @@ void Parametres() // on place la variable initPosition dans
 		//lv_obj_set_pos(ctnParamLED,0,ctnNORTH);
 
 		lv_obj_t * btnBack_Param_LED = lv_btn_create(ctnParamLED,NULL);
-			lv_obj_set_size(btnBack_Param_LED,50,50);
-			lv_obj_set_pos(btnBack_Param_LED,350,0);
+			lv_obj_set_size(btnBack_Param_LED,size_W_retour,size_H_retour);
+			lv_obj_set_pos(btnBack_Param_LED,pos_X_retour,pos_Y_retour);
 			label = lv_label_create(btnBack_Param_LED, NULL);
 			lv_label_set_text(label, "<-");
 			lv_btn_set_action(btnBack_Param_LED,LV_BTN_ACTION_CLICK,click_Back);
 
-
-
-
-		// ***************************
-		//
-		// Config du slider Rouge
-		//
-		// ***************************
+// ***************************
+//
+// Config du slider Rouge
+//
+// ***************************
 
 		sliderR = lv_slider_create(ctnParamLED,NULL);
 
@@ -338,11 +344,11 @@ void Parametres() // on place la variable initPosition dans
 
 			actual_slider_pos += sliderRGB_Width + slider_gap;
 
-		// ***************************
-		//
-		// Config du slider Bleu
-		//
-		// ***************************
+// ***************************
+//
+// Config du slider Bleu
+//
+// ***************************
 
 		sliderB = lv_slider_create(ctnParamLED,NULL);
 			lv_obj_set_size(sliderB,sliderRGB_Width,sliderRGB_Height);
@@ -392,9 +398,10 @@ void Parametres() // on place la variable initPosition dans
 
 		sliderI = lv_slider_create(ctnParamLED,NULL);
 			lv_obj_set_size(sliderI,sliderRGB_Width,sliderRGB_Height);
-			lv_slider_set_range(sliderI,0,255);
+			lv_slider_set_range(sliderI,0,100);
+			lv_slider_set_value(sliderI,50);
 			lv_obj_set_pos(sliderI,actual_slider_pos,slider_Y_pos);
-//			lv_slider_set_action(sliderI,actionSlider);
+			lv_slider_set_action(sliderI,actionSlider);
 
 #ifdef rgb_label
 			lv_obj_t * label_I= lv_label_create(ctnParamLED,NULL);
@@ -428,8 +435,7 @@ void Parametres() // on place la variable initPosition dans
 			lv_slider_set_style(sliderI, LV_SLIDER_STYLE_BG, &style_bg_I);
 			lv_slider_set_style(sliderI, LV_SLIDER_STYLE_INDIC,&style_indic_I);
 			lv_slider_set_style(sliderI, LV_SLIDER_STYLE_KNOB, &style_knob_I);
-
-			actual_slider_pos += sliderRGB_Width + slider_gap;
+			actual_slider_pos += sliderRGB_Width + slider_gap; // pour positionner de facon égale les sliders
 
 		//
 		// creation et style de la switch
@@ -453,6 +459,7 @@ void Parametres() // on place la variable initPosition dans
 		knob_on_style_sw.body.radius = LV_RADIUS_CIRCLE;
 		knob_on_style_sw.body.shadow.width = 4;
 		knob_on_style_sw.body.shadow.type = LV_SHADOW_BOTTOM;
+
 		toggleOnOff = lv_sw_create(ctnParamLED, NULL);
 			int size_width_toggle = 105;
 			int size_height_toggle = 60;
@@ -476,8 +483,6 @@ void Parametres() // on place la variable initPosition dans
 			lv_sw_set_style(toggleOnOff, LV_SW_STYLE_KNOB_ON, &knob_on_style_sw);
 			lv_sw_set_style(toggleOnOff, LV_SW_STYLE_KNOB_OFF, &knob_off_style_sw);
 
-
-
 			lv_obj_set_pos(toggleOnOff,lv_obj_get_x(sliderR),toggle_Y_align+10);
 			lv_obj_align(label_toggle,toggleOnOff,LV_ALIGN_OUT_RIGHT_MID,50,0);
 
@@ -498,8 +503,8 @@ void Parametres() // on place la variable initPosition dans
 	//lv_obj_set_pos(ctnParamGAUGE,0,ctnSUD);
 
 	lv_obj_t * btnBack_Param_GAUGE = lv_btn_create(ctnParamGAUGE,NULL);
-	lv_obj_set_size(btnBack_Param_GAUGE,50,50);
-	lv_obj_set_pos(btnBack_Param_GAUGE,350,0);
+	lv_obj_set_size(btnBack_Param_GAUGE,size_W_retour,size_H_retour);
+	lv_obj_set_pos(btnBack_Param_GAUGE,pos_X_retour,pos_Y_retour);
 	label = lv_label_create(btnBack_Param_GAUGE, NULL);
 	lv_label_set_text(label, "<-");
 	lv_btn_set_action(btnBack_Param_GAUGE,LV_BTN_ACTION_CLICK,click_Back);
@@ -688,30 +693,23 @@ static lv_res_t actionSlider(lv_obj_t * slider)
 		//
 	 */
 
-
-
 	set_leds();
 
 }
 
 void set_leds()
 {
-
-	val_SliderR = lv_slider_get_value(sliderR);
-	val_SliderG = lv_slider_get_value(sliderG);
-	val_SliderB = lv_slider_get_value(sliderB);
+	val_SliderI = lv_slider_get_value(sliderI);
+	val_SliderR = (int)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderG = (int)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderB = (int)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
 
 	if (lv_sw_get_state(toggleOnOff))
 	{
 
-		int i=0;
-		for (i=0;i<N_LEDS;i++)
-		{
-			ws2812_set_color(i,val_SliderR,val_SliderG,val_SliderB);
-		}
-
 		led_flag = true;
 	}
+
 }
 
 
