@@ -52,7 +52,7 @@
 /* USER CODE BEGIN Includes */
 #include "lv_conf.h"
 #include "lvgl/lvgl.h"
-//#include "lcd_lvgl.h"
+#include "lcd_lvgl.h"
 #include "lv_examples/lv_apps/demo/demo.h"
 
 //#include "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h"
@@ -73,11 +73,7 @@ UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
 SDRAM_HandleTypeDef hsdram2;
 
-//CAN_HandleTypeDef canDef;
-//HAL_CAN_StateTypeDef canState;
-CAN_InitTypeDef test;
-
-I2C_InitTypeDef gtestwev;
+CAN_HandleTypeDef canDef;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/

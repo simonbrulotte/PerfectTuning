@@ -5,7 +5,6 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Src/PixelArray.c \
-../Src/WS2812.c \
 ../Src/lcd_lvgl.c \
 ../Src/ledDriver.c \
 ../Src/main.c \
@@ -15,7 +14,6 @@ C_SRCS += \
 
 OBJS += \
 ./Src/PixelArray.o \
-./Src/WS2812.o \
 ./Src/lcd_lvgl.o \
 ./Src/ledDriver.o \
 ./Src/main.o \
@@ -25,7 +23,6 @@ OBJS += \
 
 C_DEPS += \
 ./Src/PixelArray.d \
-./Src/WS2812.d \
 ./Src/lcd_lvgl.d \
 ./Src/ledDriver.d \
 ./Src/main.d \
