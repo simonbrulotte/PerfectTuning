@@ -245,20 +245,6 @@ void ws2812_set_color(int ledIdx, uint8_t r, uint8_t g, uint8_t b)
 		i++;
 	}
 
-	/*
-	 * while(mask > 0)
-	 * {
-	 * 		if(mask & g == 1)
-	 *			ws2812BitBuf[i] = H_VAL;
-	 *
-	 * 		else
-	 * 			ws2812BitBuf[i] = L_VAL;
-	 *
-	 * 		mask = mask >> 1;
-	 *	 	i++;
-	 *
-	 * }
-	 */
 	mask = 0x80;
 	while (mask)
 	{

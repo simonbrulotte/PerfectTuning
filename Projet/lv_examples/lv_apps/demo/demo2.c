@@ -35,6 +35,9 @@
 #define ctnOUEST -(LV_HOR_RES)
 #define ctnEST LV_HOR_RES
 
+#define OFFSET_X_SLIDER 5 // plus on augmente la valeur, plus les sliders sont à gauche
+#define OFFSET_Y_SLIDER 70 // plus on descend la valeur, plus on descend les slider
+
 #define delay_anim_nop 150
 
 /**********************
@@ -45,15 +48,15 @@
  *  STATIC PROTOTYPES
  **********************/
 
-void Parametres(void);
-void slide_container(lv_obj_t * actual_ctn,lv_obj_t * next_ctn);
-void switch_window(lv_obj_t * actual,lv_obj_t * next);
 static lv_res_t click_Parametres(lv_obj_t * child);
 static lv_res_t click_Parametres_DEL(lv_obj_t * child);
-void click_Parametres_GAUGE(lv_obj_t * child);
-void click_Back(lv_obj_t * child);
 static lv_res_t action_switch_LED (lv_obj_t * child);
 static lv_res_t actionSlider(lv_obj_t * slider);
+void Parametres(void);
+void slide_container(lv_obj_t * actual_ctn);//,lv_obj_t * next_ctn);
+void switch_window(lv_obj_t * actual,lv_obj_t * next);
+void click_Parametres_GAUGE(lv_obj_t * child);
+void click_Back(lv_obj_t * child);
 
 /**********************
  *  STATIC VARIABLES
@@ -81,7 +84,7 @@ lv_obj_t * ctnParametre;
 lv_obj_t * ctnPrincipal;
 lv_obj_t * ctnGauge;
 lv_obj_t * ctnParamLED;
-lv_obj_t * ctnParamGAUGE;
+lv_obj_t * ctnParamDEBUG;
 
 
 //composant de la page d'acceuil
@@ -98,6 +101,8 @@ lv_obj_t * sliderB;
 lv_obj_t * sliderI;
 lv_obj_t * toggleOnOff;
 lv_obj_t * label_toggle;
+
+lv_obj_t *DEBUG_TB;
 
 //composants de la page paramètres TUNING
 
@@ -130,6 +135,9 @@ void demo2_create()
 
 void Principale ()
 {
+
+
+
 	//
 	// instanciation des éléments de la page principale
 	//
@@ -171,12 +179,13 @@ void Parametres() // on place la variable initPosition dans
 	int nb_slider = 4;
 	int slider_gap = 15;
 
-	int sliderRGB_Height = 140;
-	int sliderRGB_Width = 60;
-	int sliderLabel_Gap = 110;
-	int slider_Y_pos = LV_VER_RES - sliderRGB_Height - 100;
-	int current_X = (LV_HOR_RES-(nb_slider*(slider_gap+sliderRGB_Width)))/2;
-	int actual_slider_pos = current_X;
+	int sliderRGB_Height = 175;
+	int sliderRGB_Width = 50;
+	int sliderLabel_Gap = 100; // gap entre les slider et le label activé/désactivé
+
+	int slider_Y_pos = LV_VER_RES - sliderRGB_Height - OFFSET_Y_SLIDER;
+	int current_X_SLIDER = ((LV_HOR_RES-(nb_slider*(slider_gap+sliderRGB_Width)))/2) + OFFSET_X_SLIDER;
+	int actual_slider_pos = current_X_SLIDER;
 
 	int size_W_retour = 50;
 	int size_H_retour = 50;
@@ -225,13 +234,13 @@ void Parametres() // on place la variable initPosition dans
 			actual_btn_pos += ctnPrinc_btnTotalDst ;
 			lv_btn_set_action(btn_Param_LED,LV_BTN_ACTION_CLICK,click_Parametres_DEL);
 
-		lv_obj_t * btn_Param_GAUGE = lv_btn_create(ctnParametre,NULL);
-			lv_obj_set_size(btn_Param_GAUGE,ctnPrinc_btnWitdh,ctnPrinc_btnHeight);
-			label = lv_label_create(btn_Param_GAUGE, NULL);
-			lv_label_set_text(label, "Gauge");
-			lv_obj_set_pos(btn_Param_GAUGE,(LV_HOR_RES-ctnPrinc_btnWitdh)/2,actual_btn_pos);
+		lv_obj_t * btn_Param_DEBUG = lv_btn_create(ctnParametre,NULL);
+			lv_obj_set_size(btn_Param_DEBUG,ctnPrinc_btnWitdh,ctnPrinc_btnHeight);
+			label = lv_label_create(btn_Param_DEBUG, NULL);
+			lv_label_set_text(label, "DEBUG");
+			lv_obj_set_pos(btn_Param_DEBUG,(LV_HOR_RES-ctnPrinc_btnWitdh)/2,actual_btn_pos);
 			actual_btn_pos += ctnPrinc_btnTotalDst ;
-			lv_btn_set_action(btn_Param_GAUGE,LV_BTN_ACTION_CLICK,click_Parametres_GAUGE);
+			lv_btn_set_action(btn_Param_DEBUG,LV_BTN_ACTION_CLICK,click_Parametres_GAUGE);
 
 
 // ***************************
@@ -497,19 +506,23 @@ void Parametres() // on place la variable initPosition dans
 
 
 
-	ctnParamGAUGE = lv_cont_create(lv_scr_act(),NULL);
-	lv_obj_set_size(ctnParamGAUGE,LV_HOR_RES,LV_VER_RES);
-	lv_obj_set_hidden(ctnParamGAUGE,true);
-	//lv_obj_set_pos(ctnParamGAUGE,0,ctnSUD);
+	ctnParamDEBUG = lv_cont_create(lv_scr_act(),NULL);
 
-	lv_obj_t * btnBack_Param_GAUGE = lv_btn_create(ctnParamGAUGE,NULL);
-	lv_obj_set_size(btnBack_Param_GAUGE,size_W_retour,size_H_retour);
-	lv_obj_set_pos(btnBack_Param_GAUGE,pos_X_retour,pos_Y_retour);
-	label = lv_label_create(btnBack_Param_GAUGE, NULL);
+	lv_obj_set_size(ctnParamDEBUG,LV_HOR_RES,LV_VER_RES);
+	lv_obj_set_hidden(ctnParamDEBUG,true);
+
+
+	lv_obj_t * btnBack_Param_DEBUG = lv_btn_create(ctnParamDEBUG,NULL);
+	lv_obj_set_size(btnBack_Param_DEBUG,size_W_retour,size_H_retour);
+	lv_obj_set_pos(btnBack_Param_DEBUG,pos_X_retour,pos_Y_retour);
+	label = lv_label_create(btnBack_Param_DEBUG, NULL);
 	lv_label_set_text(label, "<-");
-	lv_btn_set_action(btnBack_Param_GAUGE,LV_BTN_ACTION_CLICK,click_Back);
-
-
+	lv_btn_set_action(btnBack_Param_DEBUG,LV_BTN_ACTION_CLICK,click_Back);
+	DEBUG_TB = lv_ta_create(ctnParamDEBUG,NULL);
+	lv_obj_set_size(DEBUG_TB,250,250);
+	lv_obj_set_pos(DEBUG_TB,70,90);
+	lv_ta_set_text(DEBUG_TB,"");
+	lv_ta_set_cursor_type(DEBUG_TB,LV_CURSOR_NONE);
 }
 
 
@@ -543,7 +556,7 @@ void click_Parametres_GAUGE(lv_obj_t * child)
 
 	level++;
 	Actual_ctn = lv_obj_get_parent(child);
-	switch_window(Actual_ctn,ctnParamGAUGE);
+	switch_window(Actual_ctn,ctnParamDEBUG);
 
 
 }
@@ -569,8 +582,19 @@ void click_Back(lv_obj_t * child)
 
 
 
-void slide_container(lv_obj_t * actual_ctn,lv_obj_t * next_ctn)
+void slide_container(lv_obj_t * actual_ctn)//,lv_obj_t * next_ctn)
 {
+	int x=0;
+	int y=0;
+	while (x<400)
+	{
+		x++;
+		while(y<70)
+		{
+			y++;
+			asm("NOP");
+		}
+	}
 
 /*
 	delay_anim = delay_anim_nop;
@@ -700,9 +724,9 @@ static lv_res_t actionSlider(lv_obj_t * slider)
 void set_leds()
 {
 	val_SliderI = lv_slider_get_value(sliderI);
-	val_SliderR = (int)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-	val_SliderG = (int)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-	val_SliderB = (int)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderR = (uint8_t)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderG = (uint8_t)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderB = (uint8_t)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
 
 	if (lv_sw_get_state(toggleOnOff))
 	{

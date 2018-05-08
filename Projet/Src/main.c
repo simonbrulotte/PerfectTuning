@@ -175,7 +175,7 @@ int main(void)
 	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
 
 	  i++;
-	  if (i>=2)
+	  if (i>=10)
 	  {
 
 		  if (led_flag)
