@@ -17,5 +17,6 @@ void canbusReceive();
 HAL_StatusTypeDef canbusWrite(uint8_t *data, uint8_t dataLenght);
 void canbusPollingTest();
 
+extern void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght);
 
 #endif /* CANBUS_H_ */

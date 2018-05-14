@@ -159,7 +159,7 @@ int main(void)
   BSP_LED_Init(LED2);
 
   canbusInit();
-  canbusPollingTest();
+  //canbusPollingTest();
 
   lvgl_init(&hdma_memtomem_dma2_stream0, &hdma2d); //Fonction qui init l'écran et autres instances. Passe les typedef des différents modules pour
   	  	  	  	  	  	  	  	  	  	  	  	   //que lcd_lvgl se serve des configurations DMA existante. (c'est notre driver perso de lcd)
@@ -202,6 +202,9 @@ int main(void)
 			  lightLedBar();
 			  i=0;
 			  led_flag = false;
+
+			  uint8_t data[] = {0xFF, 0xFE, 0xFD};
+			  canbusWrite(data, 3); //lenghtof(data));
 		  }
 
 	  }
