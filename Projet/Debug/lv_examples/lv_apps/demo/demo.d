@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 lv_examples/lv_apps/demo/demo.o: ../lv_examples/lv_apps/demo/demo.c \
  ../lv_examples/lv_apps/demo/demo.h \
  ../lv_examples/lv_apps/demo/../../../lv_ex_conf.h \
@@ -275,3 +276,6 @@ d:\bibliotheque\documents\github\perfecttuning\projet\lvgl\lv_misc\lv_txt.h:
 ../lv_examples/lv_apps/demo/../../../lvgl/lv_objx/lv_slider.h:
 
 D:/Bibliotheque/Documents/GitHub/PerfectTuning/Projet/Inc/ledDriver.h:
+=======
+lv_examples/lv_apps/demo/demo.o: ../lv_examples/lv_apps/demo/demo.c
+>>>>>>> 071194af230efdbe197b2171882601cb058f1554

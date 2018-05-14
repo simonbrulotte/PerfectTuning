@@ -201,6 +201,11 @@ LV_FONT_DECLARE(lv_font_symbol_30);
 LV_FONT_DECLARE(lv_font_dejavu_40);
 #endif
 
+#if USE_LV_FONT_DEJAVU_240
+LV_FONT_DECLARE(lv_font_dejavu_240);
+#endif
+
+
 #if USE_LV_FONT_DEJAVU_40_LATIN_SUP
 LV_FONT_DECLARE(lv_font_dejavu_40_latin_sup);
 #endif
@@ -213,9 +218,14 @@ LV_FONT_DECLARE(lv_font_dejavu_40_cyrillic);
 LV_FONT_DECLARE(lv_font_symbol_40);
 #endif
 
+
+
+
+
 #ifdef __cplusplus
 } /* extern "C" */
 #endif
+
 
 #endif /*USE_FONT*/
 

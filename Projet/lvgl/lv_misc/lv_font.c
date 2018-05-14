@@ -1,5 +1,5 @@
 /**
- * @file lv_font.c
+w * @file lv_font.c
  * 
  */
 
@@ -146,6 +146,10 @@ void lv_font_init(void)
     lv_font_add(&lv_font_dejavu_40, NULL);
 #endif
 
+#if USE_LV_FONT_DEJAVU_240 != 0
+    lv_font_add(&lv_font_dejavu_240, NULL);
+#endif
+
 #if USE_LV_FONT_DEJAVU_40_LATIN_SUP != 0
 #if USE_LV_FONT_DEJAVU_40 != 0
     lv_font_add(&lv_font_dejavu_40_latin_sup, &lv_font_dejavu_40);
@@ -170,6 +174,7 @@ void lv_font_init(void)
     lv_font_add(&lv_font_symbol_40, NULL);
 #endif
 #endif
+
 
 }
 

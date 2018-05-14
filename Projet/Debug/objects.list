@@ -144,6 +144,7 @@
 "lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o"
 "lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o"
 "lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o"
+"lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o"
 "lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o"
 "lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o"
 "lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o"

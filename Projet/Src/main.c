@@ -111,6 +111,8 @@ extern uint8_t val_SliderR;
 extern uint8_t val_SliderG;
 extern uint8_t val_SliderB;
 extern bool led_flag;
+extern lv_obj_t * txt;
+extern lv_obj_t * tv_Princ;
 
 int main(void)
 {
@@ -173,7 +175,11 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int h=0;
   int i=0;
+
+  int k=0;
+  char buffer[50];
   while (1)
   {
   /* USER CODE END WHILE */
@@ -181,8 +187,8 @@ int main(void)
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
 	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
-
 	  i++;
+	  h++;
 	  if (i>=10)
 	  {
 
@@ -196,6 +202,28 @@ int main(void)
 			  lightLedBar();
 			  i=0;
 			  led_flag = false;
+		  }
+
+	  }
+	  if (lv_tabview_get_tab_act(tv_Princ) == 3)
+	  {
+		  if (h>=1)
+		  {
+			  if (k >= 500)
+			  {
+				  k=0;
+				  itoa(k,buffer,10);
+
+				  lv_label_set_text(txt,buffer);
+
+			  }
+			  else
+			  {
+				  itoa(k,buffer,10);
+				  lv_label_set_text(txt,buffer);
+				  k++;
+			  }
+			  h=0;
 		  }
 	  }
   }
