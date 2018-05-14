@@ -635,6 +635,65 @@ void HAL_SAI_MspDeInit(SAI_HandleTypeDef* hsai)
 
 /* USER CODE BEGIN 1 */
 
+/**
+  * @brief CAN MSP Initialization
+  *        This function configures the hardware resources used in this example:
+  *           - Peripheral's clock enable
+  *           - Peripheral's GPIO Configuration
+  * @param hcan: CAN handle pointer
+  * @retval None
+  */
+void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan)
+{
+  GPIO_InitTypeDef   GPIO_InitStruct;
+
+  /*##-1- Enable peripherals and GPIO Clocks #################################*/
+  /* CAN1 Periph clock enable */
+  __HAL_RCC_CAN1_CLK_ENABLE();
+  /* Enable GPIO clock ****************************************/
+  __HAL_RCC_GPIOB_CLK_ENABLE();  //CAN1_GPIO_CLK_ENABLE();
+
+  /*##-2- Configure peripheral GPIO ##########################################*/
+  /* CAN1 TX GPIO pin configuration */
+  GPIO_InitStruct.Pin = ARD_D13_SCK_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Alternate =  GPIO_AF9_CAN1;
+
+  HAL_GPIO_Init(ARD_D13_SCK_GPIO_Port, &GPIO_InitStruct);
+
+  /* CAN1 RX GPIO pin configuration */
+  GPIO_InitStruct.Pin = ARDUINO_SCL_D15_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Alternate =  GPIO_AF9_CAN1;
+
+  HAL_GPIO_Init(ARDUINO_SCL_D15_GPIO_Port, &GPIO_InitStruct);
+}
+
+/**
+  * @brief CAN MSP De-Initialization
+  *        This function frees the hardware resources used in this example:
+  *          - Disable the Peripheral's clock
+  *          - Revert GPIO configuration to their default state
+  * @param hcan: CAN handle pointer
+  * @retval None
+  */
+void HAL_CAN_MspDeInit(CAN_HandleTypeDef *hcan)
+{
+  /*##-1- Reset peripherals ##################################################*/
+  CANx_FORCE_RESET();
+  CANx_RELEASE_RESET();
+
+  /*##-2- Disable peripherals and GPIO Clocks ################################*/
+  /* De-initialize the CAN1 TX GPIO pin */
+  HAL_GPIO_DeInit(ARD_D13_SCK_GPIO_Port, ARD_D13_SCK_Pin);
+  /* De-initialize the CAN1 RX GPIO pin */
+  HAL_GPIO_DeInit(ARDUINO_SCL_D15_GPIO_Port, ARDUINO_SCL_D15_Pin);
+}
+
 /* USER CODE END 1 */
 
 /**

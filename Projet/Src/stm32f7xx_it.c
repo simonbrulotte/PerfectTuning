@@ -44,6 +44,7 @@ extern DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
 extern LTDC_HandleTypeDef hltdc_discovery;
 extern TIM_HandleTypeDef htim3;
 extern DMA_HandleTypeDef hdma_tim3_ch3;
+extern CAN_HandleTypeDef CanHandle;
 
 /******************************************************************************/
 /*            Cortex-M7 Processor Interruption and Exception Handlers         */ 
@@ -116,6 +117,68 @@ void DMA1_Stream7_IRQHandler(void)
 	/* USER CODE BEGIN DMA1_Stream7_IRQn 1 */
 
 	/* USER CODE END DMA1_Stream7_IRQn 1 */
+}
+
+/**
+* @brief  This function handles CAN1 RX0 interrupt request.
+* @param  None
+* @retval None
+*/
+void CAN1_RX0_IRQHandler(void)
+{
+	HAL_CAN_IRQHandler(&CanHandle);
+}
+
+
+/**
+* @brief  This function handles CAN2 RX0 interrupt request.
+* @param  None
+* @retval None
+*/
+void CAN2_RX0_IRQHandler(void)
+{
+	HAL_CAN_IRQHandler(&CanHandle);
+}
+
+/**
+* @brief  This function handles CAN1 RX1 interrupt request.
+* @param  None
+* @retval None
+*/
+void CAN1_RX1_IRQHandler(void)
+{
+	HAL_CAN_IRQHandler(&CanHandle);
+}
+
+
+/**
+* @brief  This function handles CAN2 RX1 interrupt request.
+* @param  None
+* @retval None
+*/
+void CAN2_RX1_IRQHandler(void)
+{
+	HAL_CAN_IRQHandler(&CanHandle);
+}
+
+/**
+* @brief  This function handles CAN1 TX interrupt request.
+* @param  None
+* @retval None
+*/
+void CAN1_TX_IRQHandler(void)
+{
+	HAL_CAN_IRQHandler(&CanHandle);
+}
+
+/**
+* @brief  This function handles CAN2 TX interrupt request.
+* @param  None
+* @retval None
+*/
+void CAN2_TX_IRQHandler(void)
+{
+	HAL_CAN_IRQHandler(&CanHandle);
 }
 
 /* USER CODE END 1 */

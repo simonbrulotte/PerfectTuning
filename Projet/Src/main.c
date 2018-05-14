@@ -55,12 +55,14 @@
 #include "lcd_lvgl.h"
 #include "lv_examples/lv_apps/demo/demo.h"
 
-//#include "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h"
+#include "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.h"
 
 //#include "PixelArray.h"
 //#include "WS2812.h"
 
 #include "ledDriver.h"
+
+#include "canbus.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -73,7 +75,9 @@ UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
 SDRAM_HandleTypeDef hsdram2;
 
-CAN_HandleTypeDef canDef;
+
+//Led_TypeDef LED1;
+//Led_TypeDef LED2;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
@@ -95,6 +99,7 @@ static void MX_SAI1_Init(void);
 /* USER CODE BEGIN PFP */
 extern void DMA_TransferError(DMA_HandleTypeDef *hdma);
 extern void DMA_TransferComplete(DMA_HandleTypeDef *hdma);
+
 /* Private function prototypes -----------------------------------------------*/
 
 /* USER CODE END PFP */
@@ -148,6 +153,12 @@ int main(void)
 
   //lv_obj_t * label = lv_label_create(lv_scr_act(), NULL);
 
+  BSP_LED_Init(LED1);
+  BSP_LED_Init(LED2);
+
+  canbusInit();
+  canbusPollingTest();
+
   lvgl_init(&hdma_memtomem_dma2_stream0, &hdma2d); //Fonction qui init l'écran et autres instances. Passe les typedef des différents modules pour
   	  	  	  	  	  	  	  	  	  	  	  	   //que lcd_lvgl se serve des configurations DMA existante. (c'est notre driver perso de lcd)
   demo2_create();  //Fonction qui crée le démo que la librairie propose pour le développement
@@ -191,6 +202,8 @@ int main(void)
   /* USER CODE END 3 */
 
 }
+
+
 
 /** System Clock Configuration
 */
@@ -1047,6 +1060,12 @@ void _Error_Handler(char * file, int line)
   /* User can add his own implementation to report the HAL error return state */
   while(1) 
   {
+	  HAL_Delay(1500);
+	  BSP_LED_On(LED1);
+	  BSP_LED_Off(LED2);
+	  HAL_Delay(1500);
+	  BSP_LED_On(LED2);
+	  BSP_LED_Off(LED1);
   }
   /* USER CODE END Error_Handler_Debug */ 
 }
