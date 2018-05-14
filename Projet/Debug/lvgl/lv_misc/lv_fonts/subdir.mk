@@ -10,6 +10,7 @@ C_SRCS += \
 ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.c \
 ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.c \
 ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.c \
+../lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.c \
 ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.c \
 ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.c \
 ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.c \
@@ -28,6 +29,7 @@ OBJS += \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o \
+./lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o \
@@ -46,6 +48,7 @@ C_DEPS += \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.d \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.d \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.d \
+./lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.d \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.d \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.d \
 ./lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.d \

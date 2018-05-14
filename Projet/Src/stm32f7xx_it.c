@@ -60,7 +60,7 @@ void SysTick_Handler(void)
   HAL_IncTick();
   HAL_SYSTICK_IRQHandler();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-  lv_tick_inc(1);
+  lv_tick_inc(1); // le 1 représente une milliseconde
   /* USER CODE END SysTick_IRQn 1 */
 }
 

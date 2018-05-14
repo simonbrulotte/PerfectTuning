@@ -16,7 +16,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "lv_conf.h"
-#include <math.h>
+#include <math.h>`
+#include "lvgl/lv_misc/lv_font.h"
 /*********************
  *      DEFINES
  *********************/
@@ -36,9 +37,10 @@
 #define ctnEST LV_HOR_RES
 
 #define OFFSET_X_SLIDER 5 // plus on augmente la valeur, plus les sliders sont à gauche
-#define OFFSET_Y_SLIDER 70 // plus on descend la valeur, plus on descend les slider
+#define OFFSET_Y_SLIDER 80 // plus on descend la valeur, plus on descend les slider
 
 #define delay_anim_nop 150
+
 
 /**********************
  *      TYPEDEFS
@@ -47,15 +49,19 @@
 /**********************
  *  STATIC PROTOTYPES
  **********************/
-
+static lv_style_t style_txt;
 static lv_res_t click_Parametres(lv_obj_t * child);
 static lv_res_t click_Parametres_DEL(lv_obj_t * child);
 static lv_res_t action_switch_LED (lv_obj_t * child);
 static lv_res_t actionSlider(lv_obj_t * slider);
+static lv_res_t sw_master_slave(lv_obj_t * sw);
+
+
 void Parametres(void);
-void slide_container(lv_obj_t * actual_ctn);//,lv_obj_t * next_ctn);
 void switch_window(lv_obj_t * actual,lv_obj_t * next);
-void click_Parametres_GAUGE(lv_obj_t * child);
+void switch_tab(int tab);
+
+void click_Parametres_DEBUG(lv_obj_t * child);
 void click_Back(lv_obj_t * child);
 
 /**********************
@@ -73,8 +79,10 @@ uint8_t val_SliderB=0;
 uint8_t val_SliderI=0;
 int delay_anim = 0;
 int level = 0;
+int last_tab = 0;
 
 bool led_flag=false;
+bool can_mode_master = true;
 
 lv_obj_t * Actual_ctn;
 lv_obj_t * label;
@@ -103,6 +111,7 @@ lv_obj_t * toggleOnOff;
 lv_obj_t * label_toggle;
 
 lv_obj_t *DEBUG_TB;
+lv_obj_t * txt;
 
 //composants de la page paramètres TUNING
 
@@ -115,7 +124,22 @@ lv_obj_t * btn_tuning_Apply;
 
 lv_obj_t * btn_ctnvehicule_Start;
 
+
+
+/// TABVIEW
+
+lv_obj_t * tv_Princ;
+lv_obj_t * tab_princ;
+lv_obj_t * tab_param;
+lv_obj_t * tab_del;
+lv_obj_t * tab_debug;
+lv_obj_t * tab_chiffre;
+lv_obj_t * toggleCan_Master_Slave;
+
 //lv_obj_t * ctnUnlock;
+
+
+
 
 /**********************
  *      MACROS
@@ -135,18 +159,26 @@ void demo2_create()
 
 void Principale ()
 {
-
-
-
 	//
 	// instanciation des éléments de la page principale
 	//
+
+	tv_Princ = lv_tabview_create(lv_scr_act(),NULL);
+		lv_obj_set_size(tv_Princ,LV_HOR_RES+50,LV_VER_RES+130); /// 130 car la longueur des boutons est de 130
+		lv_obj_set_pos(tv_Princ,-30,-120);
+		tab_princ = lv_tabview_add_tab(tv_Princ,"PRINC");
+		//tab_param = lv_tabview_add_tab(tv_Princ,"PARAM");
+		tab_del = lv_tabview_add_tab(tv_Princ,"DEL");
+		tab_debug = lv_tabview_add_tab(tv_Princ,"DEBUG");
+		tab_chiffre = lv_tabview_add_tab(tv_Princ,"INDICATEUR");
+		lv_tabview_set_sliding(tv_Princ,true);
+
 	int actual_btn_pos=ctnPrincipal_init_ver_gap;
-	ctnPrincipal = lv_cont_create(lv_scr_act(),NULL);
-		lv_obj_set_size(ctnPrincipal,LV_HOR_RES,LV_VER_RES);
+//	ctnPrincipal = lv_cont_create(tab_princ,NULL);
+		//lv_obj_set_size(ctnPrincipal,LV_HOR_RES,LV_VER_RES);
 
 
-	btnParametre = lv_btn_create(ctnPrincipal,NULL);
+	btnParametre = lv_btn_create(tab_princ,NULL);
 		lv_obj_set_size(btnParametre,ctnPrinc_btnWitdh,ctnPrinc_btnHeight);
 		label = lv_label_create(btnParametre, NULL);
 		lv_label_set_text(label, "Parametres");
@@ -155,14 +187,14 @@ void Principale ()
 		lv_btn_set_action(btnParametre,LV_BTN_ACTION_CLICK,click_Parametres);
 
 
-	btnVehicule = lv_btn_create(ctnPrincipal,NULL);
+	btnVehicule = lv_btn_create(tab_princ,NULL);
 		lv_obj_set_size(btnVehicule,ctnPrinc_btnWitdh,ctnPrinc_btnHeight);
 		label = lv_label_create(btnVehicule, NULL);
 		lv_label_set_text(label, "Vehicule");
 		lv_obj_set_pos(btnVehicule,(LV_HOR_RES-ctnPrinc_btnWitdh)/2,actual_btn_pos); // regle le gap et la hauteur du bouton
 		actual_btn_pos += ctnPrinc_btnTotalDst ;
 
-	btnGauges = lv_btn_create(ctnPrincipal,NULL);
+	btnGauges = lv_btn_create(tab_princ,NULL);
 		lv_obj_set_size(btnGauges,ctnPrinc_btnWitdh,ctnPrinc_btnHeight);
 		label = lv_label_create(btnGauges, NULL);
 		lv_label_set_text(label, "Gauges / Stats");
@@ -175,6 +207,7 @@ void Principale ()
 
 void Parametres() // on place la variable initPosition dans
 {
+
 	int nb_Button=2;
 	int nb_slider = 4;
 	int slider_gap = 15;
@@ -214,19 +247,19 @@ void Parametres() // on place la variable initPosition dans
 
 	int actual_btn_pos = (LV_VER_RES-(nb_Button*(ctnPrinc_btnGap+ctnPrinc_btnHeight)))/2;
 
-	ctnParametre = lv_cont_create(lv_scr_act(),NULL);
+//	ctnParametre = lv_cont_create(tab_param,NULL);
 
-		lv_obj_set_size(ctnParametre,LV_HOR_RES,LV_VER_RES);
-		lv_obj_set_hidden(ctnParametre,true);
+//		lv_obj_set_size(ctnParametre,LV_HOR_RES,LV_VER_RES);
+//		lv_obj_set_hidden(ctnParametre,true);
 
-		lv_obj_t * btnBack_Param = lv_btn_create(ctnParametre,NULL);
+/*		lv_obj_t * btnBack_Param = lv_btn_create(tab_param,NULL);
 			lv_obj_set_size(btnBack_Param,size_W_retour,size_H_retour);
 			lv_obj_set_pos(btnBack_Param,pos_X_retour,pos_Y_retour);
 			label = lv_label_create(btnBack_Param, NULL);
 			lv_label_set_text(label, "<-");
 			lv_btn_set_action(btnBack_Param,LV_BTN_ACTION_CLICK,click_Back);
 
-		lv_obj_t * btn_Param_LED = lv_btn_create(ctnParametre,NULL);
+		lv_obj_t * btn_Param_LED = lv_btn_create(tab_param,NULL);
 			lv_obj_set_size(btn_Param_LED,ctnPrinc_btnWitdh,ctnPrinc_btnHeight);
 			label = lv_label_create(btn_Param_LED, NULL);
 			lv_label_set_text(label, "DEL");
@@ -234,14 +267,14 @@ void Parametres() // on place la variable initPosition dans
 			actual_btn_pos += ctnPrinc_btnTotalDst ;
 			lv_btn_set_action(btn_Param_LED,LV_BTN_ACTION_CLICK,click_Parametres_DEL);
 
-		lv_obj_t * btn_Param_DEBUG = lv_btn_create(ctnParametre,NULL);
+		lv_obj_t * btn_Param_DEBUG = lv_btn_create(tab_param,NULL);
 			lv_obj_set_size(btn_Param_DEBUG,ctnPrinc_btnWitdh,ctnPrinc_btnHeight);
 			label = lv_label_create(btn_Param_DEBUG, NULL);
 			lv_label_set_text(label, "DEBUG");
 			lv_obj_set_pos(btn_Param_DEBUG,(LV_HOR_RES-ctnPrinc_btnWitdh)/2,actual_btn_pos);
 			actual_btn_pos += ctnPrinc_btnTotalDst ;
-			lv_btn_set_action(btn_Param_DEBUG,LV_BTN_ACTION_CLICK,click_Parametres_GAUGE);
-
+			lv_btn_set_action(btn_Param_DEBUG,LV_BTN_ACTION_CLICK,click_Parametres_DEBUG);
+*/
 
 // ***************************
 //
@@ -249,25 +282,25 @@ void Parametres() // on place la variable initPosition dans
 //
 // ***************************
 
-	ctnParamLED = lv_cont_create(lv_scr_act(),NULL);
-		lv_obj_set_size(ctnParamLED,LV_HOR_RES,LV_VER_RES);
-		lv_obj_set_hidden(ctnParamLED,true);
+	//ctnParamLED = lv_cont_create(tab_del,NULL);
+		//lv_obj_set_size(ctnParamLED,LV_HOR_RES,LV_VER_RES);
+		//lv_obj_set_hidden(ctnParamLED,true);
 		//lv_obj_set_pos(ctnParamLED,0,ctnNORTH);
-
-		lv_obj_t * btnBack_Param_LED = lv_btn_create(ctnParamLED,NULL);
+/*
+		lv_obj_t * btnBack_Param_LED = lv_btn_create(tab_del,NULL);
 			lv_obj_set_size(btnBack_Param_LED,size_W_retour,size_H_retour);
 			lv_obj_set_pos(btnBack_Param_LED,pos_X_retour,pos_Y_retour);
 			label = lv_label_create(btnBack_Param_LED, NULL);
 			lv_label_set_text(label, "<-");
 			lv_btn_set_action(btnBack_Param_LED,LV_BTN_ACTION_CLICK,click_Back);
-
+*/
 // ***************************
 //
 // Config du slider Rouge
 //
 // ***************************
 
-		sliderR = lv_slider_create(ctnParamLED,NULL);
+		sliderR = lv_slider_create(tab_del,NULL);
 
 
 			lv_obj_set_size(sliderR,sliderRGB_Width,sliderRGB_Height);
@@ -314,7 +347,7 @@ void Parametres() // on place la variable initPosition dans
 		//
 		// ***************************
 
-		sliderG = lv_slider_create(ctnParamLED,NULL);
+		sliderG = lv_slider_create(tab_del,NULL);
 			lv_obj_set_size(sliderG,sliderRGB_Width,sliderRGB_Height);
 			lv_slider_set_range(sliderG,0,255);
 			lv_obj_set_pos(sliderG,actual_slider_pos,slider_Y_pos);
@@ -359,7 +392,7 @@ void Parametres() // on place la variable initPosition dans
 //
 // ***************************
 
-		sliderB = lv_slider_create(ctnParamLED,NULL);
+		sliderB = lv_slider_create(tab_del,NULL);
 			lv_obj_set_size(sliderB,sliderRGB_Width,sliderRGB_Height);
 			lv_slider_set_range(sliderB,0,255);
 			lv_obj_set_pos(sliderB,actual_slider_pos,slider_Y_pos);
@@ -405,7 +438,7 @@ void Parametres() // on place la variable initPosition dans
 		// ***************************
 
 
-		sliderI = lv_slider_create(ctnParamLED,NULL);
+		sliderI = lv_slider_create(tab_del,NULL);
 			lv_obj_set_size(sliderI,sliderRGB_Width,sliderRGB_Height);
 			lv_slider_set_range(sliderI,0,100);
 			lv_slider_set_value(sliderI,50);
@@ -469,14 +502,14 @@ void Parametres() // on place la variable initPosition dans
 		knob_on_style_sw.body.shadow.width = 4;
 		knob_on_style_sw.body.shadow.type = LV_SHADOW_BOTTOM;
 
-		toggleOnOff = lv_sw_create(ctnParamLED, NULL);
+		toggleOnOff = lv_sw_create(tab_del, NULL);
 			int size_width_toggle = 105;
 			int size_height_toggle = 60;
 
 			int toggle_Y_align = lv_obj_get_y(sliderR) - sliderLabel_Gap; // Paramètre d'alignement vertical de la switch
 
 			lv_obj_set_size(toggleOnOff,size_width_toggle,size_height_toggle);
-			label_toggle = lv_label_create(ctnParamLED,NULL);
+			label_toggle = lv_label_create(tab_del,NULL);
 
 			lv_label_set_text(label_toggle,"Deactivated");
 			lv_sw_set_action(toggleOnOff,action_switch_LED);
@@ -486,7 +519,6 @@ void Parametres() // on place la variable initPosition dans
 							toggle_Y_align + ((size_height_toggle)/2)-20);
 */
 
-
 			lv_sw_set_style(toggleOnOff, LV_SW_STYLE_BG, &bg_style_sw);
 			lv_sw_set_style(toggleOnOff, LV_SW_STYLE_INDIC, &indic_style_sw);
 			lv_sw_set_style(toggleOnOff, LV_SW_STYLE_KNOB_ON, &knob_on_style_sw);
@@ -495,74 +527,113 @@ void Parametres() // on place la variable initPosition dans
 			lv_obj_set_pos(toggleOnOff,lv_obj_get_x(sliderR),toggle_Y_align+10);
 			lv_obj_align(label_toggle,toggleOnOff,LV_ALIGN_OUT_RIGHT_MID,50,0);
 
-
-
-
-
-
-
-
 	// panneau du controle des Gauges
 
 
 
-	ctnParamDEBUG = lv_cont_create(lv_scr_act(),NULL);
+	//ctnParamDEBUG = lv_cont_create(tab_debug,NULL);
 
-	lv_obj_set_size(ctnParamDEBUG,LV_HOR_RES,LV_VER_RES);
-	lv_obj_set_hidden(ctnParamDEBUG,true);
+		//lv_obj_set_size(ctnParamDEBUG,LV_HOR_RES,LV_VER_RES);
+//		lv_obj_set_hidden(ctnParamDEBUG,true);
+
+		toggleCan_Master_Slave = lv_sw_create(tab_debug,NULL);
+		lv_obj_set_size(toggleCan_Master_Slave,80,50);
+		lv_obj_set_pos(toggleCan_Master_Slave,120,260);
+		lv_sw_set_action(toggleCan_Master_Slave,sw_master_slave);
 
 
-	lv_obj_t * btnBack_Param_DEBUG = lv_btn_create(ctnParamDEBUG,NULL);
-	lv_obj_set_size(btnBack_Param_DEBUG,size_W_retour,size_H_retour);
-	lv_obj_set_pos(btnBack_Param_DEBUG,pos_X_retour,pos_Y_retour);
-	label = lv_label_create(btnBack_Param_DEBUG, NULL);
-	lv_label_set_text(label, "<-");
-	lv_btn_set_action(btnBack_Param_DEBUG,LV_BTN_ACTION_CLICK,click_Back);
-	DEBUG_TB = lv_ta_create(ctnParamDEBUG,NULL);
-	lv_obj_set_size(DEBUG_TB,250,250);
-	lv_obj_set_pos(DEBUG_TB,70,90);
-	lv_ta_set_text(DEBUG_TB,"");
-	lv_ta_set_cursor_type(DEBUG_TB,LV_CURSOR_NONE);
+
+		DEBUG_TB = lv_ta_create(tab_debug,NULL);
+		lv_obj_set_size(DEBUG_TB,250,175);
+		lv_obj_set_pos(DEBUG_TB,70,120);
+		lv_ta_set_text(DEBUG_TB,"CanBus mode Master\n");
+		lv_ta_set_cursor_type(DEBUG_TB,LV_CURSOR_NONE);
+
+
+
+
+
+
+
+
+		lv_style_copy(&style_txt, &lv_style_plain);
+		style_txt.text.font = &lv_font_dejavu_240;
+		style_txt.text.letter_space = 2;
+		style_txt.text.line_space = 1;
+		style_txt.text.color = LV_COLOR_HEX(0x606060);
+
+		txt = lv_label_create(tab_chiffre, NULL);
+		lv_obj_set_style(txt, &style_txt);                    /*Set the created style*/
+		lv_label_set_long_mode(txt, LV_LABEL_LONG_BREAK);     /*Break the long lines*/
+		lv_label_set_recolor(txt, true);                      /*Enable re-coloring by commands in the text*/
+		lv_label_set_align(tab_chiffre, LV_LABEL_ALIGN_CENTER);       /*Center aligned lines*/
+		lv_label_set_text(txt, "10");
+		lv_obj_set_width(txt, 300);                           /*Set a width*/
+		lv_obj_set_pos(txt,100,400);
+
+
 }
 
 
-//
-//
-//faire une fonction pour tout le reste
-//
+static lv_res_t sw_master_slave(lv_obj_t * sw)
+{
+	if (can_mode_master == true)
+	{
+		can_mode_master = false;
+		lv_ta_add_text(DEBUG_TB,"CanBus mode Slave\n");
+	}
+	else
+	{
+		can_mode_master = true;
+		lv_ta_add_text(DEBUG_TB,"CanBus mode Master\n");
+
+	}
+}
+
+
 
 static lv_res_t click_Parametres(lv_obj_t * child)
 {
-
+	last_tab = lv_tabview_get_tab_act(tv_Princ);
+	switch_tab(1);
+/*
 	level++;
-	switch_window(lv_obj_get_parent(child),ctnParametre);
+	//	switch_window(lv_obj_get_parent(child),ctnParametre);
+*/
+
+
 
 }
 
 static lv_res_t click_Parametres_DEL(lv_obj_t * child)
 {
-
+/*
 	level++;
 	Actual_ctn = lv_obj_get_parent(child);
 	lv_obj_set_hidden(Actual_ctn,true);
 	lv_obj_set_hidden(ctnParamLED,false);
-
+*/
+	last_tab = lv_tabview_get_tab_act(tv_Princ);
+	switch_tab(2);
 //	switch_window(Actual_ctn,ctnParamLED);
+	return LV_RES_OK;
 
 }
 
-void click_Parametres_GAUGE(lv_obj_t * child)
+void click_Parametres_DEBUG(lv_obj_t * child)
 {
-
+/*
 	level++;
 	Actual_ctn = lv_obj_get_parent(child);
 	switch_window(Actual_ctn,ctnParamDEBUG);
-
-
+*/
+	last_tab = lv_tabview_get_tab_act(tv_Princ);
+	switch_tab(3);
 }
 
 void click_Back(lv_obj_t * child)
 {
+	/*
 	level--;
 	switch (level)
 	{
@@ -577,116 +648,29 @@ void click_Back(lv_obj_t * child)
 	if (level < 0)
 	{
 		level = 0;
+	}*/
+	if (lv_tabview_get_tab_act(tv_Princ) == 1)
+	{
+		lv_tabview_set_tab_act(tv_Princ,0,true);
+	}
+	else
+	{
+		lv_tabview_set_tab_act(tv_Princ,last_tab,true);
 	}
 }
 
-
-
-void slide_container(lv_obj_t * actual_ctn)//,lv_obj_t * next_ctn)
+void switch_tab(int tab)
 {
-	int x=0;
-	int y=0;
-	while (x<400)
-	{
-		x++;
-		while(y<70)
-		{
-			y++;
-			asm("NOP");
-		}
-	}
-
-/*
-	delay_anim = delay_anim_nop;
-
-	if (lv_obj_get_x(next_ctn) != 0) // Le déplacement se ferait horizontalement
-	{
-		if (lv_obj_get_x(next_ctn) == -(LV_HOR_RES)) // Lorsque le container voulu est à gauche
-		{
-			for (int x = 0;x>=LV_HOR_RES;x++)
-			{
-				lv_obj_set_pos(actual_ctn,lv_obj_get_x(actual_ctn)+1,0);
-				lv_obj_set_pos(next_ctn,lv_obj_get_x(next_ctn)+1,0);
-				while(delay_anim >= 0)
-				{
-					delay_anim--;
-					asm("NOP");
-				}
-				delay_anim = delay_anim_nop;
-			}
-			//lv_obj_set_pos(actual_ctn,LV_HOR_RES,0);
-		//	lv_obj_set_pos(next_ctn,0,0);
-
-		}
-		else // Lorsque le container voulu est à droite
-		{
-			for (int x = 0;x>=LV_HOR_RES;x++)
-			{
-				lv_obj_set_pos(actual_ctn,lv_obj_get_x(actual_ctn)-1,0);
-				lv_obj_set_pos(next_ctn,lv_obj_get_x(next_ctn)-1,0);
-				while(delay_anim >= 0)
-				{
-					delay_anim--;
-					asm("NOP");
-				}
-				delay_anim = delay_anim_nop;
-			}
-			lv_obj_set_pos(actual_ctn,-(LV_HOR_RES),0);
-			lv_obj_set_pos(next_ctn,0,0);
-
-		}
-	}
-
-
-	if (lv_obj_get_y(next_ctn) != 0)// Le déplacement se ferait horizontalement
-	{
-
-		if (lv_obj_get_y(next_ctn) == -(LV_VER_RES)) // Lorsque le container voulu est en Bas
-		{
-			for (int x = 0;x>=LV_VER_RES;x++)
-			{
-				lv_obj_set_pos(actual_ctn,lv_obj_get_y(actual_ctn)+1,0);
-				lv_obj_set_pos(next_ctn,lv_obj_get_y(next_ctn)+1,0);
-				while(delay_anim >= 0)
-				{
-					delay_anim--;
-					asm("NOP");
-				}
-				delay_anim = delay_anim_nop;
-			}
-			lv_obj_set_pos(actual_ctn,0,LV_VER_RES);
-			lv_obj_set_pos(next_ctn,0,0);
-
-		}
-
-		else // Lorsque le container voulu est en Haut
-		{
-			for (int x = 0;x>=LV_VER_RES;x++)
-			{
-				lv_obj_set_pos(actual_ctn,lv_obj_get_y(actual_ctn)-1,0);
-				lv_obj_set_pos(next_ctn,lv_obj_get_y(next_ctn)-1,0);
-				while(delay_anim >= 0)
-				{
-					delay_anim--;
-					asm("NOP");
-				}
-				delay_anim = delay_anim_nop;
-			}
-			lv_obj_set_pos(actual_ctn,0,-(LV_VER_RES));
-			lv_obj_set_pos(next_ctn,0,0);
-		}
-
-	}
-*/
-
-
-
+	lv_tabview_set_tab_act(tv_Princ,tab,true);
 }
 
 void switch_window(lv_obj_t * actual,lv_obj_t * next)
 {
+
+	/*
 	lv_obj_set_hidden(actual,true);
 	lv_obj_set_hidden(next,false);
+	*/
 }
 
 static lv_res_t action_switch_LED(lv_obj_t * child)
@@ -702,6 +686,7 @@ static lv_res_t action_switch_LED(lv_obj_t * child)
 		lv_label_set_text(label_toggle,"Deactivated");
 		turnOffBar();
 	}
+	return LV_RES_OK;
 }
 
 static lv_res_t actionSlider(lv_obj_t * slider)
@@ -716,9 +701,8 @@ static lv_res_t actionSlider(lv_obj_t * slider)
 		//
 		//
 	 */
-
 	set_leds();
-
+	return LV_RES_OK;
 }
 
 void set_leds()
@@ -730,10 +714,7 @@ void set_leds()
 
 	if (lv_sw_get_state(toggleOnOff))
 	{
-
 		led_flag = true;
 	}
 
 }
-
-

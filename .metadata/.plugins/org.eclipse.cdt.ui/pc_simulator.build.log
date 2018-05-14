@@ -1,0 +1,27 @@
+00:44:29 **** Build of configuration Debug for project pc_simulator ****
+make -j8 all 
+Building file: ../lvgl/lv_themes/lv_theme_mono.c
+Building file: ../lvgl/lv_themes/lv_theme_night.c
+Building file: ../lvgl/lv_themes/lv_theme_templ.c
+Invoking: Cross GCC Compiler
+gcc -I"C:\Users\game\Downloads\pc_simulator" -I"C:\Users\game\Downloads\SDL2-devel-2.0.8-mingw\SDL2-2.0.8\x86_64-w64-mingw32\include\SDL2" -O0 -Og -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_mono.d" -MT"lvgl/lv_themes/lv_theme_mono.o" -o "lvgl/lv_themes/lv_theme_mono.o" "../lvgl/lv_themes/lv_theme_mono.c"
+Invoking: Cross GCC Compiler
+Invoking: Cross GCC Compiler
+gcc -I"C:\Users\game\Downloads\pc_simulator" -I"C:\Users\game\Downloads\SDL2-devel-2.0.8-mingw\SDL2-2.0.8\x86_64-w64-mingw32\include\SDL2" -O0 -Og -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_night.d" -MT"lvgl/lv_themes/lv_theme_night.o" -o "lvgl/lv_themes/lv_theme_night.o" "../lvgl/lv_themes/lv_theme_night.c"
+gcc -I"C:\Users\game\Downloads\pc_simulator" -I"C:\Users\game\Downloads\SDL2-devel-2.0.8-mingw\SDL2-2.0.8\x86_64-w64-mingw32\include\SDL2" -O0 -Og -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_templ.d" -MT"lvgl/lv_themes/lv_theme_templ.o" -o "lvgl/lv_themes/lv_theme_templ.o" "../lvgl/lv_themes/lv_theme_templ.c"
+Building file: ../lvgl/lv_themes/lv_theme_zen.c
+Building file: ../lvgl/lv_objx/lv_bar.c
+Invoking: Cross GCC Compiler
+gcc -I"C:\Users\game\Downloads\pc_simulator" -I"C:\Users\game\Downloads\SDL2-devel-2.0.8-mingw\SDL2-2.0.8\x86_64-w64-mingw32\include\SDL2" -O0 -Og -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_zen.d" -MT"lvgl/lv_themes/lv_theme_zen.o" -o "lvgl/lv_themes/lv_theme_zen.o" "../lvgl/lv_themes/lv_theme_zen.c"
+Building file: ../lvgl/lv_objx/lv_btn.c
+Invoking: Cross GCC Compiler
+gcc -I"C:\Users\game\Downloads\pc_simulator" -I"C:\Users\game\Downloads\SDL2-devel-2.0.8-mingw\SDL2-2.0.8\x86_64-w64-mingw32\include\SDL2" -O0 -Og -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_bar.d" -MT"lvgl/lv_objx/lv_bar.o" -o "lvgl/lv_objx/lv_bar.o" "../lvgl/lv_objx/lv_bar.c"
+Building file: ../lvgl/lv_objx/lv_btnm.c
+Invoking: Cross GCC Compiler
+gcc -I"C:\Users\game\Downloads\pc_simulator" -I"C:\Users\game\Downloads\SDL2-devel-2.0.8-mingw\SDL2-2.0.8\x86_64-w64-mingw32\include\SDL2" -O0 -Og -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_btn.d" -MT"lvgl/lv_objx/lv_btn.o" -o "lvgl/lv_objx/lv_btn.o" "../lvgl/lv_objx/lv_btn.c"
+Building file: ../lvgl/lv_objx/lv_cb.c
+Invoking: Cross GCC Compiler
+Command canceled
+
+00:45:30 Build Cancelled (took 1m:1s.153ms)
+
