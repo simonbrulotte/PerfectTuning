@@ -68,14 +68,13 @@ void canbusInit()
   }
 
   //Ajout personnel pour activer les interrupts
-  //__HAL_CAN_ENABLE_IT(CanHandle, );
+  //__HAL_CAN_ENABLE_IT(&CanHandle, CAN_IT_FMP0);
   //HAL_CAN_Receive_IT(&CanHandle, CAN_FIFO0);
 
   //Ajout code Samuel
-  HAL_CAN_Receive_IT(&CanHandle, CAN_FIFO0);
+  //HAL_CAN_Receive_IT(&CanHandle, CAN_FIFO0);
   HAL_NVIC_SetPriority(CAN1_RX0_IRQn, 5, 0);
   HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
-
 }
 
 /**
