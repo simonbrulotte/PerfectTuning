@@ -98,7 +98,7 @@ lv_obj_t * ctnParamLED;
 lv_obj_t * ctnParamDEBUG;
 
 
-//composant de la page d'acceuil
+//composant de la page d'accueil
 lv_obj_t * btnParametre;
 lv_obj_t * btnGauges;
 lv_obj_t * btnVehicule;
@@ -589,9 +589,30 @@ static lv_res_t sw_master_slave(lv_obj_t * sw)
 static lv_res_t click_Parametres(lv_obj_t * child)
 {
 
+<<<<<<< HEAD
 	lv_obj_set_hidden(tv_Princ,true);
 	switch_tab(tv_Param,1);
 	lv_obj_set_hidden(tv_Param,false);
+=======
+void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
+{
+	int i;
+	uint8_t tempBuf[10];
+	uint8_t canbusString[50];
+
+	for(i=0; i<(dataLenght-1); i++)
+	{
+		sprintf(tempBuf, "[%d],", data[i]);
+		strcat(canbusString, tempBuf);
+	}
+	i++;
+	sprintf(tempBuf, "[%d]\n", data[i]);
+	strcat(canbusString, tempBuf);
+
+	lv_ta_add_text(DEBUG_TB,"CanBus mode Slave\n");
+}
+
+>>>>>>> 94cac8238a700f505c5dfc1d9f11c855335d7f44
 
 
 /*

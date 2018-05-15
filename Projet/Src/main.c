@@ -157,10 +157,14 @@ int main(void)
 
   BSP_LED_Init(LED1);
   BSP_LED_Init(LED2);
+<<<<<<< HEAD
 /*
   canbusInit();
   canbusPollingTest();
 */
+=======
+
+>>>>>>> 94cac8238a700f505c5dfc1d9f11c855335d7f44
   lvgl_init(&hdma_memtomem_dma2_stream0, &hdma2d); //Fonction qui init l'écran et autres instances. Passe les typedef des différents modules pour
   	  	  	  	  	  	  	  	  	  	  	  	   //que lcd_lvgl se serve des configurations DMA existante. (c'est notre driver perso de lcd)
   demo2_create();  //Fonction qui crée le démo que la librairie propose pour le développement
@@ -172,6 +176,9 @@ int main(void)
 
   //HAL_DSI_Start(&hdsi);
   /* USER CODE END 2 */
+
+  canbusInit();
+  canbusPollingTest();
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -202,6 +209,9 @@ int main(void)
 			  lightLedBar();
 			  i=0;
 			  led_flag = false;
+
+			  uint8_t data[] = {0xFF, 0xFE, 0xFD};
+			  //canbusWrite(data, 3); //lenghtof(data));
 		  }
 
 	  }

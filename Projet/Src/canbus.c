@@ -6,7 +6,11 @@
  */
 
 /*------------------- includes -------------------*/
+#include <string.h>
 #include "canbus.h"
+
+/*------------------- Prototypes -------------------*/
+
 
 /*------------------- Variables globales -------------------*/
 CAN_HandleTypeDef CanHandle;
@@ -64,8 +68,13 @@ void canbusInit()
   }
 
   //Ajout personnel pour activer les interrupts
-  //__HAL_CAN_ENABLE_IT(CanHandle, );
-  HAL_CAN_Receive_IT(&CanHandle, 1);
+  //__HAL_CAN_ENABLE_IT(&CanHandle, CAN_IT_FMP0);
+  //HAL_CAN_Receive_IT(&CanHandle, CAN_FIFO0);
+
+  //Ajout code Samuel
+  //HAL_CAN_Receive_IT(&CanHandle, CAN_FIFO0);
+  HAL_NVIC_SetPriority(CAN1_RX0_IRQn, 5, 0);
+  HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
 }
 
 /**
@@ -140,8 +149,8 @@ HAL_StatusTypeDef canbusWrite(uint8_t *data, uint8_t dataLenght)
   CanHandle.pTxMsg->StdId = 0x11;
   CanHandle.pTxMsg->RTR = CAN_RTR_DATA;
   CanHandle.pTxMsg->IDE = CAN_ID_STD;
-  CanHandle.pTxMsg->DLC = 2;
-  if(dataLenght >= 64)
+  CanHandle.pTxMsg->DLC = dataLenght;
+  if(dataLenght >= 8)
 	  return HAL_ERROR;
 
   for(int i=0; i<dataLenght; i++)  //Fonction qui remplie le buffer (max 8 bytes) de données à envoyer
@@ -151,7 +160,7 @@ HAL_StatusTypeDef canbusWrite(uint8_t *data, uint8_t dataLenght)
   //CanHandle.pTxMsg->Data[0] = 0xCA;
   //CanHandle.pTxMsg->Data[1] = 0xFE;
 
-  if(HAL_CAN_Transmit(&CanHandle, 10) != HAL_OK)
+  if(HAL_CAN_Transmit(&CanHandle, 10) != HAL_OK) //HAL_CAN_Transmit_IT(&CanHandle)!= HAL_OK) //HAL_CAN_Transmit(&CanHandle, 10) != HAL_OK)
   {
 	/* Transmition Error */
 	Error_Handler();
@@ -181,6 +190,15 @@ void canbusPollingTest()
 
 void HAL_CAN_RxCpltCallback(CAN_HandleTypeDef* hcan)
 {
-	int i =0;
-	i++;
+	CanRxMsgTypeDef msg;
+	if(HAL_CAN_Receive_IT(hcan, CAN_FIFO0) == HAL_OK)
+	{
+		msg.ExtId = hcan->pRxMsg->ExtId;
+		msg.DLC = hcan->pRxMsg->DLC;
+		memcpy(msg.Data, hcan->pRxMsg->Data, hcan->pRxMsg->DLC);
+
+		afficheCanBus_Data(msg.Data, msg.DLC);
+	}
+
+	//__HAL_CAN_ENABLE_IT(hcan, CAN_IT_FMP0);  // set interrupt flag for RX FIFO0
 }

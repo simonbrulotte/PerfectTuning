@@ -655,22 +655,24 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan)
 
   /*##-2- Configure peripheral GPIO ##########################################*/
   /* CAN1 TX GPIO pin configuration */
-  GPIO_InitStruct.Pin = ARD_D13_SCK_Pin;
+  GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9; //ARDUINO_SDA_D14_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;  //GPIO_SPEED_FREQ_HIGH;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;  //GPIO_PULLUP;
   GPIO_InitStruct.Alternate =  GPIO_AF9_CAN1;
 
-  HAL_GPIO_Init(ARD_D13_SCK_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);  //(ARDUINO_SDA_D14_GPIO_Port, &GPIO_InitStruct);
 
   /* CAN1 RX GPIO pin configuration */
+  /*
   GPIO_InitStruct.Pin = ARDUINO_SCL_D15_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Alternate =  GPIO_AF9_CAN1;
 
   HAL_GPIO_Init(ARDUINO_SCL_D15_GPIO_Port, &GPIO_InitStruct);
+  */
 }
 
 /**
@@ -684,8 +686,8 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan)
 void HAL_CAN_MspDeInit(CAN_HandleTypeDef *hcan)
 {
   /*##-1- Reset peripherals ##################################################*/
-  CANx_FORCE_RESET();
-  CANx_RELEASE_RESET();
+  //CANx_FORCE_RESET();
+  //CANx_RELEASE_RESET();
 
   /*##-2- Disable peripherals and GPIO Clocks ################################*/
   /* De-initialize the CAN1 TX GPIO pin */
