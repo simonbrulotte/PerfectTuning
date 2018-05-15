@@ -1,52 +1,48 @@
-13:38:47 **** Incremental Build of configuration Release for project Projet ****
+11:33:46 **** Incremental Build of configuration Release for project Projet ****
 make -j all 
 Building file: ../lv_examples/lv_apps/demo/demo2.c
 Invoking: MCU GCC Compiler
 C:\PerfectTuning\Projet\Release
 arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
-../lv_examples/lv_apps/demo/demo2.c:19:18: warning: extra tokens at end of #include directive
- #include <math.h>`
-                  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
-../lv_examples/lv_apps/demo/demo2.c:151:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
   Principale();
   ^~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:157:6: warning: conflicting types for 'Principale'
+../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
  void Principale ()
       ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:151:2: note: previous implicit declaration of 'Principale' was here
+../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
   Principale();
   ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c: In function 'Parametres':
-../lv_examples/lv_apps/demo/demo2.c:245:6: warning: unused variable 'actual_btn_pos' [-Wunused-variable]
-  int actual_btn_pos = (LV_VER_RES-(nb_Button*(ctnPrinc_btnGap+ctnPrinc_btnHeight)))/2;
-      ^~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:224:6: warning: unused variable 'pos_Y_retour' [-Wunused-variable]
-  int pos_Y_retour = 15;
-      ^~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:223:6: warning: unused variable 'pos_X_retour' [-Wunused-variable]
-  int pos_X_retour = (LV_HOR_RES/2)-(size_W_retour/2);
-      ^~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:221:6: warning: unused variable 'size_H_retour' [-Wunused-variable]
-  int size_H_retour = 50;
-      ^~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
+../lv_examples/lv_apps/demo/demo2.c:582:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
-../lv_examples/lv_apps/demo/demo2.c:590:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:597:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:610:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:622:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
-../lv_examples/lv_apps/demo/demo2.c:666:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:697:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
    set_leds();
    ^~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:692:6: warning: conflicting types for 'set_leds'
+../lv_examples/lv_apps/demo/demo2.c:723:6: warning: conflicting types for 'set_leds'
  void set_leds()
       ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:666:3: note: previous implicit declaration of 'set_leds' was here
+../lv_examples/lv_apps/demo/demo2.c:697:3: note: previous implicit declaration of 'set_leds' was here
    set_leds();
    ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:592:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+../lv_examples/lv_apps/demo/demo2.c:625:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
  static lv_res_t click_Parametres_DEL(lv_obj_t * child)
                  ^~~~~~~~~~~~~~~~~~~~
 Finished building: ../lv_examples/lv_apps/demo/demo2.c
@@ -61,61 +57,53 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
 arm-none-eabi-size "Projet.elf"
    text	   data	    bss	    dec	    hex	filename
- 818700	    280	 211600	1030580	  fb9b4	Projet.elf
+1470372	    304	 211824	1682500	 19ac44	Projet.elf
  
-13:46:25 **** Incremental Build of configuration Debug for project Projet ****
+11:34:05 **** Incremental Build of configuration Debug for project Projet ****
 make -j all 
 Building file: ../lv_examples/lv_apps/demo/demo2.c
 Invoking: MCU GCC Compiler
 C:\PerfectTuning\Projet\Debug
 arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
-../lv_examples/lv_apps/demo/demo2.c:19:18: warning: extra tokens at end of #include directive
- #include <math.h>`
-                  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
-../lv_examples/lv_apps/demo/demo2.c:154:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
   Principale();
   ^~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:160:6: warning: conflicting types for 'Principale'
+../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
  void Principale ()
       ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:154:2: note: previous implicit declaration of 'Principale' was here
+../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
   Principale();
   ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c: In function 'Parametres':
-../lv_examples/lv_apps/demo/demo2.c:248:6: warning: unused variable 'actual_btn_pos' [-Wunused-variable]
-  int actual_btn_pos = (LV_VER_RES-(nb_Button*(ctnPrinc_btnGap+ctnPrinc_btnHeight)))/2;
-      ^~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:227:6: warning: unused variable 'pos_Y_retour' [-Wunused-variable]
-  int pos_Y_retour = 15;
-      ^~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:226:6: warning: unused variable 'pos_X_retour' [-Wunused-variable]
-  int pos_X_retour = (LV_HOR_RES/2)-(size_W_retour/2);
-      ^~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:224:6: warning: unused variable 'size_H_retour' [-Wunused-variable]
-  int size_H_retour = 50;
-      ^~~~~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
-../lv_examples/lv_apps/demo/demo2.c:588:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:582:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
-../lv_examples/lv_apps/demo/demo2.c:603:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:597:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:610:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:622:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
-../lv_examples/lv_apps/demo/demo2.c:679:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:697:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
    set_leds();
    ^~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:705:6: warning: conflicting types for 'set_leds'
+../lv_examples/lv_apps/demo/demo2.c:723:6: warning: conflicting types for 'set_leds'
  void set_leds()
       ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:679:3: note: previous implicit declaration of 'set_leds' was here
+../lv_examples/lv_apps/demo/demo2.c:697:3: note: previous implicit declaration of 'set_leds' was here
    set_leds();
    ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:605:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+../lv_examples/lv_apps/demo/demo2.c:625:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
  static lv_res_t click_Parametres_DEL(lv_obj_t * child)
                  ^~~~~~~~~~~~~~~~~~~~
 Finished building: ../lv_examples/lv_apps/demo/demo2.c
@@ -130,252 +118,53 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
 arm-none-eabi-size "Projet.elf"
    text	   data	    bss	    dec	    hex	filename
- 910368	    340	 211604	1122312	 112008	Projet.elf
+1563580	    360	 211832	1775772	 1b189c	Projet.elf
  
-13:50:55 **** Incremental Build of configuration Debug for project Projet ****
-make -j all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Debug
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'main':
-../Src/main.c:204:7: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
-       itoa(k,buffer,10);
-       ^~~~
-At top level:
-../Src/main.c:690:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
- static void MX_GPIO_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:595:13: warning: 'MX_FMC_Init' defined but not used [-Wunused-function]
- static void MX_FMC_Init(void)
-             ^~~~~~~~~~~
-../Src/main.c:530:13: warning: 'MX_USART3_UART_Init' defined but not used [-Wunused-function]
- static void MX_USART3_UART_Init(void)
-             ^~~~~~~~~~~~~~~~~~~
-../Src/main.c:495:13: warning: 'MX_SAI1_Init' defined but not used [-Wunused-function]
- static void MX_SAI1_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:446:13: warning: 'MX_LTDC_Init' defined but not used [-Wunused-function]
- static void MX_LTDC_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:346:13: warning: 'MX_DSIHOST_DSI_Init' defined but not used [-Wunused-function]
- static void MX_DSIHOST_DSI_Init(void)
-             ^~~~~~~~~~~~~~~~~~~
-../Src/main.c:303:13: warning: 'MX_DMA2D_Init' defined but not used [-Wunused-function]
- static void MX_DMA2D_Init(void)
-             ^~~~~~~~~~~~~
-../Src/main.c:278:13: warning: 'MX_DFSDM1_Init' defined but not used [-Wunused-function]
- static void MX_DFSDM1_Init(void)
-             ^~~~~~~~~~~~~~
-Finished building: ../Src/main.c
- 
-Building target: Projet.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
-Finished building target: Projet.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
-arm-none-eabi-size "Projet.elf"
-   text	   data	    bss	    dec	    hex	filename
- 910388	    340	 211604	1122332	 11201c	Projet.elf
- 
-13:51:53 **** Incremental Build of configuration Debug for project Projet ****
-make -j all 
-Building file: ../Src/main.c
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Debug
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-../Src/main.c: In function 'main':
-../Src/main.c:204:7: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
-       itoa(k,buffer,10);
-       ^~~~
-At top level:
-../Src/main.c:690:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
- static void MX_GPIO_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:595:13: warning: 'MX_FMC_Init' defined but not used [-Wunused-function]
- static void MX_FMC_Init(void)
-             ^~~~~~~~~~~
-../Src/main.c:530:13: warning: 'MX_USART3_UART_Init' defined but not used [-Wunused-function]
- static void MX_USART3_UART_Init(void)
-             ^~~~~~~~~~~~~~~~~~~
-../Src/main.c:495:13: warning: 'MX_SAI1_Init' defined but not used [-Wunused-function]
- static void MX_SAI1_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:446:13: warning: 'MX_LTDC_Init' defined but not used [-Wunused-function]
- static void MX_LTDC_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:346:13: warning: 'MX_DSIHOST_DSI_Init' defined but not used [-Wunused-function]
- static void MX_DSIHOST_DSI_Init(void)
-             ^~~~~~~~~~~~~~~~~~~
-../Src/main.c:303:13: warning: 'MX_DMA2D_Init' defined but not used [-Wunused-function]
- static void MX_DMA2D_Init(void)
-             ^~~~~~~~~~~~~
-../Src/main.c:278:13: warning: 'MX_DFSDM1_Init' defined but not used [-Wunused-function]
- static void MX_DFSDM1_Init(void)
-             ^~~~~~~~~~~~~~
-Finished building: ../Src/main.c
- 
-Building target: Projet.elf
-Invoking: MCU GCC Linker
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
-Finished building target: Projet.elf
- 
-make --no-print-directory post-build
-Generating binary and Printing size information:
-arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
-arm-none-eabi-size "Projet.elf"
-   text	   data	    bss	    dec	    hex	filename
- 910388	    340	 211604	1122332	 11201c	Projet.elf
- 
-13:56:05 **** Incremental Build of configuration Debug for project Projet ****
+11:35:40 **** Incremental Build of configuration Debug for project Projet ****
 make -j all 
 Building file: ../lv_examples/lv_apps/demo/demo2.c
 Invoking: MCU GCC Compiler
 C:\PerfectTuning\Projet\Debug
 arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
-../lv_examples/lv_apps/demo/demo2.c:19:18: warning: extra tokens at end of #include directive
- #include <math.h>`
-                  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
-../lv_examples/lv_apps/demo/demo2.c:154:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
   Principale();
   ^~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:160:6: warning: conflicting types for 'Principale'
+../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
  void Principale ()
       ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:154:2: note: previous implicit declaration of 'Principale' was here
+../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
   Principale();
   ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c: In function 'Parametres':
-../lv_examples/lv_apps/demo/demo2.c:248:6: warning: unused variable 'actual_btn_pos' [-Wunused-variable]
-  int actual_btn_pos = (LV_VER_RES-(nb_Button*(ctnPrinc_btnGap+ctnPrinc_btnHeight)))/2;
-      ^~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:227:6: warning: unused variable 'pos_Y_retour' [-Wunused-variable]
-  int pos_Y_retour = 15;
-      ^~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:226:6: warning: unused variable 'pos_X_retour' [-Wunused-variable]
-  int pos_X_retour = (LV_HOR_RES/2)-(size_W_retour/2);
-      ^~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:224:6: warning: unused variable 'size_H_retour' [-Wunused-variable]
-  int size_H_retour = 50;
-      ^~~~~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
-../lv_examples/lv_apps/demo/demo2.c:583:18: warning: passing argument 1 of 'lv_ta_add_text' from incompatible pointer type [-Wincompatible-pointer-types]
-   lv_ta_add_text("CanBus mode Slave\n");
-                  ^~~~~~~~~~~~~~~~~~~~~
-In file included from c:\perfecttuning\projet\lvgl\lvgl.h:44:0,
-                 from ../lv_examples/lv_apps/demo/demo.h:19,
-                 from ../lv_examples/lv_apps/demo/demo2.c:12:
-c:\perfecttuning\projet\lvgl\lv_objx/lv_ta.h:104:6: note: expected 'lv_obj_t * {aka struct _lv_obj_t *}' but argument is of type 'char *'
- void lv_ta_add_text(lv_obj_t * ta, const char * txt);
-      ^~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:583:3: error: too few arguments to function 'lv_ta_add_text'
-   lv_ta_add_text("CanBus mode Slave\n");
-   ^~~~~~~~~~~~~~
-In file included from c:\perfecttuning\projet\lvgl\lvgl.h:44:0,
-                 from ../lv_examples/lv_apps/demo/demo.h:19,
-                 from ../lv_examples/lv_apps/demo/demo2.c:12:
-c:\perfecttuning\projet\lvgl\lv_objx/lv_ta.h:104:6: note: declared here
- void lv_ta_add_text(lv_obj_t * ta, const char * txt);
-      ^~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:588:18: warning: passing argument 1 of 'lv_ta_add_text' from incompatible pointer type [-Wincompatible-pointer-types]
-   lv_ta_add_text("CanBus mode Master\n");
-                  ^~~~~~~~~~~~~~~~~~~~~~
-In file included from c:\perfecttuning\projet\lvgl\lvgl.h:44:0,
-                 from ../lv_examples/lv_apps/demo/demo.h:19,
-                 from ../lv_examples/lv_apps/demo/demo2.c:12:
-c:\perfecttuning\projet\lvgl\lv_objx/lv_ta.h:104:6: note: expected 'lv_obj_t * {aka struct _lv_obj_t *}' but argument is of type 'char *'
- void lv_ta_add_text(lv_obj_t * ta, const char * txt);
-      ^~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:588:3: error: too few arguments to function 'lv_ta_add_text'
-   lv_ta_add_text("CanBus mode Master\n");
-   ^~~~~~~~~~~~~~
-In file included from c:\perfecttuning\projet\lvgl\lvgl.h:44:0,
-                 from ../lv_examples/lv_apps/demo/demo.h:19,
-                 from ../lv_examples/lv_apps/demo/demo2.c:12:
-c:\perfecttuning\projet\lvgl\lv_objx/lv_ta.h:104:6: note: declared here
- void lv_ta_add_text(lv_obj_t * ta, const char * txt);
-      ^~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:591:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:582:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
-../lv_examples/lv_apps/demo/demo2.c:606:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:597:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:610:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:622:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
-../lv_examples/lv_apps/demo/demo2.c:682:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:697:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
    set_leds();
    ^~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:708:6: warning: conflicting types for 'set_leds'
+../lv_examples/lv_apps/demo/demo2.c:723:6: warning: conflicting types for 'set_leds'
  void set_leds()
       ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:682:3: note: previous implicit declaration of 'set_leds' was here
+../lv_examples/lv_apps/demo/demo2.c:697:3: note: previous implicit declaration of 'set_leds' was here
    set_leds();
    ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:608:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
- static lv_res_t click_Parametres_DEL(lv_obj_t * child)
-                 ^~~~~~~~~~~~~~~~~~~~
-lv_examples/lv_apps/demo/subdir.mk:24: recipe for target 'lv_examples/lv_apps/demo/demo2.o' failed
-make: *** [lv_examples/lv_apps/demo/demo2.o] Error 1
-13:56:57 **** Incremental Build of configuration Debug for project Projet ****
-make -j all 
-Building file: ../lv_examples/lv_apps/demo/demo2.c
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Debug
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
-../lv_examples/lv_apps/demo/demo2.c:19:18: warning: extra tokens at end of #include directive
- #include <math.h>`
-                  ^
-../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
-../lv_examples/lv_apps/demo/demo2.c:154:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
-  Principale();
-  ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:160:6: warning: conflicting types for 'Principale'
- void Principale ()
-      ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:154:2: note: previous implicit declaration of 'Principale' was here
-  Principale();
-  ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c: In function 'Parametres':
-../lv_examples/lv_apps/demo/demo2.c:248:6: warning: unused variable 'actual_btn_pos' [-Wunused-variable]
-  int actual_btn_pos = (LV_VER_RES-(nb_Button*(ctnPrinc_btnGap+ctnPrinc_btnHeight)))/2;
-      ^~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:227:6: warning: unused variable 'pos_Y_retour' [-Wunused-variable]
-  int pos_Y_retour = 15;
-      ^~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:226:6: warning: unused variable 'pos_X_retour' [-Wunused-variable]
-  int pos_X_retour = (LV_HOR_RES/2)-(size_W_retour/2);
-      ^~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:224:6: warning: unused variable 'size_H_retour' [-Wunused-variable]
-  int size_H_retour = 50;
-      ^~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
-../lv_examples/lv_apps/demo/demo2.c:591:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
-../lv_examples/lv_apps/demo/demo2.c:606:1: warning: no return statement in function returning non-void [-Wreturn-type]
- }
- ^
-../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
-../lv_examples/lv_apps/demo/demo2.c:682:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
-   set_leds();
-   ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:708:6: warning: conflicting types for 'set_leds'
- void set_leds()
-      ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:682:3: note: previous implicit declaration of 'set_leds' was here
-   set_leds();
-   ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:608:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+../lv_examples/lv_apps/demo/demo2.c:625:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
  static lv_res_t click_Parametres_DEL(lv_obj_t * child)
                  ^~~~~~~~~~~~~~~~~~~~
 Finished building: ../lv_examples/lv_apps/demo/demo2.c
@@ -390,5 +179,403 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
 arm-none-eabi-size "Projet.elf"
    text	   data	    bss	    dec	    hex	filename
- 910456	    340	 211604	1122400	 112060	Projet.elf
+1563572	    360	 211832	1775764	 1b1894	Projet.elf
+ 
+11:39:36 **** Incremental Build of configuration Debug for project Projet ****
+make -j all 
+Building file: ../lv_examples/lv_apps/demo/demo2.c
+Invoking: MCU GCC Compiler
+C:\PerfectTuning\Projet\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
+../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
+../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
+ void Principale ()
+      ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
+../lv_examples/lv_apps/demo/demo2.c:582:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
+../lv_examples/lv_apps/demo/demo2.c:597:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:610:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:622:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
+../lv_examples/lv_apps/demo/demo2.c:697:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:723:6: warning: conflicting types for 'set_leds'
+ void set_leds()
+      ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:697:3: note: previous implicit declaration of 'set_leds' was here
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:625:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+ static lv_res_t click_Parametres_DEL(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:611:17: warning: 'click_menu_PARAM' defined but not used [-Wunused-function]
+ static lv_res_t click_menu_PARAM(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:599:17: warning: 'click_home' defined but not used [-Wunused-function]
+ static lv_res_t click_home(lv_obj_t * child)
+                 ^~~~~~~~~~
+Finished building: ../lv_examples/lv_apps/demo/demo2.c
+ 
+Building target: Projet.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
+Finished building target: Projet.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
+arm-none-eabi-size "Projet.elf"
+   text	   data	    bss	    dec	    hex	filename
+1109908	    360	 211760	1322028	 142c2c	Projet.elf
+ 
+11:42:21 **** Incremental Build of configuration Debug for project Projet ****
+make -j all 
+make: Nothing to be done for 'all'.
+11:43:35 **** Incremental Build of configuration Debug for project Projet ****
+make -j all 
+Building file: ../lv_examples/lv_apps/demo/demo2.c
+Invoking: MCU GCC Compiler
+C:\PerfectTuning\Projet\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
+../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
+../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
+ void Principale ()
+      ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
+../lv_examples/lv_apps/demo/demo2.c:582:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
+../lv_examples/lv_apps/demo/demo2.c:597:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:610:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:622:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
+../lv_examples/lv_apps/demo/demo2.c:697:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:723:6: warning: conflicting types for 'set_leds'
+ void set_leds()
+      ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:697:3: note: previous implicit declaration of 'set_leds' was here
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:625:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+ static lv_res_t click_Parametres_DEL(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:611:17: warning: 'click_menu_PARAM' defined but not used [-Wunused-function]
+ static lv_res_t click_menu_PARAM(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~
+Finished building: ../lv_examples/lv_apps/demo/demo2.c
+ 
+Building target: Projet.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
+Finished building target: Projet.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
+arm-none-eabi-size "Projet.elf"
+   text	   data	    bss	    dec	    hex	filename
+1270368	    360	 211832	1482560	 169f40	Projet.elf
+ 
+11:44:51 **** Incremental Build of configuration Debug for project Projet ****
+make -j all 
+Building file: ../lv_examples/lv_apps/demo/demo2.c
+Invoking: MCU GCC Compiler
+C:\PerfectTuning\Projet\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
+../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
+../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
+ void Principale ()
+      ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'Parametres':
+../lv_examples/lv_apps/demo/demo2.c:542:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
+../lv_examples/lv_apps/demo/demo2.c:583:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
+../lv_examples/lv_apps/demo/demo2.c:598:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:611:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:623:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
+../lv_examples/lv_apps/demo/demo2.c:698:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:724:6: warning: conflicting types for 'set_leds'
+ void set_leds()
+      ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:698:3: note: previous implicit declaration of 'set_leds' was here
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:626:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+ static lv_res_t click_Parametres_DEL(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:612:17: warning: 'click_menu_PARAM' defined but not used [-Wunused-function]
+ static lv_res_t click_menu_PARAM(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:600:17: warning: 'click_home' defined but not used [-Wunused-function]
+ static lv_res_t click_home(lv_obj_t * child)
+                 ^~~~~~~~~~
+Finished building: ../lv_examples/lv_apps/demo/demo2.c
+ 
+Building target: Projet.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
+Finished building target: Projet.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
+arm-none-eabi-size "Projet.elf"
+   text	   data	    bss	    dec	    hex	filename
+1109988	    360	 211832	1322180	 142cc4	Projet.elf
+ 
+11:45:50 **** Incremental Build of configuration Debug for project Projet ****
+make -j all 
+Building file: ../lv_examples/lv_apps/demo/demo2.c
+Invoking: MCU GCC Compiler
+C:\PerfectTuning\Projet\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
+../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
+../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
+ void Principale ()
+      ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'Parametres':
+../lv_examples/lv_apps/demo/demo2.c:542:1: warning: "/*" within comment [-Wcomment]
+ /*
+  
+../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
+../lv_examples/lv_apps/demo/demo2.c:583:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
+../lv_examples/lv_apps/demo/demo2.c:598:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:611:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:623:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
+../lv_examples/lv_apps/demo/demo2.c:698:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:724:6: warning: conflicting types for 'set_leds'
+ void set_leds()
+      ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:698:3: note: previous implicit declaration of 'set_leds' was here
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:626:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+ static lv_res_t click_Parametres_DEL(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:612:17: warning: 'click_menu_PARAM' defined but not used [-Wunused-function]
+ static lv_res_t click_menu_PARAM(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:600:17: warning: 'click_home' defined but not used [-Wunused-function]
+ static lv_res_t click_home(lv_obj_t * child)
+                 ^~~~~~~~~~
+Finished building: ../lv_examples/lv_apps/demo/demo2.c
+ 
+Building target: Projet.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
+Finished building target: Projet.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
+arm-none-eabi-size "Projet.elf"
+   text	   data	    bss	    dec	    hex	filename
+1110128	    360	 211832	1322320	 142d50	Projet.elf
+ 
+11:47:53 **** Incremental Build of configuration Debug for project Projet ****
+make -j all 
+Building file: ../lv_examples/lv_apps/demo/demo2.c
+Invoking: MCU GCC Compiler
+C:\PerfectTuning\Projet\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
+../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
+../lv_examples/lv_apps/demo/demo2.c:179:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:185:6: warning: conflicting types for 'Principale'
+ void Principale ()
+      ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:179:2: note: previous implicit declaration of 'Principale' was here
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
+../lv_examples/lv_apps/demo/demo2.c:582:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
+../lv_examples/lv_apps/demo/demo2.c:597:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:610:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:622:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
+../lv_examples/lv_apps/demo/demo2.c:697:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:723:6: warning: conflicting types for 'set_leds'
+ void set_leds()
+      ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:697:3: note: previous implicit declaration of 'set_leds' was here
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:625:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+ static lv_res_t click_Parametres_DEL(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~~~~~
+Finished building: ../lv_examples/lv_apps/demo/demo2.c
+ 
+Building target: Projet.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
+Finished building target: Projet.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
+arm-none-eabi-size "Projet.elf"
+   text	   data	    bss	    dec	    hex	filename
+1563568	    360	 211824	1775752	 1b1888	Projet.elf
+ 
+11:57:32 **** Incremental Build of configuration Debug for project Projet ****
+make -j all 
+Building file: ../lv_examples/lv_apps/demo/demo2.c
+Invoking: MCU GCC Compiler
+C:\PerfectTuning\Projet\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
+../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
+../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
+ void Principale ()
+      ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
+  Principale();
+  ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
+../lv_examples/lv_apps/demo/demo2.c:587:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
+../lv_examples/lv_apps/demo/demo2.c:602:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
+../lv_examples/lv_apps/demo/demo2.c:615:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
+../lv_examples/lv_apps/demo/demo2.c:627:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
+../lv_examples/lv_apps/demo/demo2.c:702:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: At top level:
+../lv_examples/lv_apps/demo/demo2.c:728:6: warning: conflicting types for 'set_leds'
+ void set_leds()
+      ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:702:3: note: previous implicit declaration of 'set_leds' was here
+   set_leds();
+   ^~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:630:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+ static lv_res_t click_Parametres_DEL(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~~~~~
+Finished building: ../lv_examples/lv_apps/demo/demo2.c
+ 
+Building target: Projet.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
+Finished building target: Projet.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
+arm-none-eabi-size "Projet.elf"
+   text	   data	    bss	    dec	    hex	filename
+1563620	    360	 211832	1775812	 1b18c4	Projet.elf
  

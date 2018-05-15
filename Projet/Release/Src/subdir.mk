@@ -4,27 +4,30 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/LedDriver.c \
 ../Src/PixelArray.c \
+../Src/canbus.c \
 ../Src/lcd_lvgl.c \
+../Src/ledDriver.c \
 ../Src/main.c \
 ../Src/stm32f7xx_hal_msp.c \
 ../Src/stm32f7xx_it.c \
 ../Src/system_stm32f7xx.c 
 
 OBJS += \
-./Src/LedDriver.o \
 ./Src/PixelArray.o \
+./Src/canbus.o \
 ./Src/lcd_lvgl.o \
+./Src/ledDriver.o \
 ./Src/main.o \
 ./Src/stm32f7xx_hal_msp.o \
 ./Src/stm32f7xx_it.o \
 ./Src/system_stm32f7xx.o 
 
 C_DEPS += \
-./Src/LedDriver.d \
 ./Src/PixelArray.d \
+./Src/canbus.d \
 ./Src/lcd_lvgl.d \
+./Src/ledDriver.d \
 ./Src/main.d \
 ./Src/stm32f7xx_hal_msp.d \
 ./Src/stm32f7xx_it.d \

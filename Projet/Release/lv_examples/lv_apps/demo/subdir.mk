@@ -4,19 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../lv_examples/lv_apps/demo/canbus_ico.c \
+../lv_examples/lv_apps/demo/config.c \
 ../lv_examples/lv_apps/demo/demo.c \
 ../lv_examples/lv_apps/demo/demo2.c \
-../lv_examples/lv_apps/demo/img_bubble_pattern.c 
+../lv_examples/lv_apps/demo/home.c \
+../lv_examples/lv_apps/demo/wifi.c 
 
 OBJS += \
+./lv_examples/lv_apps/demo/canbus_ico.o \
+./lv_examples/lv_apps/demo/config.o \
 ./lv_examples/lv_apps/demo/demo.o \
 ./lv_examples/lv_apps/demo/demo2.o \
-./lv_examples/lv_apps/demo/img_bubble_pattern.o 
+./lv_examples/lv_apps/demo/home.o \
+./lv_examples/lv_apps/demo/wifi.o 
 
 C_DEPS += \
+./lv_examples/lv_apps/demo/canbus_ico.d \
+./lv_examples/lv_apps/demo/config.d \
 ./lv_examples/lv_apps/demo/demo.d \
 ./lv_examples/lv_apps/demo/demo2.d \
-./lv_examples/lv_apps/demo/img_bubble_pattern.d 
+./lv_examples/lv_apps/demo/home.d \
+./lv_examples/lv_apps/demo/wifi.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
