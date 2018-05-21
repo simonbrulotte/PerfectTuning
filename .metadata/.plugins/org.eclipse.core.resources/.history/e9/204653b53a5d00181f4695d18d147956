@@ -203,8 +203,8 @@ void demo2_create()
 void Principale ()
 {
 
-	static lv_point_t line_points_hor[] = {{0, 165}, {400, 165}};
-	static lv_point_t line_points_ver[] = {{185, 0}, {185, 400}};
+	static lv_point_t line_points_hor[] = {{0, 170}, {400, 170}};
+	static lv_point_t line_points_ver[] = {{180, 0}, {180, 400}};
 	static lv_style_t style_btnParam;
 
 	//

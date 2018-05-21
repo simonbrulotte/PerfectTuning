@@ -204,7 +204,7 @@ void Principale ()
 {
 
 	static lv_point_t line_points_hor[] = {{0, 165}, {400, 165}};
-	static lv_point_t line_points_ver[] = {{185, 0}, {185, 400}};
+	static lv_point_t line_points_ver[] = {{190, 0}, {190, 400}};
 	static lv_style_t style_btnParam;
 
 	//

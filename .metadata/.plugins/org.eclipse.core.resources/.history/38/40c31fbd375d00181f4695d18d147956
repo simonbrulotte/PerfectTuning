@@ -158,14 +158,22 @@ int main(void)
 
   BSP_LED_Init(LED1);
   BSP_LED_Init(LED2);
+<<<<<<< HEAD
 
+=======
+>>>>>>> b0eb92271768eb6e928101e0a6b60d5ee7e1b93d
 /*
 
   canbusInit();
   canbusPollingTest();
 
 */
+<<<<<<< HEAD
 
+
+
+=======
+>>>>>>> b0eb92271768eb6e928101e0a6b60d5ee7e1b93d
   lvgl_init(&hdma_memtomem_dma2_stream0, &hdma2d); //Fonction qui init l'écran et autres instances. Passe les typedef des différents modules pour
   	  	  	  	  	  	  	  	  	  	  	  	   //que lcd_lvgl se serve des configurations DMA existante. (c'est notre driver perso de lcd)
   demo2_create();  //Fonction qui crée le démo que la librairie propose pour le développement

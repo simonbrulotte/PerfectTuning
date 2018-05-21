@@ -203,8 +203,8 @@ void demo2_create()
 void Principale ()
 {
 
-	static lv_point_t line_points_hor[] = {{0, 165}, {400, 165}};
-	static lv_point_t line_points_ver[] = {{185, 0}, {185, 400}};
+	static lv_point_t line_points_hor[] = {{0, 180}, {400, 180}};
+	static lv_point_t line_points_ver[] = {{200, 0}, {200, 400}};
 	static lv_style_t style_btnParam;
 
 	//
@@ -627,6 +627,8 @@ void Parametres() // on place la variable initPosition dans
 #endif
 		lv_page_set_scrl_fit(tab_param_home,false,false);
 		lv_page_set_sb_mode(tab_param_home,LV_SB_MODE_OFF);
+		lv_obj_set_drag(btnhome,true);
+		btnhome->drag_parent = 1;
 /*
 		lv_coord_t tab_witdh=lv_obj_get_width(tab_param_home);
 		lv_coord_t tab_height=lv_obj_get_height(tab_param_home);
@@ -713,6 +715,13 @@ void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
 
 static lv_res_t click_home(lv_obj_t * child)
 {
+	int a=lv_obj_get_x(btnhome);
+
+	char buffer[50];
+
+	itoa(a,buffer,10);
+	lv_ta_set_text(DEBUG_TB,buffer);
+
 	lv_obj_set_hidden(tv_Param,true);
 	lv_obj_set_hidden(tv_Princ,false);
 	switch_tab(tv_Param,1);
