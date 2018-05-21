@@ -738,14 +738,20 @@ static lv_res_t actionSlider(lv_obj_t * slider)
 
 void set_leds()
 {
-	val_SliderI = lv_slider_get_value(sliderI);
-	val_SliderR = (uint8_t)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-	val_SliderG = (uint8_t)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-	val_SliderB = (uint8_t)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-
-	if (lv_sw_get_state(toggleOnOff))
+	if(can_mode_master == false)
 	{
-		led_flag = true;
-	}
+		val_SliderI = lv_slider_get_value(sliderI);
+		val_SliderR = (uint8_t)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+		val_SliderG = (uint8_t)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+		val_SliderB = (uint8_t)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
 
+		if (lv_sw_get_state(toggleOnOff))
+		{
+			led_flag = true;
+		}
+	}
+	else
+	{
+
+	}
 }
