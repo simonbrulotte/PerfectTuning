@@ -1,0 +1,227 @@
+/*
+ * WS2812.c
+ *
+ *  Created on: 18 avr. 2018
+ *      Author: TophersAlien
+ */
+
+#include "WS2812.h"
+
+int __zeroHigh, __zeroLow, __oneHigh, __oneLow;
+unsigned char __II;
+enum BrightnessControl __use_II;
+bool *__transmitBuf;
+void __loadBuf(int buf[],int r_offset, int g_offset, int b_offset);
+int __outPin;
+GPIO_TypeDef *__outPort;
+
+/**
+*   Constructor
+*
+* @param pin Output pin. Connect to "Din" on the first WS2812 in the strip
+* @param size Number of LEDs in your strip
+* @param zeroHigh How many NOPs to insert to ensure TOH is properly generated. See library description for more information.
+* @param zeroLow How many NOPs to insert to ensure TOL is properly generated. See library description for more information.
+* @param oneHigh How many NOPs to insert to ensure T1H is properly generated. See library description for more information.
+* @param oneLow How many NOPs to insert to ensure T1L is properly generated. See library description for more information.
+*
+*/
+void initWS2812(int pin, GPIO_TypeDef *port, int zeroHigh, int zeroLow, int oneHigh, int oneLow)
+{
+	GPIO_InitTypeDef GPIO_InitStruct;
+
+    __transmitBuf[LED_NUMBER * FRAME_SIZE] = 0;
+    __use_II = OFF;
+    __II = 0xFF; // set global intensity to full
+    *__outPort = *port;
+
+    if(__outPin == NULL){
+		__outPin = pin;
+
+		GPIO_InitStruct.Pin = __outPin;
+		GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+		HAL_GPIO_Init(GPIOJ, &GPIO_InitStruct);
+    }
+    else{
+    	HAL_GPIO_DeInit(GPIOJ, (uint32_t)__outPin);
+
+    	//Réinitialisation
+    	__outPin = pin;
+    	GPIO_InitStruct.Pin = __outPin;
+		GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+		GPIO_InitStruct.Pull = GPIO_PULLUP;
+		HAL_GPIO_Init(GPIOJ, &GPIO_InitStruct);
+    }
+
+    // Default values designed for K64f. Assumes GPIO toggle takes ~0.4us
+    setDelays(zeroHigh, zeroLow, oneHigh, oneLow);
+}
+
+/**
+    *   Sets the timing parameters for the bit-banged signal
+    *
+    * @param zeroHigh How many NOPs to insert to ensure TOH is properly generated. See library description for more information.
+    * @param zeroLow How many NOPs to insert to ensure TOL is properly generated. See library description for more information.
+    * @param oneHigh How many NOPs to insert to ensure T1H is properly generated. See library description for more information.
+    * @param oneLow How many NOPs to insert to ensure T1L is properly generated. See library description for more information.
+    *
+    */
+void setDelays(int zeroHigh, int zeroLow, int oneHigh, int oneLow) {
+    __zeroHigh = zeroHigh;
+    __zeroLow = zeroLow;
+    __oneHigh = oneHigh;
+    __oneLow = oneLow;
+}
+
+/**
+*   Writes the given buffer to the LED strip with the given offsets.
+*   NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.
+*
+* @param buf Pointer to the PixelArray buffer
+* @param r_offset The offset where each each pixel pulls its red component. Wraps to beginning if end is reached.
+* @param g_offset The offset where each each pixel pulls its green component. Wraps to beginning if end is reached.
+* @param b_offset The offset where each each pixel pulls its blue component. Wraps to beginning if end is reached.
+*
+*/
+void __loadBuf(int buf[],int r_offset, int g_offset, int b_offset) {
+    for (int i = 0; i < LED_NUMBER; i++) {
+        int color = 0;
+
+        color |= ((buf[(i+g_offset)%LED_NUMBER] & 0x0000FF00));
+        color |= ((buf[(i+r_offset)%LED_NUMBER] & 0x00FF0000));
+        color |=  (buf[(i+b_offset)%LED_NUMBER] & 0x000000FF);
+        color |= (buf[i] & 0xFF000000);
+
+        // Outut format : GGRRBB
+        // Inout format : IIRRGGBB
+        unsigned char agrb[4] = {0x0, 0x0, 0x0, 0x0};
+
+        unsigned char sf; // scaling factor for  II
+
+        // extract colour fields from incoming
+        // 0 = green, 1 = red, 2 = blue, 3 = brightness
+        agrb[0] = (color & 0x0000FF00) >> 8;
+        agrb[1] = (color & 0x00FF0000) >> 16;
+        agrb[2] = color  & 0x000000FF;
+        agrb[3] = (color & 0xFF000000) >> 24;
+
+        // set the intensity scaling factor (global, per pixel, none)
+        if (__use_II == GLOBAL) {
+            sf = __II;
+        } else if (__use_II == PER_PIXEL) {
+            sf = agrb[3];
+        } else {
+            sf = 0xFF;
+        }
+
+        // Apply the scaling factor to each othe colour components
+        for (int clr = 0; clr < 3; clr++) {
+            agrb[clr] = ((agrb[clr] * sf) >> 8);
+
+            for (int j = 0; j < 8; j++) {
+                if (((agrb[clr] << j) & 0x80) == 0x80) {
+                    // Bit is set (checks MSB fist)
+                    __transmitBuf[(i * FRAME_SIZE) + (clr * 8) + j] = 1;
+                } else {
+                    // Bit is clear
+                    __transmitBuf[(i * FRAME_SIZE) + (clr * 8) + j] = 0;
+                }
+            }
+        }
+    }
+}
+
+/**
+    *   Writes the given buffer to the LED strip
+    *   NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.
+    *
+    * @param buf Pointer to the PixelArray buffer
+    *
+    */
+void write(int buf[]) {
+    write_offsets(buf, 0, 0, 0);
+}
+
+/**
+    *   Writes the given buffer to the LED strip with the given offsets.
+    *   NOTE: This function is timing critical, therefore interrupts are disabled during the transmission section.
+    *
+    * @param buf Pointer to the PixelArray buffer
+    * @param r_offset The offset where each each pixel pulls its red component. Wraps to beginning if end is reached.
+    * @param g_offset The offset where each each pixel pulls its green component. Wraps to beginning if end is reached.
+    * @param b_offset The offset where each each pixel pulls its blue component. Wraps to beginning if end is reached.
+    *
+    */
+void write_offsets(int buf[],int r_offset, int g_offset, int b_offset) {
+    volatile int i, j;  //Volatile : Ajout par Julien pour empêcher l'optimisation du compilateur
+
+    // Load the transmit buffer
+    __loadBuf(buf, r_offset, g_offset, b_offset);
+
+    // Entering timing critical section, so disabling interrupts
+    __disable_irq();
+
+    // Begin bit-banging
+    for (i = 0; i < FRAME_SIZE * LED_NUMBER; i++) {
+        j = 0;
+        if (__transmitBuf[i]){
+        	//__outPin = 1;
+        	//HAL_GPIO_WritePin(ARD_D8_GPIO_Port, ARD_D8_Pin, GPIO_PIN_SET);
+        	ARD_D8_GPIO_Port->BSRR = ARD_D8_Pin;
+            for (; j < __oneHigh; j++) {
+            	asm("NOP");
+            }
+            //__outPin = 0;
+            //HAL_GPIO_WritePin(ARD_D8_GPIO_Port, ARD_D8_Pin, GPIO_PIN_RESET);
+            ARD_D8_GPIO_Port->BSRR = (uint32_t)ARD_D8_Pin << 16;
+            for (; j < __oneLow; j++) {
+            	asm("NOP");
+            }
+        } else {
+        	//__outPin = 1;
+        	//HAL_GPIO_WritePin(ARD_D8_GPIO_Port, ARD_D8_Pin, GPIO_PIN_SET);
+        	ARD_D8_GPIO_Port->BSRR = ARD_D8_Pin;
+            for (; j < __zeroHigh; j++) {
+            	asm("NOP");
+            }
+            //__outPin = 0;
+            //HAL_GPIO_WritePin(ARD_D8_GPIO_Port, ARD_D8_Pin, GPIO_PIN_RESET);
+            ARD_D8_GPIO_Port->BSRR = (uint32_t)ARD_D8_Pin << 16;
+            for (; j < __zeroLow; j++) {
+            	asm("NOP");
+            }
+        }
+    }
+
+    // Exiting timing critical section, so enabling interrutps
+    __enable_irq();
+}
+
+
+/**
+    *   Sets the brightness mode
+    *
+    * @param bc The brightness control. Defaults to OFF. Possible values include OFF, GLOBAL, and PER_PIXEL
+    *
+    */
+void useII(enum BrightnessControl bc)
+{
+    if (bc > OFF) {
+        __use_II = bc;
+    } else {
+        __use_II = OFF;
+    }
+}
+
+/**
+    *   Sets the global brightness level.
+    *
+    * @param II The brightness level. Possible values include 0 - 255 (0x00 - 0xFF).
+    *
+    */
+void setII(unsigned char II)
+{
+    __II = II;
+}

@@ -1921,6 +1921,7 @@ localhost:3333: Le système a tenté de joindre un lecteur à un répertoire sto
 java.lang.Exception: localhost:3333: Le système a tenté de joindre un lecteur à un répertoire stocké sur un lecteur joint.
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:941)
 	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:770)
+<<<<<<< HEAD
 !SESSION 2018-05-14 14:19:38.688 -----------------------------------------------
 eclipse.buildId=4.6.3.M20170301-0400
 java.version=1.8.0_151
@@ -5868,3 +5869,5 @@ java.io.FileNotFoundException: C:\PerfectTuning\Projet\Debug\Projet.elf not foun
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+=======
+>>>>>>> b0eb92271768eb6e928101e0a6b60d5ee7e1b93d

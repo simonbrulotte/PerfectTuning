@@ -688,11 +688,20 @@ static lv_res_t sw_master_slave(lv_obj_t * sw)
 static lv_res_t click_Parametres(lv_obj_t * child)
 {
 
+<<<<<<< HEAD
+=======
+	lv_obj_set_hidden(tv_Princ,true);
+>>>>>>> b0eb92271768eb6e928101e0a6b60d5ee7e1b93d
 	switch_tab(tv_Param,1);
 	lv_obj_set_hidden(tv_Princ,true);
 	lv_obj_set_hidden(tv_Param,false);
+<<<<<<< HEAD
 
 }
+=======
+}
+
+>>>>>>> b0eb92271768eb6e928101e0a6b60d5ee7e1b93d
 void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
 {
 	int i;
