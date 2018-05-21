@@ -15,66 +15,65 @@
 /*------------------- Variables globales -------------------*/
 CAN_HandleTypeDef CanHandle;
 
-CAN_FilterConfTypeDef  sFilterConfig;
-static CanTxMsgTypeDef        TxMessage;
-static CanRxMsgTypeDef        RxMessage;
+CAN_FilterTypeDef  sFilterConfig;
+CAN_TxHeaderTypeDef   TxHeader;
+CAN_RxHeaderTypeDef   RxHeader;
+uint8_t               TxData[8];
+uint8_t               RxData[8];
+uint32_t              TxMailbox;
 
 /*------------------- Entré du programme -------------------*/
 void canbusInit()
 {
-  //CAN_FilterConfTypeDef  sFilterConfig;
-  //static CanTxMsgTypeDef        TxMessage;
-  //static CanRxMsgTypeDef        RxMessage;
+	/*##-1- Configure the CAN peripheral #######################################*/
+	  CanHandle.Instance = CAN1;
 
-  /*##-1- Configure the CAN peripheral #######################################*/
-  CanHandle.Instance = CAN1;
-  CanHandle.pTxMsg = &TxMessage;
-  CanHandle.pRxMsg = &RxMessage;
+	  CanHandle.Init.TimeTriggeredMode = DISABLE;
+	  CanHandle.Init.AutoBusOff = DISABLE;
+	  CanHandle.Init.AutoWakeUp = DISABLE;
+	  CanHandle.Init.AutoRetransmission = DISABLE;  //ENABLE;
+	  CanHandle.Init.ReceiveFifoLocked = DISABLE;
+	  CanHandle.Init.TransmitFifoPriority = DISABLE;
+	  CanHandle.Init.Mode = CAN_MODE_NORMAL; //CAN_MODE_LOOPBACK;
+	  CanHandle.Init.SyncJumpWidth = CAN_SJW_1TQ;
+	  CanHandle.Init.TimeSeg1 = CAN_BS1_6TQ;
+	  CanHandle.Init.TimeSeg2 = CAN_BS2_2TQ;
+	  CanHandle.Init.Prescaler = 6;
 
-  CanHandle.Init.TTCM = DISABLE;
-  CanHandle.Init.ABOM = DISABLE;
-  CanHandle.Init.AWUM = DISABLE;
-  CanHandle.Init.NART = DISABLE;
-  CanHandle.Init.RFLM = DISABLE;
-  CanHandle.Init.TXFP = DISABLE;
-  CanHandle.Init.Mode = CAN_MODE_LOOPBACK; 	//CAN_MODE_NORMAL;  //CanHandle.Init.Mode = CAN_MODE_LOOPBACK;
-  CanHandle.Init.SJW  = CAN_SJW_1TQ;
-  CanHandle.Init.BS1  = CAN_BS1_6TQ;
-  CanHandle.Init.BS2  = CAN_BS2_7TQ;
-  CanHandle.Init.Prescaler = 4;
+	  if(HAL_CAN_Init(&CanHandle) != HAL_OK)
+	  {
+	    /* Initialization Error */
+	    Error_Handler();
+	  }
 
-  if(HAL_CAN_Init(&CanHandle) != HAL_OK)
-  {
-	/* Initialization Error */
-	Error_Handler();
-  }
+	  /*##-2- Configure the CAN Filter ###########################################*/
+	  sFilterConfig.FilterBank = 0;
+	  sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+	  sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+	  sFilterConfig.FilterIdHigh = 0x0000;
+	  sFilterConfig.FilterIdLow = 0x0000;
+	  sFilterConfig.FilterMaskIdHigh = 0x0000;
+	  sFilterConfig.FilterMaskIdLow = 0x0000;
+	  sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+	  sFilterConfig.FilterActivation = ENABLE;
+	  sFilterConfig.SlaveStartFilterBank = 14;
 
-  /*##-2- Configure the CAN Filter ###########################################*/
-  sFilterConfig.FilterNumber = 0;
-  sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
-  sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
-  sFilterConfig.FilterIdHigh = 0x0000;
-  sFilterConfig.FilterIdLow = 0x0000;
-  sFilterConfig.FilterMaskIdHigh = 0x0000;
-  sFilterConfig.FilterMaskIdLow = 0x0000;
-  sFilterConfig.FilterFIFOAssignment = 0;
-  sFilterConfig.FilterActivation = ENABLE;
-  sFilterConfig.BankNumber = 14;
+	  if(HAL_CAN_ConfigFilter(&CanHandle, &sFilterConfig) != HAL_OK)
+	  {
+	    /* Filter configuration Error */
+	    Error_Handler();
+	  }
 
-  if(HAL_CAN_ConfigFilter(&CanHandle, &sFilterConfig) != HAL_OK)
-  {
-	/* Filter configuration Error */
-	Error_Handler();
-  }
+	  /*##-3- Start the CAN peripheral ###########################################*/
+	  if (HAL_CAN_Start(&CanHandle) != HAL_OK)
+	  {
+	    /* Start Error */
+	    Error_Handler();
+	  }
 
-  //Ajout personnel pour activer les interrupts
-  //__HAL_CAN_ENABLE_IT(&CanHandle, CAN_IT_FMP0);
-  //HAL_CAN_Receive_IT(&CanHandle, CAN_FIFO0);
-
-  //Ajout code Samuel
-  //HAL_CAN_Receive_IT(&CanHandle, CAN_FIFO0);
-  HAL_NVIC_SetPriority(CAN1_RX0_IRQn, 5, 0);
-  HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
+	  HAL_CAN_ActivateNotification(&CanHandle, CAN_IT_RX_FIFO0_MSG_PENDING);
+	  HAL_NVIC_SetPriority(CAN1_RX0_IRQn, 5, 0);
+	  HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
 }
 
 /**
@@ -84,58 +83,49 @@ void canbusInit()
   */
 HAL_StatusTypeDef CAN_Polling(void)
 {
-  /*##-3- Start the Transmission process #####################################*/
-  CanHandle.pTxMsg->StdId = 0x11;
-  CanHandle.pTxMsg->RTR = CAN_RTR_DATA;
-  CanHandle.pTxMsg->IDE = CAN_ID_STD;
-  CanHandle.pTxMsg->DLC = 2;
-  CanHandle.pTxMsg->Data[0] = 0xCA;
-  CanHandle.pTxMsg->Data[1] = 0xFE;
+	/*##-4- Start the Transmission process #####################################*/
+	  TxHeader.StdId = 0x11;
+	  TxHeader.RTR = CAN_RTR_DATA;
+	  TxHeader.IDE = CAN_ID_STD;
+	  TxHeader.DLC = 2;
+	  TxHeader.TransmitGlobalTime = DISABLE;
+	  TxData[0] = 0xCA;
+	  TxData[1] = 0xFE;
 
-  if(HAL_CAN_Transmit(&CanHandle, 10) != HAL_OK)
-  {
-    /* Transmition Error */
-    Error_Handler();
-  }
+	  /* Request transmission */
+	  if(HAL_CAN_AddTxMessage(&CanHandle, &TxHeader, TxData, &TxMailbox) != HAL_OK)
+	  {
+	    /* Transmission request Error */
+	    Error_Handler();
+	  }
 
-  if(HAL_CAN_GetState(&CanHandle) != HAL_CAN_STATE_READY)
-  {
-    return HAL_ERROR;
-  }
+	  /* Wait transmission complete */
+	  while(HAL_CAN_GetTxMailboxesFreeLevel(&CanHandle) != 3) {}
 
-  /*##-4- Start the Reception process ########################################*/
-  if(HAL_CAN_Receive(&CanHandle, CAN_FIFO0,10) != HAL_OK)
-  {
-    /* Reception Error */
-    Error_Handler();
-  }
+	  /*##-5- Start the Reception process ########################################*/
+	  if(HAL_CAN_GetRxFifoFillLevel(&CanHandle, CAN_RX_FIFO0) != 1)
+	  {
+	    /* Reception Missing */
+	    Error_Handler();
+	  }
 
-  if(HAL_CAN_GetState(&CanHandle) != HAL_CAN_STATE_READY)
-  {
-    return HAL_ERROR;
-  }
+	  if(HAL_CAN_GetRxMessage(&CanHandle, CAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+	  {
+	    /* Reception Error */
+	    Error_Handler();
+	  }
 
-  if(CanHandle.pRxMsg->StdId != 0x11)
-  {
-    return HAL_ERROR;
-  }
+	  if((RxHeader.StdId != 0x11)                     ||
+	     (RxHeader.RTR != CAN_RTR_DATA)               ||
+	     (RxHeader.IDE != CAN_ID_STD)                 ||
+	     (RxHeader.DLC != 2)                          ||
+	     ((RxData[0]<<8 | RxData[1]) != 0xCAFE))
+	  {
+	    /* Rx message Error */
+	    return HAL_ERROR;
+	  }
 
-  if(CanHandle.pRxMsg->IDE != CAN_ID_STD)
-  {
-    return HAL_ERROR;
-  }
-
-  if(CanHandle.pRxMsg->DLC != 2)
-  {
-    return HAL_ERROR;
-  }
-
-  if((CanHandle.pRxMsg->Data[0]<<8|RxMessage.Data[1]) != 0xCAFE)
-  {
-    return HAL_ERROR;
-  }
-
-  return HAL_OK; /* Test Passed */
+	  return HAL_OK; /* Test Passed */
 }
 
 void canbusReceive()
@@ -145,32 +135,6 @@ void canbusReceive()
 
 HAL_StatusTypeDef canbusWrite(uint8_t *data, uint8_t dataLenght)
 {
-	/*##-3- Start the Transmission process #####################################*/
-  CanHandle.pTxMsg->StdId = 0x11;
-  CanHandle.pTxMsg->RTR = CAN_RTR_DATA;
-  CanHandle.pTxMsg->IDE = CAN_ID_STD;
-  CanHandle.pTxMsg->DLC = dataLenght;
-  if(dataLenght >= 8)
-	  return HAL_ERROR;
-
-  for(int i=0; i<dataLenght; i++)  //Fonction qui remplie le buffer (max 8 bytes) de données à envoyer
-  {
-	  CanHandle.pTxMsg->Data[i] = data[i];
-  }
-  //CanHandle.pTxMsg->Data[0] = 0xCA;
-  //CanHandle.pTxMsg->Data[1] = 0xFE;
-
-  if(HAL_CAN_Transmit(&CanHandle, 10) != HAL_OK) //HAL_CAN_Transmit_IT(&CanHandle)!= HAL_OK) //HAL_CAN_Transmit(&CanHandle, 10) != HAL_OK)
-  {
-	/* Transmition Error */
-	Error_Handler();
-  }
-
-  if(HAL_CAN_GetState(&CanHandle) != HAL_CAN_STATE_READY)
-  {
-	return HAL_ERROR;
-  }
-
   return HAL_OK; /* Test Passed */
 }
 
@@ -188,17 +152,28 @@ void canbusPollingTest()
 	}
 }
 
-void HAL_CAN_RxCpltCallback(CAN_HandleTypeDef* hcan)
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
-	CanRxMsgTypeDef msg;
-	if(HAL_CAN_Receive_IT(hcan, CAN_FIFO0) == HAL_OK)
-	{
-		msg.ExtId = hcan->pRxMsg->ExtId;
-		msg.DLC = hcan->pRxMsg->DLC;
-		memcpy(msg.Data, hcan->pRxMsg->Data, hcan->pRxMsg->DLC);
+	/*##-5- Start the Reception process ########################################*/
+	  if(HAL_CAN_GetRxFifoFillLevel(hcan, CAN_RX_FIFO0) != 1)
+	  {
+	    /* Reception Missing */
+	    Error_Handler();
+	  }
 
-		afficheCanBus_Data(msg.Data, msg.DLC);
-	}
+	  if(HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+	  {
+	    /* Reception Error */
+	    Error_Handler();
+	  }
 
-	//__HAL_CAN_ENABLE_IT(hcan, CAN_IT_FMP0);  // set interrupt flag for RX FIFO0
+	  if((RxHeader.StdId != 0x11)                     ||
+	     (RxHeader.RTR != CAN_RTR_DATA)               ||
+	     (RxHeader.IDE != CAN_ID_STD)                 ||
+	     (RxHeader.DLC != 2)                          ||
+	     ((RxData[0]<<8 | RxData[1]) != 0xCAFE))
+	  {
+	    /* Rx message Error */
+	    Error_Handler();
+	  }
 }

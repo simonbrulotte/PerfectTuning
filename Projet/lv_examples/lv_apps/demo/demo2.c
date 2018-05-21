@@ -589,11 +589,11 @@ static lv_res_t sw_master_slave(lv_obj_t * sw)
 static lv_res_t click_Parametres(lv_obj_t * child)
 {
 
-<<<<<<< HEAD
 	lv_obj_set_hidden(tv_Princ,true);
 	switch_tab(tv_Param,1);
 	lv_obj_set_hidden(tv_Param,false);
-=======
+}
+
 void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
 {
 	int i;
@@ -610,16 +610,6 @@ void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
 	strcat(canbusString, tempBuf);
 
 	lv_ta_add_text(DEBUG_TB,"CanBus mode Slave\n");
-}
-
->>>>>>> 94cac8238a700f505c5dfc1d9f11c855335d7f44
-
-
-/*
-	level++;
-	//	switch_window(lv_obj_get_parent(child),ctnParametre);
-*/
-
 }
 
 static lv_res_t click_home(lv_obj_t * child)
