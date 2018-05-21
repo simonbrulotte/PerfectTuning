@@ -982,7 +982,7 @@ void HAL_DMA_IRQHandler(DMA_HandleTypeDef *hdma)
   *                               a DMA_HandleTypeDef structure as parameter.
   * @retval HAL status
   */                      
-HAL_StatusTypeDef HAL_DMA_RegisterCallback(DMA_HandleTypeDef *hdma, HAL_DMA_CallbackIDTypeDef CallbackID, void (* pCallback)(DMA_HandleTypeDef *_hdma))
+HAL_StatusTypeDef HAL_DMA_RegisterCallback(DMA_HandleTypeDef * hdma, HAL_DMA_CallbackIDTypeDef CallbackID, void (* pCallback)(DMA_HandleTypeDef *_hdma))
 {
 
   HAL_StatusTypeDef status = HAL_OK;

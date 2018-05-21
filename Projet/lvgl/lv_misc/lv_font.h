@@ -205,6 +205,15 @@ LV_FONT_DECLARE(lv_font_dejavu_40);
 LV_FONT_DECLARE(lv_font_dejavu_240);
 #endif
 
+#if USE_LV_FONT_DEJAVU_96
+LV_FONT_DECLARE(lv_font_dejavu_96);
+#endif
+
+#if USE_LV_FONT_DEJAVU_142
+LV_FONT_DECLARE(lv_font_dejavu_142);
+#endif
+
+
 
 #if USE_LV_FONT_DEJAVU_40_LATIN_SUP
 LV_FONT_DECLARE(lv_font_dejavu_40_latin_sup);

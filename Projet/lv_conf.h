@@ -111,19 +111,22 @@
 #define USE_LV_FONT_DEJAVU_20              4
 #define USE_LV_FONT_DEJAVU_20_LATIN_SUP    0
 #define USE_LV_FONT_DEJAVU_20_CYRILLIC     0
-#define USE_LV_FONT_SYMBOL_20              4
+#define USE_LV_FONT_SYMBOL_20              0
 
 #define USE_LV_FONT_DEJAVU_30              0
 #define USE_LV_FONT_DEJAVU_30_LATIN_SUP    0
 #define USE_LV_FONT_DEJAVU_30_CYRILLIC     0
 #define USE_LV_FONT_SYMBOL_30              0
 
-#define USE_LV_FONT_DEJAVU_40              8
+#define USE_LV_FONT_DEJAVU_40              0
 #define USE_LV_FONT_DEJAVU_40_LATIN_SUP    0
 #define USE_LV_FONT_DEJAVU_40_CYRILLIC     0
 #define USE_LV_FONT_SYMBOL_40              0
 
+#define USE_LV_FONT_DEJAVU_96              4 // ajout d'une fonte
+#define USE_LV_FONT_DEJAVU_142             4 // ajout d'une fonte
 #define USE_LV_FONT_DEJAVU_240             4 // ajout d'une fonte
+
 
 /*===================
  *  LV_OBJ SETTINGS

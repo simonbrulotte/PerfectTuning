@@ -1,938 +1,143 @@
-12:06:16 **** Incremental Build of configuration Release for project Projet ****
+16:28:09 **** Incremental Build of configuration Debug for project Projet ****
 make -j all 
-Building file: ../startup/startup_stm32f769xx.s
-Building file: ../lvgl/lv_themes/lv_theme.c
-Building file: ../lvgl/lv_themes/lv_theme_alien.c
-Building file: ../lvgl/lv_themes/lv_theme_default.c
-Building file: ../lvgl/lv_themes/lv_theme_material.c
-Invoking: MCU GCC Assembler
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_themes/lv_theme_mono.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_themes/lv_theme_night.c
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_themes/lv_theme_templ.c
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Building file: ../lvgl/lv_themes/lv_theme_zen.c
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme.d" -MT"lvgl/lv_themes/lv_theme.o" -o "lvgl/lv_themes/lv_theme.o" "../lvgl/lv_themes/lv_theme.c"
-arm-none-eabi-as -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -o "startup/startup_stm32f769xx.o" "../startup/startup_stm32f769xx.s"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_alien.d" -MT"lvgl/lv_themes/lv_theme_alien.o" -o "lvgl/lv_themes/lv_theme_alien.o" "../lvgl/lv_themes/lv_theme_alien.c"
-Building file: ../lvgl/lv_objx/lv_bar.c
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_material.d" -MT"lvgl/lv_themes/lv_theme_material.o" -o "lvgl/lv_themes/lv_theme_material.o" "../lvgl/lv_themes/lv_theme_material.c"
-Building file: ../lvgl/lv_objx/lv_btn.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_default.d" -MT"lvgl/lv_themes/lv_theme_default.o" -o "lvgl/lv_themes/lv_theme_default.o" "../lvgl/lv_themes/lv_theme_default.c"
-Building file: ../lvgl/lv_objx/lv_cb.c
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Building file: ../lvgl/lv_objx/lv_btnm.c
-Building file: ../lvgl/lv_objx/lv_chart.c
-C:\PerfectTuning\Projet\Release
-Building file: ../lvgl/lv_objx/lv_ddlist.c
-Building file: ../lvgl/lv_objx/lv_cont.c
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_objx/lv_gauge.c
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_mono.d" -MT"lvgl/lv_themes/lv_theme_mono.o" -o "lvgl/lv_themes/lv_theme_mono.o" "../lvgl/lv_themes/lv_theme_mono.c"
-Building file: ../lvgl/lv_objx/lv_list.c
-Building file: ../lvgl/lv_objx/lv_line.c
-Building file: ../lvgl/lv_objx/lv_kb.c
-Building file: ../lvgl/lv_objx/lv_label.c
-C:\PerfectTuning\Projet\Release
-Building file: ../lvgl/lv_objx/lv_led.c
-Building file: ../lvgl/lv_objx/lv_img.c
-Building file: ../lvgl/lv_objx/lv_mbox.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_templ.d" -MT"lvgl/lv_themes/lv_theme_templ.o" -o "lvgl/lv_themes/lv_theme_templ.o" "../lvgl/lv_themes/lv_theme_templ.c"
-Building file: ../lvgl/lv_objx/lv_roller.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_zen.d" -MT"lvgl/lv_themes/lv_theme_zen.o" -o "lvgl/lv_themes/lv_theme_zen.o" "../lvgl/lv_themes/lv_theme_zen.c"
-Building file: ../lvgl/lv_objx/lv_sw.c
-Building file: ../lvgl/lv_objx/lv_page.c
-Building file: ../lvgl/lv_objx/lv_lmeter.c
-Building file: ../lvgl/lv_objx/lv_objx_templ.c
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_objx/lv_slider.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_themes/lv_theme_night.d" -MT"lvgl/lv_themes/lv_theme_night.o" -o "lvgl/lv_themes/lv_theme_night.o" "../lvgl/lv_themes/lv_theme_night.c"
-Building file: ../lvgl/lv_objx/lv_win.c
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.c
-Building file: ../lvgl/lv_objx/lv_ta.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.c
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.c
-Building file: ../lvgl/lv_objx/lv_tabview.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_anim.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_symbol_10.c
-Building file: ../lvgl/lv_misc/lv_color.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_symbol_40.c
-Building file: ../lvgl/lv_misc/lv_circ.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_font.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_symbol_30.c
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_ll.c
-C:\PerfectTuning\Projet\Release
-Building file: ../lvgl/lv_misc/lv_math.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.c
-Building file: ../lvgl/lv_misc/lv_templ.c
-Building file: ../lvgl/lv_misc/lv_fs.c
-Building file: ../lvgl/lv_misc/lv_fonts/lv_font_symbol_20.c
-Building file: ../lvgl/lv_misc/lv_ufs.c
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_area.c
-C:\PerfectTuning\Projet\Release
-Building file: ../lvgl/lv_misc/lv_mem.c
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_task.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Building file: ../lvgl/lv_misc/lv_txt.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_bar.d" -MT"lvgl/lv_objx/lv_bar.o" -o "lvgl/lv_objx/lv_bar.o" "../lvgl/lv_objx/lv_bar.c"
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_btn.d" -MT"lvgl/lv_objx/lv_btn.o" -o "lvgl/lv_objx/lv_btn.o" "../lvgl/lv_objx/lv_btn.c"
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Finished building: ../startup/startup_stm32f769xx.s
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_btnm.d" -MT"lvgl/lv_objx/lv_btnm.o" -o "lvgl/lv_objx/lv_btnm.o" "../lvgl/lv_objx/lv_btnm.c"
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_cb.d" -MT"lvgl/lv_objx/lv_cb.o" -o "lvgl/lv_objx/lv_cb.o" "../lvgl/lv_objx/lv_cb.c"
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Building file: ../lvgl/lv_misc/lv_trigo.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_line.d" -MT"lvgl/lv_objx/lv_line.o" -o "lvgl/lv_objx/lv_line.o" "../lvgl/lv_objx/lv_line.c"
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_chart.d" -MT"lvgl/lv_objx/lv_chart.o" -o "lvgl/lv_objx/lv_chart.o" "../lvgl/lv_objx/lv_chart.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_cont.d" -MT"lvgl/lv_objx/lv_cont.o" -o "lvgl/lv_objx/lv_cont.o" "../lvgl/lv_objx/lv_cont.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_list.d" -MT"lvgl/lv_objx/lv_list.o" -o "lvgl/lv_objx/lv_list.o" "../lvgl/lv_objx/lv_list.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_gauge.d" -MT"lvgl/lv_objx/lv_gauge.o" -o "lvgl/lv_objx/lv_gauge.o" "../lvgl/lv_objx/lv_gauge.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_ddlist.d" -MT"lvgl/lv_objx/lv_ddlist.o" -o "lvgl/lv_objx/lv_ddlist.o" "../lvgl/lv_objx/lv_ddlist.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_kb.d" -MT"lvgl/lv_objx/lv_kb.o" -o "lvgl/lv_objx/lv_kb.o" "../lvgl/lv_objx/lv_kb.c"
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_label.d" -MT"lvgl/lv_objx/lv_label.o" -o "lvgl/lv_objx/lv_label.o" "../lvgl/lv_objx/lv_label.c"
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_led.d" -MT"lvgl/lv_objx/lv_led.o" -o "lvgl/lv_objx/lv_led.o" "../lvgl/lv_objx/lv_led.c"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_roller.d" -MT"lvgl/lv_objx/lv_roller.o" -o "lvgl/lv_objx/lv_roller.o" "../lvgl/lv_objx/lv_roller.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_mbox.d" -MT"lvgl/lv_objx/lv_mbox.o" -o "lvgl/lv_objx/lv_mbox.o" "../lvgl/lv_objx/lv_mbox.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_sw.d" -MT"lvgl/lv_objx/lv_sw.o" -o "lvgl/lv_objx/lv_sw.o" "../lvgl/lv_objx/lv_sw.c"
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_objx_templ.d" -MT"lvgl/lv_objx/lv_objx_templ.o" -o "lvgl/lv_objx/lv_objx_templ.o" "../lvgl/lv_objx/lv_objx_templ.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_lmeter.d" -MT"lvgl/lv_objx/lv_lmeter.o" -o "lvgl/lv_objx/lv_lmeter.o" "../lvgl/lv_objx/lv_lmeter.c"
-C:\PerfectTuning\Projet\Release
- 
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_slider.d" -MT"lvgl/lv_objx/lv_slider.o" -o "lvgl/lv_objx/lv_slider.o" "../lvgl/lv_objx/lv_slider.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.c"
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_symbol_40.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o" -o "lvgl/lv_misc/lv_fonts/lv_font_symbol_40.o" "../lvgl/lv_misc/lv_fonts/lv_font_symbol_40.c"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.c"
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_page.d" -MT"lvgl/lv_objx/lv_page.o" -o "lvgl/lv_objx/lv_page.o" "../lvgl/lv_objx/lv_page.c"
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_img.d" -MT"lvgl/lv_objx/lv_img.o" -o "lvgl/lv_objx/lv_img.o" "../lvgl/lv_objx/lv_img.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_win.d" -MT"lvgl/lv_objx/lv_win.o" -o "lvgl/lv_objx/lv_win.o" "../lvgl/lv_objx/lv_win.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_ta.d" -MT"lvgl/lv_objx/lv_ta.o" -o "lvgl/lv_objx/lv_ta.o" "../lvgl/lv_objx/lv_ta.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_objx/lv_tabview.d" -MT"lvgl/lv_objx/lv_tabview.o" -o "lvgl/lv_objx/lv_tabview.o" "../lvgl/lv_objx/lv_tabview.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.c"
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_symbol_10.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o" -o "lvgl/lv_misc/lv_fonts/lv_font_symbol_10.o" "../lvgl/lv_misc/lv_fonts/lv_font_symbol_10.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_symbol_30.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o" -o "lvgl/lv_misc/lv_fonts/lv_font_symbol_30.o" "../lvgl/lv_misc/lv_fonts/lv_font_symbol_30.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_circ.d" -MT"lvgl/lv_misc/lv_circ.o" -o "lvgl/lv_misc/lv_circ.o" "../lvgl/lv_misc/lv_circ.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_font.d" -MT"lvgl/lv_misc/lv_font.o" -o "lvgl/lv_misc/lv_font.o" "../lvgl/lv_misc/lv_font.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_ll.d" -MT"lvgl/lv_misc/lv_ll.o" -o "lvgl/lv_misc/lv_ll.o" "../lvgl/lv_misc/lv_ll.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_area.d" -MT"lvgl/lv_misc/lv_area.o" -o "lvgl/lv_misc/lv_area.o" "../lvgl/lv_misc/lv_area.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_anim.d" -MT"lvgl/lv_misc/lv_anim.o" -o "lvgl/lv_misc/lv_anim.o" "../lvgl/lv_misc/lv_anim.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_math.d" -MT"lvgl/lv_misc/lv_math.o" -o "lvgl/lv_misc/lv_math.o" "../lvgl/lv_misc/lv_math.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.c"
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_task.d" -MT"lvgl/lv_misc/lv_task.o" -o "lvgl/lv_misc/lv_task.o" "../lvgl/lv_misc/lv_task.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_templ.d" -MT"lvgl/lv_misc/lv_templ.o" -o "lvgl/lv_misc/lv_templ.o" "../lvgl/lv_misc/lv_templ.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_ufs.d" -MT"lvgl/lv_misc/lv_ufs.o" -o "lvgl/lv_misc/lv_ufs.o" "../lvgl/lv_misc/lv_ufs.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_mem.d" -MT"lvgl/lv_misc/lv_mem.o" -o "lvgl/lv_misc/lv_mem.o" "../lvgl/lv_misc/lv_mem.c"
-C:\PerfectTuning\Projet\Release
-Finished building: ../lvgl/lv_themes/lv_theme_zen.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_txt.d" -MT"lvgl/lv_misc/lv_txt.o" -o "lvgl/lv_misc/lv_txt.o" "../lvgl/lv_misc/lv_txt.c"
-Finished building: ../lvgl/lv_themes/lv_theme_alien.c
-C:\PerfectTuning\Projet\Release
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_color.d" -MT"lvgl/lv_misc/lv_color.o" -o "lvgl/lv_misc/lv_color.o" "../lvgl/lv_misc/lv_color.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fs.d" -MT"lvgl/lv_misc/lv_fs.o" -o "lvgl/lv_misc/lv_fs.o" "../lvgl/lv_misc/lv_fs.c"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_symbol_20.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_symbol_20.o" -o "lvgl/lv_misc/lv_fonts/lv_font_symbol_20.o" "../lvgl/lv_misc/lv_fonts/lv_font_symbol_20.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_trigo.d" -MT"lvgl/lv_misc/lv_trigo.o" -o "lvgl/lv_misc/lv_trigo.o" "../lvgl/lv_misc/lv_trigo.c"
-Finished building: ../lvgl/lv_themes/lv_theme_mono.c
- 
-Finished building: ../lvgl/lv_themes/lv_theme_default.c
- 
-Building file: ../Drivers/BSP/Components/exc7200/exc7200.c
-Finished building: ../lvgl/lv_themes/lv_theme.c
- 
-C:\PerfectTuning\Projet\Release
- 
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.d" -MT"lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o" -o "lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.o" "../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.c"
-Finished building: ../lvgl/lv_themes/lv_theme_material.c
-Invoking: MCU GCC Compiler
- 
-Building file: ../Drivers/BSP/Components/ft5336/ft5336.c
-Finished building: ../lvgl/lv_themes/lv_theme_night.c
-Building file: ../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.c
-Finished building: ../lvgl/lv_themes/lv_theme_templ.c
-Building file: ../Drivers/BSP/Components/ft6x06/ft6x06.c
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/BSP/Components/otm8009a/otm8009a.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/ft5336/ft5336.d" -MT"Drivers/BSP/Components/ft5336/ft5336.o" -o "Drivers/BSP/Components/ft5336/ft5336.o" "../Drivers/BSP/Components/ft5336/ft5336.c"
-Invoking: MCU GCC Compiler
- 
-Finished building: ../lvgl/lv_objx/lv_objx_templ.c
-C:\PerfectTuning\Projet\Release
- 
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/otm8009a/otm8009a.d" -MT"Drivers/BSP/Components/otm8009a/otm8009a.o" -o "Drivers/BSP/Components/otm8009a/otm8009a.o" "../Drivers/BSP/Components/otm8009a/otm8009a.c"
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Finished building: ../lvgl/lv_objx/lv_bar.c
- 
- 
-Finished building: ../lvgl/lv_misc/lv_templ.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/exc7200/exc7200.d" -MT"Drivers/BSP/Components/exc7200/exc7200.o" -o "Drivers/BSP/Components/exc7200/exc7200.o" "../Drivers/BSP/Components/exc7200/exc7200.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.d" -MT"Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o" -o "Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.o" "../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.c"
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_cyrillic.c
-Building file: ../Drivers/BSP/Components/s5k5cag/s5k5cag.c
-Building file: ../Drivers/BSP/Components/ov9655/ov9655.c
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_latin_sup.c
-Finished building: ../lvgl/lv_objx/lv_cb.c
-Finished building: ../lvgl/lv_misc/lv_font.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/ft6x06/ft6x06.d" -MT"Drivers/BSP/Components/ft6x06/ft6x06.o" -o "Drivers/BSP/Components/ft6x06/ft6x06.o" "../Drivers/BSP/Components/ft6x06/ft6x06.c"
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_cyrillic.c
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_cyrillic.c
- 
-Invoking: MCU GCC Compiler
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_symbol_40.c
-Finished building: ../lvgl/lv_misc/lv_circ.c
- 
- 
-Finished building: ../lvgl/lv_objx/lv_btn.c
-Finished building: ../lvgl/lv_objx/lv_ddlist.c
- 
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30_latin_sup.c
-Building file: ../Drivers/BSP/Components/st7735/st7735.c
- 
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10_cyrillic.c
-Invoking: MCU GCC Compiler
-Finished building: ../lvgl/lv_misc/lv_ufs.c
- 
-Finished building: ../lvgl/lv_misc/lv_anim.c
- 
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_symbol_10.c
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_symbol_30.c
-Building file: ../Drivers/BSP/Components/st7789h2/st7789h2.c
-Finished building: ../lvgl/lv_objx/lv_sw.c
-Finished building: ../lvgl/lv_objx/lv_page.c
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_30.c
- 
-Finished building: ../lvgl/lv_objx/lv_line.c
-Finished building: ../lvgl/lv_objx/lv_led.c
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40.c
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_10.c
-Finished building: ../lvgl/lv_misc/lv_fs.c
-Finished building: ../lvgl/lv_objx/lv_img.c
-C:\PerfectTuning\Projet\Release
-Finished building: ../lvgl/lv_objx/lv_kb.c
-Finished building: ../lvgl/lv_misc/lv_ll.c
- 
-C:\PerfectTuning\Projet\Release
- 
- 
-Finished building: ../lvgl/lv_misc/lv_trigo.c
- 
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_latin_sup.c
- 
-Finished building: ../lvgl/lv_misc/lv_area.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/ov9655/ov9655.d" -MT"Drivers/BSP/Components/ov9655/ov9655.o" -o "Drivers/BSP/Components/ov9655/ov9655.o" "../Drivers/BSP/Components/ov9655/ov9655.c"
-Finished building: ../lvgl/lv_objx/lv_label.c
- 
- 
-Invoking: MCU GCC Compiler
- 
- 
- 
- 
- 
-Finished building: ../lvgl/lv_misc/lv_task.c
- 
-Finished building: ../lvgl/lv_objx/lv_roller.c
- 
-Finished building: ../lvgl/lv_objx/lv_gauge.c
- 
- 
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/BSP/Components/wm8994/wm8994.c
-Building file: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.c
-Building file: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.c
-Finished building: ../lvgl/lv_objx/lv_mbox.c
-Building file: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.c
- 
- 
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.c
-Building file: ../Drivers/BSP/Components/ts3510/ts3510.c
-Finished building: ../lvgl/lv_objx/lv_chart.c
-Building file: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.c
-Finished building: ../lvgl/lv_misc/lv_color.c
-Finished building: ../lvgl/lv_misc/lv_mem.c
-Building file: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.c
- 
-Finished building: ../lvgl/lv_objx/lv_win.c
-Finished building: ../lvgl/lv_objx/lv_list.c
-Finished building: ../lvgl/lv_objx/lv_lmeter.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c
-Building file: ../Drivers/BSP/Components/stmpe811/stmpe811.c
- 
- 
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/s5k5cag/s5k5cag.d" -MT"Drivers/BSP/Components/s5k5cag/s5k5cag.o" -o "Drivers/BSP/Components/s5k5cag/s5k5cag.o" "../Drivers/BSP/Components/s5k5cag/s5k5cag.c"
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.c
- 
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c
- 
-Invoking: MCU GCC Compiler
- 
-Building file: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.c
- 
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.c
-C:\PerfectTuning\Projet\Release
- 
-Finished building: ../lvgl/lv_objx/lv_slider.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.c
-C:\PerfectTuning\Projet\Release
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c
-Invoking: MCU GCC Compiler
- 
-Invoking: MCU GCC Compiler
-Finished building: ../lvgl/lv_objx/lv_btnm.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c
- 
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c
-Invoking: MCU GCC Compiler
-Finished building: ../lvgl/lv_objx/lv_cont.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.c
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c
- 
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c
- 
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c
- 
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c
- 
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.c
- 
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c
-Finished building: ../lvgl/lv_misc/lv_math.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/st7735/st7735.d" -MT"Drivers/BSP/Components/st7735/st7735.o" -o "Drivers/BSP/Components/st7735/st7735.o" "../Drivers/BSP/Components/st7735/st7735.c"
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/st7789h2/st7789h2.d" -MT"Drivers/BSP/Components/st7789h2/st7789h2.o" -o "Drivers/BSP/Components/st7789h2/st7789h2.o" "../Drivers/BSP/Components/st7789h2/st7789h2.c"
- 
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.c
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
- 
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.c
-C:\PerfectTuning\Projet\Release
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_symbol_20.c
-C:\PerfectTuning\Projet\Release
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_20_latin_sup.c
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
- 
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c
-C:\PerfectTuning\Projet\Release
- 
-Building file: ../Src/system_stm32f7xx.c
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/wm8994/wm8994.d" -MT"Drivers/BSP/Components/wm8994/wm8994.o" -o "Drivers/BSP/Components/wm8994/wm8994.o" "../Drivers/BSP/Components/wm8994/wm8994.c"
- 
- 
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.d" -MT"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o" -o "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o" "../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.c"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Building file: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.c
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.d" -MT"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o" -o "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o" "../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.c"
-Finished building: ../lvgl/lv_objx/lv_tabview.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/stmpe811/stmpe811.d" -MT"Drivers/BSP/Components/stmpe811/stmpe811.o" -o "Drivers/BSP/Components/stmpe811/stmpe811.o" "../Drivers/BSP/Components/stmpe811/stmpe811.c"
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.c"
-Building file: ../Src/stm32f7xx_it.c
-Building file: ../Src/main.c
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c"
-Building file: ../Src/ledDriver.c
-Building file: ../Src/stm32f7xx_hal_msp.c
- 
-C:\PerfectTuning\Projet\Release
-Finished building: ../lvgl/lv_misc/lv_txt.c
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Building file: ../Src/lcd_lvgl.c
-Invoking: MCU GCC Compiler
- 
-Building file: ../Src/canbus.c
-Building file: ../Src/PixelArray.c
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.d" -MT"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o" -o "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o" "../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.d" -MT"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o" -o "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.o" "../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.c"
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
- 
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c"
-Finished building: ../Drivers/BSP/Components/exc7200/exc7200.c
-Finished building: ../lvgl/lv_objx/lv_ta.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c"
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/Components/ts3510/ts3510.d" -MT"Drivers/BSP/Components/ts3510/ts3510.o" -o "Drivers/BSP/Components/ts3510/ts3510.o" "../Drivers/BSP/Components/ts3510/ts3510.c"
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Building file: ../Utilities/Fonts/font8.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.d" -MT"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o" -o "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o" "../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.c"
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Building file: ../Utilities/Fonts/font24.c
-Invoking: MCU GCC Compiler
-Building file: ../Utilities/Fonts/font16.c
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
- 
- 
-Invoking: MCU GCC Compiler
-Building file: ../Utilities/Fonts/font20.c
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.d" -MT"Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o" -o "Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o" "../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c"
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Building file: ../Utilities/Fonts/font12.c
-Building file: ../lv_examples/lv_apps/benchmark/benchmark_bg.c
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Building file: ../lv_examples/lv_apps/benchmark/benchmark.c
-Building file: ../lv_examples/lv_apps/demo/wifi.c
-Finished building: ../Drivers/BSP/Components/otm8009a/otm8009a.c
- 
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Finished building: ../Drivers/BSP/Components/ft5336/ft5336.c
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f7xx_it.d" -MT"Src/stm32f7xx_it.o" -o "Src/stm32f7xx_it.o" "../Src/stm32f7xx_it.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/PixelArray.d" -MT"Src/PixelArray.o" -o "Src/PixelArray.o" "../Src/PixelArray.c"
- 
-C:\PerfectTuning\Projet\Release
-Finished building: ../Drivers/BSP/Components/ft6x06/ft6x06.c
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/stm32f7xx_hal_msp.d" -MT"Src/stm32f7xx_hal_msp.o" -o "Src/stm32f7xx_hal_msp.o" "../Src/stm32f7xx_hal_msp.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/canbus.d" -MT"Src/canbus.o" -o "Src/canbus.o" "../Src/canbus.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/main.d" -MT"Src/main.o" -o "Src/main.o" "../Src/main.c"
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c"
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/system_stm32f7xx.d" -MT"Src/system_stm32f7xx.o" -o "Src/system_stm32f7xx.o" "../Src/system_stm32f7xx.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Utilities/Fonts/font8.d" -MT"Utilities/Fonts/font8.o" -o "Utilities/Fonts/font8.o" "../Utilities/Fonts/font8.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Utilities/Fonts/font24.d" -MT"Utilities/Fonts/font24.o" -o "Utilities/Fonts/font24.o" "../Utilities/Fonts/font24.c"
- 
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/ledDriver.d" -MT"Src/ledDriver.o" -o "Src/ledDriver.o" "../Src/ledDriver.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.d" -MT"Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o" -o "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o" "../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.c"
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
- 
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Building file: ../lv_examples/lv_apps/demo/home.c
 Building file: ../lv_examples/lv_apps/demo/demo2.c
-C:\PerfectTuning\Projet\Release
- 
-Finished building: ../Drivers/BSP/Components/ov9655/ov9655.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Src/lcd_lvgl.d" -MT"Src/lcd_lvgl.o" -o "Src/lcd_lvgl.o" "../Src/lcd_lvgl.c"
-Finished building: ../Drivers/BSP/Components/s5k5cag/s5k5cag.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Utilities/Fonts/font20.d" -MT"Utilities/Fonts/font20.o" -o "Utilities/Fonts/font20.o" "../Utilities/Fonts/font20.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Utilities/Fonts/font16.d" -MT"Utilities/Fonts/font16.o" -o "Utilities/Fonts/font16.o" "../Utilities/Fonts/font16.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Utilities/Fonts/font12.d" -MT"Utilities/Fonts/font12.o" -o "Utilities/Fonts/font12.o" "../Utilities/Fonts/font12.c"
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/wifi.d" -MT"lv_examples/lv_apps/demo/wifi.o" -o "lv_examples/lv_apps/demo/wifi.o" "../lv_examples/lv_apps/demo/wifi.c"
-../Src/PixelArray.c: In function 'initPixelArray':
-../Src/PixelArray.c:15:9: warning: statement with no effect [-Wunused-value]
-     pbuf[pbufsize];
-     ~~~~^~~~~~~~~~
-Building file: ../lv_examples/lv_apps/demo/config.c
-Building file: ../lv_examples/lv_apps/demo/canbus_ico.c
 Invoking: MCU GCC Compiler
-Building file: ../lv_examples/lv_apps/demo/demo.c
- 
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/benchmark/benchmark_bg.d" -MT"lv_examples/lv_apps/benchmark/benchmark_bg.o" -o "lv_examples/lv_apps/benchmark/benchmark_bg.o" "../lv_examples/lv_apps/benchmark/benchmark_bg.c"
- 
-Invoking: MCU GCC Compiler
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/benchmark/benchmark.d" -MT"lv_examples/lv_apps/benchmark/benchmark.o" -o "lv_examples/lv_apps/benchmark/benchmark.o" "../lv_examples/lv_apps/benchmark/benchmark.c"
-Finished building: ../Drivers/BSP/Components/st7735/st7735.c
-Building file: ../lv_examples/lv_apps/sysmon/sysmon.c
-C:\PerfectTuning\Projet\Release
-../Src/main.c: In function 'main':
-../Src/main.c:160:1: error: version control conflict marker in file
- <<<<<<< HEAD
- ^~~~~~~
-../Src/main.c:167:9: error: invalid suffix "cac8238a700f505c5dfc1d9f11c855335d7f44" on integer constant
- >>>>>>> 94cac8238a700f505c5dfc1d9f11c855335d7f44
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Src/main.c:213:14: warning: unused variable 'data' [-Wunused-variable]
-      uint8_t data[] = {0xFF, 0xFE, 0xFD};
-              ^~~~
-../Src/main.c:225:7: warning: implicit declaration of function 'itoa' [-Wimplicit-function-declaration]
-       itoa(k,buffer,10);
-       ^~~~
-At top level:
-../Src/main.c:713:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
- static void MX_GPIO_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:618:13: warning: 'MX_FMC_Init' defined but not used [-Wunused-function]
- static void MX_FMC_Init(void)
-             ^~~~~~~~~~~
-../Src/main.c:553:13: warning: 'MX_USART3_UART_Init' defined but not used [-Wunused-function]
- static void MX_USART3_UART_Init(void)
-             ^~~~~~~~~~~~~~~~~~~
-../Src/main.c:518:13: warning: 'MX_SAI1_Init' defined but not used [-Wunused-function]
- static void MX_SAI1_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:469:13: warning: 'MX_LTDC_Init' defined but not used [-Wunused-function]
- static void MX_LTDC_Init(void)
-             ^~~~~~~~~~~~
-../Src/main.c:369:13: warning: 'MX_DSIHOST_DSI_Init' defined but not used [-Wunused-function]
- static void MX_DSIHOST_DSI_Init(void)
-             ^~~~~~~~~~~~~~~~~~~
-../Src/main.c:326:13: warning: 'MX_DMA2D_Init' defined but not used [-Wunused-function]
- static void MX_DMA2D_Init(void)
-             ^~~~~~~~~~~~~
-../Src/main.c:301:13: warning: 'MX_DFSDM1_Init' defined but not used [-Wunused-function]
- static void MX_DFSDM1_Init(void)
-             ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/home.d" -MT"lv_examples/lv_apps/demo/home.o" -o "lv_examples/lv_apps/demo/home.o" "../lv_examples/lv_apps/demo/home.c"
-Finished building: ../Drivers/BSP/Components/stmpe811/stmpe811.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
-Finished building: ../Drivers/BSP/Components/wm8994/wm8994.c
-Finished building: ../Drivers/BSP/Components/st7789h2/st7789h2.c
-C:\PerfectTuning\Projet\Release
-../Src/lcd_lvgl.c: In function 'lvgl_init':
-../Src/lcd_lvgl.c:158:33: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
-  BSP_LCD_DisplayStringAt(10,210,"Test de l'écran AMOLED", CENTER_MODE);
-                                 ^~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../Src/lcd_lvgl.c:29:0:
-../Src/../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.h:356:10: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
- void     BSP_LCD_DisplayStringAt(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode);
-          ^~~~~~~~~~~~~~~~~~~~~~~
-../Src/lcd_lvgl.c:168:33: warning: pointer targets in passing argument 3 of 'BSP_LCD_DisplayStringAt' differ in signedness [-Wpointer-sign]
-  BSP_LCD_DisplayStringAt(30,150,"Test de l'ecran AMOLED", CENTER_MODE);
-                                 ^~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ../Src/lcd_lvgl.c:29:0:
-../Src/../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.h:356:10: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
- void     BSP_LCD_DisplayStringAt(uint16_t Xpos, uint16_t Ypos, uint8_t *Text, Text_AlignModeTypdef Mode);
-          ^~~~~~~~~~~~~~~~~~~~~~~
-C:\PerfectTuning\Projet\Release
-Finished building: ../Drivers/BSP/Components/mfxstm32l152/mfxstm32l152.c
- 
-Building file: ../lv_examples/lv_apps/terminal/terminal.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo.d" -MT"lv_examples/lv_apps/demo/demo.o" -o "lv_examples/lv_apps/demo/demo.o" "../lv_examples/lv_apps/demo/demo.c"
-Finished building: ../Drivers/BSP/Components/ts3510/ts3510.c
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/canbus_ico.d" -MT"lv_examples/lv_apps/demo/canbus_ico.o" -o "lv_examples/lv_apps/demo/canbus_ico.o" "../lv_examples/lv_apps/demo/canbus_ico.c"
- 
- 
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/config.d" -MT"lv_examples/lv_apps/demo/config.o" -o "lv_examples/lv_apps/demo/config.o" "../lv_examples/lv_apps/demo/config.c"
- 
- 
-../lv_examples/lv_apps/demo/demo.c:20:1: warning: "/*" within comment [-Wcomment]
- /*********************
-  
-../lv_examples/lv_apps/demo/demo.c:38:1: warning: "/*" within comment [-Wcomment]
- /**********************
-  
-../lv_examples/lv_apps/demo/demo.c:56:1: warning: "/*" within comment [-Wcomment]
- /**********************
-  
-../lv_examples/lv_apps/demo/demo.c:114:1: warning: "/*" within comment [-Wcomment]
- /**********************
-  
-../lv_examples/lv_apps/demo/demo.c:469:1: warning: "/*" within comment [-Wcomment]
- /*   lv_obj_set_pos(label_toggle,
-  
-../lv_examples/lv_apps/demo/demo.c:571:1: warning: "/*" within comment [-Wcomment]
- /*
-  
-../lv_examples/lv_apps/demo/demo.c:681:2: warning: "/*" within comment [-Wcomment]
-  /*
-   
-Src/subdir.mk:39: recipe for target 'Src/main.o' failed
-make: *** [Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-Building file: ../lv_examples/lv_apps/tpcal/tpcal.c
- 
-C:\PerfectTuning\Projet\Release
-Invoking: MCU GCC Compiler
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c
-Finished building: ../Utilities/Fonts/font24.c
-Finished building: ../Utilities/Fonts/font12.c
-Finished building: ../Utilities/Fonts/font8.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.c
-Finished building: ../Src/PixelArray.c
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c
- 
-Finished building: ../Utilities/Fonts/font20.c
-Invoking: MCU GCC Compiler
-Finished building: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_eeprom.c
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/sysmon/sysmon.d" -MT"lv_examples/lv_apps/sysmon/sysmon.o" -o "lv_examples/lv_apps/sysmon/sysmon.o" "../lv_examples/lv_apps/sysmon/sysmon.c"
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.c
- 
-C:\PerfectTuning\Projet\Release
-Finished building: ../lv_examples/lv_apps/benchmark/benchmark_bg.c
- 
- 
- 
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c
-Finished building: ../Utilities/Fonts/font16.c
-Finished building: ../lv_examples/lv_apps/benchmark/benchmark.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai_ex.c
- 
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.c
- 
-C:\PerfectTuning\Projet\Release
- 
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/terminal/terminal.d" -MT"lv_examples/lv_apps/terminal/terminal.o" -o "lv_examples/lv_apps/terminal/terminal.o" "../lv_examples/lv_apps/terminal/terminal.c"
-Finished building: ../lv_examples/lv_apps/demo/demo.c
- 
- 
-arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/tpcal/tpcal.d" -MT"lv_examples/lv_apps/tpcal/tpcal.o" -o "lv_examples/lv_apps/tpcal/tpcal.o" "../lv_examples/lv_apps/tpcal/tpcal.c"
+C:\PerfectTuning\Projet\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
 ../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
-../lv_examples/lv_apps/demo/demo2.c:180:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:199:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
   Principale();
   ^~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:186:6: warning: conflicting types for 'Principale'
+../lv_examples/lv_apps/demo/demo2.c:203:6: warning: conflicting types for 'Principale'
  void Principale ()
       ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:180:2: note: previous implicit declaration of 'Principale' was here
+../lv_examples/lv_apps/demo/demo2.c:199:2: note: previous implicit declaration of 'Principale' was here
   Principale();
   ^~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
-../lv_examples/lv_apps/demo/demo2.c:587:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:686:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
-../lv_examples/lv_apps/demo/demo2.c:592:1: error: version control conflict marker in file
- <<<<<<< HEAD
- ^~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:596:1: error: version control conflict marker in file
- =======
- ^~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:615:9: error: invalid suffix "cac8238a700f505c5dfc1d9f11c855335d7f44" on integer constant
- >>>>>>> 94cac8238a700f505c5dfc1d9f11c855335d7f44
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:623:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:695:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'afficheCanBus_Data':
+../lv_examples/lv_apps/demo/demo2.c:704:11: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   sprintf(tempBuf, "[%d],", data[i]);
+           ^~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
+                 from c:\perfecttuning\projet\lvgl\lv_misc\lv_area.h:17,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal_indev.h:21,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal.h:17,
+                 from c:\perfecttuning\projet\lvgl\lvgl.h:20,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../lv_examples/lv_apps/demo/demo2.c:705:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(canbusString, tempBuf);
+          ^~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
+                 from c:\perfecttuning\projet\lvgl\lv_misc\lv_area.h:17,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal_indev.h:21,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal.h:17,
+                 from c:\perfecttuning\projet\lvgl\lvgl.h:20,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+../lv_examples/lv_apps/demo/demo2.c:705:24: warning: pointer targets in passing argument 2 of 'strcat' differ in signedness [-Wpointer-sign]
+   strcat(canbusString, tempBuf);
+                        ^~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
+                 from c:\perfecttuning\projet\lvgl\lv_misc\lv_area.h:17,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal_indev.h:21,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal.h:17,
+                 from c:\perfecttuning\projet\lvgl\lvgl.h:20,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:30:8: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+../lv_examples/lv_apps/demo/demo2.c:708:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  sprintf(tempBuf, "[%d]\n", data[i]);
+          ^~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
+                 from c:\perfecttuning\projet\lvgl\lv_misc\lv_area.h:17,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal_indev.h:21,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal.h:17,
+                 from c:\perfecttuning\projet\lvgl\lvgl.h:20,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
+     ^
+../lv_examples/lv_apps/demo/demo2.c:709:9: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+  strcat(canbusString, tempBuf);
+         ^~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
+                 from c:\perfecttuning\projet\lvgl\lv_misc\lv_area.h:17,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal_indev.h:21,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal.h:17,
+                 from c:\perfecttuning\projet\lvgl\lvgl.h:20,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
+../lv_examples/lv_apps/demo/demo2.c:709:23: warning: pointer targets in passing argument 2 of 'strcat' differ in signedness [-Wpointer-sign]
+  strcat(canbusString, tempBuf);
+                       ^~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
+                 from c:\perfecttuning\projet\lvgl\lv_misc\lv_area.h:17,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal_indev.h:21,
+                 from c:\perfecttuning\projet\lvgl\lv_hal/lv_hal.h:17,
+                 from c:\perfecttuning\projet\lvgl\lvgl.h:20,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:30:8: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
+ char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
+        ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
-../lv_examples/lv_apps/demo/demo2.c:636:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:732:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
-../lv_examples/lv_apps/demo/demo2.c:648:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:744:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
-../lv_examples/lv_apps/demo/demo2.c:723:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:788:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
    set_leds();
    ^~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:749:6: warning: conflicting types for 'set_leds'
+../lv_examples/lv_apps/demo/demo2.c:815:6: warning: conflicting types for 'set_leds'
  void set_leds()
       ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:723:3: note: previous implicit declaration of 'set_leds' was here
+../lv_examples/lv_apps/demo/demo2.c:788:3: note: previous implicit declaration of 'set_leds' was here
    set_leds();
    ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:651:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+../lv_examples/lv_apps/demo/demo2.c:747:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
  static lv_res_t click_Parametres_DEL(lv_obj_t * child)
                  ^~~~~~~~~~~~~~~~~~~~
+Finished building: ../lv_examples/lv_apps/demo/demo2.c
  
-Finished building: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.c
+Building target: Projet.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 -L"C:\PerfectTuning\Projet\Debug\lvgl\lv_objx" -L"C:\PerfectTuning\Projet\lv_examples" -L"C:\PerfectTuning\Projet\Drivers\BSP" -specs=nosys.specs -specs=nano.specs -T"../STM32F769NIHx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Projet.elf" @"objects.list"   -lm
+Finished building target: Projet.elf
  
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c
- 
- 
-Finished building: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.c
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c
- 
- 
-Finished building: ../Src/stm32f7xx_it.c
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dfsdm.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.c
- 
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sai.c
-Finished building: ../Src/lcd_lvgl.c
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c
- 
-Finished building: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.c
-Finished building: ../lv_examples/lv_apps/demo/wifi.c
- 
-Finished building: ../Src/system_stm32f7xx.c
-Finished building: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.c
- 
- 
- 
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.c
- 
-Finished building: ../lv_examples/lv_apps/terminal/terminal.c
- 
-lv_examples/lv_apps/demo/subdir.mk:33: recipe for target 'lv_examples/lv_apps/demo/demo2.o' failed
-make: *** [lv_examples/lv_apps/demo/demo2.o] Error 1
- 
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c
- 
- 
- 
- 
- 
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.c
-Finished building: ../lv_examples/lv_apps/tpcal/tpcal.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c
-Finished building: ../Src/canbus.c
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.c
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.c
- 
- 
-Finished building: ../Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c
- 
-Finished building: ../lv_examples/lv_apps/sysmon/sysmon.c
- 
-Finished building: ../Src/stm32f7xx_hal_msp.c
-Finished building: ../Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.c
- 
- 
- 
- 
- 
-Finished building: ../Src/ledDriver.c
- 
-Finished building: ../lv_examples/lv_apps/demo/canbus_ico.c
- 
-Finished building: ../lv_examples/lv_apps/demo/home.c
- 
-Finished building: ../lv_examples/lv_apps/demo/config.c
- 
-Finished building: ../lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.c
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
+arm-none-eabi-size "Projet.elf"
+   text	   data	    bss	    dec	    hex	filename
+2031760	    656	 212144	2244560	 223fd0	Projet.elf
  
 
-12:06:34 Build Finished (took 17s.733ms)
+16:28:13 Build Finished (took 4s.44ms)
 

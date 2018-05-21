@@ -74,7 +74,7 @@ SAI_HandleTypeDef hsai_BlockA1;
 UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_memtomem_dma2_stream0;
 SDRAM_HandleTypeDef hsdram2;
-
+lv_obj_t * indev1;
 
 //Led_TypeDef LED1;
 //Led_TypeDef LED2;
@@ -106,13 +106,14 @@ extern void DMA_TransferComplete(DMA_HandleTypeDef *hdma);
 
 /* USER CODE BEGIN 0 */
 
-/* USER CODE END 0 */
+/* USER CODE END 0   */
 extern uint8_t val_SliderR;
 extern uint8_t val_SliderG;
 extern uint8_t val_SliderB;
 extern bool led_flag;
 extern lv_obj_t * txt;
 extern lv_obj_t * tv_Princ;
+extern lv_obj_t * DEBUG_TB;
 
 int main(void)
 {
@@ -157,14 +158,16 @@ int main(void)
 
   BSP_LED_Init(LED1);
   BSP_LED_Init(LED2);
-<<<<<<< HEAD
+
 /*
+
   canbusInit();
   canbusPollingTest();
-*/
-=======
 
->>>>>>> 94cac8238a700f505c5dfc1d9f11c855335d7f44
+*/
+
+
+
   lvgl_init(&hdma_memtomem_dma2_stream0, &hdma2d); //Fonction qui init l'écran et autres instances. Passe les typedef des différents modules pour
   	  	  	  	  	  	  	  	  	  	  	  	   //que lcd_lvgl se serve des configurations DMA existante. (c'est notre driver perso de lcd)
   demo2_create();  //Fonction qui crée le démo que la librairie propose pour le développement
@@ -189,7 +192,12 @@ int main(void)
   char buffer[50];
   while (1)
   {
+
+
+
   /* USER CODE END WHILE */
+
+
 
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
@@ -215,6 +223,7 @@ int main(void)
 		  }
 
 	  }
+
 	  if (lv_tabview_get_tab_act(tv_Princ) == 3)
 	  {
 		  if (h>=1)
@@ -589,7 +598,8 @@ static void MX_DMA_Init(void)
 #if LV_COLOR_DEPTH == 24
   hdma_memtomem_dma2_stream0.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD; //DMA_PDATAALIGN_HALFWORD;
   hdma_memtomem_dma2_stream0.Init.MemDataAlignment = DMA_PDATAALIGN_WORD;  //DMA_PDATAALIGN_HALFWORD;
-#elif LV_COLOR_DEPTH == 16
+
+  #elif LV_COLOR_DEPTH == 16
   hdma_memtomem_dma2_stream0.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
   hdma_memtomem_dma2_stream0.Init.MemDataAlignment = DMA_PDATAALIGN_HALFWORD;
 #endif

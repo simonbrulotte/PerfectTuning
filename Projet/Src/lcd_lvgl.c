@@ -94,6 +94,9 @@ static TS_StateTypeDef  TS_State;
 #if USE_LV_GPU != 0
 static DMA2D_HandleTypeDef *Dma2dHandle;
 #endif
+
+lv_indev_drv_t indev_drv;
+
 /**********************
 *  GLOBAL VARIABLES
 **********************/
@@ -167,7 +170,7 @@ void lvgl_init(DMA_HandleTypeDef *dma_handle, DMA2D_HandleTypeDef *dma2d_handle)
 
 	BSP_LCD_DisplayStringAt(30,150,"Test de l'ecran AMOLED", CENTER_MODE);
 	BSP_TS_Init(BSP_LCD_GetXSize(), BSP_LCD_GetYSize());
-	lv_indev_drv_t indev_drv;
+
     lv_indev_drv_init(&indev_drv);
     indev_drv.read = touchpad_read;
     indev_drv.type = LV_INDEV_TYPE_POINTER;

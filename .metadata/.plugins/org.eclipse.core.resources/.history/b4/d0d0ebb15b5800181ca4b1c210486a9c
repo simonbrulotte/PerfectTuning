@@ -1,0 +1,7 @@
+Src/PixelArray.o: ../Src/PixelArray.c \
+ C:/PerfectTuning/Projet/Inc/PixelArray.h \
+ C:/PerfectTuning/Projet/Inc/main.h
+
+C:/PerfectTuning/Projet/Inc/PixelArray.h:
+
+C:/PerfectTuning/Projet/Inc/main.h:
