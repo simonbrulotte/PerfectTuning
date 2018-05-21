@@ -7,6 +7,7 @@
 
 /*------------------- includes -------------------*/
 #include <string.h>
+#include <stdbool.h>
 #include "canbus.h"
 
 /*------------------- Prototypes -------------------*/
@@ -21,6 +22,11 @@ CAN_RxHeaderTypeDef   RxHeader;
 uint8_t               TxData[8];
 uint8_t               RxData[8];
 uint32_t              TxMailbox;
+
+extern uint8_t val_SliderR;
+extern uint8_t val_SliderG;
+extern uint8_t val_SliderB;
+extern bool can_mode_master;
 
 /*------------------- Entré du programme -------------------*/
 void canbusInit()
@@ -135,7 +141,26 @@ void canbusReceive()
 
 HAL_StatusTypeDef canbusWrite(uint8_t *data, uint8_t dataLenght)
 {
-  return HAL_OK; /* Test Passed */
+	TxHeader.StdId = 0x11;
+	TxHeader.RTR = CAN_RTR_DATA;
+	TxHeader.IDE = CAN_ID_STD;
+	TxHeader.DLC = dataLenght;
+	TxHeader.TransmitGlobalTime = DISABLE;
+
+	//Construction de la trame
+	for(int i=0; i<dataLenght; i++)
+	{
+		TxData[i] = data[i];
+	}
+
+	/* Request transmission */
+	if(HAL_CAN_AddTxMessage(&CanHandle, &TxHeader, TxData, &TxMailbox) != HAL_OK)
+	{
+		/* Transmission request Error */
+	    return HAL_ERROR;
+	}
+
+	return HAL_OK; /* Test Passed */
 }
 
 void canbusPollingTest()
@@ -167,13 +192,22 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	    Error_Handler();
 	  }
 
+	  /*
 	  if((RxHeader.StdId != 0x11)                     ||
 	     (RxHeader.RTR != CAN_RTR_DATA)               ||
 	     (RxHeader.IDE != CAN_ID_STD)                 ||
 	     (RxHeader.DLC != 2)                          ||
 	     ((RxData[0]<<8 | RxData[1]) != 0xCAFE))
 	  {
-	    /* Rx message Error */
 	    Error_Handler();
+	  }
+	   */
+
+	  if(can_mode_master == false){
+		  if(RxHeader.DLC == 3){  //Valeur de trois bytes (RGB)
+			  val_SliderR = TxData[0];  //Modifie les valeurs présentes dans le main
+			  val_SliderG = TxData[1];
+			  val_SliderB = TxData[2];
+		  }
 	  }
 }

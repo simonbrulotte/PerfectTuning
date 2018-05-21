@@ -111,6 +111,7 @@ extern uint8_t val_SliderR;
 extern uint8_t val_SliderG;
 extern uint8_t val_SliderB;
 extern bool led_flag;
+extern bool can_mode_master;
 extern lv_obj_t * txt;
 extern lv_obj_t * tv_Princ;
 extern lv_obj_t * DEBUG_TB;
@@ -207,17 +208,21 @@ int main(void)
 
 		  if (led_flag)
 		  {
-				int j=0;
-				for (j=0;j<N_LEDS;j++)
-				{
-					ws2812_set_color(j,val_SliderR,val_SliderG,val_SliderB);
-				}
-			  lightLedBar();
-			  i=0;
-			  led_flag = false;
-
-			  uint8_t data[] = {0xFF, 0xFE, 0xFD};
-			  //canbusWrite(data, 3); //lenghtof(data));
+			  if(can_mode_master == false){
+				  for (int j=0;j<N_LEDS;j++)
+				  {
+					  ws2812_set_color(j,val_SliderR,val_SliderG,val_SliderB);
+				  }
+				  lightLedBar();
+				  i=0;
+				  led_flag = false;
+			  }
+			  else{
+				  uint8_t dataCan[] = {val_SliderR,
+						  	  	  	   val_SliderG,
+									   val_SliderB};
+				  canbusWrite(dataCan, sizeof(dataCan)); //lenghtof(data));
+			  }
 		  }
 
 	  }
