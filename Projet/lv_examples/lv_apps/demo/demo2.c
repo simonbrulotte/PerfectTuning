@@ -22,12 +22,6 @@
  *      DEFINES
  *********************/
 
-#define OFFSET_X_SLIDER 5 // plus on augmente la valeur, plus les sliders sont à gauche
-#define OFFSET_Y_SLIDER 80 // plus on descend la valeur, plus on descend les slider
-
-#define delay_anim_nop 150
-
-
 // tabviewoffset
 
 #define Tabview_Offset 130
@@ -39,8 +33,10 @@
 
 
 /**********************
- *      TYPEDEFS
+ *      EXTERN
  **********************/
+
+//extern lv_indev_t * indev_list;
 
 /**********************
  *  STATIC PROTOTYPES
@@ -56,6 +52,7 @@ void Parametres(void);
 void switch_window(lv_obj_t * actual,lv_obj_t * next);
 void switch_tab(lv_obj_t * obj,int tab);
 void click_Parametres_DEBUG(lv_obj_t * child);
+static lv_res_t click_gauge(lv_obj_t * child);
 static lv_res_t click_menu_PARAM(lv_obj_t * child);
 
 
@@ -194,6 +191,7 @@ LV_IMG_DECLARE(canbus_ico);
 
 void demo2_create()
 {
+
 	Parametres();
 	/*Create the first image without re-color*/
 	Principale();
@@ -203,8 +201,8 @@ void demo2_create()
 void Principale ()
 {
 
-	static lv_point_t line_points_hor[] = {{0, 165}, {400, 165}};
-	static lv_point_t line_points_ver[] = {{185, 0}, {185, 400}};
+	static lv_point_t line_points_hor[] = {{0, 200}, {400, 200}};
+	static lv_point_t line_points_ver[] = {{200, 0}, {200, 400}};
 	static lv_style_t style_btnParam;
 
 	//
@@ -219,57 +217,75 @@ void Principale ()
 		lv_obj_set_pos(tv_Princ,0,-128);
 
 
-		tab_princ = lv_tabview_add_tab(tv_Princ,"PRINC");
-		tab_princ_del = lv_tabview_add_tab(tv_Princ,"DEL");
-		tab_princ_debug = lv_tabview_add_tab(tv_Princ,"DEBUG");
-		tab_princ_chiffre = lv_tabview_add_tab(tv_Princ,"COMPTEUR");
+		tab_princ = lv_tabview_add_tab(tv_Princ,"PRINC"); // TAB POUR LA CONFIGURATION
+			lv_page_set_scrl_fit(tab_princ,false,false);
+			lv_page_set_scrl_height(tab_princ, lv_obj_get_height(tab_princ));
+			lv_page_set_scrl_width(tab_princ, lv_obj_get_width(tab_princ));
+			lv_page_set_sb_mode(tab_princ,false);
+		tab_princ_del = lv_tabview_add_tab(tv_Princ,"DEL"); // TAB DE SETTING DES DELS
+			lv_page_set_scrl_fit(tab_princ_del,false,false);
+			lv_page_set_scrl_height(tab_princ_del, lv_obj_get_height(tab_princ_del));
+			lv_page_set_scrl_width(tab_princ_del, lv_obj_get_width(tab_princ_del));
+			lv_page_set_sb_mode(tab_princ_del,false);
+
+		tab_princ_debug = lv_tabview_add_tab(tv_Princ,"DEBUG"); // TAB DEBUG
+			lv_page_set_scrl_fit(tab_princ_debug,false,false);
+			lv_page_set_scrl_height(tab_princ_debug, lv_obj_get_height(tab_princ_debug));
+			lv_page_set_scrl_width(tab_princ_debug, lv_obj_get_width(tab_princ_debug));
+			lv_page_set_sb_mode(tab_princ_debug,false);
+		tab_princ_chiffre = lv_tabview_add_tab(tv_Princ,"COMPTEUR"); // TAB COMPTEUR
+			lv_page_set_scrl_fit(tab_princ_chiffre,false,false);
+			lv_page_set_scrl_height(tab_princ_chiffre, lv_obj_get_height(tab_princ_chiffre));
+			lv_page_set_scrl_width(tab_princ_chiffre, lv_obj_get_width(tab_princ_chiffre));
+			lv_page_set_sb_mode(tab_princ_chiffre,false);
 		tab_princ_gauge = lv_tabview_add_tab(tv_Princ,"INDICATEUR");
-		tab_princ_stat = lv_tabview_add_tab(tv_Princ,"INDICATEUR");
+			lv_page_set_scrl_fit(tab_princ_gauge,false,false);
+			lv_page_set_scrl_height(tab_princ_gauge, lv_obj_get_height(tab_princ_gauge));
+			lv_page_set_scrl_width(tab_princ_gauge, lv_obj_get_width(tab_princ_gauge));
+			lv_page_set_sb_mode(tab_princ_gauge,false);
+		tab_princ_stat = lv_tabview_add_tab(tv_Princ,"Stats");
+			lv_page_set_scrl_fit(tab_princ_stat,false,false);
+			lv_page_set_scrl_height(tab_princ_stat, lv_obj_get_height(tab_princ_stat));
+			lv_page_set_scrl_width(tab_princ_stat, lv_obj_get_width(tab_princ_stat));
+			lv_page_set_sb_mode(tab_princ_stat,false);
 
 		lv_tabview_set_sliding(tv_Princ,true);
 		lv_tabview_set_style(tv_Princ,LV_TABVIEW_STYLE_BG,&style_btnParam);
-		lv_page_set_sb_mode(tab_princ_gauge,false);
-		lv_page_set_sb_mode(tab_princ_stat,false);
-		//lv_page_set_sb_mode(tab_princ,false);
+
+
 		lv_obj_set_drag(btnParametre,true);
-		//lv_obj_set_drag_parent(tv_Princ,true);
-		btnParametre->drag_parent = 1;
+
 
 	Image_config = lv_img_create(tab_princ,NULL);
 		lv_img_set_src(Image_config,&config);
-		lv_obj_align(Image_config,tab_princ,LV_ALIGN_CENTER,0,300);
+		lv_obj_align(Image_config,tab_princ,LV_ALIGN_CENTER,0,0);
 		lv_obj_set_click(Image_config,true);
-
+		lv_obj_set_signal_func(Image_config,click_Parametres);
 
 	switch_tab(tv_Princ,1);
 	HAL_Delay(100);
 	lv_obj_set_hidden(tv_Princ,false);
-	btnParametre = lv_btn_create(tab_princ,NULL);
-		lv_obj_set_size(btnParametre,120,350);
-		lv_btn_set_action(btnParametre,LV_BTN_ACTION_CLICK,click_Parametres);
-#ifdef show_link_btn // Si on veux voir la position
-		lv_btn_set_style(btnParametre,LV_BTNM_STYLE_BG,&style_btnParam);
-		lv_btn_set_style(btnParametre,LV_BTNM_STYLE_BTN_PR,&style_btnParam);
-		lv_btn_set_style(btnParametre,LV_BTNM_STYLE_BTN_REL,&style_btnParam);
-#endif
-		lv_obj_align(btnParametre,Image_config,LV_ALIGN_CENTER,0,0);
-	//
-	//	section LED
-	//
 
+//
+//		section LED
+//
 
 	int nb_slider = 4;
-	int slider_gap = 15;
+	int slider_gap = 65;
 
-	int sliderRGB_Height = 130;
+	int sliderRGB_Height = 160;
 	int sliderRGB_Width = 45;
-	int sliderLabel_Gap = 75; // gap entre les slider et le label activé/désactivé
+
+	int sliderLabel_Gap = 100; // gap entre les slider et le label activé/désactivé
+
+	int OFFSET_X_SLIDER = 80;
+	int OFFSET_Y_SLIDER = 120;
 
 	int slider_Y_pos = LV_VER_RES - sliderRGB_Height - OFFSET_Y_SLIDER;
-	int current_X_SLIDER = ((LV_HOR_RES-(nb_slider*(slider_gap+sliderRGB_Width)))/2) + OFFSET_X_SLIDER;
-	int actual_slider_pos = current_X_SLIDER;
 
+	int Pos_Slider_1 = ((LV_HOR_RES-(nb_slider*(slider_gap+sliderRGB_Width)))/2) + OFFSET_X_SLIDER;
 
+	int actual_slider_pos = Pos_Slider_1;
 
 	static lv_style_t style_bg_R;
 	static lv_style_t style_indic_R;
@@ -288,21 +304,19 @@ void Principale ()
 	static lv_style_t knob_on_style_sw;
 	static lv_style_t knob_off_style_sw;
 
-	//acceuil du container parametre
-
-
-
-		// ***************************
-		//
-		// Config du slider Rouge
-		//
-		// ***************************
+// ***************************
+//
+// Config du slider Rouge
+//
+// ***************************
 
 	sliderR = lv_slider_create(tab_princ_del,NULL);
 
 		lv_obj_set_size(sliderR,sliderRGB_Width,sliderRGB_Height);
 		lv_slider_set_range(sliderR,0,255);
-		lv_obj_set_pos(sliderR,actual_slider_pos - 25,slider_Y_pos +25);
+
+		lv_obj_set_pos(sliderR,Pos_Slider_1,slider_Y_pos +25);
+
 		lv_slider_set_action(sliderR,actionSlider);
 
 		lv_style_copy(&style_bg_R, &lv_style_pretty);
@@ -341,8 +355,7 @@ void Principale ()
 	sliderG = lv_slider_create(tab_princ_del,NULL);
 		lv_obj_set_size(sliderG,sliderRGB_Width,sliderRGB_Height);
 		lv_slider_set_range(sliderG,0,255);
-		lv_obj_align(sliderG,sliderR,LV_ALIGN_IN_RIGHT_MID,sliderLabel_Gap,0);
-		//lv_obj_set_pos(sliderG,actual_slider_pos,slider_Y_pos);
+		lv_obj_align(sliderG,sliderR,LV_ALIGN_IN_RIGHT_MID,slider_gap,0);
 		lv_slider_set_action(sliderG,actionSlider);
 
 		lv_style_copy(&style_bg_G, &lv_style_pretty);
@@ -380,8 +393,7 @@ void Principale ()
 	sliderB = lv_slider_create(tab_princ_del,NULL);
 		lv_obj_set_size(sliderB,sliderRGB_Width,sliderRGB_Height);
 		lv_slider_set_range(sliderB,0,255);
-		lv_obj_align(sliderB,sliderG,LV_ALIGN_IN_RIGHT_MID,sliderLabel_Gap,0);
-//			lv_obj_set_pos(sliderB,actual_slider_pos,slider_Y_pos);
+		lv_obj_align(sliderB,sliderG,LV_ALIGN_IN_RIGHT_MID,slider_gap,0);
 		lv_slider_set_action(sliderB,actionSlider);
 
 		lv_style_copy(&style_bg_B, &lv_style_pretty);
@@ -410,7 +422,6 @@ void Principale ()
 
 		actual_slider_pos += sliderRGB_Width + slider_gap;
 
-
 	// ***************************
 	//
 	// Config du slider INTENSITE
@@ -421,9 +432,7 @@ void Principale ()
 		lv_obj_set_size(sliderI,sliderRGB_Width,sliderRGB_Height);
 		lv_slider_set_range(sliderI,0,100);
 		lv_slider_set_value(sliderI,50);
-		lv_obj_align(sliderI,sliderB,LV_ALIGN_IN_RIGHT_MID,sliderLabel_Gap,0);
-
-//			lv_obj_set_pos(sliderI,actual_slider_pos,slider_Y_pos);
+		lv_obj_align(sliderI,sliderB,LV_ALIGN_IN_RIGHT_MID,slider_gap,0);
 		lv_slider_set_action(sliderI,actionSlider);
 
 		lv_style_copy(&style_bg_I, &lv_style_pretty);
@@ -450,6 +459,7 @@ void Principale ()
 		lv_slider_set_style(sliderI, LV_SLIDER_STYLE_INDIC,&style_indic_I);
 		lv_slider_set_style(sliderI, LV_SLIDER_STYLE_KNOB, &style_knob_I);
 		actual_slider_pos += sliderRGB_Width + slider_gap; // pour positionner de facon égale les sliders
+
 
 	//*********************************
 	// 								  *
@@ -489,10 +499,6 @@ void Principale ()
 		lv_label_set_text(label_toggle,"Deactivated");
 		lv_sw_set_action(toggleOnOff,action_switch_LED);
 
-/*			lv_obj_set_pos(label_toggle,
-						lv_obj_get_x(toggleOnOff)+size_width_toggle+sliderLabel_Gap,
-						toggle_Y_align + ((size_height_toggle)/2)-20);
-*/
 
 		lv_sw_set_style(toggleOnOff, LV_SW_STYLE_BG, &bg_style_sw);
 		lv_sw_set_style(toggleOnOff, LV_SW_STYLE_INDIC, &indic_style_sw);
@@ -538,7 +544,7 @@ void Principale ()
 		lv_label_set_align(tab_princ_chiffre, LV_LABEL_ALIGN_CENTER);       /*Center aligned lines*/
 		lv_label_set_text(txt, "10");
 		lv_obj_set_width(txt, 300);                           /*Set a width*/
-		lv_obj_set_pos(txt,100,400);
+
 
 
 //**************************
@@ -562,7 +568,14 @@ void Principale ()
 		lv_gauge_set_range(gauge,0,RANGE_GAUGE);
 		lv_gauge_set_critical_value(gauge, RED_LINE);
 		lv_gauge_set_scale(gauge,240,(RANGE_GAUGE/200),(RANGE_GAUGE/1000)+1);
-		lv_obj_align(gauge,tab_princ_gauge,LV_ALIGN_IN_TOP_MID,0,0);
+		lv_obj_align(gauge,tab_princ_gauge,LV_ALIGN_CENTER,0,0);
+		gauge->click = 1;
+		lv_obj_set_signal_func(gauge,click_gauge);
+
+//**************************
+//		Stats
+//**************************
+
 
 	static lv_style_t style_line;
 		lv_style_copy(&style_line, &lv_style_plain);
@@ -579,8 +592,6 @@ void Principale ()
 		lv_line_set_points(ligne_ver,line_points_ver,2);
 		lv_line_set_style(ligne_ver, &style_line);
 
-
-
 }
 
 
@@ -594,77 +605,52 @@ void Parametres() // on place la variable initPosition dans
 
 
 	tv_Param = lv_tabview_create(lv_scr_act(),NULL);
-		lv_obj_set_size(tv_Param,LV_HOR_RES,600); /// 130 car la longueur des boutons est de 130
-		lv_obj_set_pos(tv_Param,0,-10);
-		lv_obj_align(tv_Param,lv_scr_act(),LV_ALIGN_CENTER,0,-10);
+		lv_obj_set_size(tv_Param,LV_HOR_RES,528); /// 130 car la longueur des boutons est de 130
+		lv_obj_set_pos(tv_Param,0,-128);
+		lv_page_set_scrl_fit(tv_Param,false,false);
+		lv_page_set_scrl_height(tv_Param, lv_obj_get_height(tv_Param));
+		lv_page_set_scrl_width(tv_Param, lv_obj_get_width(tv_Param));
 		lv_obj_set_hidden(tv_Param,true);
 
+
 		tab_param_home = lv_tabview_add_tab(tv_Param,"HOME");
+			lv_page_set_scrl_fit(tab_param_home,false,false);
+			lv_page_set_scrl_height(tab_param_home, lv_obj_get_height(tab_param_home));
+			lv_page_set_scrl_width(tab_param_home, lv_obj_get_width(tab_param_home));
+			lv_page_set_sb_mode(tab_param_home,false);
+
 		tab_param_wifi = lv_tabview_add_tab(tv_Param,"WIFI");
+			lv_page_set_scrl_fit(tab_param_wifi,false,false);
+			lv_page_set_scrl_height(tab_param_wifi, lv_obj_get_height(tab_param_wifi));
+			lv_page_set_scrl_width(tab_param_wifi, lv_obj_get_width(tab_param_wifi));
+			lv_page_set_sb_mode(tab_param_wifi,false);
+
 		tab_param_canbus = lv_tabview_add_tab(tv_Param,"CANBUS");
-		tab_param_DEL = lv_tabview_add_tab(tv_Param,"DEL");
+			lv_page_set_scrl_fit(tab_param_canbus,false,false);
+			lv_page_set_scrl_height(tab_param_canbus, lv_obj_get_height(tab_param_canbus));
+			lv_page_set_scrl_width(tab_param_canbus, lv_obj_get_width(tab_param_canbus));
+			lv_page_set_sb_mode(tab_param_canbus,false);
 
 		lv_tabview_set_sliding(tv_Param,true);
+
 		switch_tab(tv_Param,1);
 
-	// création des objet images
 
-
-
+		// création des objet images
 
 	image_home = lv_img_create(tab_param_home,NULL);
 		lv_img_set_src(image_home,&home);
-		lv_obj_set_pos(image_home,0,0);
-		lv_obj_align(image_home,btnhome,LV_ALIGN_CENTER,0,0);
+		lv_obj_align(image_home,tab_param_home,LV_ALIGN_CENTER,0,0);
+		lv_obj_set_drag_parent(image_home,true);
+		lv_obj_set_signal_func(image_home,click_home);
 
-	btnhome = lv_btn_create(tab_param_home,NULL);
-		lv_obj_set_size(btnhome,200,200);
-		lv_btn_set_action(btnhome,LV_BTN_ACTION_CLICK,click_home);
-#ifdef show_link_btn
-		lv_btn_set_style(btnhome,LV_BTNM_STYLE_BG,&style_btn);
-		lv_btn_set_style(btnhome,LV_BTNM_STYLE_BTN_PR,&style_btn);
-		lv_btn_set_style(btnhome,LV_BTNM_STYLE_BTN_REL,&style_btn);
-#endif
-		lv_page_set_scrl_fit(tab_param_home,false,false);
-		lv_page_set_sb_mode(tab_param_home,LV_SB_MODE_OFF);
-/*
-		lv_coord_t tab_witdh=lv_obj_get_width(tab_param_home);
-		lv_coord_t tab_height=lv_obj_get_height(tab_param_home);
-		lv_obj_set_pos(btnhome,(tab_witdh/2)-(lv_obj_get_width(btnhome)/2),(tab_height/2)-(lv_obj_get_height(btnhome)/2)-130);
-*/
-
-		image_wifi = lv_img_create(tab_param_wifi,NULL);
+	image_wifi = lv_img_create(tab_param_wifi,NULL);
 		lv_img_set_src(image_wifi,&wifi);
-		lv_obj_set_pos(image_wifi,0,0);
 		lv_obj_align(image_wifi,tab_param_wifi,LV_ALIGN_CENTER,0,0);
-
-	btnwifi = lv_btn_create(tab_param_wifi,NULL);
-		lv_obj_set_size(btnwifi,200,200);
-		lv_btn_set_action(btnwifi,LV_BTN_ACTION_CLICK,click_menu_PARAM);
-		lv_btn_set_style(btnwifi,LV_BTNM_STYLE_BG,&style_btn);
-		lv_btn_set_style(btnwifi,LV_BTNM_STYLE_BTN_PR,&style_btn);
-		lv_btn_set_style(btnwifi,LV_BTNM_STYLE_BTN_REL,&style_btn);
-		lv_obj_align(btnwifi,tab_param_wifi,LV_ALIGN_CENTER,0,0);
-
-
 
 	image_canbus = lv_img_create(tab_param_canbus,NULL);
 		lv_img_set_src(image_canbus,&canbus_ico);
-		//lv_obj_set_pos(image_canbus,0,0);
 		lv_obj_align(image_canbus,tab_param_canbus,LV_ALIGN_CENTER,0,0);
-
-	btncanbus = lv_btn_create(tab_param_canbus,NULL);
-		lv_obj_set_size(btncanbus,130,200);
-		lv_btn_set_action(btncanbus,LV_BTN_ACTION_CLICK,click_menu_PARAM);
-//		lv_btn_set_style(btncanbus,LV_BTNM_STYLE_BG,&style_btn);
-//		lv_btn_set_style(btncanbus,LV_BTNM_STYLE_BTN_PR,&style_btn);
-//		lv_btn_set_style(btncanbus,LV_BTNM_STYLE_BTN_REL,&style_btn);
-		lv_obj_align(btncanbus,tab_param_canbus,LV_ALIGN_CENTER,0,0);
-
-
-
-
-
 }
 
 
@@ -688,9 +674,25 @@ static lv_res_t click_Parametres(lv_obj_t * child)
 {
 
 	switch_tab(tv_Param,1);
+
 	lv_obj_set_hidden(tv_Princ,true);
 	lv_obj_set_hidden(tv_Param,false);
 
+}
+
+static lv_res_t click_gauge(lv_obj_t * child)
+{
+	/*
+	HAL_Delay(100);
+	if (!lv_indev_is_dragging(indev_list))
+	{
+		lv_ta_add_text(DEBUG_TB,"CLICK !");
+	}
+	else
+	{
+		lv_ta_add_text(DEBUG_TB,"DRAGGING !");
+	}
+*/
 }
 
 void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
@@ -807,20 +809,13 @@ static lv_res_t actionSlider(lv_obj_t * slider)
 
 void set_leds()
 {
-	if(can_mode_master == false)
-	{
-		val_SliderI = lv_slider_get_value(sliderI);
-		val_SliderR = (uint8_t)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-		val_SliderG = (uint8_t)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-		val_SliderB = (uint8_t)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderI = lv_slider_get_value(sliderI);
+	val_SliderR = (uint8_t)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderG = (uint8_t)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderB = (uint8_t)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
 
-		if (lv_sw_get_state(toggleOnOff))
-		{
-			led_flag = true;
-		}
-	}
-	else
+	if (lv_sw_get_state(toggleOnOff))
 	{
-
+		led_flag = true;
 	}
 }

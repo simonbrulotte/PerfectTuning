@@ -186,17 +186,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   int h=0;
   int i=0;
-
   int k=0;
   char buffer[50];
   while (1)
   {
 
-
-
   /* USER CODE END WHILE */
-
-
 
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
@@ -215,7 +210,7 @@ int main(void)
 				  }
 				  lightLedBar();
 				  i=0;
-				  led_flag = false;
+
 			  }
 			  else{
 				  uint8_t dataCan[] = {val_SliderR,
@@ -223,6 +218,7 @@ int main(void)
 									   val_SliderB};
 				  canbusWrite(dataCan, sizeof(dataCan)); //lenghtof(data));
 			  }
+			  led_flag = false;
 		  }
 
 	  }
@@ -248,9 +244,7 @@ int main(void)
 			  h=0;
 		  }
 	  }
-  }
-  /* USER CODE END 3 */
-
+   }
 }
 
 

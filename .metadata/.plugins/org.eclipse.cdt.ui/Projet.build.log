@@ -1,30 +1,63 @@
-17:08:25 **** Incremental Build of configuration Debug for project Projet ****
+10:29:23 **** Incremental Build of configuration Debug for project Projet ****
 make -j all 
 Building file: ../lv_examples/lv_apps/demo/demo2.c
 Invoking: MCU GCC Compiler
 C:\PerfectTuning\Projet\Debug
 arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-d16 '-D__weak=__attribute__((weak))' '-D__packed=__attribute__((__packed__))' -DUSE_HAL_DRIVER -DSTM32F769xx -I"C:/PerfectTuning/Projet/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc" -I"C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Device/ST/STM32F7xx/Include" -I"C:/PerfectTuning/Projet/Drivers/CMSIS/Include" -I"C:/PerfectTuning/Projet" -I"C:/PerfectTuning/Projet/lv_examples" -I"C:/PerfectTuning/Projet/Drivers/BSP/Components" -I"C:/PerfectTuning/Projet/Drivers/BSP/STM32F769I-Discovery" -I"C:/PerfectTuning/Projet/Utilities/Fonts" -I"C:/PerfectTuning/Projet/Drivers"  -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"lv_examples/lv_apps/demo/demo2.d" -MT"lv_examples/lv_apps/demo/demo2.o" -o "lv_examples/lv_apps/demo/demo2.o" "../lv_examples/lv_apps/demo/demo2.c"
 ../lv_examples/lv_apps/demo/demo2.c: In function 'demo2_create':
-../lv_examples/lv_apps/demo/demo2.c:199:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:197:2: warning: implicit declaration of function 'Principale' [-Wimplicit-function-declaration]
   Principale();
   ^~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:203:6: warning: conflicting types for 'Principale'
+../lv_examples/lv_apps/demo/demo2.c:201:6: warning: conflicting types for 'Principale'
  void Principale ()
       ^~~~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:199:2: note: previous implicit declaration of 'Principale' was here
+../lv_examples/lv_apps/demo/demo2.c:197:2: note: previous implicit declaration of 'Principale' was here
   Principale();
   ^~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'Principale':
+../lv_examples/lv_apps/demo/demo2.c:263:39: warning: passing argument 2 of 'lv_obj_set_signal_func' from incompatible pointer type [-Wincompatible-pointer-types]
+   lv_obj_set_signal_func(Image_config,click_Parametres);
+                                       ^~~~~~~~~~~~~~~~
+In file included from c:\perfecttuning\projet\lvgl\lvgl.h:22:0,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\perfecttuning\projet\lvgl\lv_core/lv_obj.h:415:6: note: expected 'lv_signal_func_t {aka enum <anonymous> (*)(struct _lv_obj_t *, enum <anonymous>,  void *)}' but argument is of type 'lv_res_t (*)(lv_obj_t *) {aka enum <anonymous> (*)(struct _lv_obj_t *)}'
+ void lv_obj_set_signal_func(lv_obj_t * obj, lv_signal_func_t fp);
+      ^~~~~~~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:573:32: warning: passing argument 2 of 'lv_obj_set_signal_func' from incompatible pointer type [-Wincompatible-pointer-types]
+   lv_obj_set_signal_func(gauge,click_gauge);
+                                ^~~~~~~~~~~
+In file included from c:\perfecttuning\projet\lvgl\lvgl.h:22:0,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\perfecttuning\projet\lvgl\lv_core/lv_obj.h:415:6: note: expected 'lv_signal_func_t {aka enum <anonymous> (*)(struct _lv_obj_t *, enum <anonymous>,  void *)}' but argument is of type 'lv_res_t (*)(lv_obj_t *) {aka enum <anonymous> (*)(struct _lv_obj_t *)}'
+ void lv_obj_set_signal_func(lv_obj_t * obj, lv_signal_func_t fp);
+      ^~~~~~~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c: In function 'Parametres':
+../lv_examples/lv_apps/demo/demo2.c:645:37: warning: passing argument 2 of 'lv_obj_set_signal_func' from incompatible pointer type [-Wincompatible-pointer-types]
+   lv_obj_set_signal_func(image_home,click_home);
+                                     ^~~~~~~~~~
+In file included from c:\perfecttuning\projet\lvgl\lvgl.h:22:0,
+                 from ../lv_examples/lv_apps/demo/demo.h:19,
+                 from ../lv_examples/lv_apps/demo/demo2.c:12:
+c:\perfecttuning\projet\lvgl\lv_core/lv_obj.h:415:6: note: expected 'lv_signal_func_t {aka enum <anonymous> (*)(struct _lv_obj_t *, enum <anonymous>,  void *)}' but argument is of type 'lv_res_t (*)(lv_obj_t *) {aka enum <anonymous> (*)(struct _lv_obj_t *)}'
+ void lv_obj_set_signal_func(lv_obj_t * obj, lv_signal_func_t fp);
+      ^~~~~~~~~~~~~~~~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: In function 'sw_master_slave':
-../lv_examples/lv_apps/demo/demo2.c:685:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:671:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_Parametres':
-../lv_examples/lv_apps/demo/demo2.c:694:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:681:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../lv_examples/lv_apps/demo/demo2.c: In function 'click_gauge':
+../lv_examples/lv_apps/demo/demo2.c:696:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'afficheCanBus_Data':
-../lv_examples/lv_apps/demo/demo2.c:704:11: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+../lv_examples/lv_apps/demo/demo2.c:706:11: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
    sprintf(tempBuf, "[%d],", data[i]);
            ^~~~~~~
 In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
@@ -37,7 +70,7 @@ In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.ar
 c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
  int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
      ^
-../lv_examples/lv_apps/demo/demo2.c:705:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+../lv_examples/lv_apps/demo/demo2.c:707:10: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
    strcat(canbusString, tempBuf);
           ^~~~~~~~~~~~
 In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
@@ -50,7 +83,7 @@ In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.ar
 c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
  char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
         ^
-../lv_examples/lv_apps/demo/demo2.c:705:24: warning: pointer targets in passing argument 2 of 'strcat' differ in signedness [-Wpointer-sign]
+../lv_examples/lv_apps/demo/demo2.c:707:24: warning: pointer targets in passing argument 2 of 'strcat' differ in signedness [-Wpointer-sign]
    strcat(canbusString, tempBuf);
                         ^~~~~~~
 In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
@@ -63,7 +96,7 @@ In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.ar
 c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:30:8: note: expected 'const char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
  char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
         ^
-../lv_examples/lv_apps/demo/demo2.c:708:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+../lv_examples/lv_apps/demo/demo2.c:710:10: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
   sprintf(tempBuf, "[%d]\n", data[i]);
           ^~~~~~~
 In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
@@ -76,7 +109,7 @@ In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.ar
 c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\stdio.h:244:5: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
  int _EXFUN(sprintf, (char *__restrict, const char *__restrict, ...)
      ^
-../lv_examples/lv_apps/demo/demo2.c:709:9: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
+../lv_examples/lv_apps/demo/demo2.c:711:9: warning: pointer targets in passing argument 1 of 'strcat' differ in signedness [-Wpointer-sign]
   strcat(canbusString, tempBuf);
          ^~~~~~~~~~~~
 In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
@@ -89,7 +122,7 @@ In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.ar
 c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:30:8: note: expected 'char * restrict' but argument is of type 'uint8_t * {aka unsigned char *}'
  char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
         ^
-../lv_examples/lv_apps/demo/demo2.c:709:23: warning: pointer targets in passing argument 2 of 'strcat' differ in signedness [-Wpointer-sign]
+../lv_examples/lv_apps/demo/demo2.c:711:23: warning: pointer targets in passing argument 2 of 'strcat' differ in signedness [-Wpointer-sign]
   strcat(canbusString, tempBuf);
                        ^~~~~~~
 In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556\tools\compiler\arm-none-eabi\include\string.h:10:0,
@@ -103,27 +136,30 @@ c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.20
  char  *_EXFUN(strcat,(char *__restrict, const char *__restrict));
         ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_home':
-../lv_examples/lv_apps/demo/demo2.c:725:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:727:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'click_menu_PARAM':
-../lv_examples/lv_apps/demo/demo2.c:737:1: warning: no return statement in function returning non-void [-Wreturn-type]
+../lv_examples/lv_apps/demo/demo2.c:739:1: warning: no return statement in function returning non-void [-Wreturn-type]
  }
  ^
 ../lv_examples/lv_apps/demo/demo2.c: In function 'action_switch_LED':
-../lv_examples/lv_apps/demo/demo2.c:781:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
+../lv_examples/lv_apps/demo/demo2.c:783:3: warning: implicit declaration of function 'set_leds' [-Wimplicit-function-declaration]
    set_leds();
    ^~~~~~~~
 ../lv_examples/lv_apps/demo/demo2.c: At top level:
-../lv_examples/lv_apps/demo/demo2.c:808:6: warning: conflicting types for 'set_leds'
+../lv_examples/lv_apps/demo/demo2.c:810:6: warning: conflicting types for 'set_leds'
  void set_leds()
       ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:781:3: note: previous implicit declaration of 'set_leds' was here
+../lv_examples/lv_apps/demo/demo2.c:783:3: note: previous implicit declaration of 'set_leds' was here
    set_leds();
    ^~~~~~~~
-../lv_examples/lv_apps/demo/demo2.c:740:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
+../lv_examples/lv_apps/demo/demo2.c:742:17: warning: 'click_Parametres_DEL' defined but not used [-Wunused-function]
  static lv_res_t click_Parametres_DEL(lv_obj_t * child)
                  ^~~~~~~~~~~~~~~~~~~~
+../lv_examples/lv_apps/demo/demo2.c:728:17: warning: 'click_menu_PARAM' defined but not used [-Wunused-function]
+ static lv_res_t click_menu_PARAM(lv_obj_t * child)
+                 ^~~~~~~~~~~~~~~~
 Finished building: ../lv_examples/lv_apps/demo/demo2.c
  
 Building target: Projet.elf
@@ -136,8 +172,8 @@ Generating binary and Printing size information:
 arm-none-eabi-objcopy -O binary "Projet.elf" "Projet.bin"
 arm-none-eabi-size "Projet.elf"
    text	   data	    bss	    dec	    hex	filename
-2026828	    556	 212108	2239492	 222c04	Projet.elf
+2026004	    556	 212100	2238660	 2228c4	Projet.elf
  
 
-17:08:30 Build Finished (took 4s.195ms)
+10:29:27 Build Finished (took 4s.93ms)
 
