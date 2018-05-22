@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="itoa" key="selection"/>
+		<item value="drag" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="drag"/>
 			<item value="itoa"/>
 			<item value="USE_LV_FONT_DEJAVU_40 == 4"/>
 			<item value="_create("/>

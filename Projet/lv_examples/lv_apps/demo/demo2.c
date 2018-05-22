@@ -192,6 +192,7 @@ LV_IMG_DECLARE(canbus_ico);
 void demo2_create()
 {
 
+	Principale();
 	Parametres();
 	/*Create the first image without re-color*/
 
