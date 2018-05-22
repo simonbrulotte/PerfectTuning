@@ -45,6 +45,7 @@ extern LTDC_HandleTypeDef hltdc_discovery;
 extern TIM_HandleTypeDef htim3;
 extern DMA_HandleTypeDef hdma_tim3_ch3;
 extern CAN_HandleTypeDef CanHandle;
+extern ADC_HandleTypeDef hadc1;
 
 /******************************************************************************/
 /*            Cortex-M7 Processor Interruption and Exception Handlers         */ 
@@ -179,6 +180,16 @@ void CAN1_TX_IRQHandler(void)
 void CAN2_TX_IRQHandler(void)
 {
 	HAL_CAN_IRQHandler(&CanHandle);
+}
+
+/**
+* @brief  This function handles the ADC conversion results
+* @param  None
+* @retval None
+*/
+void ADC_IRQHandler(void)
+{
+	HAL_ADC_IRQHandler(&hadc1);
 }
 
 /* USER CODE END 1 */

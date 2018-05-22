@@ -93,7 +93,7 @@ EndDependencies */
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f769i_discovery_lcd.h"
 #include "../../../Utilities/Fonts/fonts.h"
-#include "lv_conf.h"  //Ajout personnel
+#include "lv_conf.h"  //Ajout personnel pour la sélection de la résolution
 /*
 #include "../../../Utilities/Fonts/font24.c"
 #include "../../../Utilities/Fonts/font20.c"

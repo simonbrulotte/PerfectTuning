@@ -194,7 +194,7 @@ void demo2_create()
 
 	Parametres();
 	/*Create the first image without re-color*/
-	Principale();
+
 }
 
 
@@ -222,6 +222,7 @@ void Principale ()
 			lv_page_set_scrl_height(tab_princ, lv_obj_get_height(tab_princ));
 			lv_page_set_scrl_width(tab_princ, lv_obj_get_width(tab_princ));
 			lv_page_set_sb_mode(tab_princ,false);
+
 		tab_princ_del = lv_tabview_add_tab(tv_Princ,"DEL"); // TAB DE SETTING DES DELS
 			lv_page_set_scrl_fit(tab_princ_del,false,false);
 			lv_page_set_scrl_height(tab_princ_del, lv_obj_get_height(tab_princ_del));

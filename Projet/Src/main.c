@@ -47,9 +47,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+/* USER CODE BEGIN Includes */
 #include "stm32f7xx_hal.h"
 
-/* USER CODE BEGIN Includes */
 #include "lv_conf.h"
 #include "lvgl/lvgl.h"
 #include "lcd_lvgl.h"
@@ -61,8 +61,8 @@
 //#include "WS2812.h"
 
 #include "ledDriver.h"
-
 #include "canbus.h"
+#include "adc.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -114,7 +114,11 @@ extern bool led_flag;
 extern bool can_mode_master;
 extern lv_obj_t * txt;
 extern lv_obj_t * tv_Princ;
+<<<<<<< HEAD
 extern lv_obj_t * DEBUG_TB;
+=======
+extern ADC_HandleTypeDef hadc1;
+>>>>>>> ce019316904205666123568b65f20bb3e500a64d
 
 int main(void)
 {
@@ -182,6 +186,8 @@ int main(void)
   canbusInit();
   //canbusPollingTest();
 
+  initADC();
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   int h=0;
@@ -200,7 +206,6 @@ int main(void)
 	  h++;
 	  if (i>=10)
 	  {
-
 		  if (led_flag)
 		  {
 			  if(can_mode_master == false){
@@ -210,17 +215,26 @@ int main(void)
 				  }
 				  lightLedBar();
 				  i=0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce019316904205666123568b65f20bb3e500a64d
 			  }
 			  else{
 				  uint8_t dataCan[] = {val_SliderR,
 						  	  	  	   val_SliderG,
 									   val_SliderB};
-				  canbusWrite(dataCan, sizeof(dataCan)); //lenghtof(data));
+				  canbusWrite(CANBUS_ID_TYPE_LED_DATA ,dataCan, sizeof(dataCan)); //lenghtof(data));
 			  }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ce019316904205666123568b65f20bb3e500a64d
 			  led_flag = false;
 		  }
 
+		  //Gestion ADC
+		  HAL_ADC_Start_IT(&hadc1);
 	  }
 
 	  if (lv_tabview_get_tab_act(tv_Princ) == 3)
