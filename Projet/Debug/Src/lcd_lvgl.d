@@ -34,6 +34,8 @@ Src/lcd_lvgl.o: ../Src/lcd_lvgl.c C:/PerfectTuning/Projet/lv_conf.h \
  C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h \
  C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h \
  C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h \
+ C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h \
+ C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h \
  C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h \
  C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma2d.h \
  C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_flash.h \
@@ -137,6 +139,10 @@ C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma.h:
 C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_dma_ex.h:
 
 C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_cortex.h:
+
+C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc.h:
+
+C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_adc_ex.h:
 
 C:/PerfectTuning/Projet/Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_can.h:
 

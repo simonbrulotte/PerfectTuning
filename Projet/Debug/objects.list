@@ -46,6 +46,7 @@
 "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.o"
 "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o"
 "Src/PixelArray.o"
+"Src/adc.o"
 "Src/canbus.o"
 "Src/lcd_lvgl.o"
 "Src/ledDriver.o"

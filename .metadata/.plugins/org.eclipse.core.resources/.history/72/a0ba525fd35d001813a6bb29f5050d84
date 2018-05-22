@@ -612,7 +612,7 @@ void Parametres() // on place la variable initPosition dans
 			lv_page_set_scrl_height(tab_param_home, lv_obj_get_height(tab_param_home));
 			lv_page_set_scrl_width(tab_param_home, lv_obj_get_width(tab_param_home));
 			lv_page_set_sb_mode(tab_param_home,false);
-
+			lv_tabvi
 
 		tab_param_wifi = lv_tabview_add_tab(tv_Param,"WIFI");
 			lv_page_set_scrl_fit(tab_param_wifi,false,false);

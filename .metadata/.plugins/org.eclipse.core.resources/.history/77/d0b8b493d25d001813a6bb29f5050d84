@@ -50,5 +50,5 @@ void initADC()
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-//	afficheGraphData_CanBus(HAL_ADC_GetValue(hadc));
+	afficheGraphData_CanBus(HAL_ADC_GetValue(hadc));
 }

@@ -253,8 +253,9 @@ void Principale ()
 
 		lv_tabview_set_sliding(tv_Princ,true);
 		lv_tabview_set_style(tv_Princ,LV_TABVIEW_STYLE_BG,&style_btnParam);
-		lv_obj_set_drag(btnParametre,true);
 
+
+		lv_obj_set_drag(btnParametre,true);
 
 
 	Image_config = lv_img_create(tab_princ,NULL);
@@ -509,7 +510,14 @@ void Principale ()
 		lv_obj_set_pos(toggleOnOff,lv_obj_get_x(sliderR),toggle_Y_align+10);
 		lv_obj_align(label_toggle,toggleOnOff,LV_ALIGN_OUT_RIGHT_MID,50,0);
 
+// panneau du controle des Gauges
 
+
+
+//ctnParamDEBUG = lv_cont_create(tab_debug,NULL);
+
+	//lv_obj_set_size(ctnParamDEBUG,LV_HOR_RES,LV_VER_RES);
+//		lv_obj_set_hidden(ctnParamDEBUG,true);
 
 	toggleCan_Master_Slave = lv_sw_create(tab_princ_debug,NULL);
 		lv_obj_set_size(toggleCan_Master_Slave,80,50);
@@ -613,7 +621,6 @@ void Parametres() // on place la variable initPosition dans
 			lv_page_set_scrl_width(tab_param_home, lv_obj_get_width(tab_param_home));
 			lv_page_set_sb_mode(tab_param_home,false);
 
-
 		tab_param_wifi = lv_tabview_add_tab(tv_Param,"WIFI");
 			lv_page_set_scrl_fit(tab_param_wifi,false,false);
 			lv_page_set_scrl_height(tab_param_wifi, lv_obj_get_height(tab_param_wifi));
@@ -669,10 +676,9 @@ static lv_res_t click_Parametres(lv_obj_t * child)
 {
 
 	switch_tab(tv_Param,1);
-	HAL_Delay(150);
+
 	lv_obj_set_hidden(tv_Princ,true);
 	lv_obj_set_hidden(tv_Param,false);
-	HAL_Delay(150);
 
 }
 
