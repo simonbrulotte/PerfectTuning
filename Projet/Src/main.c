@@ -114,11 +114,8 @@ extern bool led_flag;
 extern bool can_mode_master;
 extern lv_obj_t * txt;
 extern lv_obj_t * tv_Princ;
-<<<<<<< HEAD
 extern lv_obj_t * DEBUG_TB;
-=======
 extern ADC_HandleTypeDef hadc1;
->>>>>>> ce019316904205666123568b65f20bb3e500a64d
 
 int main(void)
 {
@@ -215,10 +212,6 @@ int main(void)
 				  }
 				  lightLedBar();
 				  i=0;
-<<<<<<< HEAD
-
-=======
->>>>>>> ce019316904205666123568b65f20bb3e500a64d
 			  }
 			  else{
 				  uint8_t dataCan[] = {val_SliderR,
@@ -226,10 +219,6 @@ int main(void)
 									   val_SliderB};
 				  canbusWrite(CANBUS_ID_TYPE_LED_DATA ,dataCan, sizeof(dataCan)); //lenghtof(data));
 			  }
-<<<<<<< HEAD
-=======
-
->>>>>>> ce019316904205666123568b65f20bb3e500a64d
 			  led_flag = false;
 		  }
 

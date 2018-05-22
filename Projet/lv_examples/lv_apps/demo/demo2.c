@@ -117,6 +117,9 @@ lv_obj_t * btn_tuning_Apply;
 
 lv_obj_t * btn_ctnvehicule_Start;
 
+//Composants du tab Graph
+lv_obj_t * dataGraph;
+lv_chart_series_t * ser1;
 
 
 /// TABVIEW Principal
@@ -128,6 +131,7 @@ lv_obj_t * tab_princ_debug;
 lv_obj_t * tab_princ_chiffre;
 lv_obj_t * tab_princ_gauge;
 lv_obj_t * tab_princ_stat;
+lv_obj_t * tab_princ_graph;
 
 
 // Tabview Paramètres
@@ -250,6 +254,7 @@ void Principale ()
 			lv_page_set_scrl_height(tab_princ_stat, lv_obj_get_height(tab_princ_stat));
 			lv_page_set_scrl_width(tab_princ_stat, lv_obj_get_width(tab_princ_stat));
 			lv_page_set_sb_mode(tab_princ_stat,false);
+		tab_princ_graph = lv_tabview_add_tab(tv_Princ, "GRAPH");
 
 		lv_tabview_set_sliding(tv_Princ,true);
 		lv_tabview_set_style(tv_Princ,LV_TABVIEW_STYLE_BG,&style_btnParam);
@@ -594,6 +599,25 @@ void Principale ()
 		lv_line_set_points(ligne_ver,line_points_ver,2);
 		lv_line_set_style(ligne_ver, &style_line);
 
+/*------------------- Tab Graphique -------------------*/
+		static lv_style_t dataGraph_Style;
+		lv_style_copy(&dataGraph_Style, &lv_style_pretty);
+		dataGraph_Style.body.shadow.width = 6;
+		dataGraph_Style.body.shadow.color = LV_COLOR_GRAY;
+		dataGraph_Style.line.color = LV_COLOR_GRAY;
+
+		dataGraph = lv_chart_create(tab_princ_graph, NULL);
+		lv_obj_set_size(dataGraph, 350, 350);
+		lv_obj_set_style(dataGraph, &dataGraph_Style);
+		lv_obj_align(dataGraph, NULL, LV_ALIGN_CENTER, 0, 0);
+		lv_chart_set_type(dataGraph, LV_CHART_TYPE_POINT | LV_CHART_TYPE_LINE);   /*Show lines and points too*/
+		lv_chart_set_series_opa(dataGraph, LV_OPA_70);                            /*Opacity of the data series*/
+		lv_chart_set_series_width(dataGraph, 10);
+
+		lv_chart_set_range(dataGraph, 0, 255);
+
+		ser1 = lv_chart_add_series(dataGraph, LV_COLOR_RED);
+
 }
 
 
@@ -713,6 +737,11 @@ void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
 	strcat(canbusString, tempBuf);
 
 	lv_ta_add_text(DEBUG_TB,"CanBus mode Slave\n");
+}
+
+void afficheGraphData_CanBus(uint32_t graphPointY){
+	lv_chart_set_next(dataGraph, ser1, graphPointY);
+	lv_chart_refresh(dataGraph);
 }
 
 static lv_res_t click_home(lv_obj_t * child)

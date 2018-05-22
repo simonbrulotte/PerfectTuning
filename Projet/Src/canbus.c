@@ -145,11 +145,7 @@ void canbusReceive()
 
 HAL_StatusTypeDef canbusWrite(uint32_t idDataType, uint8_t *data, uint8_t dataLenght)
 {
-<<<<<<< HEAD
-	TxHeader.StdId = 0x0;
-=======
 	TxHeader.StdId = idDataType;
->>>>>>> ce019316904205666123568b65f20bb3e500a64d
 	TxHeader.RTR = CAN_RTR_DATA;
 	TxHeader.IDE = CAN_ID_STD;
 	TxHeader.DLC = dataLenght;
