@@ -14,9 +14,16 @@
 void canbusInit();
 HAL_StatusTypeDef CAN_Polling(void);
 void canbusReceive();
-HAL_StatusTypeDef canbusWrite(uint8_t *data, uint8_t dataLenght);
 void canbusPollingTest();
+HAL_StatusTypeDef canbusWrite(uint32_t idDataType, uint8_t *data, uint8_t dataLenght);
 
 extern void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght);
+
+enum{
+	CANBUS_ID_TYPE_LED_DATA = 0,
+	CANBUS_ID_TYPE_GAUGE_DATA,
+	CANBUS_ID_TYPE_MESSAGE,
+	CANBUS_ID_TYPE_GRAPH_DATA
+};
 
 #endif /* CANBUS_H_ */

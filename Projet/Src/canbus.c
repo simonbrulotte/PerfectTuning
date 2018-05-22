@@ -10,8 +10,11 @@
 #include <stdbool.h>
 #include "canbus.h"
 
-/*------------------- Prototypes -------------------*/
+/*------------------- Defines -------------------*/
 
+
+/*------------------- Prototypes -------------------*/
+extern void afficheGraphData_CanBus(uint32_t graphPointY);
 
 /*------------------- Variables globales -------------------*/
 CAN_HandleTypeDef CanHandle;
@@ -27,6 +30,7 @@ extern uint8_t val_SliderR;
 extern uint8_t val_SliderG;
 extern uint8_t val_SliderB;
 extern bool can_mode_master;
+extern bool led_flag;
 
 /*------------------- Entré du programme -------------------*/
 void canbusInit()
@@ -139,9 +143,9 @@ void canbusReceive()
 
 }
 
-HAL_StatusTypeDef canbusWrite(uint8_t *data, uint8_t dataLenght)
+HAL_StatusTypeDef canbusWrite(uint32_t idDataType, uint8_t *data, uint8_t dataLenght)
 {
-	TxHeader.StdId = 0x11;
+	TxHeader.StdId = idDataType;
 	TxHeader.RTR = CAN_RTR_DATA;
 	TxHeader.IDE = CAN_ID_STD;
 	TxHeader.DLC = dataLenght;
@@ -179,6 +183,8 @@ void canbusPollingTest()
 
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
+	uint32_t dataGraph;
+
 	/*##-5- Start the Reception process ########################################*/
 	  if(HAL_CAN_GetRxFifoFillLevel(hcan, CAN_RX_FIFO0) != 1)
 	  {
@@ -192,22 +198,32 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	    Error_Handler();
 	  }
 
-	  /*
-	  if((RxHeader.StdId != 0x11)                     ||
-	     (RxHeader.RTR != CAN_RTR_DATA)               ||
-	     (RxHeader.IDE != CAN_ID_STD)                 ||
-	     (RxHeader.DLC != 2)                          ||
-	     ((RxData[0]<<8 | RxData[1]) != 0xCAFE))
-	  {
-	    Error_Handler();
-	  }
-	   */
+	  /*------------------- Traitement des données -------------------*/
 
-	  if(can_mode_master == false){
-		  if(RxHeader.DLC == 3){  //Valeur de trois bytes (RGB)
-			  val_SliderR = TxData[0];  //Modifie les valeurs présentes dans le main
-			  val_SliderG = TxData[1];
-			  val_SliderB = TxData[2];
-		  }
+	  switch(RxHeader.StdId){
+	  	  case CANBUS_ID_TYPE_LED_DATA:  //Traitement des DEL
+	  		if(can_mode_master == false){
+				  if(RxHeader.DLC == 3){  //Valeur de trois bytes (RGB)
+					  val_SliderR = RxData[0];  //Modifie les valeurs présentes dans le main
+					  val_SliderG = RxData[1];
+					  val_SliderB = RxData[2];
+				  }
+			  }
+			  led_flag = true;
+			  break;
+	  	  case CANBUS_ID_TYPE_GRAPH_DATA:  //Traitement d'un point de graphique
+	  		  for(int i=0; i<8; i++){
+	  			  dataGraph += RxData[i] << i*4;
+	  		  }
+	  		  afficheGraphData_CanBus(dataGraph);//Appel fonction qui traite le tableau
+	  		  led_flag = true;
+	  		  break;
+	  	  case CANBUS_ID_TYPE_GAUGE_DATA:
+	  		  //FonctionAdd(TypeDef TypeDeDonnee, uint8 data[] (x4))
+	  		  break;
+	  	  case CANBUS_ID_TYPE_MESSAGE:
+	  		  break;
+	  	  default:
+	  		  break;
 	  }
 }

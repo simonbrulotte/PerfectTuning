@@ -127,6 +127,9 @@ lv_obj_t * btn_tuning_Apply;
 
 lv_obj_t * btn_ctnvehicule_Start;
 
+//Composants du tab Graph
+lv_obj_t * dataGraph;
+lv_chart_series_t * ser1;
 
 
 /// TABVIEW Principal
@@ -137,6 +140,7 @@ lv_obj_t * tab__princ_param;
 lv_obj_t * tab_princ_del;
 lv_obj_t * tab_princ_debug;
 lv_obj_t * tab_princ_chiffre;
+lv_obj_t * tab_princ_graph;
 
 
 // Tabview Paramètres
@@ -196,6 +200,7 @@ void Principale ()
 		tab_princ_del = lv_tabview_add_tab(tv_Princ,"DEL");
 		tab_princ_debug = lv_tabview_add_tab(tv_Princ,"DEBUG");
 		tab_princ_chiffre = lv_tabview_add_tab(tv_Princ,"INDICATEUR");
+		tab_princ_graph = lv_tabview_add_tab(tv_Princ, "GRAPH");
 		lv_tabview_set_sliding(tv_Princ,true);
 	Image_config = lv_img_create(tab_princ,NULL);
 		lv_img_set_src(Image_config,&config);
@@ -499,6 +504,24 @@ void Principale ()
 		lv_obj_set_width(txt, 300);                           /*Set a width*/
 		lv_obj_set_pos(txt,100,400);
 
+		/*------------------- Tab Graphique -------------------*/
+		static lv_style_t dataGraph_Style;
+		lv_style_copy(&dataGraph_Style, &lv_style_pretty);
+		dataGraph_Style.body.shadow.width = 6;
+		dataGraph_Style.body.shadow.color = LV_COLOR_GRAY;
+		dataGraph_Style.line.color = LV_COLOR_GRAY;
+
+		dataGraph = lv_chart_create(tab_princ_graph, NULL);
+		lv_obj_set_size(dataGraph, 350, 350);
+		lv_obj_set_style(dataGraph, &dataGraph_Style);
+		lv_obj_align(dataGraph, NULL, LV_ALIGN_CENTER, 0, 0);
+		lv_chart_set_type(dataGraph, LV_CHART_TYPE_POINT | LV_CHART_TYPE_LINE);   /*Show lines and points too*/
+		lv_chart_set_series_opa(dataGraph, LV_OPA_70);                            /*Opacity of the data series*/
+		lv_chart_set_series_width(dataGraph, 10);
+
+		lv_chart_set_range(dataGraph, 0, 255);
+
+		ser1 = lv_chart_add_series(dataGraph, LV_COLOR_RED);
 }
 
 
@@ -610,6 +633,11 @@ void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
 	strcat(canbusString, tempBuf);
 
 	lv_ta_add_text(DEBUG_TB,"CanBus mode Slave\n");
+}
+
+void afficheGraphData_CanBus(uint32_t graphPointY){
+	lv_chart_set_next(dataGraph, ser1, graphPointY);
+	lv_chart_refresh(dataGraph);
 }
 
 static lv_res_t click_home(lv_obj_t * child)
@@ -738,20 +766,13 @@ static lv_res_t actionSlider(lv_obj_t * slider)
 
 void set_leds()
 {
-	if(can_mode_master == false)
-	{
-		val_SliderI = lv_slider_get_value(sliderI);
-		val_SliderR = (uint8_t)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-		val_SliderG = (uint8_t)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
-		val_SliderB = (uint8_t)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderI = lv_slider_get_value(sliderI);
+	val_SliderR = (uint8_t)round((lv_slider_get_value(sliderR)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderG = (uint8_t)round((lv_slider_get_value(sliderG)*(val_SliderI))/lv_slider_get_max_value(sliderI));
+	val_SliderB = (uint8_t)round((lv_slider_get_value(sliderB)*(val_SliderI))/lv_slider_get_max_value(sliderI));
 
-		if (lv_sw_get_state(toggleOnOff))
-		{
-			led_flag = true;
-		}
-	}
-	else
+	if (lv_sw_get_state(toggleOnOff))
 	{
-
+		led_flag = true;
 	}
 }
