@@ -69,8 +69,12 @@ lv_style_transp     0x48              lvgl/lv_core/lv_style.o
 sdramHandle         0x34              Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
 sFilterConfig       0x28              Src/canbus.o
 txt                 0x4               lv_examples/lv_apps/demo/demo2.o
+<<<<<<< HEAD
 label_Cadran1_Valeur2
                     0x4               lv_examples/lv_apps/demo/demo2.o
+=======
+m_cad4              0x6               Src/adc.o
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 tab_princ_del       0x4               lv_examples/lv_apps/demo/demo2.o
 label_Cadran3_titre
                     0x4               lv_examples/lv_apps/demo/demo2.o
@@ -152,6 +156,7 @@ toggleCan_Master_Slave
                     0x4               lv_examples/lv_apps/demo/demo2.o
 ctnParametre        0x4               lv_examples/lv_apps/demo/demo2.o
 indev1              0x4               Src/main.o
+m_cad3              0x6               Src/adc.o
 audio_drv           0x4               Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
 hDmaTopLeft         0x60              Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_audio.o
 btn_slide_gauge     0x4               lv_examples/lv_apps/demo/demo2.o
@@ -180,6 +185,7 @@ label_Cadran3_Valeur3
 label_Cadran2_titre
                     0x4               lv_examples/lv_apps/demo/demo2.o
 gauge               0x4               lv_examples/lv_apps/demo/demo2.o
+m_cad1              0x6               Src/adc.o
 lv_style_btn_ina    0x48              lvgl/lv_core/lv_style.o
 btn_tuning_Retour   0x4               lv_examples/lv_apps/demo/demo2.o
 label_Cadran4_titre
@@ -226,7 +232,11 @@ image_home          0x4               lv_examples/lv_apps/demo/demo2.o
 pbuf                0x4               Src/PixelArray.o
 lv_style_scr        0x48              lvgl/lv_core/lv_style.o
 sliderR             0x4               lv_examples/lv_apps/demo/demo2.o
+<<<<<<< HEAD
 label_Cadran3_unit  0x4               lv_examples/lv_apps/demo/demo2.o
+=======
+m_cad2              0x6               Src/adc.o
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 TxHeader            0x18              Src/canbus.o
 label_Cadran1_unit3
                     0x4               lv_examples/lv_apps/demo/demo2.o
@@ -239,6 +249,7 @@ hDmaButtomRight     0x60              Drivers/BSP/STM32F769I-Discovery/stm32f769
 lv_style_plain_color
                     0x48              lvgl/lv_core/lv_style.o
 btnwifi             0x4               lv_examples/lv_apps/demo/demo2.o
+<<<<<<< HEAD
 label_Cadran1_titre3
                     0x4               lv_examples/lv_apps/demo/demo2.o
 ws2812BitBuf        0x1b00            Src/ledDriver.o
@@ -247,6 +258,10 @@ label_Cadran2_unit3
                     0x4               lv_examples/lv_apps/demo/demo2.o
 label_Cadran1_unit2
                     0x4               lv_examples/lv_apps/demo/demo2.o
+=======
+cadran2             0x4               lv_examples/lv_apps/demo/demo2.o
+ws2812BitBuf        0x1200            Src/ledDriver.o
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 hdsi_discovery      0x1c              Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
 
 Discarded input sections
@@ -8130,9 +8145,10 @@ Discarded input sections
  .group         0x00000000        0x8 Src/adc.o
  .group         0x00000000        0x8 Src/adc.o
  .group         0x00000000        0x8 Src/adc.o
+ .group         0x00000000        0x8 Src/adc.o
+ .group         0x00000000        0x8 Src/adc.o
  .text          0x00000000        0x0 Src/adc.o
  .data          0x00000000        0x0 Src/adc.o
- .bss           0x00000000        0x0 Src/adc.o
  .debug_macro   0x00000000      0x8c8 Src/adc.o
  .debug_macro   0x00000000      0x835 Src/adc.o
  .debug_macro   0x00000000       0x2e Src/adc.o
@@ -8288,7 +8304,7 @@ Discarded input sections
  .group         0x00000000        0x8 Src/canbus.o
  .text          0x00000000        0x0 Src/canbus.o
  .data          0x00000000        0x0 Src/canbus.o
- .bss           0x00000000        0x0 Src/canbus.o
+ .bss           0x00000000        0x1 Src/canbus.o
  .text.CAN_Polling
                 0x00000000       0xe0 Src/canbus.o
  .text.canbusReceive
@@ -8311,6 +8327,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x187 Src/canbus.o
  .debug_macro   0x00000000      0x330 Src/canbus.o
  .debug_macro   0x00000000       0x35 Src/canbus.o
+ .debug_macro   0x00000000       0x22 Src/canbus.o
  .debug_macro   0x00000000      0x835 Src/canbus.o
  .debug_macro   0x00000000      0x1b5 Src/canbus.o
  .debug_macro   0x00000000       0x2e Src/canbus.o
@@ -8629,9 +8646,10 @@ Discarded input sections
  .group         0x00000000        0x8 Src/ledDriver.o
  .group         0x00000000        0x8 Src/ledDriver.o
  .group         0x00000000        0x8 Src/ledDriver.o
+ .group         0x00000000        0x8 Src/ledDriver.o
+ .group         0x00000000        0x8 Src/ledDriver.o
  .text          0x00000000        0x0 Src/ledDriver.o
  .data          0x00000000        0x0 Src/ledDriver.o
- .bss           0x00000000        0x0 Src/ledDriver.o
  .debug_macro   0x00000000      0x8c8 Src/ledDriver.o
  .debug_macro   0x00000000       0x22 Src/ledDriver.o
  .debug_macro   0x00000000       0x52 Src/ledDriver.o
@@ -8660,6 +8678,7 @@ Discarded input sections
  .debug_macro   0x00000000       0xd7 Src/ledDriver.o
  .debug_macro   0x00000000       0x16 Src/ledDriver.o
  .debug_macro   0x00000000      0x18b Src/ledDriver.o
+ .debug_macro   0x00000000       0x22 Src/ledDriver.o
  .debug_macro   0x00000000      0x835 Src/ledDriver.o
  .debug_macro   0x00000000      0x1af Src/ledDriver.o
  .debug_macro   0x00000000       0x2e Src/ledDriver.o
@@ -8708,6 +8727,8 @@ Discarded input sections
  .debug_macro   0x00000000       0x47 Src/ledDriver.o
  .debug_macro   0x00000000      0x2a3 Src/ledDriver.o
  .debug_macro   0x00000000      0x156 Src/ledDriver.o
+ .debug_macro   0x00000000       0x2e Src/ledDriver.o
+ .debug_macro   0x00000000      0x1e4 Src/ledDriver.o
  .group         0x00000000        0x8 Src/main.o
  .group         0x00000000        0x8 Src/main.o
  .group         0x00000000        0x8 Src/main.o
@@ -8903,7 +8924,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 Src/main.o
  .debug_macro   0x00000000       0x22 Src/main.o
  .debug_macro   0x00000000      0x1e4 Src/main.o
- .debug_macro   0x00000000       0x28 Src/main.o
+ .debug_macro   0x00000000       0x2e Src/main.o
  .group         0x00000000        0x8 Src/stm32f7xx_hal_msp.o
  .group         0x00000000        0x8 Src/stm32f7xx_hal_msp.o
  .group         0x00000000        0x8 Src/stm32f7xx_hal_msp.o
@@ -9946,7 +9967,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x16 lv_examples/lv_apps/demo/demo2.o
  .debug_macro   0x00000000      0x230 lv_examples/lv_apps/demo/demo2.o
  .debug_macro   0x00000000       0x2e lv_examples/lv_apps/demo/demo2.o
- .debug_macro   0x00000000       0x28 lv_examples/lv_apps/demo/demo2.o
+ .debug_macro   0x00000000       0x2e lv_examples/lv_apps/demo/demo2.o
  .debug_macro   0x00000000       0x16 lv_examples/lv_apps/demo/demo2.o
  .debug_macro   0x00000000       0x16 lv_examples/lv_apps/demo/demo2.o
  .debug_macro   0x00000000       0x29 lv_examples/lv_apps/demo/demo2.o
@@ -15082,8 +15103,6 @@ Discarded input sections
  .data          0x00000000        0x0 lvgl/lv_objx/lv_chart.o
  .text.lv_chart_set_div_line_count
                 0x00000000       0x32 lvgl/lv_objx/lv_chart.o
- .text.lv_chart_set_point_count
-                0x00000000       0xac lvgl/lv_objx/lv_chart.o
  .text.lv_chart_set_series_darking
                 0x00000000       0x22 lvgl/lv_objx/lv_chart.o
  .text.lv_chart_init_points
@@ -17574,7 +17593,11 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
                 0x08000000                g_pfnVectors
                 0x080001f8                . = ALIGN (0x4)
 
+<<<<<<< HEAD
 .text           0x080001f8    0x21554
+=======
+.text           0x080001f8    0x214f0
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
                 0x080001f8                . = ALIGN (0x4)
  *(.text)
  .text          0x080001f8       0x6c c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
@@ -18080,6 +18103,7 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
                 0x08008800       0x78 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
                 0x08008800                FMC_SDRAM_SendCommand
  .text.FMC_SDRAM_ProgramRefreshRate
+<<<<<<< HEAD
                 0x08008878       0x26 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
                 0x08008878                FMC_SDRAM_ProgramRefreshRate
  *fill*         0x0800889e        0x2 
@@ -19984,10 +20008,1945 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
 
 .rel.dyn        0x081b867c        0x0
  .rel.iplt      0x081b867c        0x0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+=======
+                0x08008b90       0x26 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+                0x08008b90                FMC_SDRAM_ProgramRefreshRate
+ *fill*         0x08008bb6        0x2 
+ .text.initADC  0x08008bb8       0xa0 Src/adc.o
+                0x08008bb8                initADC
+ .text.adcLogiqueAffichage
+                0x08008c58       0x40 Src/adc.o
+                0x08008c58                adcLogiqueAffichage
+ .text.HAL_ADC_ConvCpltCallback
+                0x08008c98       0xc8 Src/adc.o
+                0x08008c98                HAL_ADC_ConvCpltCallback
+ .text.canbusInit
+                0x08008d60       0xf8 Src/canbus.o
+                0x08008d60                canbusInit
+ .text.canbusWrite
+                0x08008e58       0x84 Src/canbus.o
+                0x08008e58                canbusWrite
+ .text.canbusLogiqueAffichage
+                0x08008edc        0xe Src/canbus.o
+                0x08008edc                canbusLogiqueAffichage
+ *fill*         0x08008eea        0x2 
+ .text.HAL_CAN_RxFifo0MsgPendingCallback
+                0x08008eec       0xfc Src/canbus.o
+                0x08008eec                HAL_CAN_RxFifo0MsgPendingCallback
+ .text.lv_color_to24
+                0x08008fe8       0x16 Src/lcd_lvgl.o
+ *fill*         0x08008ffe        0x2 
+ .text.lvgl_init
+                0x08009000      0x13c Src/lcd_lvgl.o
+                0x08009000                lvgl_init
+ .text.DMA2D_TransferComplete
+                0x0800913c       0x14 Src/lcd_lvgl.o
+                0x0800913c                DMA2D_TransferComplete
+ .text.DMA2D_TransferError
+                0x08009150       0x14 Src/lcd_lvgl.o
+                0x08009150                DMA2D_TransferError
+ .text.DMA2D_Config
+                0x08009164       0x84 Src/lcd_lvgl.o
+ .text.tft_flush
+                0x080091e8       0xf4 Src/lcd_lvgl.o
+ .text.tft_fill
+                0x080092dc       0xb8 Src/lcd_lvgl.o
+ .text.tft_map  0x08009394       0xf4 Src/lcd_lvgl.o
+ .text.gpu_mem_blend
+                0x08009488       0x5c Src/lcd_lvgl.o
+ .text.gpu_mem_fill
+                0x080094e4       0x60 Src/lcd_lvgl.o
+ .text.touchpad_read
+                0x08009544       0x80 Src/lcd_lvgl.o
+ .text.DMA_TransferComplete
+                0x080095c4       0x9c Src/lcd_lvgl.o
+                0x080095c4                DMA_TransferComplete
+ .text.DMA_TransferError
+                0x08009660       0x14 Src/lcd_lvgl.o
+                0x08009660                DMA_TransferError
+ .text.HAL_LTDC_LineEventCallback
+                0x08009674       0x14 Src/lcd_lvgl.o
+                0x08009674                HAL_LTDC_LineEventCallback
+ .text.ledDriver_init
+                0x08009688       0x84 Src/ledDriver.o
+                0x08009688                ledDriver_init
+ .text.ledDriverLogique
+                0x0800970c       0xcc Src/ledDriver.o
+                0x0800970c                ledDriverLogique
+ .text.MX_TIM3_Init
+                0x080097d8       0xa4 Src/ledDriver.o
+ .text.HAL_TIM_PWM_MspInit
+                0x0800987c       0xc4 Src/ledDriver.o
+                0x0800987c                HAL_TIM_PWM_MspInit
+ .text.HAL_TIM_MspPostInit
+                0x08009940       0x60 Src/ledDriver.o
+                0x08009940                HAL_TIM_MspPostInit
+ .text.MX_DMA_Init
+                0x080099a0       0x3c Src/ledDriver.o
+                0x080099a0                MX_DMA_Init
+ .text.initLedBar
+                0x080099dc       0x34 Src/ledDriver.o
+                0x080099dc                initLedBar
+ .text.turnOffBar
+                0x08009a10       0x30 Src/ledDriver.o
+                0x08009a10                turnOffBar
+ .text.ws2812_set_color
+                0x08009a40       0xd4 Src/ledDriver.o
+                0x08009a40                ws2812_set_color
+ .text.lightLedBar
+                0x08009b14       0x20 Src/ledDriver.o
+                0x08009b14                lightLedBar
+ .text.ledRingSplited
+                0x08009b34      0x3a8 Src/ledDriver.o
+                0x08009b34                ledRingSplited
+ .text.main     0x08009edc       0xe4 Src/main.o
+                0x08009edc                main
+ .text.SystemClock_Config
+                0x08009fc0       0xf4 Src/main.o
+                0x08009fc0                SystemClock_Config
+ .text.MX_DMA_Init
+                0x0800a0b4       0xd0 Src/main.o
+ .text._Error_Handler
+                0x0800a184       0x34 Src/main.o
+                0x0800a184                _Error_Handler
+ .text.HAL_MspInit
+                0x0800a1b8       0x62 Src/stm32f7xx_hal_msp.o
+                0x0800a1b8                HAL_MspInit
+ *fill*         0x0800a21a        0x2 
+ .text.HAL_DMA2D_MspInit
+                0x0800a21c       0x40 Src/stm32f7xx_hal_msp.o
+                0x0800a21c                HAL_DMA2D_MspInit
+ .text.HAL_DSI_MspInit
+                0x0800a25c       0x60 Src/stm32f7xx_hal_msp.o
+                0x0800a25c                HAL_DSI_MspInit
+ .text.HAL_DSI_MspDeInit
+                0x0800a2bc       0x3c Src/stm32f7xx_hal_msp.o
+                0x0800a2bc                HAL_DSI_MspDeInit
+ .text.HAL_LTDC_MspInit
+                0x0800a2f8       0x40 Src/stm32f7xx_hal_msp.o
+                0x0800a2f8                HAL_LTDC_MspInit
+ .text.HAL_FMC_MspInit
+                0x0800a338      0x118 Src/stm32f7xx_hal_msp.o
+ .text.HAL_SDRAM_MspInit
+                0x0800a450       0x14 Src/stm32f7xx_hal_msp.o
+                0x0800a450                HAL_SDRAM_MspInit
+ .text.HAL_CAN_MspInit
+                0x0800a464       0x6c Src/stm32f7xx_hal_msp.o
+                0x0800a464                HAL_CAN_MspInit
+ .text.HAL_ADC_MspInit
+                0x0800a4d0       0xd8 Src/stm32f7xx_hal_msp.o
+                0x0800a4d0                HAL_ADC_MspInit
+ .text.SysTick_Handler
+                0x0800a5a8       0x16 Src/stm32f7xx_it.o
+                0x0800a5a8                SysTick_Handler
+ *fill*         0x0800a5be        0x2 
+ .text.DMA2_Stream0_IRQHandler
+                0x0800a5c0       0x14 Src/stm32f7xx_it.o
+                0x0800a5c0                DMA2_Stream0_IRQHandler
+ .text.LTDC_IRQHandler
+                0x0800a5d4       0x14 Src/stm32f7xx_it.o
+                0x0800a5d4                LTDC_IRQHandler
+ .text.TIM3_IRQHandler
+                0x0800a5e8       0x14 Src/stm32f7xx_it.o
+                0x0800a5e8                TIM3_IRQHandler
+ .text.DMA1_Stream7_IRQHandler
+                0x0800a5fc       0x14 Src/stm32f7xx_it.o
+                0x0800a5fc                DMA1_Stream7_IRQHandler
+ .text.CAN1_RX0_IRQHandler
+                0x0800a610       0x14 Src/stm32f7xx_it.o
+                0x0800a610                CAN1_RX0_IRQHandler
+ .text.CAN2_RX0_IRQHandler
+                0x0800a624       0x14 Src/stm32f7xx_it.o
+                0x0800a624                CAN2_RX0_IRQHandler
+ .text.CAN1_RX1_IRQHandler
+                0x0800a638       0x14 Src/stm32f7xx_it.o
+                0x0800a638                CAN1_RX1_IRQHandler
+ .text.CAN2_RX1_IRQHandler
+                0x0800a64c       0x14 Src/stm32f7xx_it.o
+                0x0800a64c                CAN2_RX1_IRQHandler
+ .text.CAN1_TX_IRQHandler
+                0x0800a660       0x14 Src/stm32f7xx_it.o
+                0x0800a660                CAN1_TX_IRQHandler
+ .text.CAN2_TX_IRQHandler
+                0x0800a674       0x14 Src/stm32f7xx_it.o
+                0x0800a674                CAN2_TX_IRQHandler
+ .text.ADC_IRQHandler
+                0x0800a688       0x14 Src/stm32f7xx_it.o
+                0x0800a688                ADC_IRQHandler
+ .text.SystemInit
+                0x0800a69c       0x6c Src/system_stm32f7xx.o
+                0x0800a69c                SystemInit
+ .text.lv_line_set_style
+                0x0800a708       0x1a lv_examples/lv_apps/demo/demo2.o
+ .text.lv_page_set_scrl_fit
+                0x0800a722       0x28 lv_examples/lv_apps/demo/demo2.o
+ .text.lv_page_set_scrl_width
+                0x0800a74a       0x28 lv_examples/lv_apps/demo/demo2.o
+ .text.lv_page_set_scrl_height
+                0x0800a772       0x28 lv_examples/lv_apps/demo/demo2.o
+ .text.lv_slider_set_value
+                0x0800a79a       0x20 lv_examples/lv_apps/demo/demo2.o
+ .text.lv_slider_set_range
+                0x0800a7ba       0x28 lv_examples/lv_apps/demo/demo2.o
+ .text.lv_slider_get_max_value
+                0x0800a7e2       0x18 lv_examples/lv_apps/demo/demo2.o
+ .text.lv_gauge_set_range
+                0x0800a7fa       0x28 lv_examples/lv_apps/demo/demo2.o
+ .text.lv_gauge_set_critical_value
+                0x0800a822       0x20 lv_examples/lv_apps/demo/demo2.o
+ .text.lv_gauge_set_style
+                0x0800a842       0x1a lv_examples/lv_apps/demo/demo2.o
+ .text.lv_sw_set_action
+                0x0800a85c       0x1a lv_examples/lv_apps/demo/demo2.o
+ .text.lv_sw_get_state
+                0x0800a876       0x22 lv_examples/lv_apps/demo/demo2.o
+ .text.demo2_create
+                0x0800a898       0x10 lv_examples/lv_apps/demo/demo2.o
+                0x0800a898                demo2_create
+ .text.Principale
+                0x0800a8a8      0xfdc lv_examples/lv_apps/demo/demo2.o
+                0x0800a8a8                Principale
+ .text.Parametres
+                0x0800b884      0x2b0 lv_examples/lv_apps/demo/demo2.o
+                0x0800b884                Parametres
+ .text.sw_master_slave
+                0x0800bb34       0x50 lv_examples/lv_apps/demo/demo2.o
+ .text.click_Parametres
+                0x0800bb84       0x40 lv_examples/lv_apps/demo/demo2.o
+ .text.click_gauge
+                0x0800bbc4       0x16 lv_examples/lv_apps/demo/demo2.o
+ *fill*         0x0800bbda        0x2 
+ .text.afficheGraphData_CanBus
+                0x0800bbdc       0x34 lv_examples/lv_apps/demo/demo2.o
+                0x0800bbdc                afficheGraphData_CanBus
+ .text.click_home
+                0x0800bc10       0x40 lv_examples/lv_apps/demo/demo2.o
+ .text.switch_tab
+                0x0800bc50       0x20 lv_examples/lv_apps/demo/demo2.o
+                0x0800bc50                switch_tab
+ .text.action_switch_LED
+                0x0800bc70       0x54 lv_examples/lv_apps/demo/demo2.o
+ .text.actionSlider
+                0x0800bcc4       0x16 lv_examples/lv_apps/demo/demo2.o
+ *fill*         0x0800bcda        0x2 
+ .text.set_leds
+                0x0800bcdc      0x13c lv_examples/lv_apps/demo/demo2.o
+                0x0800bcdc                set_leds
+ .text.lv_color_mix
+                0x0800be18       0xa4 lvgl/lv_core/lv_group.o
+ .text.lv_group_add_obj
+                0x0800bebc       0x3e lvgl/lv_core/lv_group.o
+                0x0800bebc                lv_group_add_obj
+ .text.lv_group_focus_next
+                0x0800befa       0xbc lvgl/lv_core/lv_group.o
+                0x0800befa                lv_group_focus_next
+ .text.lv_group_focus_prev
+                0x0800bfb6       0xbc lvgl/lv_core/lv_group.o
+                0x0800bfb6                lv_group_focus_prev
+ .text.lv_group_send_data
+                0x0800c072       0x2e lvgl/lv_core/lv_group.o
+                0x0800c072                lv_group_send_data
+ .text.lv_group_mod_style
+                0x0800c0a0       0x42 lvgl/lv_core/lv_group.o
+                0x0800c0a0                lv_group_mod_style
+ .text.lv_group_get_focused
+                0x0800c0e2       0x30 lvgl/lv_core/lv_group.o
+                0x0800c0e2                lv_group_get_focused
+ .text.style_mod_def
+                0x0800c112       0xce lvgl/lv_core/lv_group.o
+ .text.lv_indev_init
+                0x0800c1e0       0x20 lvgl/lv_core/lv_indev.o
+                0x0800c1e0                lv_indev_init
+ .text.lv_indev_get_act
+                0x0800c200       0x18 lvgl/lv_core/lv_indev.o
+                0x0800c200                lv_indev_get_act
+ .text.lv_indev_reset
+                0x0800c218       0x4c lvgl/lv_core/lv_indev.o
+                0x0800c218                lv_indev_reset
+ .text.lv_indev_reset_lpr
+                0x0800c264       0x32 lvgl/lv_core/lv_indev.o
+                0x0800c264                lv_indev_reset_lpr
+ .text.lv_indev_get_point
+                0x0800c296       0x48 lvgl/lv_core/lv_indev.o
+                0x0800c296                lv_indev_get_point
+ .text.lv_indev_is_dragging
+                0x0800c2de       0x48 lvgl/lv_core/lv_indev.o
+                0x0800c2de                lv_indev_is_dragging
+ .text.lv_indev_get_vect
+                0x0800c326       0x48 lvgl/lv_core/lv_indev.o
+                0x0800c326                lv_indev_get_vect
+ *fill*         0x0800c36e        0x2 
+ .text.indev_proc_task
+                0x0800c370       0xc4 lvgl/lv_core/lv_indev.o
+ .text.indev_pointer_proc
+                0x0800c434       0x96 lvgl/lv_core/lv_indev.o
+ .text.indev_keypad_proc
+                0x0800c4ca      0x106 lvgl/lv_core/lv_indev.o
+ .text.indev_button_proc
+                0x0800c5d0       0x8c lvgl/lv_core/lv_indev.o
+ .text.indev_proc_press
+                0x0800c65c      0x2f8 lvgl/lv_core/lv_indev.o
+ .text.indev_proc_release
+                0x0800c954       0xb0 lvgl/lv_core/lv_indev.o
+ .text.indev_proc_reset_query_handler
+                0x0800ca04       0x80 lvgl/lv_core/lv_indev.o
+ .text.indev_search_obj
+                0x0800ca84       0xa6 lvgl/lv_core/lv_indev.o
+ *fill*         0x0800cb2a        0x2 
+ .text.indev_drag
+                0x0800cb2c      0x1a0 lvgl/lv_core/lv_indev.o
+ .text.indev_drag_throw
+                0x0800cccc      0x198 lvgl/lv_core/lv_indev.o
+ .text.lv_area_copy
+                0x0800ce64       0x1c lvgl/lv_core/lv_obj.o
+ .text.lv_area_get_width
+                0x0800ce80       0x2e lvgl/lv_core/lv_obj.o
+ .text.lv_area_get_height
+                0x0800ceae       0x2e lvgl/lv_core/lv_obj.o
+ .text.lv_init  0x0800cedc       0xa0 lvgl/lv_core/lv_obj.o
+                0x0800cedc                lv_init
+ .text.lv_obj_create
+                0x0800cf7c      0x32c lvgl/lv_core/lv_obj.o
+                0x0800cf7c                lv_obj_create
+ .text.lv_obj_invalidate
+                0x0800d2a8       0xe8 lvgl/lv_core/lv_obj.o
+                0x0800d2a8                lv_obj_invalidate
+ .text.lv_obj_set_parent
+                0x0800d390       0x78 lvgl/lv_core/lv_obj.o
+                0x0800d390                lv_obj_set_parent
+ .text.lv_obj_set_pos
+                0x0800d408      0x116 lvgl/lv_core/lv_obj.o
+                0x0800d408                lv_obj_set_pos
+ .text.lv_obj_set_x
+                0x0800d51e       0x2a lvgl/lv_core/lv_obj.o
+                0x0800d51e                lv_obj_set_x
+ .text.lv_obj_set_y
+                0x0800d548       0x2a lvgl/lv_core/lv_obj.o
+                0x0800d548                lv_obj_set_y
+ .text.lv_obj_set_size
+                0x0800d572       0xae lvgl/lv_core/lv_obj.o
+                0x0800d572                lv_obj_set_size
+ .text.lv_obj_set_width
+                0x0800d620       0x2a lvgl/lv_core/lv_obj.o
+                0x0800d620                lv_obj_set_width
+ .text.lv_obj_set_height
+                0x0800d64a       0x2a lvgl/lv_core/lv_obj.o
+                0x0800d64a                lv_obj_set_height
+ .text.lv_obj_align
+                0x0800d674      0x4c8 lvgl/lv_core/lv_obj.o
+                0x0800d674                lv_obj_align
+ .text.lv_obj_set_style
+                0x0800db3c       0x24 lvgl/lv_core/lv_obj.o
+                0x0800db3c                lv_obj_set_style
+ .text.lv_obj_refresh_style
+                0x0800db60       0x28 lvgl/lv_core/lv_obj.o
+                0x0800db60                lv_obj_refresh_style
+ .text.lv_obj_set_hidden
+                0x0800db88       0x4e lvgl/lv_core/lv_obj.o
+                0x0800db88                lv_obj_set_hidden
+ .text.lv_obj_set_click
+                0x0800dbd6       0x28 lvgl/lv_core/lv_obj.o
+                0x0800dbd6                lv_obj_set_click
+ .text.lv_obj_set_drag
+                0x0800dbfe       0x32 lvgl/lv_core/lv_obj.o
+                0x0800dbfe                lv_obj_set_drag
+ .text.lv_obj_set_drag_throw
+                0x0800dc30       0x28 lvgl/lv_core/lv_obj.o
+                0x0800dc30                lv_obj_set_drag_throw
+ .text.lv_obj_set_drag_parent
+                0x0800dc58       0x28 lvgl/lv_core/lv_obj.o
+                0x0800dc58                lv_obj_set_drag_parent
+ .text.lv_obj_set_protect
+                0x0800dc80       0x2a lvgl/lv_core/lv_obj.o
+                0x0800dc80                lv_obj_set_protect
+ .text.lv_obj_clear_protect
+                0x0800dcaa       0x30 lvgl/lv_core/lv_obj.o
+                0x0800dcaa                lv_obj_clear_protect
+ .text.lv_obj_set_signal_func
+                0x0800dcda       0x1c lvgl/lv_core/lv_obj.o
+                0x0800dcda                lv_obj_set_signal_func
+ .text.lv_obj_set_design_func
+                0x0800dcf6       0x1c lvgl/lv_core/lv_obj.o
+                0x0800dcf6                lv_obj_set_design_func
+ .text.lv_obj_allocate_ext_attr
+                0x0800dd12       0x2c lvgl/lv_core/lv_obj.o
+                0x0800dd12                lv_obj_allocate_ext_attr
+ .text.lv_obj_refresh_ext_size
+                0x0800dd3e       0x28 lvgl/lv_core/lv_obj.o
+                0x0800dd3e                lv_obj_refresh_ext_size
+ *fill*         0x0800dd66        0x2 
+ .text.lv_scr_act
+                0x0800dd68       0x18 lvgl/lv_core/lv_obj.o
+                0x0800dd68                lv_scr_act
+ .text.lv_layer_top
+                0x0800dd80       0x18 lvgl/lv_core/lv_obj.o
+                0x0800dd80                lv_layer_top
+ .text.lv_layer_sys
+                0x0800dd98       0x18 lvgl/lv_core/lv_obj.o
+                0x0800dd98                lv_layer_sys
+ .text.lv_obj_get_screen
+                0x0800ddb0       0x28 lvgl/lv_core/lv_obj.o
+                0x0800ddb0                lv_obj_get_screen
+ .text.lv_obj_get_parent
+                0x0800ddd8       0x18 lvgl/lv_core/lv_obj.o
+                0x0800ddd8                lv_obj_get_parent
+ .text.lv_obj_get_child
+                0x0800ddf0       0x34 lvgl/lv_core/lv_obj.o
+                0x0800ddf0                lv_obj_get_child
+ .text.lv_obj_get_child_back
+                0x0800de24       0x34 lvgl/lv_core/lv_obj.o
+                0x0800de24                lv_obj_get_child_back
+ .text.lv_obj_get_coords
+                0x0800de58       0x1e lvgl/lv_core/lv_obj.o
+                0x0800de58                lv_obj_get_coords
+ .text.lv_obj_get_x
+                0x0800de76       0x32 lvgl/lv_core/lv_obj.o
+                0x0800de76                lv_obj_get_x
+ .text.lv_obj_get_y
+                0x0800dea8       0x32 lvgl/lv_core/lv_obj.o
+                0x0800dea8                lv_obj_get_y
+ .text.lv_obj_get_width
+                0x0800deda       0x1c lvgl/lv_core/lv_obj.o
+                0x0800deda                lv_obj_get_width
+ .text.lv_obj_get_height
+                0x0800def6       0x1c lvgl/lv_core/lv_obj.o
+                0x0800def6                lv_obj_get_height
+ *fill*         0x0800df12        0x2 
+ .text.lv_obj_get_style
+                0x0800df14       0xb0 lvgl/lv_core/lv_obj.o
+                0x0800df14                lv_obj_get_style
+ .text.lv_obj_get_hidden
+                0x0800dfc4       0x2a lvgl/lv_core/lv_obj.o
+                0x0800dfc4                lv_obj_get_hidden
+ .text.lv_obj_get_click
+                0x0800dfee       0x2a lvgl/lv_core/lv_obj.o
+                0x0800dfee                lv_obj_get_click
+ .text.lv_obj_get_drag
+                0x0800e018       0x2a lvgl/lv_core/lv_obj.o
+                0x0800e018                lv_obj_get_drag
+ .text.lv_obj_get_drag_throw
+                0x0800e042       0x2a lvgl/lv_core/lv_obj.o
+                0x0800e042                lv_obj_get_drag_throw
+ .text.lv_obj_get_drag_parent
+                0x0800e06c       0x2a lvgl/lv_core/lv_obj.o
+                0x0800e06c                lv_obj_get_drag_parent
+ .text.lv_obj_is_protected
+                0x0800e096       0x2e lvgl/lv_core/lv_obj.o
+                0x0800e096                lv_obj_is_protected
+ .text.lv_obj_get_signal_func
+                0x0800e0c4       0x18 lvgl/lv_core/lv_obj.o
+                0x0800e0c4                lv_obj_get_signal_func
+ .text.lv_obj_get_design_func
+                0x0800e0dc       0x18 lvgl/lv_core/lv_obj.o
+                0x0800e0dc                lv_obj_get_design_func
+ .text.lv_obj_get_ext_attr
+                0x0800e0f4       0x18 lvgl/lv_core/lv_obj.o
+                0x0800e0f4                lv_obj_get_ext_attr
+ .text.lv_obj_get_group
+                0x0800e10c       0x18 lvgl/lv_core/lv_obj.o
+                0x0800e10c                lv_obj_get_group
+ .text.lv_obj_design
+                0x0800e124       0xfc lvgl/lv_core/lv_obj.o
+ .text.lv_obj_signal
+                0x0800e220       0x84 lvgl/lv_core/lv_obj.o
+ .text.refresh_childen_position
+                0x0800e2a4       0x9a lvgl/lv_core/lv_obj.o
+ .text.refresh_childen_style
+                0x0800e33e       0x58 lvgl/lv_core/lv_obj.o
+ .text.lv_area_copy
+                0x0800e396       0x1c lvgl/lv_core/lv_refr.o
+ .text.lv_area_get_width
+                0x0800e3b2       0x2e lvgl/lv_core/lv_refr.o
+ .text.lv_area_get_height
+                0x0800e3e0       0x2e lvgl/lv_core/lv_refr.o
+ .text.lv_mem_assert
+                0x0800e40e       0x1c lvgl/lv_core/lv_refr.o
+ *fill*         0x0800e42a        0x2 
+ .text.lv_refr_init
+                0x0800e42c       0x40 lvgl/lv_core/lv_refr.o
+                0x0800e42c                lv_refr_init
+ .text.lv_inv_area
+                0x0800e46c       0xfc lvgl/lv_core/lv_refr.o
+                0x0800e46c                lv_inv_area
+ .text.lv_refr_get_buf_size
+                0x0800e568       0x18 lvgl/lv_core/lv_refr.o
+                0x0800e568                lv_refr_get_buf_size
+ .text.lv_refr_pop_from_buf
+                0x0800e580       0x3c lvgl/lv_core/lv_refr.o
+                0x0800e580                lv_refr_pop_from_buf
+ .text.lv_refr_task
+                0x0800e5bc       0x74 lvgl/lv_core/lv_refr.o
+ .text.lv_refr_join_area
+                0x0800e630      0x144 lvgl/lv_core/lv_refr.o
+ .text.lv_refr_areas
+                0x0800e774       0x90 lvgl/lv_core/lv_refr.o
+ .text.lv_refr_area_with_vdb
+                0x0800e804      0x11a lvgl/lv_core/lv_refr.o
+ .text.lv_refr_area_part_vdb
+                0x0800e91e       0x6c lvgl/lv_core/lv_refr.o
+ .text.lv_refr_get_top_obj
+                0x0800e98a       0x9c lvgl/lv_core/lv_refr.o
+ .text.lv_refr_obj_and_children
+                0x0800ea26       0x96 lvgl/lv_core/lv_refr.o
+ .text.lv_refr_obj
+                0x0800eabc      0x196 lvgl/lv_core/lv_refr.o
+ *fill*         0x0800ec52        0x2 
+ .text.lv_style_init
+                0x0800ec54      0x784 lvgl/lv_core/lv_style.o
+                0x0800ec54                lv_style_init
+ .text.lv_style_copy
+                0x0800f3d8       0x1c lvgl/lv_core/lv_style.o
+                0x0800f3d8                lv_style_copy
+ .text.lv_vdb_get
+                0x0800f3f4       0x60 lvgl/lv_core/lv_vdb.o
+                0x0800f3f4                lv_vdb_get
+ .text.lv_vdb_flush
+                0x0800f454       0x84 lvgl/lv_core/lv_vdb.o
+                0x0800f454                lv_vdb_flush
+ .text.lv_flush_ready
+                0x0800f4d8       0x34 lvgl/lv_core/lv_vdb.o
+                0x0800f4d8                lv_flush_ready
+ .text.lv_color_mix
+                0x0800f50c       0xa4 lvgl/lv_draw/lv_draw.o
+ .text.lv_area_copy
+                0x0800f5b0       0x1c lvgl/lv_draw/lv_draw.o
+ .text.lv_area_get_width
+                0x0800f5cc       0x2e lvgl/lv_draw/lv_draw.o
+ .text.lv_area_get_height
+                0x0800f5fa       0x2e lvgl/lv_draw/lv_draw.o
+ .text.lv_font_get_height
+                0x0800f628       0x18 lvgl/lv_draw/lv_draw.o
+ .text.lv_draw_rect
+                0x0800f640       0xa0 lvgl/lv_draw/lv_draw.o
+                0x0800f640                lv_draw_rect
+ .text.lv_draw_label
+                0x0800f6e0      0x3a0 lvgl/lv_draw/lv_draw.o
+                0x0800f6e0                lv_draw_label
+ .text.lv_draw_img
+                0x0800fa80      0x3b4 lvgl/lv_draw/lv_draw.o
+                0x0800fa80                lv_draw_img
+ .text.lv_draw_line
+                0x0800fe34      0x718 lvgl/lv_draw/lv_draw.o
+                0x0800fe34                lv_draw_line
+ .text.lv_draw_rect_main_mid
+                0x0801054c      0x19c lvgl/lv_draw/lv_draw.o
+ .text.lv_draw_rect_main_corner
+                0x080106e8      0x760 lvgl/lv_draw/lv_draw.o
+ .text.lv_draw_rect_border_straight
+                0x08010e48      0x4cc lvgl/lv_draw/lv_draw.o
+ .text.lv_draw_rect_border_corner
+                0x08011314      0x5d8 lvgl/lv_draw/lv_draw.o
+ .text.lv_draw_shadow
+                0x080118ec       0xea lvgl/lv_draw/lv_draw.o
+ *fill*         0x080119d6        0x2 
+ .text.lv_draw_shadow_full
+                0x080119d8      0x604 lvgl/lv_draw/lv_draw.o
+ .text.lv_draw_shadow_bottom
+                0x08011fdc      0x3d8 lvgl/lv_draw/lv_draw.o
+ .text.lv_draw_shadow_full_straight
+                0x080123b4      0x228 lvgl/lv_draw/lv_draw.o
+ .text.lv_draw_cont_radius_corr
+                0x080125dc       0x6c lvgl/lv_draw/lv_draw.o
+ .text.hex_char_to_num
+                0x08012648       0x78 lvgl/lv_draw/lv_draw.o
+ .text.lv_area_get_width
+                0x080126c0       0x2e lvgl/lv_draw/lv_draw_vbasic.o
+ .text.lv_area_get_height
+                0x080126ee       0x2e lvgl/lv_draw/lv_draw_vbasic.o
+ .text.lv_color_mix
+                0x0801271c       0xa4 lvgl/lv_draw/lv_draw_vbasic.o
+ .text.lv_font_get_height
+                0x080127c0       0x18 lvgl/lv_draw/lv_draw_vbasic.o
+ .text.lv_vpx   0x080127d8       0xc4 lvgl/lv_draw/lv_draw_vbasic.o
+                0x080127d8                lv_vpx
+ .text.lv_vfill
+                0x0801289c      0x288 lvgl/lv_draw/lv_draw_vbasic.o
+                0x0801289c                lv_vfill
+ .text.lv_vletter
+                0x08012b24      0x468 lvgl/lv_draw/lv_draw_vbasic.o
+                0x08012b24                lv_vletter
+ .text.lv_vmap  0x08012f8c      0x38a lvgl/lv_draw/lv_draw_vbasic.o
+                0x08012f8c                lv_vmap
+ .text.sw_mem_blend
+                0x08013316       0x66 lvgl/lv_draw/lv_draw_vbasic.o
+ .text.sw_color_fill
+                0x0801337c      0x18e lvgl/lv_draw/lv_draw_vbasic.o
+ .text.lv_disp_drv_init
+                0x0801350a       0x32 lvgl/lv_hal/lv_hal_disp.o
+                0x0801350a                lv_disp_drv_init
+ .text.lv_disp_drv_register
+                0x0801353c       0x68 lvgl/lv_hal/lv_hal_disp.o
+                0x0801353c                lv_disp_drv_register
+ .text.lv_disp_flush
+                0x080135a4       0x44 lvgl/lv_hal/lv_hal_disp.o
+                0x080135a4                lv_disp_flush
+ .text.lv_disp_mem_blend
+                0x080135e8       0x40 lvgl/lv_hal/lv_hal_disp.o
+                0x080135e8                lv_disp_mem_blend
+ .text.lv_disp_mem_fill
+                0x08013628       0x3c lvgl/lv_hal/lv_hal_disp.o
+                0x08013628                lv_disp_mem_fill
+ .text.lv_disp_is_mem_blend_supported
+                0x08013664       0x30 lvgl/lv_hal/lv_hal_disp.o
+                0x08013664                lv_disp_is_mem_blend_supported
+ .text.lv_disp_is_mem_fill_supported
+                0x08013694       0x30 lvgl/lv_hal/lv_hal_disp.o
+                0x08013694                lv_disp_is_mem_fill_supported
+ .text.lv_indev_drv_init
+                0x080136c4       0x26 lvgl/lv_hal/lv_hal_indev.o
+                0x080136c4                lv_indev_drv_init
+ *fill*         0x080136ea        0x2 
+ .text.lv_indev_drv_register
+                0x080136ec       0x90 lvgl/lv_hal/lv_hal_indev.o
+                0x080136ec                lv_indev_drv_register
+ .text.lv_indev_next
+                0x0801377c       0x34 lvgl/lv_hal/lv_hal_indev.o
+                0x0801377c                lv_indev_next
+ .text.lv_indev_read
+                0x080137b0       0x40 lvgl/lv_hal/lv_hal_indev.o
+                0x080137b0                lv_indev_read
+ .text.lv_tick_inc
+                0x080137f0       0x30 lvgl/lv_hal/lv_hal_tick.o
+                0x080137f0                lv_tick_inc
+ .text.lv_tick_get
+                0x08013820       0x34 lvgl/lv_hal/lv_hal_tick.o
+                0x08013820                lv_tick_get
+ .text.lv_tick_elaps
+                0x08013854       0x38 lvgl/lv_hal/lv_hal_tick.o
+                0x08013854                lv_tick_elaps
+ .text.lv_mem_assert
+                0x0801388c       0x1c lvgl/lv_misc/lv_anim.o
+ .text.lv_anim_init
+                0x080138a8       0x34 lvgl/lv_misc/lv_anim.o
+                0x080138a8                lv_anim_init
+ .text.lv_anim_create
+                0x080138dc       0x6c lvgl/lv_misc/lv_anim.o
+                0x080138dc                lv_anim_create
+ .text.lv_anim_del
+                0x08013948       0x68 lvgl/lv_misc/lv_anim.o
+                0x08013948                lv_anim_del
+ .text.lv_anim_speed_to_time
+                0x080139b0       0x48 lvgl/lv_misc/lv_anim.o
+                0x080139b0                lv_anim_speed_to_time
+ .text.lv_anim_path_linear
+                0x080139f8       0x64 lvgl/lv_misc/lv_anim.o
+                0x080139f8                lv_anim_path_linear
+ .text.lv_anim_path_step
+                0x08013a5c       0x2e lvgl/lv_misc/lv_anim.o
+                0x08013a5c                lv_anim_path_step
+ *fill*         0x08013a8a        0x2 
+ .text.anim_task
+                0x08013a8c       0xd0 lvgl/lv_misc/lv_anim.o
+ .text.anim_ready_handler
+                0x08013b5c      0x10c lvgl/lv_misc/lv_anim.o
+ .text.lv_area_get_width
+                0x08013c68       0x2e lvgl/lv_misc/lv_area.o
+ .text.lv_area_get_height
+                0x08013c96       0x2e lvgl/lv_misc/lv_area.o
+ .text.lv_area_set
+                0x08013cc4       0x3e lvgl/lv_misc/lv_area.o
+                0x08013cc4                lv_area_set
+ .text.lv_area_set_width
+                0x08013d02       0x30 lvgl/lv_misc/lv_area.o
+                0x08013d02                lv_area_set_width
+ .text.lv_area_set_height
+                0x08013d32       0x30 lvgl/lv_misc/lv_area.o
+                0x08013d32                lv_area_set_height
+ .text.lv_area_set_pos
+                0x08013d62       0x50 lvgl/lv_misc/lv_area.o
+                0x08013d62                lv_area_set_pos
+ .text.lv_area_get_size
+                0x08013db2       0x42 lvgl/lv_misc/lv_area.o
+                0x08013db2                lv_area_get_size
+ .text.lv_area_union
+                0x08013df4       0xa2 lvgl/lv_misc/lv_area.o
+                0x08013df4                lv_area_union
+ .text.lv_area_join
+                0x08013e96       0x78 lvgl/lv_misc/lv_area.o
+                0x08013e96                lv_area_join
+ .text.lv_area_is_point_on
+                0x08013f0e       0x60 lvgl/lv_misc/lv_area.o
+                0x08013f0e                lv_area_is_point_on
+ .text.lv_area_is_on
+                0x08013f6e       0x5c lvgl/lv_misc/lv_area.o
+                0x08013f6e                lv_area_is_on
+ .text.lv_area_is_in
+                0x08013fca       0x60 lvgl/lv_misc/lv_area.o
+                0x08013fca                lv_area_is_in
+ .text.lv_circ_init
+                0x0801402a       0x34 lvgl/lv_misc/lv_circ.o
+                0x0801402a                lv_circ_init
+ .text.lv_circ_cont
+                0x0801405e       0x2a lvgl/lv_misc/lv_circ.o
+                0x0801405e                lv_circ_cont
+ .text.lv_circ_next
+                0x08014088       0x94 lvgl/lv_misc/lv_circ.o
+                0x08014088                lv_circ_next
+ .text.lv_font_init
+                0x0801411c       0x38 lvgl/lv_misc/lv_font.o
+                0x0801411c                lv_font_init
+ .text.lv_font_add
+                0x08014154       0x34 lvgl/lv_misc/lv_font.o
+                0x08014154                lv_font_add
+ .text.lv_font_get_bitmap
+                0x08014188       0x3c lvgl/lv_misc/lv_font.o
+                0x08014188                lv_font_get_bitmap
+ .text.lv_font_get_width
+                0x080141c4       0x42 lvgl/lv_misc/lv_font.o
+                0x080141c4                lv_font_get_width
+ .text.lv_font_get_bpp
+                0x08014206       0x4c lvgl/lv_misc/lv_font.o
+                0x08014206                lv_font_get_bpp
+ .text.lv_font_get_bitmap_continuous
+                0x08014252       0x4e lvgl/lv_misc/lv_font.o
+                0x08014252                lv_font_get_bitmap_continuous
+ .text.lv_font_get_width_continuous
+                0x080142a0       0x48 lvgl/lv_misc/lv_font.o
+                0x080142a0                lv_font_get_width_continuous
+ .text.lv_mem_assert
+                0x080142e8       0x1c lvgl/lv_misc/lv_fs.o
+ .text.lv_fs_init
+                0x08014304       0x14 lvgl/lv_misc/lv_fs.o
+                0x08014304                lv_fs_init
+ .text.lv_fs_open
+                0x08014318       0xdc lvgl/lv_misc/lv_fs.o
+                0x08014318                lv_fs_open
+ .text.lv_fs_close
+                0x080143f4       0x5a lvgl/lv_misc/lv_fs.o
+                0x080143f4                lv_fs_close
+ .text.lv_fs_read
+                0x0801444e       0x6e lvgl/lv_misc/lv_fs.o
+                0x0801444e                lv_fs_read
+ .text.lv_fs_seek
+                0x080144bc       0x4a lvgl/lv_misc/lv_fs.o
+                0x080144bc                lv_fs_seek
+ .text.lv_fs_tell
+                0x08014506       0x52 lvgl/lv_misc/lv_fs.o
+                0x08014506                lv_fs_tell
+ .text.lv_fs_add_drv
+                0x08014558       0x2c lvgl/lv_misc/lv_fs.o
+                0x08014558                lv_fs_add_drv
+ .text.lv_fs_get_real_path
+                0x08014584       0x44 lvgl/lv_misc/lv_fs.o
+ .text.lv_fs_get_drv
+                0x080145c8       0x40 lvgl/lv_misc/lv_fs.o
+ .text.lv_mem_assert
+                0x08014608       0x1c lvgl/lv_misc/lv_ll.o
+ .text.lv_ll_init
+                0x08014624       0x40 lvgl/lv_misc/lv_ll.o
+                0x08014624                lv_ll_init
+ .text.lv_ll_ins_head
+                0x08014664       0x68 lvgl/lv_misc/lv_ll.o
+                0x08014664                lv_ll_ins_head
+ .text.lv_ll_ins_prev
+                0x080146cc       0x82 lvgl/lv_misc/lv_ll.o
+                0x080146cc                lv_ll_ins_prev
+ .text.lv_ll_ins_tail
+                0x0801474e       0x68 lvgl/lv_misc/lv_ll.o
+                0x0801474e                lv_ll_ins_tail
+ .text.lv_ll_rem
+                0x080147b6       0xb2 lvgl/lv_misc/lv_ll.o
+                0x080147b6                lv_ll_rem
+ .text.lv_ll_clear
+                0x08014868       0x40 lvgl/lv_misc/lv_ll.o
+                0x08014868                lv_ll_clear
+ .text.lv_ll_chg_list
+                0x080148a8       0x5e lvgl/lv_misc/lv_ll.o
+                0x080148a8                lv_ll_chg_list
+ .text.lv_ll_get_head
+                0x08014906       0x26 lvgl/lv_misc/lv_ll.o
+                0x08014906                lv_ll_get_head
+ .text.lv_ll_get_tail
+                0x0801492c       0x26 lvgl/lv_misc/lv_ll.o
+                0x0801492c                lv_ll_get_tail
+ .text.lv_ll_get_next
+                0x08014952       0x34 lvgl/lv_misc/lv_ll.o
+                0x08014952                lv_ll_get_next
+ .text.lv_ll_get_prev
+                0x08014986       0x32 lvgl/lv_misc/lv_ll.o
+                0x08014986                lv_ll_get_prev
+ .text.node_set_prev
+                0x080149b8       0x24 lvgl/lv_misc/lv_ll.o
+ .text.node_set_next
+                0x080149dc       0x26 lvgl/lv_misc/lv_ll.o
+ .text.lv_math_num_to_str
+                0x08014a02      0x176 lvgl/lv_misc/lv_math.o
+                0x08014a02                lv_math_num_to_str
+ .text.lv_mem_init
+                0x08014b78       0x34 lvgl/lv_misc/lv_mem.o
+                0x08014b78                lv_mem_init
+ .text.lv_mem_alloc
+                0x08014bac       0x64 lvgl/lv_misc/lv_mem.o
+                0x08014bac                lv_mem_alloc
+ .text.lv_mem_free
+                0x08014c10       0x3c lvgl/lv_misc/lv_mem.o
+                0x08014c10                lv_mem_free
+ .text.lv_mem_realloc
+                0x08014c4c       0x96 lvgl/lv_misc/lv_mem.o
+                0x08014c4c                lv_mem_realloc
+ .text.lv_mem_monitor
+                0x08014ce2       0xd8 lvgl/lv_misc/lv_mem.o
+                0x08014ce2                lv_mem_monitor
+ *fill*         0x08014dba        0x2 
+ .text.lv_mem_get_size
+                0x08014dbc       0x3c lvgl/lv_misc/lv_mem.o
+                0x08014dbc                lv_mem_get_size
+ .text.ent_get_next
+                0x08014df8       0x54 lvgl/lv_misc/lv_mem.o
+ .text.ent_alloc
+                0x08014e4c       0x4e lvgl/lv_misc/lv_mem.o
+ .text.ent_trunc
+                0x08014e9a       0xa0 lvgl/lv_misc/lv_mem.o
+ .text.lv_mem_assert
+                0x08014f3a       0x1c lvgl/lv_misc/lv_task.o
+ *fill*         0x08014f56        0x2 
+ .text.lv_task_init
+                0x08014f58       0x1c lvgl/lv_misc/lv_task.o
+                0x08014f58                lv_task_init
+ .text.lv_task_handler
+                0x08014f74      0x150 lvgl/lv_misc/lv_task.o
+                0x08014f74                lv_task_handler
+ .text.lv_task_create
+                0x080150c4       0xb4 lvgl/lv_misc/lv_task.o
+                0x080150c4                lv_task_create
+ .text.lv_task_del
+                0x08015178       0x24 lvgl/lv_misc/lv_task.o
+                0x08015178                lv_task_del
+ .text.lv_task_enable
+                0x0801519c       0x20 lvgl/lv_misc/lv_task.o
+                0x0801519c                lv_task_enable
+ .text.lv_task_exec
+                0x080151bc       0x5a lvgl/lv_misc/lv_task.o
+ *fill*         0x08015216        0x2 
+ .text.lv_trigo_sin
+                0x08015218       0xe0 lvgl/lv_misc/lv_trigo.o
+                0x08015218                lv_trigo_sin
+ .text.lv_font_get_height
+                0x080152f8       0x18 lvgl/lv_misc/lv_txt.o
+ .text.lv_txt_get_size
+                0x08015310      0x162 lvgl/lv_misc/lv_txt.o
+                0x08015310                lv_txt_get_size
+ .text.lv_txt_get_next_line
+                0x08015472      0x14c lvgl/lv_misc/lv_txt.o
+                0x08015472                lv_txt_get_next_line
+ .text.lv_txt_get_width
+                0x080155be       0xe6 lvgl/lv_misc/lv_txt.o
+                0x080155be                lv_txt_get_width
+ .text.lv_txt_is_cmd
+                0x080156a4       0x74 lvgl/lv_misc/lv_txt.o
+                0x080156a4                lv_txt_is_cmd
+ .text.lv_txt_ins
+                0x08015718       0x72 lvgl/lv_misc/lv_txt.o
+                0x08015718                lv_txt_ins
+ .text.lv_txt_utf8_size
+                0x0801578a       0x4e lvgl/lv_misc/lv_txt.o
+                0x0801578a                lv_txt_utf8_size
+ .text.lv_txt_utf8_next
+                0x080157d8      0x22a lvgl/lv_misc/lv_txt.o
+                0x080157d8                lv_txt_utf8_next
+ .text.lv_txt_utf8_prev
+                0x08015a02       0x7e lvgl/lv_misc/lv_txt.o
+                0x08015a02                lv_txt_utf8_prev
+ .text.txt_utf8_get_byte_id
+                0x08015a80       0x44 lvgl/lv_misc/lv_txt.o
+                0x08015a80                txt_utf8_get_byte_id
+ .text.lv_txt_utf8_get_char_id
+                0x08015ac4       0x38 lvgl/lv_misc/lv_txt.o
+                0x08015ac4                lv_txt_utf8_get_char_id
+ .text.lv_txt_get_length
+                0x08015afc       0x3a lvgl/lv_misc/lv_txt.o
+                0x08015afc                lv_txt_get_length
+ *fill*         0x08015b36        0x2 
+ .text.is_break_char
+                0x08015b38       0x48 lvgl/lv_misc/lv_txt.o
+ .text.lv_ufs_init
+                0x08015b80       0xb4 lvgl/lv_misc/lv_ufs.o
+                0x08015b80                lv_ufs_init
+ .text.lv_ufs_ready
+                0x08015c34       0x18 lvgl/lv_misc/lv_ufs.o
+                0x08015c34                lv_ufs_ready
+ .text.lv_ufs_open
+                0x08015c4c       0xc4 lvgl/lv_misc/lv_ufs.o
+                0x08015c4c                lv_ufs_open
+ .text.lv_ufs_close
+                0x08015d10       0x3c lvgl/lv_misc/lv_ufs.o
+                0x08015d10                lv_ufs_close
+ .text.lv_ufs_remove
+                0x08015d4c       0x70 lvgl/lv_misc/lv_ufs.o
+                0x08015d4c                lv_ufs_remove
+ .text.lv_ufs_read
+                0x08015dbc       0xb6 lvgl/lv_misc/lv_ufs.o
+                0x08015dbc                lv_ufs_read
+ .text.lv_ufs_write
+                0x08015e72       0xa0 lvgl/lv_misc/lv_ufs.o
+                0x08015e72                lv_ufs_write
+ .text.lv_ufs_seek
+                0x08015f12       0x6c lvgl/lv_misc/lv_ufs.o
+                0x08015f12                lv_ufs_seek
+ .text.lv_ufs_tell
+                0x08015f7e       0x24 lvgl/lv_misc/lv_ufs.o
+                0x08015f7e                lv_ufs_tell
+ .text.lv_ufs_trunc
+                0x08015fa2       0x58 lvgl/lv_misc/lv_ufs.o
+                0x08015fa2                lv_ufs_trunc
+ .text.lv_ufs_size
+                0x08015ffa       0x2a lvgl/lv_misc/lv_ufs.o
+                0x08015ffa                lv_ufs_size
+ .text.lv_ufs_dir_open
+                0x08016024       0x2e lvgl/lv_misc/lv_ufs.o
+                0x08016024                lv_ufs_dir_open
+ *fill*         0x08016052        0x2 
+ .text.lv_ufs_dir_read
+                0x08016054       0x64 lvgl/lv_misc/lv_ufs.o
+                0x08016054                lv_ufs_dir_read
+ .text.lv_ufs_dir_close
+                0x080160b8       0x16 lvgl/lv_misc/lv_ufs.o
+                0x080160b8                lv_ufs_dir_close
+ .text.lv_ufs_free
+                0x080160ce       0x2c lvgl/lv_misc/lv_ufs.o
+                0x080160ce                lv_ufs_free
+ *fill*         0x080160fa        0x2 
+ .text.lv_ufs_ent_get
+                0x080160fc       0x48 lvgl/lv_misc/lv_ufs.o
+ .text.lv_ufs_ent_new
+                0x08016144       0x6c lvgl/lv_misc/lv_ufs.o
+ .text.lv_area_copy
+                0x080161b0       0x1c lvgl/lv_objx/lv_bar.o
+ .text.lv_area_get_width
+                0x080161cc       0x2e lvgl/lv_objx/lv_bar.o
+ .text.lv_area_get_height
+                0x080161fa       0x2e lvgl/lv_objx/lv_bar.o
+ .text.lv_mem_assert
+                0x08016228       0x1c lvgl/lv_objx/lv_bar.o
+ .text.lv_bar_create
+                0x08016244      0x13c lvgl/lv_objx/lv_bar.o
+                0x08016244                lv_bar_create
+ .text.lv_bar_set_value
+                0x08016380       0x50 lvgl/lv_objx/lv_bar.o
+                0x08016380                lv_bar_set_value
+ .text.lv_bar_set_range
+                0x080163d0       0x76 lvgl/lv_objx/lv_bar.o
+                0x080163d0                lv_bar_set_range
+ .text.lv_bar_set_style
+                0x08016446       0x42 lvgl/lv_objx/lv_bar.o
+                0x08016446                lv_bar_set_style
+ .text.lv_bar_get_value
+                0x08016488       0x1e lvgl/lv_objx/lv_bar.o
+                0x08016488                lv_bar_get_value
+ .text.lv_bar_get_min_value
+                0x080164a6       0x1e lvgl/lv_objx/lv_bar.o
+                0x080164a6                lv_bar_get_min_value
+ .text.lv_bar_get_max_value
+                0x080164c4       0x1e lvgl/lv_objx/lv_bar.o
+                0x080164c4                lv_bar_get_max_value
+ .text.lv_bar_get_style
+                0x080164e2       0x3a lvgl/lv_objx/lv_bar.o
+                0x080164e2                lv_bar_get_style
+ .text.lv_bar_design
+                0x0801651c      0x184 lvgl/lv_objx/lv_bar.o
+ .text.lv_bar_signal
+                0x080166a0       0x9c lvgl/lv_objx/lv_bar.o
+ .text.lv_area_copy
+                0x0801673c       0x1c lvgl/lv_objx/lv_btnm.o
+ .text.lv_area_get_width
+                0x08016758       0x2e lvgl/lv_objx/lv_btnm.o
+ .text.lv_area_get_height
+                0x08016786       0x2e lvgl/lv_objx/lv_btnm.o
+ .text.lv_mem_assert
+                0x080167b4       0x1c lvgl/lv_objx/lv_btnm.o
+ .text.lv_btnm_create
+                0x080167d0      0x1d0 lvgl/lv_objx/lv_btnm.o
+                0x080167d0                lv_btnm_create
+ .text.lv_btnm_set_map
+                0x080169a0      0x324 lvgl/lv_objx/lv_btnm.o
+                0x080169a0                lv_btnm_set_map
+ .text.lv_btnm_set_action
+                0x08016cc4       0x20 lvgl/lv_objx/lv_btnm.o
+                0x08016cc4                lv_btnm_set_action
+ .text.lv_btnm_set_toggle
+                0x08016ce4       0x78 lvgl/lv_objx/lv_btnm.o
+                0x08016ce4                lv_btnm_set_toggle
+ .text.lv_btnm_set_style
+                0x08016d5c       0x94 lvgl/lv_objx/lv_btnm.o
+                0x08016d5c                lv_btnm_set_style
+ .text.lv_btnm_get_map
+                0x08016df0       0x1c lvgl/lv_objx/lv_btnm.o
+                0x08016df0                lv_btnm_get_map
+ .text.lv_btnm_get_style
+                0x08016e0c       0x6c lvgl/lv_objx/lv_btnm.o
+                0x08016e0c                lv_btnm_get_style
+ .text.lv_btnm_design
+                0x08016e78      0x340 lvgl/lv_objx/lv_btnm.o
+ .text.lv_btnm_signal
+                0x080171b8      0x718 lvgl/lv_objx/lv_btnm.o
+ .text.create_buttons
+                0x080178d0       0x8c lvgl/lv_objx/lv_btnm.o
+ .text.get_button_width
+                0x0801795c       0x2e lvgl/lv_objx/lv_btnm.o
+ .text.button_is_hidden
+                0x0801798a       0x32 lvgl/lv_objx/lv_btnm.o
+ .text.button_is_repeat_disabled
+                0x080179bc       0x32 lvgl/lv_objx/lv_btnm.o
+ .text.button_is_inactive
+                0x080179ee       0x32 lvgl/lv_objx/lv_btnm.o
+ .text.cut_ctrl_byte
+                0x08017a20       0x28 lvgl/lv_objx/lv_btnm.o
+                0x08017a20                cut_ctrl_byte
+ .text.get_button_from_point
+                0x08017a48       0xca lvgl/lv_objx/lv_btnm.o
+ *fill*         0x08017b12        0x2 
+ .text.get_button_text
+                0x08017b14       0x80 lvgl/lv_objx/lv_btnm.o
+ .text.lv_color_mix
+                0x08017b94       0xa4 lvgl/lv_objx/lv_chart.o
+ .text.lv_mem_assert
+                0x08017c38       0x1c lvgl/lv_objx/lv_chart.o
+ .text.lv_chart_set_style
+                0x08017c54       0x1a lvgl/lv_objx/lv_chart.o
+ *fill*         0x08017c6e        0x2 
+ .text.lv_chart_create
+                0x08017c70      0x158 lvgl/lv_objx/lv_chart.o
+                0x08017c70                lv_chart_create
+ .text.lv_chart_add_series
+                0x08017dc8       0x90 lvgl/lv_objx/lv_chart.o
+                0x08017dc8                lv_chart_add_series
+ .text.lv_chart_set_range
+                0x08017e58       0x32 lvgl/lv_objx/lv_chart.o
+                0x08017e58                lv_chart_set_range
+ .text.lv_chart_set_type
+                0x08017e8a       0x34 lvgl/lv_objx/lv_chart.o
+                0x08017e8a                lv_chart_set_type
+ .text.lv_chart_set_point_count
+                0x08017ebe       0xac lvgl/lv_objx/lv_chart.o
+                0x08017ebe                lv_chart_set_point_count
+ .text.lv_chart_set_series_opa
+                0x08017f6a       0x28 lvgl/lv_objx/lv_chart.o
+                0x08017f6a                lv_chart_set_series_opa
+ .text.lv_chart_set_series_width
+                0x08017f92       0x28 lvgl/lv_objx/lv_chart.o
+                0x08017f92                lv_chart_set_series_width
+ .text.lv_chart_set_next
+                0x08017fba       0x70 lvgl/lv_objx/lv_chart.o
+                0x08017fba                lv_chart_set_next
+ .text.lv_chart_refresh
+                0x0801802a       0x16 lvgl/lv_objx/lv_chart.o
+                0x0801802a                lv_chart_refresh
+ .text.lv_chart_design
+                0x08018040       0xb0 lvgl/lv_objx/lv_chart.o
+ .text.lv_chart_signal
+                0x080180f0       0xb0 lvgl/lv_objx/lv_chart.o
+ .text.lv_chart_draw_div
+                0x080181a0      0x22e lvgl/lv_objx/lv_chart.o
+ *fill*         0x080183ce        0x2 
+ .text.lv_chart_draw_lines
+                0x080183d0      0x1a4 lvgl/lv_objx/lv_chart.o
+ .text.lv_chart_draw_points
+                0x08018574      0x1d8 lvgl/lv_objx/lv_chart.o
+ .text.lv_chart_draw_cols
+                0x0801874c      0x1f8 lvgl/lv_objx/lv_chart.o
+ .text.lv_area_copy
+                0x08018944       0x1c lvgl/lv_objx/lv_cont.o
+ .text.lv_area_get_width
+                0x08018960       0x2e lvgl/lv_objx/lv_cont.o
+ .text.lv_area_get_height
+                0x0801898e       0x2e lvgl/lv_objx/lv_cont.o
+ .text.lv_mem_assert
+                0x080189bc       0x1c lvgl/lv_objx/lv_cont.o
+ .text.lv_cont_set_style
+                0x080189d8       0x1a lvgl/lv_objx/lv_cont.o
+ *fill*         0x080189f2        0x2 
+ .text.lv_cont_create
+                0x080189f4       0xf4 lvgl/lv_objx/lv_cont.o
+                0x080189f4                lv_cont_create
+ .text.lv_cont_set_layout
+                0x08018ae8       0x3a lvgl/lv_objx/lv_cont.o
+                0x08018ae8                lv_cont_set_layout
+ .text.lv_cont_set_fit
+                0x08018b22       0x6a lvgl/lv_objx/lv_cont.o
+                0x08018b22                lv_cont_set_fit
+ .text.lv_cont_get_layout
+                0x08018b8c       0x22 lvgl/lv_objx/lv_cont.o
+                0x08018b8c                lv_cont_get_layout
+ .text.lv_cont_get_hor_fit
+                0x08018bae       0x2c lvgl/lv_objx/lv_cont.o
+                0x08018bae                lv_cont_get_hor_fit
+ *fill*         0x08018bda        0x2 
+ .text.lv_cont_signal
+                0x08018bdc       0xd8 lvgl/lv_objx/lv_cont.o
+ .text.lv_cont_refr_layout
+                0x08018cb4       0x90 lvgl/lv_objx/lv_cont.o
+ .text.lv_cont_layout_col
+                0x08018d44       0xec lvgl/lv_objx/lv_cont.o
+ .text.lv_cont_layout_row
+                0x08018e30       0xf2 lvgl/lv_objx/lv_cont.o
+ .text.lv_cont_layout_center
+                0x08018f22      0x146 lvgl/lv_objx/lv_cont.o
+ .text.lv_cont_layout_pretty
+                0x08019068      0x340 lvgl/lv_objx/lv_cont.o
+ .text.lv_cont_layout_grid
+                0x080193a8      0x188 lvgl/lv_objx/lv_cont.o
+ .text.lv_cont_refr_autofit
+                0x08019530      0x200 lvgl/lv_objx/lv_cont.o
+ .text.lv_mem_assert
+                0x08019730       0x1c lvgl/lv_objx/lv_gauge.o
+ .text.lv_gauge_set_critical_value
+                0x0801974c       0x20 lvgl/lv_objx/lv_gauge.o
+ .text.lv_gauge_set_style
+                0x0801976c       0x1a lvgl/lv_objx/lv_gauge.o
+ .text.lv_gauge_get_min_value
+                0x08019786       0x18 lvgl/lv_objx/lv_gauge.o
+ .text.lv_gauge_get_max_value
+                0x0801979e       0x18 lvgl/lv_objx/lv_gauge.o
+ .text.lv_gauge_get_style
+                0x080197b6       0x18 lvgl/lv_objx/lv_gauge.o
+ *fill*         0x080197ce        0x2 
+ .text.lv_gauge_create
+                0x080197d0      0x144 lvgl/lv_objx/lv_gauge.o
+                0x080197d0                lv_gauge_create
+ .text.lv_gauge_set_needle_count
+                0x08019914       0x8c lvgl/lv_objx/lv_gauge.o
+                0x08019914                lv_gauge_set_needle_count
+ .text.lv_gauge_set_scale
+                0x080199a0       0x3c lvgl/lv_objx/lv_gauge.o
+                0x080199a0                lv_gauge_set_scale
+ .text.lv_gauge_design
+                0x080199dc       0xd0 lvgl/lv_objx/lv_gauge.o
+ .text.lv_gauge_signal
+                0x08019aac       0x90 lvgl/lv_objx/lv_gauge.o
+ .text.lv_gauge_draw_scale
+                0x08019b3c      0x258 lvgl/lv_objx/lv_gauge.o
+ .text.lv_gauge_draw_needle
+                0x08019d94      0x29c lvgl/lv_objx/lv_gauge.o
+ .text.lv_mem_assert
+                0x0801a030       0x1c lvgl/lv_objx/lv_img.o
+ .text.lv_img_create
+                0x0801a04c      0x120 lvgl/lv_objx/lv_img.o
+                0x0801a04c                lv_img_create
+ .text.lv_img_set_src
+                0x0801a16c      0x29e lvgl/lv_objx/lv_img.o
+                0x0801a16c                lv_img_set_src
+ .text.lv_img_get_src_type
+                0x0801a40a       0x54 lvgl/lv_objx/lv_img.o
+                0x0801a40a                lv_img_get_src_type
+ .text.lv_img_get_auto_size
+                0x0801a45e       0x2c lvgl/lv_objx/lv_img.o
+                0x0801a45e                lv_img_get_auto_size
+ .text.lv_img_design
+                0x0801a48a      0x1d0 lvgl/lv_objx/lv_img.o
+ *fill*         0x0801a65a        0x2 
+ .text.lv_img_signal
+                0x0801a65c       0xd8 lvgl/lv_objx/lv_img.o
+ .text.lv_area_get_width
+                0x0801a734       0x2e lvgl/lv_objx/lv_label.o
+ .text.lv_area_get_height
+                0x0801a762       0x2e lvgl/lv_objx/lv_label.o
+ .text.lv_font_get_height
+                0x0801a790       0x18 lvgl/lv_objx/lv_label.o
+ .text.lv_mem_assert
+                0x0801a7a8       0x1c lvgl/lv_objx/lv_label.o
+ .text.lv_label_set_style
+                0x0801a7c4       0x1a lvgl/lv_objx/lv_label.o
+ .text.lv_label_get_style
+                0x0801a7de       0x18 lvgl/lv_objx/lv_label.o
+ *fill*         0x0801a7f6        0x2 
+ .text.lv_label_create
+                0x0801a7f8      0x1c8 lvgl/lv_objx/lv_label.o
+                0x0801a7f8                lv_label_create
+ .text.lv_label_set_text
+                0x0801a9c0       0xb2 lvgl/lv_objx/lv_label.o
+                0x0801a9c0                lv_label_set_text
+ .text.lv_label_set_static_text
+                0x0801aa72       0x5c lvgl/lv_objx/lv_label.o
+                0x0801aa72                lv_label_set_static_text
+ *fill*         0x0801aace        0x2 
+ .text.lv_label_set_long_mode
+                0x0801aad0       0x9c lvgl/lv_objx/lv_label.o
+                0x0801aad0                lv_label_set_long_mode
+ .text.lv_label_set_align
+                0x0801ab6c       0x34 lvgl/lv_objx/lv_label.o
+                0x0801ab6c                lv_label_set_align
+ .text.lv_label_set_recolor
+                0x0801aba0       0x3e lvgl/lv_objx/lv_label.o
+                0x0801aba0                lv_label_set_recolor
+ .text.lv_label_set_no_break
+                0x0801abde       0x3e lvgl/lv_objx/lv_label.o
+                0x0801abde                lv_label_set_no_break
+ .text.lv_label_set_body_draw
+                0x0801ac1c       0x44 lvgl/lv_objx/lv_label.o
+                0x0801ac1c                lv_label_set_body_draw
+ .text.lv_label_get_text
+                0x0801ac60       0x1c lvgl/lv_objx/lv_label.o
+                0x0801ac60                lv_label_get_text
+ .text.lv_label_get_long_mode
+                0x0801ac7c       0x1c lvgl/lv_objx/lv_label.o
+                0x0801ac7c                lv_label_get_long_mode
+ .text.lv_label_get_align
+                0x0801ac98       0x22 lvgl/lv_objx/lv_label.o
+                0x0801ac98                lv_label_get_align
+ .text.lv_label_get_recolor
+                0x0801acba       0x2c lvgl/lv_objx/lv_label.o
+                0x0801acba                lv_label_get_recolor
+ .text.lv_label_get_body_draw
+                0x0801ace6       0x2c lvgl/lv_objx/lv_label.o
+                0x0801ace6                lv_label_get_body_draw
+ .text.lv_label_get_letter_pos
+                0x0801ad12      0x290 lvgl/lv_objx/lv_label.o
+                0x0801ad12                lv_label_get_letter_pos
+ .text.lv_label_get_letter_on
+                0x0801afa2      0x242 lvgl/lv_objx/lv_label.o
+                0x0801afa2                lv_label_get_letter_on
+ .text.lv_label_ins_text
+                0x0801b1e4       0x8e lvgl/lv_objx/lv_label.o
+                0x0801b1e4                lv_label_ins_text
+ .text.lv_label_design
+                0x0801b272      0x176 lvgl/lv_objx/lv_label.o
+ .text.lv_label_signal
+                0x0801b3e8      0x148 lvgl/lv_objx/lv_label.o
+ .text.lv_label_refr_text
+                0x0801b530      0x550 lvgl/lv_objx/lv_label.o
+ .text.lv_label_revert_dots
+                0x0801ba80       0x7e lvgl/lv_objx/lv_label.o
+ .text.lv_label_set_offset_x
+                0x0801bafe       0x28 lvgl/lv_objx/lv_label.o
+ .text.lv_label_set_offset_y
+                0x0801bb26       0x28 lvgl/lv_objx/lv_label.o
+ .text.lv_mem_assert
+                0x0801bb4e       0x1c lvgl/lv_objx/lv_line.o
+ .text.lv_line_get_style
+                0x0801bb6a       0x18 lvgl/lv_objx/lv_line.o
+ *fill*         0x0801bb82        0x2 
+ .text.lv_line_create
+                0x0801bb84       0xf4 lvgl/lv_objx/lv_line.o
+                0x0801bb84                lv_line_create
+ .text.lv_line_set_points
+                0x0801bc78       0xc4 lvgl/lv_objx/lv_line.o
+                0x0801bc78                lv_line_set_points
+ .text.lv_line_set_auto_size
+                0x0801bd3c       0x4e lvgl/lv_objx/lv_line.o
+                0x0801bd3c                lv_line_set_auto_size
+ .text.lv_line_set_y_invert
+                0x0801bd8a       0x3e lvgl/lv_objx/lv_line.o
+                0x0801bd8a                lv_line_set_y_invert
+ .text.lv_line_get_auto_size
+                0x0801bdc8       0x2c lvgl/lv_objx/lv_line.o
+                0x0801bdc8                lv_line_get_auto_size
+ .text.lv_line_get_y_inv
+                0x0801bdf4       0x2c lvgl/lv_objx/lv_line.o
+                0x0801bdf4                lv_line_get_y_inv
+ .text.lv_line_design
+                0x0801be20      0x152 lvgl/lv_objx/lv_line.o
+ *fill*         0x0801bf72        0x2 
+ .text.lv_line_signal
+                0x0801bf74       0x70 lvgl/lv_objx/lv_line.o
+ .text.lv_color_mix
+                0x0801bfe4       0xa4 lvgl/lv_objx/lv_lmeter.o
+ .text.lv_mem_assert
+                0x0801c088       0x1c lvgl/lv_objx/lv_lmeter.o
+ .text.lv_lmeter_set_style
+                0x0801c0a4       0x1a lvgl/lv_objx/lv_lmeter.o
+ *fill*         0x0801c0be        0x2 
+ .text.lv_lmeter_create
+                0x0801c0c0       0xf8 lvgl/lv_objx/lv_lmeter.o
+                0x0801c0c0                lv_lmeter_create
+ .text.lv_lmeter_set_value
+                0x0801c1b8       0x50 lvgl/lv_objx/lv_lmeter.o
+                0x0801c1b8                lv_lmeter_set_value
+ .text.lv_lmeter_set_range
+                0x0801c208       0x76 lvgl/lv_objx/lv_lmeter.o
+                0x0801c208                lv_lmeter_set_range
+ .text.lv_lmeter_set_scale
+                0x0801c27e       0x32 lvgl/lv_objx/lv_lmeter.o
+                0x0801c27e                lv_lmeter_set_scale
+ .text.lv_lmeter_get_min_value
+                0x0801c2b0       0x1e lvgl/lv_objx/lv_lmeter.o
+                0x0801c2b0                lv_lmeter_get_min_value
+ .text.lv_lmeter_get_max_value
+                0x0801c2ce       0x1e lvgl/lv_objx/lv_lmeter.o
+                0x0801c2ce                lv_lmeter_get_max_value
+ .text.lv_lmeter_get_scale_angle
+                0x0801c2ec       0x1c lvgl/lv_objx/lv_lmeter.o
+                0x0801c2ec                lv_lmeter_get_scale_angle
+ .text.lv_lmeter_design
+                0x0801c308      0x2f6 lvgl/lv_objx/lv_lmeter.o
+ *fill*         0x0801c5fe        0x2 
+ .text.lv_lmeter_signal
+                0x0801c600       0x78 lvgl/lv_objx/lv_lmeter.o
+ .text.lv_lmeter_coord_round
+                0x0801c678       0x4a lvgl/lv_objx/lv_lmeter.o
+ .text.lv_area_copy
+                0x0801c6c2       0x1c lvgl/lv_objx/lv_page.o
+ .text.lv_area_get_width
+                0x0801c6de       0x2e lvgl/lv_objx/lv_page.o
+ .text.lv_area_get_height
+                0x0801c70c       0x2e lvgl/lv_objx/lv_page.o
+ .text.lv_mem_assert
+                0x0801c73a       0x1c lvgl/lv_objx/lv_page.o
+ *fill*         0x0801c756        0x2 
+ .text.lv_page_create
+                0x0801c758      0x270 lvgl/lv_objx/lv_page.o
+                0x0801c758                lv_page_create
+ .text.lv_page_set_rel_action
+                0x0801c9c8       0x20 lvgl/lv_objx/lv_page.o
+                0x0801c9c8                lv_page_set_rel_action
+ .text.lv_page_set_pr_action
+                0x0801c9e8       0x20 lvgl/lv_objx/lv_page.o
+                0x0801c9e8                lv_page_set_pr_action
+ .text.lv_page_set_sb_mode
+                0x0801ca08       0x5a lvgl/lv_objx/lv_page.o
+                0x0801ca08                lv_page_set_sb_mode
+ .text.lv_page_set_style
+                0x0801ca62       0x8c lvgl/lv_objx/lv_page.o
+                0x0801ca62                lv_page_set_style
+ .text.lv_page_get_scrl
+                0x0801caee       0x1c lvgl/lv_objx/lv_page.o
+                0x0801caee                lv_page_get_scrl
+ .text.lv_page_get_style
+                0x0801cb0a       0x4a lvgl/lv_objx/lv_page.o
+                0x0801cb0a                lv_page_get_style
+ .text.lv_page_design
+                0x0801cb54      0x1e8 lvgl/lv_objx/lv_page.o
+ .text.lv_scrl_design
+                0x0801cd3c       0xb4 lvgl/lv_objx/lv_page.o
+ .text.lv_page_signal
+                0x0801cdf0      0x2d0 lvgl/lv_objx/lv_page.o
+ .text.lv_page_scrollable_signal
+                0x0801d0c0      0x3e0 lvgl/lv_objx/lv_page.o
+ .text.lv_page_sb_refresh
+                0x0801d4a0      0x5fe lvgl/lv_objx/lv_page.o
+ .text.lv_area_copy
+                0x0801da9e       0x1c lvgl/lv_objx/lv_slider.o
+ .text.lv_area_get_width
+                0x0801daba       0x2e lvgl/lv_objx/lv_slider.o
+ .text.lv_area_get_height
+                0x0801dae8       0x2e lvgl/lv_objx/lv_slider.o
+ .text.lv_mem_assert
+                0x0801db16       0x1c lvgl/lv_objx/lv_slider.o
+ .text.lv_slider_set_value
+                0x0801db32       0x20 lvgl/lv_objx/lv_slider.o
+ .text.lv_slider_get_min_value
+                0x0801db52       0x18 lvgl/lv_objx/lv_slider.o
+ .text.lv_slider_get_max_value
+                0x0801db6a       0x18 lvgl/lv_objx/lv_slider.o
+ *fill*         0x0801db82        0x2 
+ .text.lv_slider_create
+                0x0801db84      0x130 lvgl/lv_objx/lv_slider.o
+                0x0801db84                lv_slider_create
+ .text.lv_slider_set_action
+                0x0801dcb4       0x20 lvgl/lv_objx/lv_slider.o
+                0x0801dcb4                lv_slider_set_action
+ .text.lv_slider_set_knob_in
+                0x0801dcd4       0x3e lvgl/lv_objx/lv_slider.o
+                0x0801dcd4                lv_slider_set_knob_in
+ .text.lv_slider_set_style
+                0x0801dd12       0x54 lvgl/lv_objx/lv_slider.o
+                0x0801dd12                lv_slider_set_style
+ .text.lv_slider_get_value
+                0x0801dd66       0x34 lvgl/lv_objx/lv_slider.o
+                0x0801dd66                lv_slider_get_value
+ .text.lv_slider_get_style
+                0x0801dd9a       0x4a lvgl/lv_objx/lv_slider.o
+                0x0801dd9a                lv_slider_get_style
+ .text.lv_slider_design
+                0x0801dde4      0x486 lvgl/lv_objx/lv_slider.o
+ *fill*         0x0801e26a        0x2 
+ .text.lv_slider_signal
+                0x0801e26c      0x3c0 lvgl/lv_objx/lv_slider.o
+ .text.lv_mem_assert
+                0x0801e62c       0x1c lvgl/lv_objx/lv_sw.o
+ .text.lv_slider_set_value
+                0x0801e648       0x20 lvgl/lv_objx/lv_sw.o
+ .text.lv_slider_set_range
+                0x0801e668       0x28 lvgl/lv_objx/lv_sw.o
+ .text.lv_sw_get_state
+                0x0801e690       0x22 lvgl/lv_objx/lv_sw.o
+ *fill*         0x0801e6b2        0x2 
+ .text.lv_sw_create
+                0x0801e6b4      0x128 lvgl/lv_objx/lv_sw.o
+                0x0801e6b4                lv_sw_create
+ .text.lv_sw_on
+                0x0801e7dc       0x2e lvgl/lv_objx/lv_sw.o
+                0x0801e7dc                lv_sw_on
+ .text.lv_sw_off
+                0x0801e80a       0x2e lvgl/lv_objx/lv_sw.o
+                0x0801e80a                lv_sw_off
+ .text.lv_sw_set_style
+                0x0801e838       0x9c lvgl/lv_objx/lv_sw.o
+                0x0801e838                lv_sw_set_style
+ .text.lv_sw_signal
+                0x0801e8d4      0x220 lvgl/lv_objx/lv_sw.o
+ .text.lv_area_get_width
+                0x0801eaf4       0x2e lvgl/lv_objx/lv_ta.o
+ .text.lv_area_get_height
+                0x0801eb22       0x2e lvgl/lv_objx/lv_ta.o
+ .text.lv_font_get_height
+                0x0801eb50       0x18 lvgl/lv_objx/lv_ta.o
+ .text.lv_mem_assert
+                0x0801eb68       0x1c lvgl/lv_objx/lv_ta.o
+ .text.lv_page_set_scrl_fit
+                0x0801eb84       0x28 lvgl/lv_objx/lv_ta.o
+ .text.lv_ta_set_sb_mode
+                0x0801ebac       0x1e lvgl/lv_objx/lv_ta.o
+ *fill*         0x0801ebca        0x2 
+ .text.lv_ta_create
+                0x0801ebcc      0x2b8 lvgl/lv_objx/lv_ta.o
+                0x0801ebcc                lv_ta_create
+ .text.lv_ta_add_char
+                0x0801ee84      0x110 lvgl/lv_objx/lv_ta.o
+                0x0801ee84                lv_ta_add_char
+ .text.lv_ta_add_text
+                0x0801ef94      0x110 lvgl/lv_objx/lv_ta.o
+                0x0801ef94                lv_ta_add_text
+ .text.lv_ta_set_text
+                0x0801f0a4       0xf8 lvgl/lv_objx/lv_ta.o
+                0x0801f0a4                lv_ta_set_text
+ .text.lv_ta_set_cursor_pos
+                0x0801f19c      0x230 lvgl/lv_objx/lv_ta.o
+                0x0801f19c                lv_ta_set_cursor_pos
+ .text.lv_ta_set_cursor_type
+                0x0801f3cc       0x2a lvgl/lv_objx/lv_ta.o
+                0x0801f3cc                lv_ta_set_cursor_type
+ .text.lv_ta_set_one_line
+                0x0801f3f6      0x124 lvgl/lv_objx/lv_ta.o
+                0x0801f3f6                lv_ta_set_one_line
+ .text.lv_ta_set_style
+                0x0801f51a       0x5c lvgl/lv_objx/lv_ta.o
+                0x0801f51a                lv_ta_set_style
+ .text.lv_ta_get_cursor_pos
+                0x0801f576       0x1c lvgl/lv_objx/lv_ta.o
+                0x0801f576                lv_ta_get_cursor_pos
+ .text.lv_ta_get_style
+                0x0801f592       0x4a lvgl/lv_objx/lv_ta.o
+                0x0801f592                lv_ta_get_style
+ .text.lv_ta_cursor_right
+                0x0801f5dc       0x2c lvgl/lv_objx/lv_ta.o
+                0x0801f5dc                lv_ta_cursor_right
+ .text.lv_ta_cursor_left
+                0x0801f608       0x32 lvgl/lv_objx/lv_ta.o
+                0x0801f608                lv_ta_cursor_left
+ .text.lv_ta_cursor_down
+                0x0801f63a       0xb6 lvgl/lv_objx/lv_ta.o
+                0x0801f63a                lv_ta_cursor_down
+ .text.lv_ta_cursor_up
+                0x0801f6f0       0xa2 lvgl/lv_objx/lv_ta.o
+                0x0801f6f0                lv_ta_cursor_up
+ *fill*         0x0801f792        0x2 
+ .text.lv_ta_design
+                0x0801f794       0x58 lvgl/lv_objx/lv_ta.o
+ .text.lv_ta_scrollable_design
+                0x0801f7ec      0x6bc lvgl/lv_objx/lv_ta.o
+ .text.lv_ta_signal
+                0x0801fea8      0x2c0 lvgl/lv_objx/lv_ta.o
+ .text.lv_ta_scrollable_signal
+                0x08020168       0x90 lvgl/lv_objx/lv_ta.o
+ .text.cursor_blink_anim
+                0x080201f8       0x68 lvgl/lv_objx/lv_ta.o
+ .text.pwd_char_hider_anim
+                0x08020260       0x16 lvgl/lv_objx/lv_ta.o
+ .text.pwd_char_hider
+                0x08020276       0x7e lvgl/lv_objx/lv_ta.o
+ .text.lv_area_get_width
+                0x080202f4       0x2e lvgl/lv_objx/lv_tabview.o
+ .text.lv_area_get_height
+                0x08020322       0x2e lvgl/lv_objx/lv_tabview.o
+ .text.lv_font_get_height
+                0x08020350       0x18 lvgl/lv_objx/lv_tabview.o
+ .text.lv_mem_assert
+                0x08020368       0x1c lvgl/lv_objx/lv_tabview.o
+ .text.lv_cont_set_style
+                0x08020384       0x1a lvgl/lv_objx/lv_tabview.o
+ *fill*         0x0802039e        0x2 
+ .text.lv_tabview_create
+                0x080203a0      0x378 lvgl/lv_objx/lv_tabview.o
+                0x080203a0                lv_tabview_create
+ .text.lv_tabview_add_tab
+                0x08020718      0x20c lvgl/lv_objx/lv_tabview.o
+                0x08020718                lv_tabview_add_tab
+ .text.lv_tabview_set_tab_act
+                0x08020924      0x1e0 lvgl/lv_objx/lv_tabview.o
+                0x08020924                lv_tabview_set_tab_act
+ .text.lv_tabview_set_sliding
+                0x08020b04       0x38 lvgl/lv_objx/lv_tabview.o
+                0x08020b04                lv_tabview_set_sliding
+ .text.lv_tabview_set_style
+                0x08020b3c       0xd4 lvgl/lv_objx/lv_tabview.o
+                0x08020b3c                lv_tabview_set_style
+ .text.lv_tabview_get_tab_act
+                0x08020c10       0x1c lvgl/lv_objx/lv_tabview.o
+                0x08020c10                lv_tabview_get_tab_act
+ .text.lv_tabview_get_tab
+                0x08020c2c       0x60 lvgl/lv_objx/lv_tabview.o
+                0x08020c2c                lv_tabview_get_tab
+ .text.lv_tabview_get_sliding
+                0x08020c8c       0x2c lvgl/lv_objx/lv_tabview.o
+                0x08020c8c                lv_tabview_get_sliding
+ .text.lv_tabview_get_style
+                0x08020cb8       0xa0 lvgl/lv_objx/lv_tabview.o
+                0x08020cb8                lv_tabview_get_style
+ .text.lv_tabview_signal
+                0x08020d58      0x13c lvgl/lv_objx/lv_tabview.o
+ .text.tabpage_signal
+                0x08020e94       0x90 lvgl/lv_objx/lv_tabview.o
+ .text.tabpage_scrl_signal
+                0x08020f24       0x98 lvgl/lv_objx/lv_tabview.o
+ .text.tabpage_pressed_handler
+                0x08020fbc       0x2c lvgl/lv_objx/lv_tabview.o
+ .text.tabpage_pressing_handler
+                0x08020fe8      0x19a lvgl/lv_objx/lv_tabview.o
+ *fill*         0x08021182        0x2 
+ .text.tabpage_press_lost_handler
+                0x08021184      0x124 lvgl/lv_objx/lv_tabview.o
+ .text.tab_btnm_action
+                0x080212a8       0x6c lvgl/lv_objx/lv_tabview.o
+ .text.tabview_realign
+                0x08021314      0x17c lvgl/lv_objx/lv_tabview.o
+ .text.lv_theme_get_current
+                0x08021490       0x18 lvgl/lv_themes/lv_theme.o
+                0x08021490                lv_theme_get_current
+ .text.Reset_Handler
+                0x080214a8       0x50 startup/startup_stm32f769xx.o
+                0x080214a8                Reset_Handler
+ .text.Default_Handler
+                0x080214f8        0x2 startup/startup_stm32f769xx.o
+                0x080214f8                RTC_Alarm_IRQHandler
+                0x080214f8                EXTI2_IRQHandler
+                0x080214f8                TIM8_CC_IRQHandler
+                0x080214f8                DebugMon_Handler
+                0x080214f8                UART8_IRQHandler
+                0x080214f8                SPI4_IRQHandler
+                0x080214f8                TIM1_CC_IRQHandler
+                0x080214f8                DMA2_Stream5_IRQHandler
+                0x080214f8                HardFault_Handler
+                0x080214f8                JPEG_IRQHandler
+                0x080214f8                DMA1_Stream5_IRQHandler
+                0x080214f8                CAN3_RX1_IRQHandler
+                0x080214f8                PVD_IRQHandler
+                0x080214f8                TAMP_STAMP_IRQHandler
+                0x080214f8                PendSV_Handler
+                0x080214f8                NMI_Handler
+                0x080214f8                EXTI3_IRQHandler
+                0x080214f8                TIM8_TRG_COM_TIM14_IRQHandler
+                0x080214f8                DFSDM1_FLT1_IRQHandler
+                0x080214f8                TIM1_UP_TIM10_IRQHandler
+                0x080214f8                TIM8_UP_TIM13_IRQHandler
+                0x080214f8                I2C3_ER_IRQHandler
+                0x080214f8                DFSDM1_FLT2_IRQHandler
+                0x080214f8                EXTI0_IRQHandler
+                0x080214f8                I2C2_EV_IRQHandler
+                0x080214f8                DMA1_Stream2_IRQHandler
+                0x080214f8                FPU_IRQHandler
+                0x080214f8                OTG_HS_WKUP_IRQHandler
+                0x080214f8                CAN3_SCE_IRQHandler
+                0x080214f8                UsageFault_Handler
+                0x080214f8                LTDC_ER_IRQHandler
+                0x080214f8                CAN2_SCE_IRQHandler
+                0x080214f8                DMA2_Stream2_IRQHandler
+                0x080214f8                SPI1_IRQHandler
+                0x080214f8                TIM6_DAC_IRQHandler
+                0x080214f8                TIM1_BRK_TIM9_IRQHandler
+                0x080214f8                DCMI_IRQHandler
+                0x080214f8                DMA2_Stream3_IRQHandler
+                0x080214f8                SAI2_IRQHandler
+                0x080214f8                DFSDM1_FLT3_IRQHandler
+                0x080214f8                USART6_IRQHandler
+                0x080214f8                CAN3_RX0_IRQHandler
+                0x080214f8                USART3_IRQHandler
+                0x080214f8                UART5_IRQHandler
+                0x080214f8                TIM4_IRQHandler
+                0x080214f8                QUADSPI_IRQHandler
+                0x080214f8                I2C1_EV_IRQHandler
+                0x080214f8                DMA1_Stream6_IRQHandler
+                0x080214f8                DMA1_Stream1_IRQHandler
+                0x080214f8                UART4_IRQHandler
+                0x080214f8                RCC_IRQHandler
+                0x080214f8                TIM8_BRK_TIM12_IRQHandler
+                0x080214f8                Default_Handler
+                0x080214f8                CEC_IRQHandler
+                0x080214f8                EXTI15_10_IRQHandler
+                0x080214f8                SPI5_IRQHandler
+                0x080214f8                TIM7_IRQHandler
+                0x080214f8                SDMMC1_IRQHandler
+                0x080214f8                TIM5_IRQHandler
+                0x080214f8                DMA2_Stream7_IRQHandler
+                0x080214f8                I2C3_EV_IRQHandler
+                0x080214f8                EXTI9_5_IRQHandler
+                0x080214f8                RTC_WKUP_IRQHandler
+                0x080214f8                ETH_WKUP_IRQHandler
+                0x080214f8                SPDIF_RX_IRQHandler
+                0x080214f8                SPI2_IRQHandler
+                0x080214f8                OTG_HS_EP1_IN_IRQHandler
+                0x080214f8                MemManage_Handler
+                0x080214f8                DMA1_Stream0_IRQHandler
+                0x080214f8                SVC_Handler
+                0x080214f8                EXTI4_IRQHandler
+                0x080214f8                RNG_IRQHandler
+                0x080214f8                DSI_IRQHandler
+                0x080214f8                ETH_IRQHandler
+                0x080214f8                OTG_HS_EP1_OUT_IRQHandler
+                0x080214f8                WWDG_IRQHandler
+                0x080214f8                SPI6_IRQHandler
+                0x080214f8                MDIOS_IRQHandler
+                0x080214f8                I2C4_EV_IRQHandler
+                0x080214f8                CAN3_TX_IRQHandler
+                0x080214f8                TIM2_IRQHandler
+                0x080214f8                OTG_FS_WKUP_IRQHandler
+                0x080214f8                TIM1_TRG_COM_TIM11_IRQHandler
+                0x080214f8                OTG_HS_IRQHandler
+                0x080214f8                DMA2D_IRQHandler
+                0x080214f8                EXTI1_IRQHandler
+                0x080214f8                SDMMC2_IRQHandler
+                0x080214f8                UART7_IRQHandler
+                0x080214f8                USART2_IRQHandler
+                0x080214f8                DFSDM1_FLT0_IRQHandler
+                0x080214f8                I2C2_ER_IRQHandler
+                0x080214f8                DMA2_Stream1_IRQHandler
+                0x080214f8                CAN1_SCE_IRQHandler
+                0x080214f8                FLASH_IRQHandler
+                0x080214f8                DMA2_Stream4_IRQHandler
+                0x080214f8                BusFault_Handler
+                0x080214f8                USART1_IRQHandler
+                0x080214f8                OTG_FS_IRQHandler
+                0x080214f8                SPI3_IRQHandler
+                0x080214f8                DMA1_Stream4_IRQHandler
+                0x080214f8                I2C1_ER_IRQHandler
+                0x080214f8                FMC_IRQHandler
+                0x080214f8                LPTIM1_IRQHandler
+                0x080214f8                I2C4_ER_IRQHandler
+                0x080214f8                DMA2_Stream6_IRQHandler
+                0x080214f8                SAI1_IRQHandler
+                0x080214f8                DMA1_Stream3_IRQHandler
+ *fill*         0x080214fa        0x2 
+ .text.round    0x080214fc       0xa0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libm.a(lib_a-s_round.o)
+                0x080214fc                round
+ .text.__libc_init_array
+                0x0802159c       0x48 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-init.o)
+                0x0802159c                __libc_init_array
+ .text.__itoa   0x080215e4       0x30 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-itoa.o)
+                0x080215e4                __itoa
+ .text.itoa     0x08021614        0x4 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-itoa.o)
+                0x08021614                itoa
+ .text.memcpy   0x08021618       0x16 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-memcpy-stub.o)
+                0x08021618                memcpy
+ .text.memset   0x0802162e       0x10 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-memset.o)
+                0x0802162e                memset
+ .text.strcpy   0x0802163e       0x10 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-strcpy.o)
+                0x0802163e                strcpy
+ *fill*         0x0802164e        0x2 
+ .text.__utoa   0x08021650       0x80 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-utoa.o)
+                0x08021650                __utoa
+ *(.glue_7)
+ .glue_7        0x080216d0        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x080216d0        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x080216d0        0x0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+ *(.init)
+ .init          0x080216d0        0x4 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crti.o
+                0x080216d0                _init
+ .init          0x080216d4        0x8 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtn.o
+ *(.fini)
+ .fini          0x080216dc        0x4 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crti.o
+                0x080216dc                _fini
+ .fini          0x080216e0        0x8 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtn.o
+                0x080216e8                . = ALIGN (0x4)
+                0x080216e8                _etext = .
+
+.vfp11_veneer   0x080216e8        0x0
+ .vfp11_veneer  0x080216e8        0x0 linker stubs
+
+.v4_bx          0x080216e8        0x0
+ .v4_bx         0x080216e8        0x0 linker stubs
+
+.iplt           0x080216e8        0x0
+ .iplt          0x080216e8        0x0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+
+.rodata         0x080216e8   0x1cf34c
+                0x080216e8                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x080216e8      0x42e Drivers/BSP/Components/otm8009a/otm8009a.o
+                0x080216e8                lcdRegData1
+                0x080216ec                lcdRegData2
+                0x080216f0                lcdRegData3
+                0x08021704                lcdRegData4
+                0x08021718                lcdRegData5
+                0x0802171c                lcdRegData6
+                0x08021720                lcdRegData7
+                0x08021728                lcdRegData8
+                0x08021738                lcdRegData9
+                0x08021748                lcdRegData10
+                0x08021754                lcdRegData11
+                0x08021760                lcdRegData12
+                0x08021770                lcdRegData13
+                0x08021780                lcdRegData14
+                0x0802178c                lcdRegData15
+                0x0802179c                lcdRegData16
+                0x080217ac                lcdRegData17
+                0x080217b8                lcdRegData18
+                0x080217c4                lcdRegData19
+                0x080217d0                lcdRegData20
+                0x080217e0                lcdRegData21
+                0x080217f0                lcdRegData22
+                0x080217fc                lcdRegData23
+                0x0802180c                lcdRegData24
+                0x0802181c                lcdRegData25
+                0x08021820                lcdRegData27
+                0x08021828                lcdRegData28
+                0x08021830                ShortRegData1
+                0x08021834                ShortRegData2
+                0x08021838                ShortRegData3
+                0x0802183c                ShortRegData4
+                0x08021840                ShortRegData5
+                0x08021844                ShortRegData6
+                0x08021848                ShortRegData7
+                0x0802184c                ShortRegData8
+                0x08021850                ShortRegData9
+                0x08021854                ShortRegData10
+                0x08021858                ShortRegData11
+                0x0802185c                ShortRegData12
+                0x08021860                ShortRegData13
+                0x08021864                ShortRegData14
+                0x08021868                ShortRegData15
+                0x0802186c                ShortRegData16
+                0x08021870                ShortRegData17
+                0x08021874                ShortRegData18
+                0x08021878                ShortRegData19
+                0x0802187c                ShortRegData20
+                0x08021880                ShortRegData21
+                0x08021884                ShortRegData22
+                0x08021888                ShortRegData23
+                0x0802188c                ShortRegData24
+                0x08021890                ShortRegData25
+                0x08021894                ShortRegData26
+                0x08021898                ShortRegData27
+                0x0802189c                ShortRegData28
+                0x080218a0                ShortRegData29
+                0x080218a4                ShortRegData30
+                0x080218a8                ShortRegData31
+                0x080218ac                ShortRegData32
+                0x080218b0                ShortRegData33
+                0x080218b4                ShortRegData34
+                0x080218b8                ShortRegData35
+                0x080218bc                ShortRegData36
+                0x080218c0                ShortRegData37
+                0x080218c4                ShortRegData38
+                0x080218c8                ShortRegData39
+                0x080218cc                ShortRegData40
+                0x080218d0                ShortRegData41
+                0x080218d4                ShortRegData42
+                0x080218d8                ShortRegData43
+                0x080218dc                ShortRegData44
+                0x080218e0                ShortRegData45
+                0x080218e4                ShortRegData46
+                0x080218e8                ShortRegData47
+                0x080218ec                ShortRegData48
+                0x080218f0                ShortRegData49
+                0x080218f4                ShortRegData50
+                0x080218f8                ShortRegData51
+                0x080218fc                OledShortRegData1
+                0x08021900                OledShortRegData2
+                0x08021904                OledShortRegData3
+                0x08021908                OledShortRegData4
+                0x0802190c                OledShortRegData5
+                0x08021910                OledShortRegData6
+                0x08021914                OledShortRegData7
+                0x08021918                OledShortRegData8
+                0x0802191c                OledShortRegData9
+                0x08021920                OledShortRegData10
+                0x08021924                OledShortRegData11
+                0x08021928                OledShortRegData12
+                0x0802192c                OledShortRegData13
+                0x08021930                OledShortRegData14
+                0x08021934                OledShortRegData15
+                0x08021938                OledShortRegData16
+                0x0802193c                OledShortRegData17
+                0x08021940                OledShortRegData18
+                0x08021944                OledShortRegData19
+                0x08021948                OledShortRegData20
+                0x0802194c                OledShortRegData21
+                0x08021950                OledShortRegData22
+                0x08021954                OledShortRegData23
+                0x08021958                OledShortRegData24
+                0x0802195c                OledShortRegData25
+                0x08021960                OledShortRegData26
+                0x08021964                OledShortRegData27
+                0x08021968                OledShortRegData28
+                0x0802196c                OledShortRegData29
+                0x08021970                OledShortRegData30
+                0x08021974                OledShortRegData31
+                0x08021978                OledShortRegData32
+                0x0802197c                OledShortRegData33
+                0x08021980                OledShortRegData34
+                0x08021984                OledShortRegData35
+                0x08021988                OledShortRegData36
+                0x0802198c                OledShortRegData37
+                0x08021990                OledShortRegData38
+                0x08021994                OledShortRegData39
+                0x08021998                OledShortRegData40
+                0x0802199c                OledShortRegData41
+                0x080219a0                OledShortRegData42
+                0x080219a4                OledShortRegData43
+                0x080219a8                OledShortRegData44
+                0x080219ac                OledShortRegData45
+                0x080219b0                OledShortRegData46
+                0x080219b4                OledShortRegData47
+                0x080219b8                OledShortRegData48
+                0x080219bc                OledShortRegData49
+                0x080219c0                OledShortRegData50
+                0x080219c4                OledShortRegData51
+                0x080219c8                OledShortRegData52
+                0x080219cc                OledShortRegData53
+                0x080219d0                OledShortRegData54
+                0x080219d4                OledShortRegData55
+                0x080219d8                OledShortRegData56
+                0x080219dc                OledShortRegData57
+                0x080219e0                OledShortRegData58
+                0x080219e4                OledShortRegData59
+                0x080219e8                OledShortRegData60
+                0x080219ec                OledShortRegData61
+                0x080219f0                OledShortRegData62
+                0x080219f4                OledShortRegData63
+                0x080219f8                OledShortRegData64
+                0x080219fc                OledShortRegData65
+                0x08021a00                OledShortRegData66
+                0x08021a04                OledShortRegData67
+                0x08021a08                OledShortRegData68
+                0x08021a0c                OledShortRegData69
+                0x08021a10                OledShortRegData70
+                0x08021a14                OledShortRegData71
+                0x08021a18                OledShortRegData72
+                0x08021a1c                OledShortRegData73
+                0x08021a20                OledShortRegData74
+                0x08021a24                OledShortRegData75
+                0x08021a28                OledShortRegData76
+                0x08021a2c                OledShortRegData77
+                0x08021a30                OledShortRegData78
+                0x08021a34                OledShortRegData79
+                0x08021a38                OledShortRegData80
+                0x08021a3c                OledShortRegData81
+                0x08021a40                OledShortRegData82
+                0x08021a44                OledShortRegData83
+                0x08021a48                OledShortRegData84
+                0x08021a4c                OledShortRegData85
+                0x08021a50                OledShortRegData86
+                0x08021a54                OledShortRegData87
+                0x08021a58                OledShortRegData88
+                0x08021a5c                OledShortRegData89
+                0x08021a60                OledShortRegData90
+                0x08021a64                OledShortRegData91
+                0x08021a68                OledShortRegData92
+                0x08021a6c                OledShortRegData93
+                0x08021a70                OledShortRegData94
+                0x08021a74                OledShortRegData95
+                0x08021a78                OledShortRegData96
+                0x08021a7c                OledShortRegData97
+                0x08021a80                OledShortRegData98
+                0x08021a84                OledShortRegData99
+                0x08021a88                OledShortRegData100
+                0x08021a8c                OledShortRegData101
+                0x08021a90                OledShortRegData102
+                0x08021a94                OledShortRegData103
+                0x08021a98                OledShortRegData104
+                0x08021a9c                OledShortRegData105
+                0x08021aa0                OledShortRegData106
+                0x08021aa4                OledShortRegData107
+                0x08021aa8                OledShortRegData108
+                0x08021aac                OledShortRegData109
+                0x08021ab0                OledShortRegData110
+                0x08021ab4                OledShortRegData111
+                0x08021ab8                OledShortRegData112
+                0x08021abc                OledShortRegData113
+                0x08021ac0                OledShortRegData114
+                0x08021ac4                OledShortRegData115
+                0x08021ac8                OledShortRegData116
+                0x08021acc                OledShortRegData117
+                0x08021ad0                OledShortRegData118
+                0x08021ad4                OledShortRegData119
+                0x08021ad8                OledShortRegData120
+                0x08021adc                OledShortRegData121
+                0x08021ae0                OledShortRegData122
+                0x08021ae4                OledShortRegData123
+                0x08021ae8                OledShortRegData124
+                0x08021aec                OledShortRegData125
+                0x08021af0                OledShortRegData126
+                0x08021af4                OledShortRegData127
+                0x08021af8                OledShortRegData128
+                0x08021afc                OledShortRegData129
+                0x08021b00                OledShortRegData130
+                0x08021b04                OledShortRegData131
+                0x08021b08                OledShortRegData132
+                0x08021b0c                OledShortRegData133
+                0x08021b10                OledShortRegData134
+                0x08021b14                OledShortRegData135
+ *fill*         0x08021b16        0x2 
+ .rodata        0x08021b18        0x8 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
+ .rodata        0x08021b20        0xd Src/adc.o
+ *fill*         0x08021b2d        0x3 
+ .rodata        0x08021b30       0x10 Src/canbus.o
+ .rodata        0x08021b40       0x2f Src/lcd_lvgl.o
+ *fill*         0x08021b6f        0x1 
+ .rodata        0x08021b70       0x13 Src/ledDriver.o
+ *fill*         0x08021b83        0x1 
+ .rodata        0x08021b84        0xe Src/main.o
+ *fill*         0x08021b92        0x2 
+ .rodata        0x08021b94       0x18 Src/system_stm32f7xx.o
+                0x08021b94                AHBPrescTable
+                0x08021ba4                APBPrescTable
+ .rodata        0x08021bac     0x1ab8 Utilities/Fonts/font24.o
+                0x08021bac                Font24_Table
+ .rodata        0x08023664    0x27108 lv_examples/lv_apps/demo/canbus_ico.o
+                0x0804a764                canbus_ico
+ .rodata        0x0804a76c    0x2f448 lv_examples/lv_apps/demo/config.o
+                0x08079bac                config
+ .rodata        0x08079bb4       0xa6 lv_examples/lv_apps/demo/demo2.o
+ *fill*         0x08079c5a        0x2 
+ .rodata        0x08079c5c    0x27108 lv_examples/lv_apps/demo/home.o
+                0x080a0d5c                home
+ .rodata        0x080a0d64    0x206c8 lv_examples/lv_apps/demo/wifi.o
+                0x080c1424                wifi
+ .rodata        0x080c142c        0x7 lvgl/lv_core/lv_obj.o
+ *fill*         0x080c1433        0x1 
+ .rodata        0x080c1434       0x51 lvgl/lv_draw/lv_draw.o
+ *fill*         0x080c1485        0x3 
+ .rodata        0x080c1488        0x8 lvgl/lv_misc/lv_txt.o
+ .rodata        0x080c1490    0x57e84 lvgl/lv_misc/lv_fonts/lv_font_dejavu_142.o
+ .rodata        0x08119314     0x2260 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+ .rodata        0x0811b574    0xada0c lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o
+ .rodata        0x081c8f80    0x279bc lvgl/lv_misc/lv_fonts/lv_font_dejavu_96.o
+ .rodata        0x081f093c        0x7 lvgl/lv_objx/lv_bar.o
+ *fill*         0x081f0943        0x1 
+ .rodata        0x081f0944       0x38 lvgl/lv_objx/lv_btnm.o
+ .rodata        0x081f097c        0x9 lvgl/lv_objx/lv_chart.o
+ *fill*         0x081f0985        0x3 
+ .rodata        0x081f0988        0x8 lvgl/lv_objx/lv_cont.o
+ .rodata        0x081f0990        0x9 lvgl/lv_objx/lv_gauge.o
+ *fill*         0x081f0999        0x3 
+ .rodata        0x081f099c        0xb lvgl/lv_objx/lv_img.o
+ *fill*         0x081f09a7        0x1 
+ .rodata        0x081f09a8       0x11 lvgl/lv_objx/lv_label.o
+ *fill*         0x081f09b9        0x3 
+ .rodata        0x081f09bc        0x8 lvgl/lv_objx/lv_line.o
+ .rodata        0x081f09c4        0xa lvgl/lv_objx/lv_lmeter.o
+ *fill*         0x081f09ce        0x2 
+ .rodata        0x081f09d0        0x8 lvgl/lv_objx/lv_page.o
+ .rodata        0x081f09d8        0xa lvgl/lv_objx/lv_slider.o
+ *fill*         0x081f09e2        0x2 
+ .rodata        0x081f09e4        0x6 lvgl/lv_objx/lv_sw.o
+ *fill*         0x081f09ea        0x2 
+ .rodata        0x081f09ec       0x12 lvgl/lv_objx/lv_ta.o
+ *fill*         0x081f09fe        0x2 
+ .rodata        0x081f0a00        0xf lvgl/lv_objx/lv_tabview.o
+ *(.rodata*)
+ .rodata.__utoa.str1.1
+                0x081f0a0f       0x25 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-utoa.o)
+                0x081f0a34                . = ALIGN (0x4)
+
+.rel.dyn        0x081f0a34        0x0
+ .rel.iplt      0x081f0a34        0x0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
+<<<<<<< HEAD
 .ARM            0x081b867c        0x0
                 0x081b867c                __exidx_start = .
  *(.ARM.exidx*)
@@ -20014,6 +21973,34 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
                 0x081b8684                _sidata = LOADADDR (.data)
 
 .data           0x20000000      0x250 load address 0x081b8684
+=======
+.ARM            0x081f0a34        0x0
+                0x081f0a34                __exidx_start = .
+ *(.ARM.exidx*)
+                0x081f0a34                __exidx_end = .
+
+.preinit_array  0x081f0a34        0x0
+                0x081f0a34                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x081f0a34                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x081f0a34        0x4
+                0x081f0a34                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+ .init_array    0x081f0a34        0x4 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+                0x081f0a38                PROVIDE (__init_array_end, .)
+
+.fini_array     0x081f0a38        0x4
+                [!provide]                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x081f0a38        0x4 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+                [!provide]                PROVIDE (__fini_array_end, .)
+                0x081f0a3c                _sidata = LOADADDR (.data)
+
+.data           0x20000000      0x224 load address 0x081f0a3c
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -20056,6 +22043,7 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
                 0x20000250                . = ALIGN (0x4)
                 0x20000250                _edata = .
 
+<<<<<<< HEAD
 .jcr            0x20000250        0x0 load address 0x081b88d4
  .jcr           0x20000250        0x0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
 
@@ -20275,6 +22263,205 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
                 0x200340d0                . = (. + _Min_Stack_Size)
  *fill*         0x20033cd0      0x400 
                 0x200340d0                . = ALIGN (0x8)
+=======
+.jcr            0x20000224        0x0 load address 0x081f0c60
+ .jcr           0x20000224        0x0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+
+.igot.plt       0x20000224        0x0 load address 0x081f0c60
+ .igot.plt      0x20000224        0x0 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+                0x20000224                . = ALIGN (0x4)
+
+.bss            0x20000224    0x32e50 load address 0x081f0c60
+                0x20000224                _sbss = .
+                0x20000224                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x20000224       0x1c c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtbegin.o
+ .bss           0x20000240        0x7 Drivers/BSP/Components/ft6x06/ft6x06.o
+                0x20000240                ft6x06
+ *fill*         0x20000247        0x1 
+ .bss           0x20000248       0x98 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
+ .bss           0x200002e0      0x118 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .bss           0x200003f8       0xec Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
+ .bss           0x200004e4       0x18 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
+                0x200004e9                I2C_Address
+ .bss           0x200004fc        0x1 Src/adc.o
+                0x200004fc                boucleAdcLogique
+ *fill*         0x200004fd        0x3 
+ .bss           0x20000500       0x2c Src/lcd_lvgl.o
+ .bss           0x2000052c        0x1 Src/ledDriver.o
+                0x2000052c                boucleLedLogique
+ *fill*         0x2000052d        0x3 
+ .bss           0x20000530       0x10 Src/stm32f7xx_hal_msp.o
+ .bss           0x20000540      0x644 lv_examples/lv_apps/demo/demo2.o
+                0x20000588                val_SliderR
+                0x20000589                val_SliderG
+                0x2000058a                val_SliderB
+                0x2000058b                val_SliderI
+                0x2000058c                delay_anim
+                0x20000590                level
+                0x20000594                last_tab
+                0x20000598                led_flag
+ .bss           0x20000b84        0x4 lvgl/lv_core/lv_indev.o
+ .bss           0x20000b88       0x1c lvgl/lv_core/lv_obj.o
+ .bss           0x20000ba4      0x150 lvgl/lv_core/lv_refr.o
+ .bss           0x20000cf4    0x28004 lvgl/lv_core/lv_vdb.o
+ .bss           0x20028cf8      0x640 lvgl/lv_draw/lv_draw_vbasic.o
+ .bss           0x20029338        0x8 lvgl/lv_hal/lv_hal_disp.o
+ .bss           0x20029340        0x4 lvgl/lv_hal/lv_hal_indev.o
+ .bss           0x20029344        0x5 lvgl/lv_hal/lv_hal_tick.o
+ *fill*         0x20029349        0x3 
+ .bss           0x2002934c       0x10 lvgl/lv_misc/lv_anim.o
+ .bss           0x2002935c        0xc lvgl/lv_misc/lv_fs.o
+ .bss           0x20029368     0x8004 lvgl/lv_misc/lv_mem.o
+ .bss           0x2003136c       0x1c lvgl/lv_misc/lv_task.o
+ .bss           0x20031388        0xd lvgl/lv_misc/lv_ufs.o
+ *fill*         0x20031395        0x3 
+ .bss           0x20031398        0x8 lvgl/lv_objx/lv_bar.o
+ .bss           0x200313a0        0x8 lvgl/lv_objx/lv_btnm.o
+ .bss           0x200313a8        0x8 lvgl/lv_objx/lv_chart.o
+ .bss           0x200313b0        0x4 lvgl/lv_objx/lv_cont.o
+ .bss           0x200313b4        0x8 lvgl/lv_objx/lv_gauge.o
+ .bss           0x200313bc        0x4 lvgl/lv_objx/lv_img.o
+ .bss           0x200313c0        0x4 lvgl/lv_objx/lv_label.o
+ .bss           0x200313c4        0x4 lvgl/lv_objx/lv_line.o
+ .bss           0x200313c8        0x4 lvgl/lv_objx/lv_lmeter.o
+ .bss           0x200313cc        0x8 lvgl/lv_objx/lv_page.o
+ .bss           0x200313d4        0x8 lvgl/lv_objx/lv_slider.o
+ .bss           0x200313dc        0x4 lvgl/lv_objx/lv_sw.o
+ .bss           0x200313e0       0x10 lvgl/lv_objx/lv_ta.o
+ .bss           0x200313f0        0xc lvgl/lv_objx/lv_tabview.o
+ .bss           0x200313fc        0x4 lvgl/lv_themes/lv_theme.o
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x20031400      0x11c Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+                0x20031400                hdma2d_discovery
+                0x20031458                hltdc_discovery
+                0x20031500                hdsi_discovery
+ COMMON         0x2003151c       0x34 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
+                0x2003151c                sdramHandle
+ COMMON         0x20031550        0x4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
+                0x20031550                uwTick
+ COMMON         0x20031554       0x66 Src/adc.o
+                0x20031554                m_cad4
+                0x2003155c                hadc1
+                0x200315a4                m_cad3
+                0x200315ac                m_cad1
+                0x200315b4                m_cad2
+ *fill*         0x200315ba        0x2 
+ COMMON         0x200315bc       0x98 Src/canbus.o
+                0x200315bc                sFilterConfig
+                0x200315e4                CanHandle
+                0x2003160c                TxData
+                0x20031614                TxMailbox
+                0x20031618                RxData
+                0x20031620                TxHeader
+                0x20031638                RxHeader
+ COMMON         0x20031654       0x10 Src/lcd_lvgl.o
+                0x20031654                indev_drv
+                0x20031660                DMA_M2M
+ COMMON         0x20031664     0x12a0 Src/ledDriver.o
+                0x20031664                hdma_tim3_ch3
+                0x200316c4                htim3
+                0x20031704                ws2812BitBuf
+ COMMON         0x20032904      0x2e0 Src/main.o
+                0x20032904                hdma_memtomem_dma2_stream0
+                0x20032964                huart3
+                0x200329d4                hdsi
+                0x200329f0                hltdc
+                0x20032a98                hsdram2
+                0x20032acc                indev1
+                0x20032ad0                hdfsdm1_channel0
+                0x20032b08                hdma2d
+                0x20032b60                hsai_BlockA1
+ COMMON         0x20032be4       0xe8 lv_examples/lv_apps/demo/demo2.o
+                0x20032be4                btnParametre
+                0x20032be8                param_tuning_gauge
+                0x20032bec                DEBUG_TB
+                0x20032bf0                ligne_ver
+                0x20032bf4                txt
+                0x20032bf8                tab_princ_del
+                0x20032bfc                ctnParamDEBUG
+                0x20032c00                sliderB
+                0x20032c04                Image_config
+                0x20032c08                tab_princ_graph
+                0x20032c0c                label
+                0x20032c10                btnLock
+                0x20032c14                tab_param_canbus
+                0x20032c18                ctnGauge
+                0x20032c1c                toggleOnOff
+                0x20032c20                btncanbus
+                0x20032c24                tab_princ
+                0x20032c28                list_gauge
+                0x20032c2c                btnGauges
+                0x20032c30                dataGraph
+                0x20032c34                tab_princ_gauge
+                0x20032c38                ligne_hor
+                0x20032c3c                image_canbus
+                0x20032c40                ctnPrincipal
+                0x20032c44                btnUnlock
+                0x20032c48                cadran1
+                0x20032c4c                image_wifi
+                0x20032c50                tab_param_wifi
+                0x20032c54                tab_princ_stat
+                0x20032c58                Actual_ctn
+                0x20032c5c                tab_param_general
+                0x20032c60                tab_princ_debug
+                0x20032c64                label_toggle
+                0x20032c68                sliderI
+                0x20032c6c                btn_tuning_Apply
+                0x20032c70                toggleCan_Master_Slave
+                0x20032c74                ctnParametre
+                0x20032c78                btn_slide_gauge
+                0x20032c7c                btnhome
+                0x20032c80                ctnParamLED
+                0x20032c84                ser1
+                0x20032c88                tv_Princ
+                0x20032c8c                tab_princ_chiffre
+                0x20032c90                tab_param_DEL
+                0x20032c94                cadran3
+                0x20032c98                gauge
+                0x20032c9c                btn_tuning_Retour
+                0x20032ca0                tab_param_home
+                0x20032ca4                btnVehicule
+                0x20032ca8                cadran4
+                0x20032cac                btn_ctnvehicule_Start
+                0x20032cb0                btn_list_gauge
+                0x20032cb4                sliderG
+                0x20032cb8                tv_Param
+                0x20032cbc                image_home
+                0x20032cc0                sliderR
+                0x20032cc4                btnwifi
+                0x20032cc8                cadran2
+ COMMON         0x20032ccc      0x3a8 lvgl/lv_core/lv_style.o
+                0x20032ccc                lv_style_pretty_color
+                0x20032d14                lv_style_transp
+                0x20032d5c                lv_style_btn_rel
+                0x20032da4                lv_style_btn_pr
+                0x20032dec                lv_style_pretty
+                0x20032e34                lv_style_transp_tight
+                0x20032e7c                lv_style_btn_ina
+                0x20032ec4                lv_style_transp_fit
+                0x20032f0c                lv_style_plain
+                0x20032f54                lv_style_btn_tgl_rel
+                0x20032f9c                lv_style_scr
+                0x20032fe4                lv_style_btn_tgl_pr
+                0x2003302c                lv_style_plain_color
+                0x20033074                . = ALIGN (0x4)
+                0x20033074                _ebss = .
+                0x20033074                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x20033074      0x604 load address 0x081f0c60
+                0x20033078                . = ALIGN (0x8)
+ *fill*         0x20033074        0x4 
+                0x20033078                PROVIDE (end, .)
+                [!provide]                PROVIDE (_end, .)
+                0x20033278                . = (. + _Min_Heap_Size)
+ *fill*         0x20033078      0x200 
+                0x20033678                . = (. + _Min_Stack_Size)
+ *fill*         0x20033278      0x400 
+                0x20033678                . = ALIGN (0x8)
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 
 /DISCARD/
  libc.a(*)
@@ -20474,7 +22661,11 @@ LOAD c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15
                 0x0000136f       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv5/hard/crtn.o
 OUTPUT(Projet.elf elf32-littlearm)
 
+<<<<<<< HEAD
 .debug_info     0x00000000    0x6d7d0
+=======
+.debug_info     0x00000000    0x6d6ac
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
  .debug_info    0x00000000      0x49f Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_info    0x0000049f     0x1050 Drivers/BSP/Components/otm8009a/otm8009a.o
  .debug_info    0x000014ef     0x1dd7 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
@@ -20497,6 +22688,7 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_info    0x0001b223     0x112f Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
  .debug_info    0x0001c352      0xed4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
  .debug_info    0x0001d226     0x146c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
+<<<<<<< HEAD
  .debug_info    0x0001e692     0x2a88 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
  .debug_info    0x0002111a     0x1bbc Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
  .debug_info    0x00022cd6     0x14b6 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
@@ -20559,6 +22751,70 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_info    0x0006d76d       0x63 startup/startup_stm32f769xx.o
 
 .debug_abbrev   0x00000000     0xcf73
+=======
+ .debug_info    0x0001e692     0x2a8c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
+ .debug_info    0x0002111e     0x1bbc Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
+ .debug_info    0x00022cda     0x14b6 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+ .debug_info    0x00024190      0xfc0 Src/adc.o
+ .debug_info    0x00025150     0x1369 Src/canbus.o
+ .debug_info    0x000264b9     0x231d Src/lcd_lvgl.o
+ .debug_info    0x000287d6     0x1a98 Src/ledDriver.o
+ .debug_info    0x0002a26e     0x3842 Src/main.o
+ .debug_info    0x0002dab0     0x3099 Src/stm32f7xx_hal_msp.o
+ .debug_info    0x00030b49     0x187d Src/stm32f7xx_it.o
+ .debug_info    0x000323c6      0xf14 Src/system_stm32f7xx.o
+ .debug_info    0x000332da      0x14e Utilities/Fonts/font24.o
+ .debug_info    0x00033428      0xe94 lv_examples/lv_apps/demo/canbus_ico.o
+ .debug_info    0x000342bc      0xe94 lv_examples/lv_apps/demo/config.o
+ .debug_info    0x00035150     0x281f lv_examples/lv_apps/demo/demo2.o
+ .debug_info    0x0003796f      0xe94 lv_examples/lv_apps/demo/home.o
+ .debug_info    0x00038803      0xe94 lv_examples/lv_apps/demo/wifi.o
+ .debug_info    0x00039697     0x1490 lvgl/lv_core/lv_group.o
+ .debug_info    0x0003ab27     0x19ce lvgl/lv_core/lv_indev.o
+ .debug_info    0x0003c4f5     0x2de5 lvgl/lv_core/lv_obj.o
+ .debug_info    0x0003f2da     0x170a lvgl/lv_core/lv_refr.o
+ .debug_info    0x000409e4     0x1202 lvgl/lv_core/lv_style.o
+ .debug_info    0x00041be6      0xac7 lvgl/lv_core/lv_vdb.o
+ .debug_info    0x000426ad     0x24ce lvgl/lv_draw/lv_draw.o
+ .debug_info    0x00044b7b     0x15f9 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_info    0x00046174     0x1165 lvgl/lv_hal/lv_hal_disp.o
+ .debug_info    0x000472d9      0xcd1 lvgl/lv_hal/lv_hal_indev.o
+ .debug_info    0x00047faa      0x148 lvgl/lv_hal/lv_hal_tick.o
+ .debug_info    0x000480f2      0xd64 lvgl/lv_misc/lv_anim.o
+ .debug_info    0x00048e56      0xc40 lvgl/lv_misc/lv_area.o
+ .debug_info    0x00049a96      0x98c lvgl/lv_misc/lv_circ.o
+ .debug_info    0x0004a422      0x479 lvgl/lv_misc/lv_font.o
+ .debug_info    0x0004a89b     0x123a lvgl/lv_misc/lv_fs.o
+ .debug_info    0x0004bad5      0xcfa lvgl/lv_misc/lv_ll.o
+ .debug_info    0x0004c7cf      0x156 lvgl/lv_misc/lv_math.o
+ .debug_info    0x0004c925      0xc9a lvgl/lv_misc/lv_mem.o
+ .debug_info    0x0004d5bf      0x483 lvgl/lv_misc/lv_task.o
+ .debug_info    0x0004da42       0xe0 lvgl/lv_misc/lv_trigo.o
+ .debug_info    0x0004db22     0x10dd lvgl/lv_misc/lv_txt.o
+ .debug_info    0x0004ebff     0x12b3 lvgl/lv_misc/lv_ufs.o
+ .debug_info    0x0004feb2      0x272 lvgl/lv_misc/lv_fonts/lv_font_dejavu_142.o
+ .debug_info    0x00050124      0x270 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+ .debug_info    0x00050394      0x276 lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o
+ .debug_info    0x0005060a      0x272 lvgl/lv_misc/lv_fonts/lv_font_dejavu_96.o
+ .debug_info    0x0005087c     0x1d62 lvgl/lv_objx/lv_bar.o
+ .debug_info    0x000525de     0x21c5 lvgl/lv_objx/lv_btnm.o
+ .debug_info    0x000547a3     0x22b4 lvgl/lv_objx/lv_chart.o
+ .debug_info    0x00056a57     0x1f52 lvgl/lv_objx/lv_cont.o
+ .debug_info    0x000589a9     0x1f1d lvgl/lv_objx/lv_gauge.o
+ .debug_info    0x0005a8c6     0x18e9 lvgl/lv_objx/lv_img.o
+ .debug_info    0x0005c1af     0x207b lvgl/lv_objx/lv_label.o
+ .debug_info    0x0005e22a     0x14a7 lvgl/lv_objx/lv_line.o
+ .debug_info    0x0005f6d1     0x1d22 lvgl/lv_objx/lv_lmeter.o
+ .debug_info    0x000613f3     0x22a0 lvgl/lv_objx/lv_page.o
+ .debug_info    0x00063693     0x1ef5 lvgl/lv_objx/lv_slider.o
+ .debug_info    0x00065588     0x1b79 lvgl/lv_objx/lv_sw.o
+ .debug_info    0x00067101     0x28e7 lvgl/lv_objx/lv_ta.o
+ .debug_info    0x000699e8     0x2872 lvgl/lv_objx/lv_tabview.o
+ .debug_info    0x0006c25a     0x13d1 lvgl/lv_themes/lv_theme.o
+ .debug_info    0x0006d62b       0x81 startup/startup_stm32f769xx.o
+
+.debug_abbrev   0x00000000     0xcff8
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
  .debug_abbrev  0x00000000      0x1ee Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_abbrev  0x000001ee       0xdb Drivers/BSP/Components/otm8009a/otm8009a.o
  .debug_abbrev  0x000002c9      0x314 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
@@ -20581,6 +22837,7 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_abbrev  0x00003239      0x32f Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
  .debug_abbrev  0x00003568      0x25e Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
  .debug_abbrev  0x000037c6      0x29e Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
+<<<<<<< HEAD
  .debug_abbrev  0x00003a64      0x2e6 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
  .debug_abbrev  0x00003d4a      0x2c3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
  .debug_abbrev  0x0000400d      0x259 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
@@ -20643,6 +22900,70 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_abbrev  0x0000cf61       0x12 startup/startup_stm32f769xx.o
 
 .debug_aranges  0x00000000     0x3330
+=======
+ .debug_abbrev  0x00003a64      0x2bb Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
+ .debug_abbrev  0x00003d1f      0x2c3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
+ .debug_abbrev  0x00003fe2      0x259 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+ .debug_abbrev  0x0000423b      0x240 Src/adc.o
+ .debug_abbrev  0x0000447b      0x2a8 Src/canbus.o
+ .debug_abbrev  0x00004723      0x353 Src/lcd_lvgl.o
+ .debug_abbrev  0x00004a76      0x322 Src/ledDriver.o
+ .debug_abbrev  0x00004d98      0x332 Src/main.o
+ .debug_abbrev  0x000050ca      0x2d8 Src/stm32f7xx_hal_msp.o
+ .debug_abbrev  0x000053a2      0x203 Src/stm32f7xx_it.o
+ .debug_abbrev  0x000055a5      0x212 Src/system_stm32f7xx.o
+ .debug_abbrev  0x000057b7       0xa5 Utilities/Fonts/font24.o
+ .debug_abbrev  0x0000585c      0x209 lv_examples/lv_apps/demo/canbus_ico.o
+ .debug_abbrev  0x00005a65      0x209 lv_examples/lv_apps/demo/config.o
+ .debug_abbrev  0x00005c6e      0x3ba lv_examples/lv_apps/demo/demo2.o
+ .debug_abbrev  0x00006028      0x209 lv_examples/lv_apps/demo/home.o
+ .debug_abbrev  0x00006231      0x209 lv_examples/lv_apps/demo/wifi.o
+ .debug_abbrev  0x0000643a      0x2c2 lvgl/lv_core/lv_group.o
+ .debug_abbrev  0x000066fc      0x36a lvgl/lv_core/lv_indev.o
+ .debug_abbrev  0x00006a66      0x3b5 lvgl/lv_core/lv_obj.o
+ .debug_abbrev  0x00006e1b      0x347 lvgl/lv_core/lv_refr.o
+ .debug_abbrev  0x00007162      0x2a4 lvgl/lv_core/lv_style.o
+ .debug_abbrev  0x00007406      0x21a lvgl/lv_core/lv_vdb.o
+ .debug_abbrev  0x00007620      0x33e lvgl/lv_draw/lv_draw.o
+ .debug_abbrev  0x0000795e      0x2f5 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_abbrev  0x00007c53      0x28c lvgl/lv_hal/lv_hal_disp.o
+ .debug_abbrev  0x00007edf      0x242 lvgl/lv_hal/lv_hal_indev.o
+ .debug_abbrev  0x00008121       0xaf lvgl/lv_hal/lv_hal_tick.o
+ .debug_abbrev  0x000081d0      0x2b7 lvgl/lv_misc/lv_anim.o
+ .debug_abbrev  0x00008487      0x23f lvgl/lv_misc/lv_area.o
+ .debug_abbrev  0x000086c6      0x1ed lvgl/lv_misc/lv_circ.o
+ .debug_abbrev  0x000088b3      0x18f lvgl/lv_misc/lv_font.o
+ .debug_abbrev  0x00008a42      0x2dc lvgl/lv_misc/lv_fs.o
+ .debug_abbrev  0x00008d1e      0x2c3 lvgl/lv_misc/lv_ll.o
+ .debug_abbrev  0x00008fe1       0x8c lvgl/lv_misc/lv_math.o
+ .debug_abbrev  0x0000906d      0x312 lvgl/lv_misc/lv_mem.o
+ .debug_abbrev  0x0000937f      0x1be lvgl/lv_misc/lv_task.o
+ .debug_abbrev  0x0000953d       0x93 lvgl/lv_misc/lv_trigo.o
+ .debug_abbrev  0x000095d0      0x32b lvgl/lv_misc/lv_txt.o
+ .debug_abbrev  0x000098fb      0x324 lvgl/lv_misc/lv_ufs.o
+ .debug_abbrev  0x00009c1f      0x104 lvgl/lv_misc/lv_fonts/lv_font_dejavu_142.o
+ .debug_abbrev  0x00009d23      0x104 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+ .debug_abbrev  0x00009e27      0x104 lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o
+ .debug_abbrev  0x00009f2b      0x104 lvgl/lv_misc/lv_fonts/lv_font_dejavu_96.o
+ .debug_abbrev  0x0000a02f      0x31d lvgl/lv_objx/lv_bar.o
+ .debug_abbrev  0x0000a34c      0x39f lvgl/lv_objx/lv_btnm.o
+ .debug_abbrev  0x0000a6eb      0x369 lvgl/lv_objx/lv_chart.o
+ .debug_abbrev  0x0000aa54      0x32d lvgl/lv_objx/lv_cont.o
+ .debug_abbrev  0x0000ad81      0x324 lvgl/lv_objx/lv_gauge.o
+ .debug_abbrev  0x0000b0a5      0x31c lvgl/lv_objx/lv_img.o
+ .debug_abbrev  0x0000b3c1      0x38a lvgl/lv_objx/lv_label.o
+ .debug_abbrev  0x0000b74b      0x286 lvgl/lv_objx/lv_line.o
+ .debug_abbrev  0x0000b9d1      0x34f lvgl/lv_objx/lv_lmeter.o
+ .debug_abbrev  0x0000bd20      0x34f lvgl/lv_objx/lv_page.o
+ .debug_abbrev  0x0000c06f      0x328 lvgl/lv_objx/lv_slider.o
+ .debug_abbrev  0x0000c397      0x2d4 lvgl/lv_objx/lv_sw.o
+ .debug_abbrev  0x0000c66b      0x39b lvgl/lv_objx/lv_ta.o
+ .debug_abbrev  0x0000ca06      0x399 lvgl/lv_objx/lv_tabview.o
+ .debug_abbrev  0x0000cd9f      0x247 lvgl/lv_themes/lv_theme.o
+ .debug_abbrev  0x0000cfe6       0x12 startup/startup_stm32f769xx.o
+
+.debug_aranges  0x00000000     0x3338
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
  .debug_aranges
                 0x00000000       0x78 Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_aranges
@@ -20694,28 +23015,29 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_aranges
                 0x00001718       0xc8 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
  .debug_aranges
-                0x000017e0       0x28 Src/adc.o
+                0x000017e0       0x30 Src/adc.o
  .debug_aranges
-                0x00001808       0x48 Src/canbus.o
+                0x00001810       0x50 Src/canbus.o
  .debug_aranges
-                0x00001850       0x88 Src/lcd_lvgl.o
+                0x00001860       0x88 Src/lcd_lvgl.o
  .debug_aranges
-                0x000018d8       0x60 Src/ledDriver.o
+                0x000018e8       0x70 Src/ledDriver.o
  .debug_aranges
-                0x00001938       0x78 Src/main.o
+                0x00001958       0x78 Src/main.o
  .debug_aranges
-                0x000019b0       0xc0 Src/stm32f7xx_hal_msp.o
+                0x000019d0       0xc0 Src/stm32f7xx_hal_msp.o
  .debug_aranges
-                0x00001a70       0x78 Src/stm32f7xx_it.o
+                0x00001a90       0x78 Src/stm32f7xx_it.o
  .debug_aranges
-                0x00001ae8       0x28 Src/system_stm32f7xx.o
+                0x00001b08       0x28 Src/system_stm32f7xx.o
  .debug_aranges
-                0x00001b10       0x18 Utilities/Fonts/font24.o
+                0x00001b30       0x18 Utilities/Fonts/font24.o
  .debug_aranges
-                0x00001b28       0x18 lv_examples/lv_apps/demo/canbus_ico.o
+                0x00001b48       0x18 lv_examples/lv_apps/demo/canbus_ico.o
  .debug_aranges
-                0x00001b40       0x18 lv_examples/lv_apps/demo/config.o
+                0x00001b60       0x18 lv_examples/lv_apps/demo/config.o
  .debug_aranges
+<<<<<<< HEAD
                 0x00001b58      0x118 lv_examples/lv_apps/demo/demo2.o
  .debug_aranges
                 0x00001c70       0x18 lv_examples/lv_apps/demo/home.o
@@ -20767,11 +23089,67 @@ OUTPUT(Projet.elf elf32-littlearm)
                 0x00002758       0x90 lvgl/lv_misc/lv_txt.o
  .debug_aranges
                 0x000027e8       0xa8 lvgl/lv_misc/lv_ufs.o
+=======
+                0x00001b78      0x100 lv_examples/lv_apps/demo/demo2.o
  .debug_aranges
-                0x00002890       0x18 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+                0x00001c78       0x18 lv_examples/lv_apps/demo/home.o
  .debug_aranges
-                0x000028a8       0x18 lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o
+                0x00001c90       0x18 lv_examples/lv_apps/demo/wifi.o
  .debug_aranges
+                0x00001ca8       0xa0 lvgl/lv_core/lv_group.o
+ .debug_aranges
+                0x00001d48       0xd0 lvgl/lv_core/lv_indev.o
+ .debug_aranges
+                0x00001e18      0x250 lvgl/lv_core/lv_obj.o
+ .debug_aranges
+                0x00002068       0xa8 lvgl/lv_core/lv_refr.o
+ .debug_aranges
+                0x00002110       0x48 lvgl/lv_core/lv_style.o
+ .debug_aranges
+                0x00002158       0x30 lvgl/lv_core/lv_vdb.o
+ .debug_aranges
+                0x00002188       0xb0 lvgl/lv_draw/lv_draw.o
+ .debug_aranges
+                0x00002238       0x68 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_aranges
+                0x000022a0       0x78 lvgl/lv_hal/lv_hal_disp.o
+ .debug_aranges
+                0x00002318       0x38 lvgl/lv_hal/lv_hal_indev.o
+ .debug_aranges
+                0x00002350       0x30 lvgl/lv_hal/lv_hal_tick.o
+ .debug_aranges
+                0x00002380       0x60 lvgl/lv_misc/lv_anim.o
+ .debug_aranges
+                0x000023e0       0x78 lvgl/lv_misc/lv_area.o
+ .debug_aranges
+                0x00002458       0x30 lvgl/lv_misc/lv_circ.o
+ .debug_aranges
+                0x00002488       0x60 lvgl/lv_misc/lv_font.o
+ .debug_aranges
+                0x000024e8       0xc0 lvgl/lv_misc/lv_fs.o
+ .debug_aranges
+                0x000025a8       0x90 lvgl/lv_misc/lv_ll.o
+ .debug_aranges
+                0x00002638       0x20 lvgl/lv_misc/lv_math.o
+ .debug_aranges
+                0x00002658       0x68 lvgl/lv_misc/lv_mem.o
+ .debug_aranges
+                0x000026c0       0x80 lvgl/lv_misc/lv_task.o
+ .debug_aranges
+                0x00002740       0x20 lvgl/lv_misc/lv_trigo.o
+ .debug_aranges
+                0x00002760       0x90 lvgl/lv_misc/lv_txt.o
+ .debug_aranges
+                0x000027f0       0xa8 lvgl/lv_misc/lv_ufs.o
+ .debug_aranges
+                0x00002898       0x18 lvgl/lv_misc/lv_fonts/lv_font_dejavu_142.o
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
+ .debug_aranges
+                0x000028b0       0x18 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+ .debug_aranges
+                0x000028c8       0x18 lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o
+ .debug_aranges
+<<<<<<< HEAD
                 0x000028c0       0x18 lvgl/lv_misc/lv_fonts/lv_font_dejavu_40_8bpp.o
  .debug_aranges
                 0x000028d8       0x18 lvgl/lv_misc/lv_fonts/lv_font_dejavu_60_8bpp.o
@@ -20809,6 +23187,43 @@ OUTPUT(Projet.elf elf32-littlearm)
                 0x00003308       0x28 startup/startup_stm32f769xx.o
 
 .debug_ranges   0x00000000     0x2e90
+=======
+                0x000028e0       0x18 lvgl/lv_misc/lv_fonts/lv_font_dejavu_96.o
+ .debug_aranges
+                0x000028f8       0x90 lvgl/lv_objx/lv_bar.o
+ .debug_aranges
+                0x00002988       0xd0 lvgl/lv_objx/lv_btnm.o
+ .debug_aranges
+                0x00002a58       0xf0 lvgl/lv_objx/lv_chart.o
+ .debug_aranges
+                0x00002b48       0xb0 lvgl/lv_objx/lv_cont.o
+ .debug_aranges
+                0x00002bf8       0xa0 lvgl/lv_objx/lv_gauge.o
+ .debug_aranges
+                0x00002c98       0x60 lvgl/lv_objx/lv_img.o
+ .debug_aranges
+                0x00002cf8      0x120 lvgl/lv_objx/lv_label.o
+ .debug_aranges
+                0x00002e18       0x68 lvgl/lv_objx/lv_line.o
+ .debug_aranges
+                0x00002e80       0x90 lvgl/lv_objx/lv_lmeter.o
+ .debug_aranges
+                0x00002f10       0xb0 lvgl/lv_objx/lv_page.o
+ .debug_aranges
+                0x00002fc0       0xa8 lvgl/lv_objx/lv_slider.o
+ .debug_aranges
+                0x00003068       0x68 lvgl/lv_objx/lv_sw.o
+ .debug_aranges
+                0x000030d0      0x128 lvgl/lv_objx/lv_ta.o
+ .debug_aranges
+                0x000031f8       0xf0 lvgl/lv_objx/lv_tabview.o
+ .debug_aranges
+                0x000032e8       0x28 lvgl/lv_themes/lv_theme.o
+ .debug_aranges
+                0x00003310       0x28 startup/startup_stm32f769xx.o
+
+.debug_ranges   0x00000000     0x2e98
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
  .debug_ranges  0x00000000       0x68 Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_ranges  0x00000068       0x20 Drivers/BSP/Components/otm8009a/otm8009a.o
  .debug_ranges  0x00000088      0x120 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
@@ -20834,6 +23249,7 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_ranges  0x000010d8      0x358 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
  .debug_ranges  0x00001430      0x168 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
  .debug_ranges  0x00001598       0xb8 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+<<<<<<< HEAD
  .debug_ranges  0x00001650       0x18 Src/adc.o
  .debug_ranges  0x00001668       0x38 Src/canbus.o
  .debug_ranges  0x000016a0       0x78 Src/lcd_lvgl.o
@@ -20884,6 +23300,58 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_ranges  0x00002e70       0x20 startup/startup_stm32f769xx.o
 
 .debug_macro    0x00000000    0x3a9dd
+=======
+ .debug_ranges  0x00001650       0x20 Src/adc.o
+ .debug_ranges  0x00001670       0x40 Src/canbus.o
+ .debug_ranges  0x000016b0       0x78 Src/lcd_lvgl.o
+ .debug_ranges  0x00001728       0x60 Src/ledDriver.o
+ .debug_ranges  0x00001788       0x68 Src/main.o
+ .debug_ranges  0x000017f0       0xb0 Src/stm32f7xx_hal_msp.o
+ .debug_ranges  0x000018a0       0x68 Src/stm32f7xx_it.o
+ .debug_ranges  0x00001908       0x18 Src/system_stm32f7xx.o
+ .debug_ranges  0x00001920       0xf0 lv_examples/lv_apps/demo/demo2.o
+ .debug_ranges  0x00001a10       0x90 lvgl/lv_core/lv_group.o
+ .debug_ranges  0x00001aa0       0xf0 lvgl/lv_core/lv_indev.o
+ .debug_ranges  0x00001b90      0x240 lvgl/lv_core/lv_obj.o
+ .debug_ranges  0x00001dd0       0x98 lvgl/lv_core/lv_refr.o
+ .debug_ranges  0x00001e68       0x38 lvgl/lv_core/lv_style.o
+ .debug_ranges  0x00001ea0       0x20 lvgl/lv_core/lv_vdb.o
+ .debug_ranges  0x00001ec0       0xe8 lvgl/lv_draw/lv_draw.o
+ .debug_ranges  0x00001fa8       0x70 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_ranges  0x00002018       0x68 lvgl/lv_hal/lv_hal_disp.o
+ .debug_ranges  0x00002080       0x28 lvgl/lv_hal/lv_hal_indev.o
+ .debug_ranges  0x000020a8       0x20 lvgl/lv_hal/lv_hal_tick.o
+ .debug_ranges  0x000020c8       0x50 lvgl/lv_misc/lv_anim.o
+ .debug_ranges  0x00002118       0x68 lvgl/lv_misc/lv_area.o
+ .debug_ranges  0x00002180       0x20 lvgl/lv_misc/lv_circ.o
+ .debug_ranges  0x000021a0       0x50 lvgl/lv_misc/lv_font.o
+ .debug_ranges  0x000021f0       0xb0 lvgl/lv_misc/lv_fs.o
+ .debug_ranges  0x000022a0       0x80 lvgl/lv_misc/lv_ll.o
+ .debug_ranges  0x00002320       0x10 lvgl/lv_misc/lv_math.o
+ .debug_ranges  0x00002330       0x58 lvgl/lv_misc/lv_mem.o
+ .debug_ranges  0x00002388       0x70 lvgl/lv_misc/lv_task.o
+ .debug_ranges  0x000023f8       0x10 lvgl/lv_misc/lv_trigo.o
+ .debug_ranges  0x00002408       0x80 lvgl/lv_misc/lv_txt.o
+ .debug_ranges  0x00002488       0x98 lvgl/lv_misc/lv_ufs.o
+ .debug_ranges  0x00002520       0x80 lvgl/lv_objx/lv_bar.o
+ .debug_ranges  0x000025a0       0xc0 lvgl/lv_objx/lv_btnm.o
+ .debug_ranges  0x00002660       0xe0 lvgl/lv_objx/lv_chart.o
+ .debug_ranges  0x00002740       0xb8 lvgl/lv_objx/lv_cont.o
+ .debug_ranges  0x000027f8       0x90 lvgl/lv_objx/lv_gauge.o
+ .debug_ranges  0x00002888       0x50 lvgl/lv_objx/lv_img.o
+ .debug_ranges  0x000028d8      0x128 lvgl/lv_objx/lv_label.o
+ .debug_ranges  0x00002a00       0x58 lvgl/lv_objx/lv_line.o
+ .debug_ranges  0x00002a58       0x80 lvgl/lv_objx/lv_lmeter.o
+ .debug_ranges  0x00002ad8       0xa0 lvgl/lv_objx/lv_page.o
+ .debug_ranges  0x00002b78       0x98 lvgl/lv_objx/lv_slider.o
+ .debug_ranges  0x00002c10       0x58 lvgl/lv_objx/lv_sw.o
+ .debug_ranges  0x00002c68      0x118 lvgl/lv_objx/lv_ta.o
+ .debug_ranges  0x00002d80       0xe0 lvgl/lv_objx/lv_tabview.o
+ .debug_ranges  0x00002e60       0x18 lvgl/lv_themes/lv_theme.o
+ .debug_ranges  0x00002e78       0x20 startup/startup_stm32f769xx.o
+
+.debug_macro    0x00000000    0x3aa43
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
  .debug_macro   0x00000000       0x81 Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_macro   0x00000081       0x16 Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_macro   0x00000097      0x230 Drivers/BSP/Components/ft6x06/ft6x06.o
@@ -20940,6 +23408,7 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_macro   0x0002bd6a      0x1de Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
  .debug_macro   0x0002bf48      0x44f Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
  .debug_macro   0x0002c397       0x16 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+<<<<<<< HEAD
  .debug_macro   0x0002c3ad      0x24d Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
  .debug_macro   0x0002c5fa       0x9a Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
  .debug_macro   0x0002c694      0x1e4 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
@@ -21305,6 +23774,373 @@ OUTPUT(Projet.elf elf32-littlearm)
                                0x8f34 (size before relaxing)
  .debug_str     0x00135046       0x55 lvgl/lv_themes/lv_theme.o
                                0x7bfe (size before relaxing)
+=======
+ .debug_macro   0x0002c3ad      0x253 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .debug_macro   0x0002c600       0x9a Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .debug_macro   0x0002c69a      0x1e4 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .debug_macro   0x0002c87e       0x10 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .debug_macro   0x0002c88e       0x16 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .debug_macro   0x0002c8a4      0x13d Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .debug_macro   0x0002c9e1      0x3cb Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
+ .debug_macro   0x0002cdac      0x45b Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
+ .debug_macro   0x0002d207      0x170 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
+ .debug_macro   0x0002d377       0x2e Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
+ .debug_macro   0x0002d3a5      0x3d7 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
+ .debug_macro   0x0002d77c      0x3b4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o
+ .debug_macro   0x0002db30      0x3b3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.o
+ .debug_macro   0x0002dee3      0x3bb Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.o
+ .debug_macro   0x0002e29e      0x3b3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
+ .debug_macro   0x0002e651      0x3ba Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
+ .debug_macro   0x0002ea0b      0x3c1 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o
+ .debug_macro   0x0002edcc      0x3f5 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o
+ .debug_macro   0x0002f1c1      0x3eb Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o
+ .debug_macro   0x0002f5ac      0x47f Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o
+ .debug_macro   0x0002fa2b      0x3b3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o
+ .debug_macro   0x0002fdde      0x3b3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o
+ .debug_macro   0x00030191      0x3cb Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o
+ .debug_macro   0x0003055c      0x3d7 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
+ .debug_macro   0x00030933      0x3bf Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
+ .debug_macro   0x00030cf2      0x3b3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
+ .debug_macro   0x000310a5      0x3b4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
+ .debug_macro   0x00031459      0x3bf Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
+ .debug_macro   0x00031818      0x3b3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+ .debug_macro   0x00031bcb      0x3e6 Src/adc.o
+ .debug_macro   0x00031fb1       0x22 Src/adc.o
+ .debug_macro   0x00031fd3      0x1b5 Src/adc.o
+ .debug_macro   0x00032188       0x2e Src/adc.o
+ .debug_macro   0x000321b6      0x3ea Src/canbus.o
+ .debug_macro   0x000325a0      0x174 Src/canbus.o
+ .debug_macro   0x00032714       0x10 Src/canbus.o
+ .debug_macro   0x00032724       0x1c Src/canbus.o
+ .debug_macro   0x00032740      0x4cb Src/lcd_lvgl.o
+ .debug_macro   0x00032c0b       0xd3 Src/lcd_lvgl.o
+ .debug_macro   0x00032cde       0x10 Src/lcd_lvgl.o
+ .debug_macro   0x00032cee       0x22 Src/lcd_lvgl.o
+ .debug_macro   0x00032d10       0xa0 Src/lcd_lvgl.o
+ .debug_macro   0x00032db0      0x3f7 Src/ledDriver.o
+ .debug_macro   0x000331a7      0x740 Src/main.o
+ .debug_macro   0x000338e7       0x12 Src/main.o
+ .debug_macro   0x000338f9      0x136 Src/main.o
+ .debug_macro   0x00033a2f       0x23 Src/main.o
+ .debug_macro   0x00033a52       0x3a Src/main.o
+ .debug_macro   0x00033a8c       0x10 Src/main.o
+ .debug_macro   0x00033a9c       0x10 Src/main.o
+ .debug_macro   0x00033aac       0x2e Src/main.o
+ .debug_macro   0x00033ada       0x10 Src/main.o
+ .debug_macro   0x00033aea       0x1c Src/main.o
+ .debug_macro   0x00033b06       0x40 Src/main.o
+ .debug_macro   0x00033b46      0x3b3 Src/stm32f7xx_hal_msp.o
+ .debug_macro   0x00033ef9      0x3d6 Src/stm32f7xx_it.o
+ .debug_macro   0x000342cf      0x3b9 Src/system_stm32f7xx.o
+ .debug_macro   0x00034688       0x73 Utilities/Fonts/font24.o
+ .debug_macro   0x000346fb      0x1b8 lv_examples/lv_apps/demo/canbus_ico.o
+ .debug_macro   0x000348b3      0x1b8 lv_examples/lv_apps/demo/config.o
+ .debug_macro   0x00034a6b      0x7f2 lv_examples/lv_apps/demo/demo2.o
+ .debug_macro   0x0003525d      0x1e1 lv_examples/lv_apps/demo/demo2.o
+ .debug_macro   0x0003543e      0x1b8 lv_examples/lv_apps/demo/home.o
+ .debug_macro   0x000355f6      0x1b8 lv_examples/lv_apps/demo/wifi.o
+ .debug_macro   0x000357ae      0x1dc lvgl/lv_core/lv_group.o
+ .debug_macro   0x0003598a      0x255 lvgl/lv_core/lv_indev.o
+ .debug_macro   0x00035bdf       0x1c lvgl/lv_core/lv_indev.o
+ .debug_macro   0x00035bfb      0x2e9 lvgl/lv_core/lv_obj.o
+ .debug_macro   0x00035ee4       0x10 lvgl/lv_core/lv_obj.o
+ .debug_macro   0x00035ef4      0x1f9 lvgl/lv_core/lv_refr.o
+ .debug_macro   0x000360ed      0x1e1 lvgl/lv_core/lv_style.o
+ .debug_macro   0x000362ce      0x195 lvgl/lv_core/lv_vdb.o
+ .debug_macro   0x00036463      0x375 lvgl/lv_draw/lv_draw.o
+ .debug_macro   0x000367d8       0x64 lvgl/lv_draw/lv_draw.o
+ .debug_macro   0x0003683c      0x216 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_macro   0x00036a52       0x16 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_macro   0x00036a68      0x20c lvgl/lv_hal/lv_hal_disp.o
+ .debug_macro   0x00036c74       0x10 lvgl/lv_hal/lv_hal_disp.o
+ .debug_macro   0x00036c84      0x189 lvgl/lv_hal/lv_hal_indev.o
+ .debug_macro   0x00036e0d       0x8e lvgl/lv_hal/lv_hal_tick.o
+ .debug_macro   0x00036e9b      0x185 lvgl/lv_misc/lv_anim.o
+ .debug_macro   0x00037020      0x136 lvgl/lv_misc/lv_area.o
+ .debug_macro   0x00037156      0x12d lvgl/lv_misc/lv_circ.o
+ .debug_macro   0x00037283       0x9d lvgl/lv_misc/lv_font.o
+ .debug_macro   0x00037320      0x15e lvgl/lv_misc/lv_fs.o
+ .debug_macro   0x0003747e      0x14e lvgl/lv_misc/lv_ll.o
+ .debug_macro   0x000375cc       0x7b lvgl/lv_misc/lv_math.o
+ .debug_macro   0x00037647       0x16 lvgl/lv_misc/lv_math.o
+ .debug_macro   0x0003765d      0x141 lvgl/lv_misc/lv_mem.o
+ .debug_macro   0x0003779e       0xbe lvgl/lv_misc/lv_task.o
+ .debug_macro   0x0003785c       0x72 lvgl/lv_misc/lv_trigo.o
+ .debug_macro   0x000378ce       0x10 lvgl/lv_misc/lv_trigo.o
+ .debug_macro   0x000378de      0x17d lvgl/lv_misc/lv_txt.o
+ .debug_macro   0x00037a5b      0x237 lvgl/lv_misc/lv_ufs.o
+ .debug_macro   0x00037c92       0x10 lvgl/lv_misc/lv_ufs.o
+ .debug_macro   0x00037ca2      0x241 lvgl/lv_misc/lv_ufs.o
+ .debug_macro   0x00037ee3       0x99 lvgl/lv_misc/lv_fonts/lv_font_dejavu_142.o
+ .debug_macro   0x00037f7c       0x99 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+ .debug_macro   0x00038015       0x99 lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o
+ .debug_macro   0x000380ae       0x99 lvgl/lv_misc/lv_fonts/lv_font_dejavu_96.o
+ .debug_macro   0x00038147      0x392 lvgl/lv_objx/lv_bar.o
+ .debug_macro   0x000384d9      0x2f0 lvgl/lv_objx/lv_btnm.o
+ .debug_macro   0x000387c9       0x28 lvgl/lv_objx/lv_btnm.o
+ .debug_macro   0x000387f1      0x273 lvgl/lv_objx/lv_chart.o
+ .debug_macro   0x00038a64      0x270 lvgl/lv_objx/lv_cont.o
+ .debug_macro   0x00038cd4      0x35b lvgl/lv_objx/lv_gauge.o
+ .debug_macro   0x0003902f       0x16 lvgl/lv_objx/lv_gauge.o
+ .debug_macro   0x00039045      0x299 lvgl/lv_objx/lv_img.o
+ .debug_macro   0x000392de      0x23f lvgl/lv_objx/lv_label.o
+ .debug_macro   0x0003951d      0x20b lvgl/lv_objx/lv_line.o
+ .debug_macro   0x00039728      0x273 lvgl/lv_objx/lv_lmeter.o
+ .debug_macro   0x0003999b      0x2d3 lvgl/lv_objx/lv_page.o
+ .debug_macro   0x00039c6e      0x2fa lvgl/lv_objx/lv_slider.o
+ .debug_macro   0x00039f68      0x2d4 lvgl/lv_objx/lv_sw.o
+ .debug_macro   0x0003a23c      0x2fa lvgl/lv_objx/lv_ta.o
+ .debug_macro   0x0003a536      0x33b lvgl/lv_objx/lv_tabview.o
+ .debug_macro   0x0003a871      0x1d2 lvgl/lv_themes/lv_theme.o
+
+.debug_line     0x00000000    0x3303b
+ .debug_line    0x00000000      0x414 Drivers/BSP/Components/ft6x06/ft6x06.o
+ .debug_line    0x00000414      0x411 Drivers/BSP/Components/otm8009a/otm8009a.o
+ .debug_line    0x00000825      0xc21 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
+ .debug_line    0x00001446     0x118b Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+ .debug_line    0x000025d1      0xab8 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
+ .debug_line    0x00003089      0xc98 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
+ .debug_line    0x00003d21      0xb39 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
+ .debug_line    0x0000485a      0xd43 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o
+ .debug_line    0x0000559d      0xc26 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.o
+ .debug_line    0x000061c3      0xdfa Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.o
+ .debug_line    0x00006fbd      0xc4c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
+ .debug_line    0x00007c09      0xc03 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
+ .debug_line    0x0000880c      0xe64 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o
+ .debug_line    0x00009670     0x13b7 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o
+ .debug_line    0x0000aa27      0xb3d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o
+ .debug_line    0x0000b564     0x19d3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o
+ .debug_line    0x0000cf37     0x120b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o
+ .debug_line    0x0000e142      0x9f8 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o
+ .debug_line    0x0000eb3a      0xa86 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o
+ .debug_line    0x0000f5c0      0xb94 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
+ .debug_line    0x00010154      0xade Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
+ .debug_line    0x00010c32      0xc8b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
+ .debug_line    0x000118bd     0x1b49 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
+ .debug_line    0x00013406     0x109d Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
+ .debug_line    0x000144a3      0xbf5 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+ .debug_line    0x00015098      0xa50 Src/adc.o
+ .debug_line    0x00015ae8      0xab3 Src/canbus.o
+ .debug_line    0x0001659b      0xf37 Src/lcd_lvgl.o
+ .debug_line    0x000174d2      0xccc Src/ledDriver.o
+ .debug_line    0x0001819e     0x130e Src/main.o
+ .debug_line    0x000194ac      0xb3c Src/stm32f7xx_hal_msp.o
+ .debug_line    0x00019fe8      0xa2b Src/stm32f7xx_it.o
+ .debug_line    0x0001aa13      0x94d Src/system_stm32f7xx.o
+ .debug_line    0x0001b360      0x2ca Utilities/Fonts/font24.o
+ .debug_line    0x0001b62a      0x545 lv_examples/lv_apps/demo/canbus_ico.o
+ .debug_line    0x0001bb6f      0x541 lv_examples/lv_apps/demo/config.o
+ .debug_line    0x0001c0b0     0x184d lv_examples/lv_apps/demo/demo2.o
+ .debug_line    0x0001d8fd      0x53f lv_examples/lv_apps/demo/home.o
+ .debug_line    0x0001de3c      0x53f lv_examples/lv_apps/demo/wifi.o
+ .debug_line    0x0001e37b      0x6de lvgl/lv_core/lv_group.o
+ .debug_line    0x0001ea59      0xa2c lvgl/lv_core/lv_indev.o
+ .debug_line    0x0001f485     0x1026 lvgl/lv_core/lv_obj.o
+ .debug_line    0x000204ab      0x7c7 lvgl/lv_core/lv_refr.o
+ .debug_line    0x00020c72      0x649 lvgl/lv_core/lv_style.o
+ .debug_line    0x000212bb      0x518 lvgl/lv_core/lv_vdb.o
+ .debug_line    0x000217d3     0x1006 lvgl/lv_draw/lv_draw.o
+ .debug_line    0x000227d9      0xa11 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_line    0x000231ea      0x72b lvgl/lv_hal/lv_hal_disp.o
+ .debug_line    0x00023915      0x4c9 lvgl/lv_hal/lv_hal_indev.o
+ .debug_line    0x00023dde      0x355 lvgl/lv_hal/lv_hal_tick.o
+ .debug_line    0x00024133      0x549 lvgl/lv_misc/lv_anim.o
+ .debug_line    0x0002467c      0x4bb lvgl/lv_misc/lv_area.o
+ .debug_line    0x00024b37      0x3ac lvgl/lv_misc/lv_circ.o
+ .debug_line    0x00024ee3      0x47d lvgl/lv_misc/lv_font.o
+ .debug_line    0x00025360      0x723 lvgl/lv_misc/lv_fs.o
+ .debug_line    0x00025a83      0x505 lvgl/lv_misc/lv_ll.o
+ .debug_line    0x00025f88      0x336 lvgl/lv_misc/lv_math.o
+ .debug_line    0x000262be      0x4e0 lvgl/lv_misc/lv_mem.o
+ .debug_line    0x0002679e      0x4be lvgl/lv_misc/lv_task.o
+ .debug_line    0x00026c5c      0x2ff lvgl/lv_misc/lv_trigo.o
+ .debug_line    0x00026f5b      0x71b lvgl/lv_misc/lv_txt.o
+ .debug_line    0x00027676      0x6c9 lvgl/lv_misc/lv_ufs.o
+ .debug_line    0x00027d3f      0x3cf lvgl/lv_misc/lv_fonts/lv_font_dejavu_142.o
+ .debug_line    0x0002810e      0x3a7 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+ .debug_line    0x000284b5      0x3a8 lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o
+ .debug_line    0x0002885d      0x3ce lvgl/lv_misc/lv_fonts/lv_font_dejavu_96.o
+ .debug_line    0x00028c2b      0xaee lvgl/lv_objx/lv_bar.o
+ .debug_line    0x00029719      0xd7c lvgl/lv_objx/lv_btnm.o
+ .debug_line    0x0002a495      0xb63 lvgl/lv_objx/lv_chart.o
+ .debug_line    0x0002aff8      0xb24 lvgl/lv_objx/lv_cont.o
+ .debug_line    0x0002bb1c      0xab8 lvgl/lv_objx/lv_gauge.o
+ .debug_line    0x0002c5d4      0x970 lvgl/lv_objx/lv_img.o
+ .debug_line    0x0002cf44      0xc08 lvgl/lv_objx/lv_label.o
+ .debug_line    0x0002db4c      0x794 lvgl/lv_objx/lv_line.o
+ .debug_line    0x0002e2e0      0x8df lvgl/lv_objx/lv_lmeter.o
+ .debug_line    0x0002ebbf      0xc8f lvgl/lv_objx/lv_page.o
+ .debug_line    0x0002f84e      0xbe1 lvgl/lv_objx/lv_slider.o
+ .debug_line    0x0003042f      0x9c1 lvgl/lv_objx/lv_sw.o
+ .debug_line    0x00030df0      0xe36 lvgl/lv_objx/lv_ta.o
+ .debug_line    0x00031c26      0xe2d lvgl/lv_objx/lv_tabview.o
+ .debug_line    0x00032a53      0x569 lvgl/lv_themes/lv_theme.o
+ .debug_line    0x00032fbc       0x7f startup/startup_stm32f769xx.o
+
+.debug_str      0x00000000   0x134e49
+ .debug_str     0x00000000     0x3e84 Drivers/BSP/Components/ft6x06/ft6x06.o
+                               0x404a (size before relaxing)
+ .debug_str     0x00003e84     0x12f2 Drivers/BSP/Components/otm8009a/otm8009a.o
+                               0x4acd (size before relaxing)
+ .debug_str     0x00005176   0x11d613 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
+                             0x120ebe (size before relaxing)
+ .debug_str     0x00122789     0x2ce3 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_lcd.o
+                             0x123a99 (size before relaxing)
+ .debug_str     0x0012546c      0x3b3 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_sdram.o
+                             0x120abf (size before relaxing)
+ .debug_str     0x0012581f      0x366 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery_ts.o
+                             0x123544 (size before relaxing)
+ .debug_str     0x00125b85      0x38b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.o
+                             0x11fc68 (size before relaxing)
+ .debug_str     0x00125f10      0x3e5 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.o
+                             0x11f7b0 (size before relaxing)
+ .debug_str     0x001262f5      0x302 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.o
+                             0x11f7ea (size before relaxing)
+ .debug_str     0x001265f7      0x786 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_can.o
+                             0x11f934 (size before relaxing)
+ .debug_str     0x00126d7d      0x488 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.o
+                             0x11fd0b (size before relaxing)
+ .debug_str     0x00127205      0x31b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.o
+                             0x11f657 (size before relaxing)
+ .debug_str     0x00127520      0x38f Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma2d.o
+                             0x11f81a (size before relaxing)
+ .debug_str     0x001278af      0xa78 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dsi.o
+                             0x1201ab (size before relaxing)
+ .debug_str     0x00128327      0x249 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.o
+                             0x11f4f3 (size before relaxing)
+ .debug_str     0x00128570      0xd52 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.o
+                             0x12035e (size before relaxing)
+ .debug_str     0x001292c2      0x44a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc.o
+                             0x11f87d (size before relaxing)
+ .debug_str     0x0012970c       0x8b Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_ltdc_ex.o
+                             0x11f669 (size before relaxing)
+ .debug_str     0x00129797      0x1f3 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.o
+                             0x11f5a3 (size before relaxing)
+ .debug_str     0x0012998a      0x386 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.o
+                             0x11f632 (size before relaxing)
+ .debug_str     0x00129d10      0x11f Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.o
+                             0x11f5c4 (size before relaxing)
+ .debug_str     0x00129e2f      0x27a Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_sdram.o
+                             0x11f82b (size before relaxing)
+ .debug_str     0x0012a0a9      0xe40 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
+                             0x12024b (size before relaxing)
+ .debug_str     0x0012aee9      0x67c Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
+                             0x11fd6d (size before relaxing)
+ .debug_str     0x0012b565      0x477 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+                             0x11f77b (size before relaxing)
+ .debug_str     0x0012b9dc      0x1cf Src/adc.o
+                             0x120288 (size before relaxing)
+ .debug_str     0x0012bbab       0xe9 Src/canbus.o
+                             0x1208b5 (size before relaxing)
+ .debug_str     0x0012bc94      0x8c6 Src/lcd_lvgl.o
+                             0x123d83 (size before relaxing)
+ .debug_str     0x0012c55a      0x115 Src/ledDriver.o
+                             0x120c50 (size before relaxing)
+ .debug_str     0x0012c66f     0x196b Src/main.o
+                             0x123f70 (size before relaxing)
+ .debug_str     0x0012dfda       0xff Src/stm32f7xx_hal_msp.o
+                             0x120f31 (size before relaxing)
+ .debug_str     0x0012e0d9       0xd6 Src/stm32f7xx_it.o
+                             0x11fc93 (size before relaxing)
+ .debug_str     0x0012e1af       0x5a Src/system_stm32f7xx.o
+                             0x11f318 (size before relaxing)
+ .debug_str     0x0012e209       0x29 Utilities/Fonts/font24.o
+                               0x3588 (size before relaxing)
+ .debug_str     0x0012e232      0x107 lv_examples/lv_apps/demo/canbus_ico.o
+                               0x7c08 (size before relaxing)
+ .debug_str     0x0012e339       0x36 lv_examples/lv_apps/demo/config.o
+                               0x7bfc (size before relaxing)
+ .debug_str     0x0012e36f     0x1523 lv_examples/lv_apps/demo/demo2.o
+                             0x125ca9 (size before relaxing)
+ .debug_str     0x0012f892       0x32 lv_examples/lv_apps/demo/home.o
+                               0x7bf6 (size before relaxing)
+ .debug_str     0x0012f8c4       0x32 lv_examples/lv_apps/demo/wifi.o
+                               0x7bf6 (size before relaxing)
+ .debug_str     0x0012f8f6      0x1d8 lvgl/lv_core/lv_group.o
+                               0x817e (size before relaxing)
+ .debug_str     0x0012face      0x496 lvgl/lv_core/lv_indev.o
+                               0x8616 (size before relaxing)
+ .debug_str     0x0012ff64      0x7c7 lvgl/lv_core/lv_obj.o
+                               0x8e4c (size before relaxing)
+ .debug_str     0x0013072b      0x222 lvgl/lv_core/lv_refr.o
+                               0x8211 (size before relaxing)
+ .debug_str     0x0013094d      0x18d lvgl/lv_core/lv_style.o
+                               0x7e55 (size before relaxing)
+ .debug_str     0x00130ada       0xac lvgl/lv_core/lv_vdb.o
+                               0x7266 (size before relaxing)
+ .debug_str     0x00130b86      0x86d lvgl/lv_draw/lv_draw.o
+                               0x99ce (size before relaxing)
+ .debug_str     0x001313f3      0x22f lvgl/lv_draw/lv_draw_vbasic.o
+                               0x7e4a (size before relaxing)
+ .debug_str     0x00131622      0x125 lvgl/lv_hal/lv_hal_disp.o
+                               0x7db4 (size before relaxing)
+ .debug_str     0x00131747       0x6d lvgl/lv_hal/lv_hal_indev.o
+                               0x7426 (size before relaxing)
+ .debug_str     0x001317b4       0x70 lvgl/lv_hal/lv_hal_tick.o
+                               0x404d (size before relaxing)
+ .debug_str     0x00131824      0x107 lvgl/lv_misc/lv_anim.o
+                               0x6f9f (size before relaxing)
+ .debug_str     0x0013192b       0xd9 lvgl/lv_misc/lv_area.o
+                               0x6602 (size before relaxing)
+ .debug_str     0x00131a04       0x41 lvgl/lv_misc/lv_circ.o
+                               0x64a4 (size before relaxing)
+ .debug_str     0x00131a45       0xec lvgl/lv_misc/lv_font.o
+                               0x4799 (size before relaxing)
+ .debug_str     0x00131b31      0x177 lvgl/lv_misc/lv_fs.o
+                               0x7030 (size before relaxing)
+ .debug_str     0x00131ca8      0x1c8 lvgl/lv_misc/lv_ll.o
+                               0x66b2 (size before relaxing)
+ .debug_str     0x00131e70       0x5e lvgl/lv_misc/lv_math.o
+                               0x35f8 (size before relaxing)
+ .debug_str     0x00131ece      0x189 lvgl/lv_misc/lv_mem.o
+                               0x6d91 (size before relaxing)
+ .debug_str     0x00132057      0x184 lvgl/lv_misc/lv_task.o
+                               0x4311 (size before relaxing)
+ .debug_str     0x001321db       0x6b lvgl/lv_misc/lv_trigo.o
+                               0x3538 (size before relaxing)
+ .debug_str     0x00132246      0x22a lvgl/lv_misc/lv_txt.o
+                               0x76c2 (size before relaxing)
+ .debug_str     0x00132470      0x630 lvgl/lv_misc/lv_ufs.o
+                               0x86e4 (size before relaxing)
+ .debug_str     0x00132aa0       0x6b lvgl/lv_misc/lv_fonts/lv_font_dejavu_142.o
+                               0x46f4 (size before relaxing)
+ .debug_str     0x00132b0b       0x68 lvgl/lv_misc/lv_fonts/lv_font_dejavu_20.o
+                               0x46f1 (size before relaxing)
+ .debug_str     0x00132b73       0x6b lvgl/lv_misc/lv_fonts/lv_font_dejavu_240.o
+                               0x46f4 (size before relaxing)
+ .debug_str     0x00132bde       0x68 lvgl/lv_misc/lv_fonts/lv_font_dejavu_96.o
+                               0x46f1 (size before relaxing)
+ .debug_str     0x00132c46      0x16b lvgl/lv_objx/lv_bar.o
+                               0x96b2 (size before relaxing)
+ .debug_str     0x00132db1      0x37c lvgl/lv_objx/lv_btnm.o
+                               0x87c5 (size before relaxing)
+ .debug_str     0x0013312d      0x373 lvgl/lv_objx/lv_chart.o
+                               0x84d7 (size before relaxing)
+ .debug_str     0x001334a0      0x28a lvgl/lv_objx/lv_cont.o
+                               0x8675 (size before relaxing)
+ .debug_str     0x0013372a      0x2b2 lvgl/lv_objx/lv_gauge.o
+                               0x96e4 (size before relaxing)
+ .debug_str     0x001339dc      0x151 lvgl/lv_objx/lv_img.o
+                               0x84c3 (size before relaxing)
+ .debug_str     0x00133b2d      0x372 lvgl/lv_objx/lv_label.o
+                               0x87b6 (size before relaxing)
+ .debug_str     0x00133e9f      0x101 lvgl/lv_objx/lv_line.o
+                               0x8103 (size before relaxing)
+ .debug_str     0x00133fa0      0x1b3 lvgl/lv_objx/lv_lmeter.o
+                               0x8469 (size before relaxing)
+ .debug_str     0x00134153      0x2d3 lvgl/lv_objx/lv_page.o
+                               0x8781 (size before relaxing)
+ .debug_str     0x00134426      0x209 lvgl/lv_objx/lv_slider.o
+                               0x86f0 (size before relaxing)
+ .debug_str     0x0013462f       0xc1 lvgl/lv_objx/lv_sw.o
+                               0x8488 (size before relaxing)
+ .debug_str     0x001346f0      0x389 lvgl/lv_objx/lv_ta.o
+                               0x89b5 (size before relaxing)
+ .debug_str     0x00134a79      0x37b lvgl/lv_objx/lv_tabview.o
+                               0x8f50 (size before relaxing)
+ .debug_str     0x00134df4       0x55 lvgl/lv_themes/lv_theme.o
+                               0x7c1a (size before relaxing)
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 
 .comment        0x00000000       0x7f
  .comment       0x00000000       0x7f Drivers/BSP/Components/ft6x06/ft6x06.o
@@ -21390,7 +24226,11 @@ OUTPUT(Projet.elf elf32-littlearm)
  .comment       0x0000007f       0x80 lvgl/lv_objx/lv_tabview.o
  .comment       0x0000007f       0x80 lvgl/lv_themes/lv_theme.o
 
+<<<<<<< HEAD
 .debug_frame    0x00000000     0xd0d4
+=======
+.debug_frame    0x00000000     0xd0f0
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
  .debug_frame   0x00000000      0x1d4 Drivers/BSP/Components/ft6x06/ft6x06.o
  .debug_frame   0x000001d4       0x7c Drivers/BSP/Components/otm8009a/otm8009a.o
  .debug_frame   0x00000250      0x4d4 Drivers/BSP/STM32F769I-Discovery/stm32f769i_discovery.o
@@ -21416,6 +24256,7 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_frame   0x00004d00      0xfb4 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.o
  .debug_frame   0x00005cb4      0x684 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.o
  .debug_frame   0x00006338      0x378 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_fmc.o
+<<<<<<< HEAD
  .debug_frame   0x000066b0       0x5c Src/adc.o
  .debug_frame   0x0000670c       0xcc Src/canbus.o
  .debug_frame   0x000067d8      0x224 Src/lcd_lvgl.o
@@ -21471,3 +24312,60 @@ OUTPUT(Projet.elf elf32-littlearm)
  .debug_frame   0x0000d04c       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-strcmp.o)
  .debug_frame   0x0000d06c       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-strcpy.o)
  .debug_frame   0x0000d08c       0x48 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-utoa.o)
+=======
+ .debug_frame   0x000066b0       0x74 Src/adc.o
+ .debug_frame   0x00006724       0xec Src/canbus.o
+ .debug_frame   0x00006810      0x224 Src/lcd_lvgl.o
+ .debug_frame   0x00006a34      0x198 Src/ledDriver.o
+ .debug_frame   0x00006bcc      0x1a0 Src/main.o
+ .debug_frame   0x00006d6c      0x304 Src/stm32f7xx_hal_msp.o
+ .debug_frame   0x00007070      0x160 Src/stm32f7xx_it.o
+ .debug_frame   0x000071d0       0x58 Src/system_stm32f7xx.o
+ .debug_frame   0x00007228      0x430 lv_examples/lv_apps/demo/demo2.o
+ .debug_frame   0x00007658      0x290 lvgl/lv_core/lv_group.o
+ .debug_frame   0x000078e8      0x364 lvgl/lv_core/lv_indev.o
+ .debug_frame   0x00007c4c      0xa70 lvgl/lv_core/lv_obj.o
+ .debug_frame   0x000086bc      0x2b4 lvgl/lv_core/lv_refr.o
+ .debug_frame   0x00008970       0xe8 lvgl/lv_core/lv_style.o
+ .debug_frame   0x00008a58       0x78 lvgl/lv_core/lv_vdb.o
+ .debug_frame   0x00008ad0      0x330 lvgl/lv_draw/lv_draw.o
+ .debug_frame   0x00008e00      0x198 lvgl/lv_draw/lv_draw_vbasic.o
+ .debug_frame   0x00008f98      0x1cc lvgl/lv_hal/lv_hal_disp.o
+ .debug_frame   0x00009164       0xa8 lvgl/lv_hal/lv_hal_indev.o
+ .debug_frame   0x0000920c       0x84 lvgl/lv_hal/lv_hal_tick.o
+ .debug_frame   0x00009290      0x15c lvgl/lv_misc/lv_anim.o
+ .debug_frame   0x000093ec      0x1ec lvgl/lv_misc/lv_area.o
+ .debug_frame   0x000095d8       0x88 lvgl/lv_misc/lv_circ.o
+ .debug_frame   0x00009660      0x164 lvgl/lv_misc/lv_font.o
+ .debug_frame   0x000097c4      0x30c lvgl/lv_misc/lv_fs.o
+ .debug_frame   0x00009ad0      0x250 lvgl/lv_misc/lv_ll.o
+ .debug_frame   0x00009d20       0x38 lvgl/lv_misc/lv_math.o
+ .debug_frame   0x00009d58      0x18c lvgl/lv_misc/lv_mem.o
+ .debug_frame   0x00009ee4      0x1e8 lvgl/lv_misc/lv_task.o
+ .debug_frame   0x0000a0cc       0x38 lvgl/lv_misc/lv_trigo.o
+ .debug_frame   0x0000a104      0x248 lvgl/lv_misc/lv_txt.o
+ .debug_frame   0x0000a34c      0x2a8 lvgl/lv_misc/lv_ufs.o
+ .debug_frame   0x0000a5f4      0x238 lvgl/lv_objx/lv_bar.o
+ .debug_frame   0x0000a82c      0x37c lvgl/lv_objx/lv_btnm.o
+ .debug_frame   0x0000aba8      0x3f4 lvgl/lv_objx/lv_chart.o
+ .debug_frame   0x0000af9c      0x2e0 lvgl/lv_objx/lv_cont.o
+ .debug_frame   0x0000b27c      0x284 lvgl/lv_objx/lv_gauge.o
+ .debug_frame   0x0000b500      0x164 lvgl/lv_objx/lv_img.o
+ .debug_frame   0x0000b664      0x4e4 lvgl/lv_objx/lv_label.o
+ .debug_frame   0x0000bb48      0x17c lvgl/lv_objx/lv_line.o
+ .debug_frame   0x0000bcc4      0x23c lvgl/lv_objx/lv_lmeter.o
+ .debug_frame   0x0000bf00      0x2dc lvgl/lv_objx/lv_page.o
+ .debug_frame   0x0000c1dc      0x2ac lvgl/lv_objx/lv_slider.o
+ .debug_frame   0x0000c488      0x180 lvgl/lv_objx/lv_sw.o
+ .debug_frame   0x0000c608      0x518 lvgl/lv_objx/lv_ta.o
+ .debug_frame   0x0000cb20      0x404 lvgl/lv_objx/lv_tabview.o
+ .debug_frame   0x0000cf24       0x58 lvgl/lv_themes/lv_theme.o
+ .debug_frame   0x0000cf7c       0x40 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libm.a(lib_a-s_round.o)
+ .debug_frame   0x0000cfbc       0x2c c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000cfe8       0x38 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-itoa.o)
+ .debug_frame   0x0000d020       0x28 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000d048       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000d068       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-strcmp.o)
+ .debug_frame   0x0000d088       0x20 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-strcpy.o)
+ .debug_frame   0x0000d0a8       0x48 c:/ac6/systemworkbench/plugins/fr.ac6.mcu.externaltools.arm-none.win32_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv5/hard\libc_nano.a(lib_a-utoa.o)
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3

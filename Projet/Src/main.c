@@ -128,7 +128,6 @@ extern lv_obj_t * label_Cadran2_Valeur3;
 extern lv_obj_t * label_Cadran3_Valeur3;
 extern int active_tab;
 extern lv_obj_t * DEBUG_TB;
-extern ADC_HandleTypeDef hadc1;
 
 int main(void)
 {
@@ -174,13 +173,6 @@ int main(void)
   BSP_LED_Init(LED1);
   BSP_LED_Init(LED2);
 
-/*
-
-  canbusInit();
-  canbusPollingTest();
-
-*/
-
   lvgl_init(&hdma_memtomem_dma2_stream0, &hdma2d); //Fonction qui init l'écran et autres instances. Passe les typedef des différents modules pour
   	  	  	  	  	  	  	  	  	  	  	  	   //que lcd_lvgl se serve des configurations DMA existante. (c'est notre driver perso de lcd)
   demo2_create();  //Fonction qui crée le démo que la librairie propose pour le développement
@@ -212,6 +204,7 @@ int main(void)
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
 	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
+<<<<<<< HEAD
 	  i++;
 	  h++;
 	  if (i>=10)
@@ -239,11 +232,20 @@ int main(void)
 		  //Gestion ADC
 		 // HAL_ADC_Start_IT(&hadc1);
 	  }
+=======
+	  adcLogiqueAffichage();
+	  canbusLogiqueAffichage();
+	  ledDriverLogique();
+
+	  //Partie compteur sur interface
+	  h++;
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 
 	  if (h>=1)
 	  {
 		  if (k >= 500)
 		  {
+<<<<<<< HEAD
 			  k=0;
 			  itoa(k,buffer,10);
 		  }
@@ -251,6 +253,22 @@ int main(void)
 		  {
 			  itoa(k,buffer,10);
 			  k++;
+=======
+			  if (k >= 500)
+			  {
+				  k=0;
+				  itoa(k,buffer,10);
+				  lv_label_set_text(txt,buffer);
+
+			  }
+			  else
+			  {
+				  itoa(k,buffer,10);
+				  lv_label_set_text(txt,buffer);
+				  k++;
+			  }
+			  h=0;
+>>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 		  }
 		  h=0;
 	  }
