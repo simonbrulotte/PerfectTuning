@@ -30,7 +30,7 @@
 
 #define RANGE_GAUGE 6000
 #define RED_LINE 4500
-
+#define gaugeKPH 1
 
 /**********************
  *      EXTERN
@@ -41,6 +41,7 @@
 /**********************
  *  STATIC PROTOTYPES
  **********************/
+static lv_res_t position_label (lv_obj_t * child);
 static lv_style_t style_txt;
 static lv_res_t click_Parametres(lv_obj_t * child);
 static lv_res_t click_Parametres_DEL(lv_obj_t * child);
@@ -49,11 +50,13 @@ static lv_res_t action_switch_LED (lv_obj_t * child);
 static lv_res_t actionSlider(lv_obj_t * slider);
 static lv_res_t sw_master_slave(lv_obj_t * sw);
 void Parametres(void);
-void switch_window(lv_obj_t * actual,lv_obj_t * next);
 void switch_tab(lv_obj_t * obj,int tab);
 void click_Parametres_DEBUG(lv_obj_t * child);
 static lv_res_t click_gauge(lv_obj_t * child);
 static lv_res_t click_menu_PARAM(lv_obj_t * child);
+static lv_res_t tab_load_action(lv_obj_t * child);
+
+void Principale (void);
 
 
 /**********************
@@ -72,8 +75,9 @@ uint8_t val_SliderI=0;
 int delay_anim = 0;
 int level = 0;
 int last_tab = 0;
+int active_tab = -1;
 
-bool led_flag=false;
+extern bool led_flag;
 bool can_mode_master = true;
 
 lv_obj_t * Actual_ctn;
@@ -131,6 +135,8 @@ lv_obj_t * tab_princ_debug;
 lv_obj_t * tab_princ_chiffre;
 lv_obj_t * tab_princ_gauge;
 lv_obj_t * tab_princ_stat;
+lv_obj_t * tab_princ_stat2;
+lv_obj_t * tab_princ_stat3;
 lv_obj_t * tab_princ_graph;
 
 
@@ -161,28 +167,75 @@ lv_obj_t * btnhome;
 lv_obj_t * btnwifi;
 
 
-// tab cadran divisé
+// tab cadran divisé 1
+
 lv_obj_t * ligne_hor;
 lv_obj_t * ligne_ver;
 
-lv_obj_t * cadran1;
-lv_obj_t * cadran2;
-lv_obj_t * cadran3;
-lv_obj_t * cadran4;
+lv_obj_t * label_Cadran1_titre;
+lv_obj_t * label_Cadran1_unit;
+lv_obj_t * label_Cadran1_Valeur;
+
+lv_obj_t * label_Cadran2_titre;
+lv_obj_t * label_Cadran2_unit;
+lv_obj_t * label_Cadran2_Valeur;
+
+lv_obj_t * label_Cadran3_titre;
+lv_obj_t * label_Cadran3_unit;
+lv_obj_t * label_Cadran3_Valeur;
+
+lv_obj_t * label_Cadran4_titre;
+lv_obj_t * label_Cadran4_unit;
+lv_obj_t * label_Cadran4_Valeur;
+
+// tab cadran divisé 2
+
+lv_obj_t * ligne_hor2;
+lv_obj_t * ligne_ver2;
+
+lv_obj_t * label_Cadran1_titre2;
+lv_obj_t * label_Cadran1_unit2;
+lv_obj_t * label_Cadran1_Valeur2;
+
+lv_obj_t * label_Cadran2_titre2;
+lv_obj_t * label_Cadran2_unit2;
+lv_obj_t * label_Cadran2_Valeur2;
+
+// tab cadran divisé 3
+
+lv_obj_t * ligne_hor3;
+lv_obj_t * ligne_ver3;
+
+lv_obj_t * label_Cadran1_titre3;
+lv_obj_t * label_Cadran1_unit3;
+lv_obj_t * label_Cadran1_Valeur3;
+
+lv_obj_t * label_Cadran2_titre3;
+lv_obj_t * label_Cadran2_unit3;
+lv_obj_t * label_Cadran2_Valeur3;
+
+lv_obj_t * label_Cadran3_titre3;
+lv_obj_t * label_Cadran3_unit3;
+lv_obj_t * label_Cadran3_Valeur3;
+
+//---------------------------------
+
+lv_obj_t * tableau_objet_valeur[] = { &label_Cadran1_Valeur, &label_Cadran2_Valeur, &label_Cadran3_Valeur, &label_Cadran4_Valeur };
+
+lv_obj_t * label_pos_test;
+lv_obj_t * label_valeur_pos;
 
 
 //lv_obj_t * ctnUnlock;
 #if LV_DEMO_WALLPAPER
+
+/*----------DECLARATION DES IMAGES------*/
+
 LV_IMG_DECLARE(config);
 LV_IMG_DECLARE(home);
 LV_IMG_DECLARE(wifi);
 LV_IMG_DECLARE(canbus_ico);
-
-
-
 #endif
-
-
 
 
 /**********************
@@ -199,98 +252,21 @@ void demo2_create()
 	Principale();
 	Parametres();
 	/*Create the first image without re-color*/
-
+	//set_cadran(1,100);
 }
 
 
 void Principale ()
 {
-
-	static lv_point_t line_points_hor[] = {{0, 200}, {400, 200}};
-	static lv_point_t line_points_ver[] = {{200, 0}, {200, 400}};
-	static lv_style_t style_btnParam;
-
-	//
-	// instanciation des éléments de la page principale
-	//
-
-	lv_style_copy(&style_btnParam, &lv_style_transp);
-
-	tv_Princ = lv_tabview_create(lv_scr_act(),NULL);
-		lv_obj_set_hidden(tv_Princ,true);
-		lv_obj_set_size(tv_Princ,LV_HOR_RES,528); /// 130 car la longueur des boutons est de 130
-		lv_obj_set_pos(tv_Princ,0,-128);
-
-
-		tab_princ = lv_tabview_add_tab(tv_Princ,"PRINC"); // TAB POUR LA CONFIGURATION
-			lv_page_set_scrl_fit(tab_princ,false,false);
-			lv_page_set_scrl_height(tab_princ, lv_obj_get_height(tab_princ));
-			lv_page_set_scrl_width(tab_princ, lv_obj_get_width(tab_princ));
-			lv_page_set_sb_mode(tab_princ,false);
-
-		tab_princ_del = lv_tabview_add_tab(tv_Princ,"DEL"); // TAB DE SETTING DES DELS
-			lv_page_set_scrl_fit(tab_princ_del,false,false);
-			lv_page_set_scrl_height(tab_princ_del, lv_obj_get_height(tab_princ_del));
-			lv_page_set_scrl_width(tab_princ_del, lv_obj_get_width(tab_princ_del));
-			lv_page_set_sb_mode(tab_princ_del,false);
-
-		tab_princ_debug = lv_tabview_add_tab(tv_Princ,"DEBUG"); // TAB DEBUG
-			lv_page_set_scrl_fit(tab_princ_debug,false,false);
-			lv_page_set_scrl_height(tab_princ_debug, lv_obj_get_height(tab_princ_debug));
-			lv_page_set_scrl_width(tab_princ_debug, lv_obj_get_width(tab_princ_debug));
-			lv_page_set_sb_mode(tab_princ_debug,false);
-		tab_princ_chiffre = lv_tabview_add_tab(tv_Princ,"COMPTEUR"); // TAB COMPTEUR
-			lv_page_set_scrl_fit(tab_princ_chiffre,false,false);
-			lv_page_set_scrl_height(tab_princ_chiffre, lv_obj_get_height(tab_princ_chiffre));
-			lv_page_set_scrl_width(tab_princ_chiffre, lv_obj_get_width(tab_princ_chiffre));
-			lv_page_set_sb_mode(tab_princ_chiffre,false);
-		tab_princ_gauge = lv_tabview_add_tab(tv_Princ,"INDICATEUR");
-			lv_page_set_scrl_fit(tab_princ_gauge,false,false);
-			lv_page_set_scrl_height(tab_princ_gauge, lv_obj_get_height(tab_princ_gauge));
-			lv_page_set_scrl_width(tab_princ_gauge, lv_obj_get_width(tab_princ_gauge));
-			lv_page_set_sb_mode(tab_princ_gauge,false);
-		tab_princ_stat = lv_tabview_add_tab(tv_Princ,"Stats");
-			lv_page_set_scrl_fit(tab_princ_stat,false,false);
-			lv_page_set_scrl_height(tab_princ_stat, lv_obj_get_height(tab_princ_stat));
-			lv_page_set_scrl_width(tab_princ_stat, lv_obj_get_width(tab_princ_stat));
-			lv_page_set_sb_mode(tab_princ_stat,false);
-		tab_princ_graph = lv_tabview_add_tab(tv_Princ, "GRAPH");
-
-		lv_tabview_set_sliding(tv_Princ,true);
-		lv_tabview_set_style(tv_Princ,LV_TABVIEW_STYLE_BG,&style_btnParam);
-		lv_obj_set_drag(btnParametre,true);
-
-
-
-	Image_config = lv_img_create(tab_princ,NULL);
-		lv_img_set_src(Image_config,&config);
-		lv_obj_align(Image_config,tab_princ,LV_ALIGN_CENTER,0,0);
-		lv_obj_set_click(Image_config,true);
-		lv_obj_set_signal_func(Image_config,click_Parametres);
-
-	switch_tab(tv_Princ,1);
-	HAL_Delay(100);
-	lv_obj_set_hidden(tv_Princ,false);
-
-//
-//		section LED
-//
-
 	int nb_slider = 4;
 	int slider_gap = 65;
-
 	int sliderRGB_Height = 160;
 	int sliderRGB_Width = 45;
-
 	int sliderLabel_Gap = 100; // gap entre les slider et le label activé/désactivé
-
 	int OFFSET_X_SLIDER = 80;
 	int OFFSET_Y_SLIDER = 120;
-
 	int slider_Y_pos = LV_VER_RES - sliderRGB_Height - OFFSET_Y_SLIDER;
-
 	int Pos_Slider_1 = ((LV_HOR_RES-(nb_slider*(slider_gap+sliderRGB_Width)))/2) + OFFSET_X_SLIDER;
-
 	int actual_slider_pos = Pos_Slider_1;
 
 	static lv_style_t style_bg_R;
@@ -309,6 +285,98 @@ void Principale ()
 	static lv_style_t indic_style_sw;
 	static lv_style_t knob_on_style_sw;
 	static lv_style_t knob_off_style_sw;
+	static lv_style_t style_cadran_titre;
+	static lv_style_t style_cadran_unit;
+	static lv_style_t style_cadran_value;
+
+	static lv_point_t line_points_hor[] = {{0, 200}, {400, 200}};
+	static lv_point_t line_points_ver[] = {{185, 0}, {185, 400}};
+
+	static lv_point_t line_points_hor2[] = {{0, 200}, {400, 200}};
+
+	static lv_point_t line_points_hor3[] = {{0, 200}, {400, 200}};
+	static lv_point_t line_points_ver3[] = {{185, 0}, {185, 200}};
+
+	static lv_style_t style_invisible;
+
+	//
+	// instanciation des éléments de la page principale
+	//
+
+	tv_Princ = lv_tabview_create(lv_scr_act(),NULL);
+		lv_obj_set_hidden(tv_Princ,true);
+		lv_obj_set_size(tv_Princ,LV_HOR_RES,525); /// 130 car la longueur des boutons est de 130
+		lv_obj_set_pos(tv_Princ,0,-135);
+		lv_page_set_sb_mode(tv_Princ,LV_SB_MODE_OFF);
+		lv_obj_set_style(tv_Princ,&style_invisible);
+
+		tab_princ = lv_tabview_add_tab(tv_Princ,"PRINC"); // TAB POUR LA CONFIGURATION
+			lv_page_set_scrl_fit(tab_princ,false,false);
+			lv_page_set_scrl_height(tab_princ, lv_obj_get_height(tab_princ));
+			lv_page_set_scrl_width(tab_princ, lv_obj_get_width(tab_princ));
+			lv_page_set_sb_mode(tab_princ,LV_SB_MODE_OFF);
+
+		tab_princ_del = lv_tabview_add_tab(tv_Princ,"DEL"); // TAB DE SETTING DES DELS
+			lv_page_set_scrl_fit(tab_princ_del,false,false);
+			lv_page_set_scrl_height(tab_princ_del, lv_obj_get_height(tab_princ_del));
+			lv_page_set_scrl_width(tab_princ_del, lv_obj_get_width(tab_princ_del));
+			lv_page_set_sb_mode(tab_princ_del,LV_SB_MODE_OFF);
+		tab_princ_debug = lv_tabview_add_tab(tv_Princ,"DEBUG"); // TAB DEBUG
+			lv_page_set_scrl_fit(tab_princ_debug,false,false);
+			lv_page_set_scrl_height(tab_princ_debug, lv_obj_get_height(tab_princ_debug));
+			lv_page_set_scrl_width(tab_princ_debug, lv_obj_get_width(tab_princ_debug));
+			lv_page_set_sb_mode(tab_princ_debug,LV_SB_MODE_OFF);
+		tab_princ_chiffre = lv_tabview_add_tab(tv_Princ,"COMPTEUR"); // TAB COMPTEUR
+			lv_page_set_scrl_fit(tab_princ_chiffre,false,false);
+			lv_page_set_scrl_height(tab_princ_chiffre, lv_obj_get_height(tab_princ_chiffre));
+			lv_page_set_scrl_width(tab_princ_chiffre, lv_obj_get_width(tab_princ_chiffre));
+			lv_page_set_sb_mode(tab_princ_chiffre,LV_SB_MODE_OFF);
+		tab_princ_gauge = lv_tabview_add_tab(tv_Princ,"INDICATEUR");
+			lv_page_set_scrl_fit(tab_princ_gauge,false,false);
+			lv_page_set_scrl_height(tab_princ_gauge, lv_obj_get_height(tab_princ_gauge));
+			lv_page_set_scrl_width(tab_princ_gauge, lv_obj_get_width(tab_princ_gauge));
+			lv_page_set_sb_mode(tab_princ_gauge,LV_SB_MODE_OFF);
+		tab_princ_stat = lv_tabview_add_tab(tv_Princ,"Stats");
+			lv_page_set_scrl_fit(tab_princ_stat,false,false);
+			lv_page_set_scrl_height(tab_princ_stat, lv_obj_get_height(tab_princ_stat));
+			lv_page_set_scrl_width(tab_princ_stat, lv_obj_get_width(tab_princ_stat));
+			lv_page_set_sb_mode(tab_princ_stat,LV_SB_MODE_OFF);
+
+		tab_princ_stat2 = lv_tabview_add_tab(tv_Princ,"Stats");
+			lv_page_set_scrl_fit(tab_princ_stat2,false,false);
+			lv_page_set_scrl_height(tab_princ_stat2, lv_obj_get_height(tab_princ_stat2));
+			lv_page_set_scrl_width(tab_princ_stat2, lv_obj_get_width(tab_princ_stat2));
+			lv_page_set_sb_mode(tab_princ_stat2,LV_SB_MODE_OFF);
+
+		tab_princ_stat3 = lv_tabview_add_tab(tv_Princ,"Stats");
+			lv_page_set_scrl_fit(tab_princ_stat3,false,false);
+			lv_page_set_scrl_height(tab_princ_stat3, lv_obj_get_height(tab_princ_stat3));
+			lv_page_set_scrl_width(tab_princ_stat3, lv_obj_get_width(tab_princ_stat3));
+			lv_page_set_sb_mode(tab_princ_stat3,LV_SB_MODE_OFF);
+
+		tab_princ_graph = lv_tabview_add_tab(tv_Princ, "GRAPH");
+			lv_page_set_scrl_fit(tab_princ_graph,false,false);
+			lv_page_set_scrl_height(tab_princ_graph, lv_obj_get_height(tab_princ_graph));
+			lv_page_set_scrl_width(tab_princ_graph, lv_obj_get_width(tab_princ_graph));
+
+		lv_tabview_set_sliding(tv_Princ,true);
+//		lv_tabview_set_style(tv_Princ,LV_TABVIEW_STYLE_BG,&style_btnParam);
+
+
+
+		Image_config = lv_img_create(tab_princ,NULL);
+			lv_img_set_src(Image_config,&config);
+			lv_obj_align(Image_config,tab_princ,LV_ALIGN_CENTER,0,0);
+			lv_obj_set_click(Image_config,true);
+			lv_obj_set_signal_func(Image_config,click_Parametres);
+
+	switch_tab(tv_Princ,5);
+	HAL_Delay(100);
+	lv_obj_set_hidden(tv_Princ,false);
+
+//
+//		section LED
+//
 
 // ***************************
 //
@@ -485,18 +553,17 @@ void Principale ()
 
 	lv_style_copy(&knob_off_style_sw, &lv_style_pretty);
 		knob_off_style_sw.body.radius = LV_RADIUS_CIRCLE;
-		knob_off_style_sw.body.shadow.width = 3;
+		knob_off_style_sw.body.shadow.width = 2;
 		knob_off_style_sw.body.shadow.type = LV_SHADOW_BOTTOM;
 
 	lv_style_copy(&knob_on_style_sw, &lv_style_pretty_color);
 		knob_on_style_sw.body.radius = LV_RADIUS_CIRCLE;
-		knob_on_style_sw.body.shadow.width = 3;
+		knob_on_style_sw.body.shadow.width = 2;
 		knob_on_style_sw.body.shadow.type = LV_SHADOW_BOTTOM;
 
 	toggleOnOff = lv_sw_create(tab_princ_del, NULL);
 		int size_width_toggle = 95;
 		int size_height_toggle = 60;
-
 		int toggle_Y_align = lv_obj_get_y(sliderR) - sliderLabel_Gap; // Paramètre d'alignement vertical de la switch
 
 		lv_obj_set_size(toggleOnOff,size_width_toggle,size_height_toggle);
@@ -520,7 +587,7 @@ void Principale ()
 		lv_obj_set_size(toggleCan_Master_Slave,80,50);
 		lv_obj_set_pos(toggleCan_Master_Slave,120,260);
 		lv_sw_set_action(toggleCan_Master_Slave,sw_master_slave);
-
+		lv_obj_align(toggleCan_Master_Slave,tab_princ_debug,LV_ALIGN_OUT_TOP_LEFT,DEBUG_TB->coords.x1,100);
 
 
 	DEBUG_TB = lv_ta_create(tab_princ_debug,NULL);
@@ -540,10 +607,12 @@ void Principale ()
 		lv_obj_set_style(txt, &style_txt);                    /*Set the created style*/
 		lv_label_set_long_mode(txt, LV_LABEL_LONG_BREAK);     /*Break the long lines*/
 		lv_label_set_recolor(txt, true);                      /*Enable re-coloring by commands in the text*/
-		lv_label_set_align(tab_princ_chiffre, LV_LABEL_ALIGN_CENTER);       /*Center aligned lines*/
+		lv_label_set_align(txt, LV_LABEL_ALIGN_LEFT);       /*Center aligned lines*/
+
 		lv_label_set_text(txt, "10");
 		lv_obj_set_width(txt, 300);                           /*Set a width*/
 
+	lv_obj_align(txt,tab_princ_chiffre,LV_ALIGN_CENTER,50,0);
 
 
 //**************************
@@ -569,11 +638,14 @@ void Principale ()
 		lv_gauge_set_scale(gauge,240,(RANGE_GAUGE/200),(RANGE_GAUGE/1000)+1);
 		lv_obj_align(gauge,tab_princ_gauge,LV_ALIGN_CENTER,0,0);
 		gauge->click = 1;
-		lv_obj_set_signal_func(gauge,click_gauge);
+
+		lv_obj_get_drag_parent(gauge);
 
 //**************************
 //		Stats
 //**************************
+
+/*---------------LIGNES DE L'ÉCRAN---------------------*/
 
 
 	static lv_style_t style_line;
@@ -582,14 +654,239 @@ void Principale ()
 		style_line.line.width = 8;
 
 
-	ligne_hor = lv_line_create(tab_princ_stat,NULL);
-		lv_line_set_points(ligne_hor,line_points_hor,2);
-		lv_line_set_style(ligne_hor, &style_line);
+		ligne_hor = lv_line_create(tab_princ_stat,NULL);
+			lv_line_set_points(ligne_hor,line_points_hor,2);
+			lv_line_set_style(ligne_hor, &style_line);
+
+		ligne_ver = lv_line_create(tab_princ_stat,NULL);
+			lv_line_set_points(ligne_ver,line_points_ver,2);
+			lv_line_set_style(ligne_ver, &style_line);
 
 
-	ligne_ver = lv_line_create(tab_princ_stat,NULL);
-		lv_line_set_points(ligne_ver,line_points_ver,2);
-		lv_line_set_style(ligne_ver, &style_line);
+		ligne_hor2 = lv_line_create(tab_princ_stat2,NULL);
+			lv_line_set_points(ligne_hor2,line_points_hor2,2);
+			lv_line_set_style(ligne_hor2, &style_line);
+
+
+		ligne_hor3 = lv_line_create(tab_princ_stat3,NULL);
+			lv_line_set_points(ligne_hor3,line_points_hor3,2);
+			lv_line_set_style(ligne_hor3, &style_line);
+
+		ligne_ver3 = lv_line_create(tab_princ_stat3,NULL);
+			lv_line_set_points(ligne_ver3,line_points_ver3,2);
+			lv_line_set_style(ligne_ver3, &style_line);
+
+
+/*-----------------STYLE DU TEXTE POUR LA POLICE----------*/
+
+	lv_style_copy(&style_cadran_titre, &lv_style_plain);
+		style_cadran_titre.text.font = &lv_font_dejavu_60_8bpp;
+		style_cadran_titre.text.letter_space = 2;
+		style_cadran_titre.text.line_space = 1;
+		style_cadran_titre.text.color = LV_COLOR_HEX(0x606060);
+
+	lv_style_copy(&style_cadran_unit, &lv_style_plain);
+		style_cadran_unit.text.font = &lv_font_dejavu_20;
+		style_cadran_unit.text.letter_space = 2;
+		style_cadran_unit.text.line_space = 1;
+		style_cadran_unit.text.color = LV_COLOR_HEX(0x606060);
+
+	lv_style_copy(&style_cadran_value, &lv_style_plain);
+		style_cadran_value.text.font = &lv_font_dejavu_60_8bpp;
+		style_cadran_value.text.letter_space = 2;
+		style_cadran_value.text.line_space = 1;
+		style_cadran_value.text.color = LV_COLOR_HEX(0x606060);
+
+/*----------------------LABELS DU CADRANS tab1-----------------------*/
+
+/*
+		label_pos_test = lv_label_create(tab_princ_stat,NULL);
+			lv_obj_set_style(label_pos_test,&style_cadran_titre);
+			lv_obj_set_pos(label_pos_test,150,50);
+			lv_label_set_text(label_pos_test,"AFRÉ");
+			label_pos_test->click = 1;
+			lv_obj_set_drag(label_pos_test,true);
+
+		lv_obj_t * btn_valeur_pos = lv_btn_create(tab_princ_stat,NULL);
+			lv_obj_set_size(btn_valeur_pos,60,60);
+			lv_obj_set_pos(btn_valeur_pos,125,300);
+			lv_btn_set_action(btn_valeur_pos,LV_BTN_ACTION_CLICK,position_label);
+*/
+
+
+
+
+
+	label_Cadran1_titre = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran1_titre,&style_cadran_titre);
+		lv_obj_set_pos(label_Cadran1_titre,55,42);
+		lv_label_set_text(label_Cadran1_titre,"AFR");
+
+
+	label_Cadran2_titre = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran2_titre,&style_cadran_titre);
+		lv_obj_set_pos(label_Cadran2_titre,200,42);
+		lv_label_set_text(label_Cadran2_titre,"AFRT");
+
+	label_Cadran3_titre = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran3_titre,&style_cadran_titre);
+		lv_obj_set_pos(label_Cadran3_titre,55,205);
+		lv_label_set_text(label_Cadran3_titre,"VSS");
+
+	label_Cadran4_titre = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran4_titre,&style_cadran_titre);
+		lv_obj_set_pos(label_Cadran4_titre,215,205);
+		lv_label_set_text(label_Cadran4_titre,"MPG");
+
+
+	label_Cadran1_unit = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran1_unit,&style_cadran_unit);
+		lv_label_set_text(label_Cadran1_unit,"AFR");
+		lv_obj_align(label_Cadran1_unit,label_Cadran1_titre,LV_ALIGN_CENTER,0,40);
+
+	label_Cadran2_unit = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran2_unit,&style_cadran_unit);
+		lv_label_set_text(label_Cadran2_unit,"AFR");
+		lv_obj_align(label_Cadran2_unit,label_Cadran2_titre,LV_ALIGN_CENTER,0,40);
+
+	label_Cadran3_unit = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran3_unit,&style_cadran_unit);
+#ifdef gaugeKPH
+		lv_label_set_text(label_Cadran3_unit,"KPH");
+#endif
+#ifdef gaugeMPH
+		lv_label_set_text(label_Cadran3_unit,"MPH");
+#endif
+		lv_obj_align(label_Cadran3_unit,label_Cadran3_titre,LV_ALIGN_CENTER,0,40);
+
+
+	label_Cadran4_unit = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran4_unit,&style_cadran_unit);
+		lv_obj_align(label_Cadran4_unit,label_Cadran4_titre,LV_ALIGN_CENTER,0,40);
+		lv_label_set_text(label_Cadran4_unit,"");
+
+	label_Cadran1_Valeur = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran1_Valeur,&style_cadran_value);
+		lv_label_set_text(label_Cadran1_Valeur,"0");
+		lv_obj_align(label_Cadran1_Valeur,label_Cadran1_unit,LV_ALIGN_CENTER,0,40);
+
+	label_Cadran2_Valeur = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran2_Valeur,&style_cadran_value);
+		lv_label_set_text(label_Cadran2_Valeur,"0");
+		lv_obj_align(label_Cadran2_Valeur,label_Cadran2_unit,LV_ALIGN_CENTER,0,40);
+
+	label_Cadran3_Valeur = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran3_Valeur,&style_cadran_value);
+		lv_label_set_text(label_Cadran3_Valeur,"0");
+		lv_obj_align(label_Cadran3_Valeur,label_Cadran3_unit,LV_ALIGN_CENTER,0,40);
+
+	label_Cadran4_Valeur = lv_label_create(tab_princ_stat,NULL);
+		lv_obj_set_style(label_Cadran4_Valeur,&style_cadran_value);
+		lv_label_set_text(label_Cadran4_Valeur,"0");
+		lv_obj_align(label_Cadran4_Valeur,label_Cadran4_titre,LV_ALIGN_CENTER,0,80);
+
+	lv_label_set_align(label_Cadran1_Valeur,LV_LABEL_ALIGN_CENTER);
+	lv_label_set_align(label_Cadran2_Valeur,LV_LABEL_ALIGN_CENTER);
+	lv_label_set_align(label_Cadran3_Valeur,LV_LABEL_ALIGN_CENTER);
+	lv_label_set_align(label_Cadran4_Valeur,LV_LABEL_ALIGN_CENTER);
+
+/*----------------------LABELS DU CADRANS tab2-----------------------*/
+		label_Cadran1_titre2 = lv_label_create(tab_princ_stat2,NULL);
+			lv_obj_set_style(label_Cadran1_titre2,&style_cadran_titre);
+			lv_label_set_text(label_Cadran1_titre2,"AFR");
+			lv_obj_align(label_Cadran1_titre2,tab_princ_stat2,LV_ALIGN_IN_TOP_MID,0,50);
+
+		label_Cadran2_titre2 = lv_label_create(tab_princ_stat2,NULL);
+			lv_obj_set_style(label_Cadran2_titre2,&style_cadran_titre);
+			lv_label_set_text(label_Cadran2_titre2,"Turbo");
+			lv_obj_align(label_Cadran2_titre2,tab_princ_stat2,LV_ALIGN_CENTER,0,50);
+
+
+		label_Cadran1_unit2 = lv_label_create(tab_princ_stat2,NULL);
+			lv_obj_set_style(label_Cadran1_unit2,&style_cadran_unit);
+			lv_label_set_text(label_Cadran1_unit2,"AFR");
+			lv_obj_align(label_Cadran1_unit2,label_Cadran1_titre2,LV_ALIGN_CENTER,0,40);
+
+		label_Cadran2_unit2 = lv_label_create(tab_princ_stat2,NULL);
+			lv_obj_set_style(label_Cadran2_unit2,&style_cadran_unit);
+			lv_label_set_text(label_Cadran2_unit2,"PSI");
+			lv_obj_align(label_Cadran2_unit2,label_Cadran2_titre2,LV_ALIGN_CENTER,0,40);
+
+		label_Cadran1_Valeur2 = lv_label_create(tab_princ_stat2,NULL);
+			lv_obj_set_style(label_Cadran1_Valeur2,&style_cadran_value);
+			lv_label_set_text(label_Cadran1_Valeur2,"0");
+			lv_obj_align(label_Cadran1_Valeur2,label_Cadran1_unit2,LV_ALIGN_CENTER,0,40);
+
+		label_Cadran2_Valeur2 = lv_label_create(tab_princ_stat2,NULL);
+			lv_obj_set_style(label_Cadran2_Valeur2,&style_cadran_value);
+			lv_label_set_text(label_Cadran2_Valeur2,"0");
+			lv_obj_align(label_Cadran2_Valeur2,label_Cadran2_unit2,LV_ALIGN_CENTER,0,40);
+
+		lv_label_set_align(label_Cadran1_Valeur2,LV_LABEL_ALIGN_CENTER);
+		lv_label_set_align(label_Cadran2_Valeur2,LV_LABEL_ALIGN_CENTER);
+
+/*----------------------LABELS DU CADRANS tab3-----------------------*/
+/*
+
+*/
+
+		label_Cadran1_titre3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran1_titre3,&style_cadran_titre);
+			lv_obj_set_pos(label_Cadran1_titre3,55,42);
+			lv_label_set_text(label_Cadran1_titre3,"AFR");
+
+
+		label_Cadran2_titre3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran2_titre3,&style_cadran_titre);
+			lv_obj_set_pos(label_Cadran2_titre3,200,42);
+			lv_label_set_text(label_Cadran2_titre3,"AFRT");
+
+		label_Cadran3_titre3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran3_titre3,&style_cadran_titre);
+			lv_label_set_text(label_Cadran3_titre3,"VSS");
+			lv_obj_align(label_Cadran3_titre3,tab_princ_stat3,LV_ALIGN_CENTER,0,50);
+
+		label_Cadran1_unit3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran1_unit3,&style_cadran_unit);
+			lv_label_set_text(label_Cadran1_unit3,"AFR");
+			lv_obj_align(label_Cadran1_unit3,label_Cadran1_titre3,LV_ALIGN_CENTER,0,40);
+
+		label_Cadran2_unit3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran2_unit3,&style_cadran_unit);
+			lv_label_set_text(label_Cadran2_unit3,"AFR");
+			lv_obj_align(label_Cadran2_unit3,label_Cadran2_titre3,LV_ALIGN_CENTER,0,40);
+
+		label_Cadran3_unit3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran3_unit3,&style_cadran_unit);
+
+		#ifdef gaugeKPH
+			lv_label_set_text(label_Cadran3_unit3,"KPH");
+		#endif
+
+		#ifdef gaugeMPH
+			lv_label_set_text(label_Cadran3_unit3,"MPH");
+		#endif
+			lv_obj_align(label_Cadran3_unit3,label_Cadran3_titre3,LV_ALIGN_CENTER,0,40);
+
+
+		label_Cadran1_Valeur3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran1_Valeur3,&style_cadran_value);
+			lv_label_set_text(label_Cadran1_Valeur3,"0");
+			lv_obj_align(label_Cadran1_Valeur3,label_Cadran1_unit3,LV_ALIGN_CENTER,0,40);
+
+		label_Cadran2_Valeur3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran2_Valeur3,&style_cadran_value);
+			lv_label_set_text(label_Cadran2_Valeur3,"0");
+			lv_obj_align(label_Cadran2_Valeur3,label_Cadran2_unit3,LV_ALIGN_CENTER,0,40);
+
+		label_Cadran3_Valeur3 = lv_label_create(tab_princ_stat3,NULL);
+			lv_obj_set_style(label_Cadran3_Valeur3,&style_cadran_value);
+			lv_label_set_text(label_Cadran3_Valeur3,"0");
+			lv_obj_align(label_Cadran3_Valeur3,label_Cadran3_unit3,LV_ALIGN_CENTER,0,40);
+
+		lv_label_set_align(label_Cadran1_Valeur3,LV_LABEL_ALIGN_CENTER);
+		lv_label_set_align(label_Cadran2_Valeur3,LV_LABEL_ALIGN_CENTER);
+		lv_label_set_align(label_Cadran3_Valeur3,LV_LABEL_ALIGN_CENTER);
 
 /*------------------- Tab Graphique -------------------*/
 		static lv_style_t dataGraph_Style;
@@ -623,8 +920,8 @@ void Parametres() // on place la variable initPosition dans
 
 
 	tv_Param = lv_tabview_create(lv_scr_act(),NULL);
-		lv_obj_set_size(tv_Param,LV_HOR_RES,528); /// 130 car la longueur des boutons est de 130
-		lv_obj_set_pos(tv_Param,0,-128);
+		lv_obj_set_size(tv_Param,LV_HOR_RES,525); /// 130 car la longueur des boutons est de 130
+		lv_obj_set_pos(tv_Param,0,-135);
 		lv_page_set_scrl_fit(tv_Param,false,false);
 		lv_page_set_scrl_height(tv_Param, lv_obj_get_height(tv_Param));
 		lv_page_set_scrl_width(tv_Param, lv_obj_get_width(tv_Param));
@@ -700,6 +997,16 @@ static lv_res_t click_Parametres(lv_obj_t * child)
 
 }
 
+static lv_res_t position_label (lv_obj_t * child)
+{
+	int test;
+	int test2;
+	test = lv_obj_get_x(label_pos_test);
+	test2 = lv_obj_get_y(label_pos_test);
+
+	return LV_RES_OK;
+}
+
 static lv_res_t click_gauge(lv_obj_t * child)
 {
 	/*
@@ -713,6 +1020,7 @@ static lv_res_t click_gauge(lv_obj_t * child)
 		lv_ta_add_text(DEBUG_TB,"DRAGGING !");
 	}
 */
+	return LV_RES_OK;
 }
 
 void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
@@ -731,6 +1039,8 @@ void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght)
 	strcat(canbusString, tempBuf);
 
 	lv_ta_add_text(DEBUG_TB,"CanBus mode Slave\n");
+
+
 }
 
 void afficheGraphData_CanBus(uint32_t graphPointY){
@@ -748,8 +1058,9 @@ static lv_res_t click_home(lv_obj_t * child)
 	level++;
 	//	switch_window(lv_obj_get_parent(child),ctnParametre);
 */
-
+	return LV_RES_OK;
 }
+
 static lv_res_t click_menu_PARAM(lv_obj_t * child)
 {
 
@@ -760,9 +1071,13 @@ static lv_res_t click_menu_PARAM(lv_obj_t * child)
 	level++;
 	//	switch_window(lv_obj_get_parent(child),ctnParametre);
 */
-
+	return LV_RES_OK;
 }
 
+static lv_res_t tab_load_action(lv_obj_t * child)
+{
+	active_tab = lv_tabview_get_tab_act(tv_Princ);
+}
 
 static lv_res_t click_Parametres_DEL(lv_obj_t * child)
 {
@@ -815,8 +1130,11 @@ static lv_res_t action_switch_LED(lv_obj_t * child)
 	return LV_RES_OK;
 }
 
+
+
 static lv_res_t actionSlider(lv_obj_t * slider)
 {
+
 	/*
 		int a=lv_slider_get_value(slider);
 		char buffer[50];
@@ -831,7 +1149,6 @@ static lv_res_t actionSlider(lv_obj_t * slider)
 	return LV_RES_OK;
 }
 
-
 void set_leds()
 {
 	val_SliderI = lv_slider_get_value(sliderI);
@@ -843,4 +1160,13 @@ void set_leds()
 	{
 		led_flag = true;
 	}
+}
+
+void set_cadran (uint16_t no_cadran,uint16_t valeur) // on passe le numero du cadran et ola valeur en paramètre, et on l'affiche dans le cadran en question
+{
+
+	char buffer[50];
+	itoa(valeur,buffer,2);
+	lv_label_set_text(tableau_objet_valeur[no_cadran],buffer);
+
 }

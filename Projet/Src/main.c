@@ -110,10 +110,23 @@ extern void DMA_TransferComplete(DMA_HandleTypeDef *hdma);
 extern uint8_t val_SliderR;
 extern uint8_t val_SliderG;
 extern uint8_t val_SliderB;
-extern bool led_flag;
+bool led_flag = false;
 extern bool can_mode_master;
 extern lv_obj_t * txt;
 extern lv_obj_t * tv_Princ;
+
+extern lv_obj_t * label_Cadran1_Valeur;
+extern lv_obj_t * label_Cadran2_Valeur;
+extern lv_obj_t * label_Cadran3_Valeur;
+extern lv_obj_t * label_Cadran4_Valeur;
+
+extern lv_obj_t * label_Cadran1_Valeur2;
+extern lv_obj_t * label_Cadran2_Valeur2;
+
+extern lv_obj_t * label_Cadran1_Valeur3;
+extern lv_obj_t * label_Cadran2_Valeur3;
+extern lv_obj_t * label_Cadran3_Valeur3;
+extern int active_tab;
 extern lv_obj_t * DEBUG_TB;
 extern ADC_HandleTypeDef hadc1;
 
@@ -210,43 +223,62 @@ int main(void)
 				  {
 					  ws2812_set_color(j,val_SliderR,val_SliderG,val_SliderB);
 				  }
-				  lightLedBar();
+				 // lightLedBar();
 				  i=0;
 			  }
 			  else{
 				  uint8_t dataCan[] = {val_SliderR,
 						  	  	  	   val_SliderG,
 									   val_SliderB};
-				  canbusWrite(CANBUS_ID_TYPE_LED_DATA ,dataCan, sizeof(dataCan)); //lenghtof(data));
+				  //canbusWrite(CANBUS_ID_TYPE_LED_DATA ,dataCan, sizeof(dataCan)); //lenghtof(data));
 			  }
 
 			  led_flag = false;
 		  }
 
 		  //Gestion ADC
-		  HAL_ADC_Start_IT(&hadc1);
+		 // HAL_ADC_Start_IT(&hadc1);
 	  }
 
-	  if (lv_tabview_get_tab_act(tv_Princ) == 3)
+	  if (h>=1)
 	  {
-		  if (h>=1)
+		  if (k >= 500)
 		  {
-			  if (k >= 500)
-			  {
-				  k=0;
-				  itoa(k,buffer,10);
-
-				  lv_label_set_text(txt,buffer);
-
-			  }
-			  else
-			  {
-				  itoa(k,buffer,10);
-				  lv_label_set_text(txt,buffer);
-				  k++;
-			  }
-			  h=0;
+			  k=0;
+			  itoa(k,buffer,10);
 		  }
+		  else
+		  {
+			  itoa(k,buffer,10);
+			  k++;
+		  }
+		  h=0;
+	  }
+	  active_tab = lv_tabview_get_tab_act(tv_Princ);
+	  switch (active_tab)
+	  {
+	  	  case 2:
+	  	  	  break;
+	  	  case 3:
+			  lv_label_set_text(txt,buffer);
+	  		  break;
+	  	  case 4:
+	  		  break;
+	  	  case 5:
+			  lv_label_set_text(label_Cadran1_Valeur,buffer);
+			  lv_label_set_text(label_Cadran2_Valeur,buffer);
+			  lv_label_set_text(label_Cadran3_Valeur,buffer);
+			  lv_label_set_text(label_Cadran4_Valeur,buffer);
+	  		  break;
+	  	  case 6:
+			  lv_label_set_text(label_Cadran1_Valeur2,buffer);
+			  lv_label_set_text(label_Cadran2_Valeur2,buffer);
+	  		  break;
+	  	  case 7:
+			  lv_label_set_text(label_Cadran1_Valeur3,buffer);
+			  lv_label_set_text(label_Cadran2_Valeur3,buffer);
+			  lv_label_set_text(label_Cadran3_Valeur3,buffer);
+	  		  break;
 	  }
    }
 }

@@ -142,17 +142,17 @@ void lv_font_init(void)
 #endif
 
     /*DEJAVU 40*/
+
+#if USE_LV_FONT_DEJAVU_60 != 0
+
+	lv_font_add(&lv_font_dejavu_60_8bpp, NULL);
+
+#endif
+
 #if USE_LV_FONT_DEJAVU_40 != 0
-    lv_font_add(&lv_font_dejavu_40, NULL);
-#endif
 
-#if USE_LV_FONT_DEJAVU_96 != 0
-    lv_font_add(&lv_font_dejavu_96, NULL);
-#endif
+	lv_font_add(&lv_font_dejavu_40_8bpp, NULL);
 
-
-#if USE_LV_FONT_DEJAVU_142 != 0
-    lv_font_add(&lv_font_dejavu_142, NULL);
 #endif
 
 #if USE_LV_FONT_DEJAVU_240 != 0
