@@ -18,6 +18,7 @@ void canbusPollingTest();
 HAL_StatusTypeDef canbusWrite(uint32_t idDataType, uint8_t *data, uint8_t dataLenght);
 
 extern void afficheCanBus_Data(uint8_t *data, uint8_t dataLenght);
+void canbusLogiqueAffichage();
 
 enum{
 	CANBUS_ID_TYPE_LED_DATA = 0,

@@ -32,6 +32,8 @@ extern uint8_t val_SliderB;
 extern bool can_mode_master;
 extern bool led_flag;
 
+uint8_t boucleCanLogique = 0;
+
 /*------------------- Entré du programme -------------------*/
 void canbusInit()
 {
@@ -181,9 +183,16 @@ void canbusPollingTest()
 	}
 }
 
+void canbusLogiqueAffichage()
+{
+	if(boucleCanLogique>=20){
+
+	}
+}
+
 void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 {
-	uint32_t dataGraph;
+	uint32_t dataGraph = 0;
 
 	/*##-5- Start the Reception process ########################################*/
 	  if(HAL_CAN_GetRxFifoFillLevel(hcan, CAN_RX_FIFO0) != 1)
@@ -199,31 +208,31 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 	  }
 
 	  /*------------------- Traitement des données -------------------*/
-
-	  switch(RxHeader.StdId){
-	  	  case CANBUS_ID_TYPE_LED_DATA:  //Traitement des DEL
-	  		if(can_mode_master == false){
-				  if(RxHeader.DLC == 3){  //Valeur de trois bytes (RGB)
-					  val_SliderR = RxData[0];  //Modifie les valeurs présentes dans le main
-					  val_SliderG = RxData[1];
-					  val_SliderB = RxData[2];
+	  if(can_mode_master != true){
+		  switch(RxHeader.StdId){
+			  case CANBUS_ID_TYPE_LED_DATA:  //Traitement des DEL
+				 if(can_mode_master == false){
+					  if(RxHeader.DLC == 3){  //Valeur de trois bytes (RGB)
+						  val_SliderR = RxData[0];  //Modifie les valeurs présentes dans le main
+						  val_SliderG = RxData[1];
+						  val_SliderB = RxData[2];
+					  }
 				  }
-			  }
-			  led_flag = true;
-			  break;
-	  	  case CANBUS_ID_TYPE_GRAPH_DATA:  //Traitement d'un point de graphique
-	  		  for(int i=0; i<8; i++){
-	  			  dataGraph += RxData[i] << i*4;
-	  		  }
-	  		  afficheGraphData_CanBus(dataGraph);//Appel fonction qui traite le tableau
-	  		  led_flag = true;
-	  		  break;
-	  	  case CANBUS_ID_TYPE_GAUGE_DATA:
-	  		  //FonctionAdd(TypeDef TypeDeDonnee, uint8 data[] (x4))
-	  		  break;
-	  	  case CANBUS_ID_TYPE_MESSAGE:
-	  		  break;
-	  	  default:
-	  		  break;
+				  led_flag = true;
+				  break;
+			  case CANBUS_ID_TYPE_GRAPH_DATA:  //Traitement d'un point de graphique
+				  for(int i=0; i<2; i++){
+					  dataGraph |= (RxData[i] << (i*8));
+				  }
+				  afficheGraphData_CanBus(dataGraph);//Appel fonction qui traite le tableau
+				  break;
+			  case CANBUS_ID_TYPE_GAUGE_DATA:
+				  //FonctionAdd(TypeDef TypeDeDonnee, uint8 data[] (x4))
+				  break;
+			  case CANBUS_ID_TYPE_MESSAGE:
+				  break;
+			  default:
+				  break;
+		  }
 	  }
 }

@@ -115,7 +115,6 @@ extern bool can_mode_master;
 extern lv_obj_t * txt;
 extern lv_obj_t * tv_Princ;
 extern lv_obj_t * DEBUG_TB;
-extern ADC_HandleTypeDef hadc1;
 
 int main(void)
 {
@@ -161,13 +160,6 @@ int main(void)
   BSP_LED_Init(LED1);
   BSP_LED_Init(LED2);
 
-/*
-
-  canbusInit();
-  canbusPollingTest();
-
-*/
-
   lvgl_init(&hdma_memtomem_dma2_stream0, &hdma2d); //Fonction qui init l'écran et autres instances. Passe les typedef des différents modules pour
   	  	  	  	  	  	  	  	  	  	  	  	   //que lcd_lvgl se serve des configurations DMA existante. (c'est notre driver perso de lcd)
   demo2_create();  //Fonction qui crée le démo que la librairie propose pour le développement
@@ -199,32 +191,12 @@ int main(void)
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
 	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
-	  i++;
-	  h++;
-	  if (i>=10)
-	  {
-		  if (led_flag)
-		  {
-			  if(can_mode_master == false){
-				  for (int j=0;j<N_LEDS;j++)
-				  {
-					  ws2812_set_color(j,val_SliderR,val_SliderG,val_SliderB);
-				  }
-				  lightLedBar();
-				  i=0;
-			  }
-			  else{
-				  uint8_t dataCan[] = {val_SliderR,
-						  	  	  	   val_SliderG,
-									   val_SliderB};
-				  canbusWrite(CANBUS_ID_TYPE_LED_DATA ,dataCan, sizeof(dataCan)); //lenghtof(data));
-			  }
-			  led_flag = false;
-		  }
+	  adcLogiqueAffichage();
+	  canbusLogiqueAffichage();
+	  ledDriverLogique();
 
-		  //Gestion ADC
-		  HAL_ADC_Start_IT(&hadc1);
-	  }
+	  //Partie compteur sur interface
+	  h++;
 
 	  if (lv_tabview_get_tab_act(tv_Princ) == 3)
 	  {
@@ -234,7 +206,6 @@ int main(void)
 			  {
 				  k=0;
 				  itoa(k,buffer,10);
-
 				  lv_label_set_text(txt,buffer);
 
 			  }

@@ -8,18 +8,28 @@
 /* Includes ------------------------------------------------------------------*/
 #include <string.h>
 #include <stdio.h>
+#include <stdbool.h>
 #include "stm32f7xx_hal.h"
 #include "ledDriver.h"
 #include "main.h"
+#include "canbus.h"
 
 /* Defines  ------------------------------------------------------------------*/
 
 
 /* Private variables ---------------------------------------------------------*/
 TIM_HandleTypeDef htim3;
-DMA_HandleTypeDef hdma_tim3_ch3;  //*Variable fournie dans le code exemple, mais n'est pas utilisée dans ce dernier
+DMA_HandleTypeDef hdma_tim3_ch3;
 
-uint32_t ws2812BitBuf[BIT_BUF_SIZE];  //Code du fichier ws2812_handler.c
+uint32_t ws2812BitBuf[BIT_BUF_SIZE]; //uint32_t ws2812BitBuf[BIT_BUF_SIZE];  //Code du fichier ws2812_handler.c
+
+uint8_t boucleLedLogique = 0;
+
+extern bool can_mode_master;
+extern bool led_flag;
+extern uint8_t val_SliderR;
+extern uint8_t val_SliderG;
+extern uint8_t val_SliderB;
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_TIM3_Init(void);
@@ -34,6 +44,52 @@ void ledDriver_init()
 	MX_TIM3_Init();  //Timer pour la générationdu signal PWM de DELs
 
 	initLedBar();
+
+	m_cad1.nbDel = 0;
+	m_cad1.valR = 255;
+	m_cad1.valG = 0;
+	m_cad1.valB = 0;
+
+	m_cad2.nbDel = 2;
+	m_cad2.valR = 0;
+	m_cad2.valG = 255;
+	m_cad2.valB = 0;
+
+	m_cad3.nbDel = 3;
+	m_cad3.valR = 0;
+	m_cad3.valG = 0;
+	m_cad3.valB = 255;
+
+	m_cad4.nbDel = 6;
+	m_cad4.valR = 255;
+	m_cad4.valG = 255;
+	m_cad4.valB = 255;
+}
+
+void ledDriverLogique(){
+	if(boucleLedLogique >= 20){
+		if (led_flag)
+		  {
+			  if(can_mode_master == true){
+				  uint8_t dataCan[] = {val_SliderR,
+									   val_SliderG,
+									   val_SliderB};
+				  canbusWrite(CANBUS_ID_TYPE_LED_DATA ,dataCan, sizeof(dataCan)); //lenghtof(data));
+			  }
+
+			  /*
+			  for(int i=0;i<N_LEDS;i++){
+				  ws2812_set_color(i, val_SliderR, val_SliderG, val_SliderB);
+			  }
+			  */
+			  ledRingSplited(m_cad1, m_cad2, m_cad3, m_cad4, 4);
+			  lightLedBar();
+			  led_flag = false;
+		  }
+		boucleLedLogique=0;
+	}else{
+		boucleLedLogique++;
+	}
 }
 
 /* tim3 init function */
@@ -90,7 +146,7 @@ void MX_TIM3_Init(void)
   htim3.Instance = TIM3;
   htim3.Init.Prescaler = 0;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 67; // Click ABP1 54MHz
+  htim3.Init.Period = TOTAL_VAL; // Click ABP1 54MHz = 68 / APB2 108 MHz ***Si TIM3Clk == ABP2, period == 110
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
@@ -115,7 +171,7 @@ void MX_TIM3_Init(void)
   }
 
   HAL_TIM_MspPostInit(&htim3);
-  //HAL_TIM_PWM_MspInit(&htim3);
+  //HAL_TIM_PWM_MspInit(&htim3);  //Ne pas appeler car la fonction HAL_TIM_PWM_Init() le fait déjà
 }
 
 void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef* htim_pwm)
@@ -136,10 +192,11 @@ void HAL_TIM_PWM_MspInit(TIM_HandleTypeDef* htim_pwm)
     hdma_tim3_ch3.Init.Direction = DMA_MEMORY_TO_PERIPH;
     hdma_tim3_ch3.Init.PeriphInc = DMA_PINC_DISABLE;
     hdma_tim3_ch3.Init.MemInc = DMA_MINC_ENABLE;
-    hdma_tim3_ch3.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma_tim3_ch3.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;  //Le timer3 est seulement 16 bits
     hdma_tim3_ch3.Init.MemDataAlignment = DMA_MDATAALIGN_WORD;
     hdma_tim3_ch3.Init.Mode = DMA_NORMAL;
-//    hdma_tim3_ch3.Init.MemBurst = DMA_MBURST_SINGLE;
+    hdma_tim3_ch3.Init.MemBurst = DMA_MBURST_SINGLE;
+    //hdma_tim3_ch3.Init.PeriphBurst = DMA_PBURST_SINGLE;
     hdma_tim3_ch3.Init.Priority = DMA_PRIORITY_HIGH;
     hdma_tim3_ch3.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
     if (HAL_DMA_Init(&hdma_tim3_ch3) != HAL_OK)
@@ -235,6 +292,72 @@ void ws2812_set_color(int ledIdx, uint8_t r, uint8_t g, uint8_t b)
 	if (ledIdx >= N_LEDS)
 		return;
 
+	/*
+	int i = ledIdx * BITS_PER_LED;
+	uint8_t mask;
+	mask = 0x80;
+	while (mask)
+	{
+		if(mask & g){
+			ws2812BitBuf[i] = H_VAL + (H_VAL - L_VAL);
+			i++;
+			ws2812BitBuf[i] = 0;  //Nb de peak voulu - 1
+			i++;
+			ws2812BitBuf[i] = H_VAL;
+			i++;
+		}else{
+			ws2812BitBuf[i] = L_VAL + (H_VAL - L_VAL);
+			i++;
+			ws2812BitBuf[i] = 0;  //Nb de peak voulu - 1
+			i++;
+			ws2812BitBuf[i] = L_VAL;
+			i++;
+		}
+		mask >>= 1;
+	}
+
+	mask = 0x80;
+	while (mask)
+	{
+		if(mask & r){
+			ws2812BitBuf[i] = H_VAL + (H_VAL - L_VAL);
+			i++;
+			ws2812BitBuf[i] = 0;  //Nb de peak voulu - 1
+			i++;
+			ws2812BitBuf[i] = H_VAL;
+			i++;
+		}else{
+			ws2812BitBuf[i] = L_VAL + (H_VAL - L_VAL);
+			i++;
+			ws2812BitBuf[i] = 0;  //Nb de peak voulu - 1
+			i++;
+			ws2812BitBuf[i] = L_VAL;
+			i++;
+		}
+		mask >>= 1;
+	}
+	mask = 0x80;
+	while (mask)
+	{
+		if(mask & b){
+			ws2812BitBuf[i] = H_VAL + (H_VAL - L_VAL);
+			i++;
+			ws2812BitBuf[i] = 0;  //Nb de peak voulu - 1
+			i++;
+			ws2812BitBuf[i] = H_VAL;
+			i++;
+		}else{
+			ws2812BitBuf[i] = L_VAL + (H_VAL - L_VAL);
+			i++;
+			ws2812BitBuf[i] = 0;  //Nb de peak voulu - 1
+			i++;
+			ws2812BitBuf[i] = L_VAL;
+			i++;
+		}
+		mask >>= 1;
+	}
+	*/
+
 	int i = ledIdx * BITS_PER_LED;
 	uint8_t mask;
 	mask = 0x80;
@@ -259,14 +382,130 @@ void ws2812_set_color(int ledIdx, uint8_t r, uint8_t g, uint8_t b)
 		mask >>= 1;
 		i++;
 	}
-
-
-
 }
 
 void lightLedBar()
 {
+	//HAL_TIM_PWM_Stop_DMA(&htim3, TIM_CHANNEL_3);
 	HAL_TIM_PWM_Start_DMA(&htim3, TIM_CHANNEL_3, (uint32_t*) ws2812BitBuf, sizeof(ws2812BitBuf) / sizeof(ws2812BitBuf[0]));
 	//HAL_GPIO_TogglePin(ARD_D5_PWM_GPIO_Port, ARD_D5_PWM_Pin);
+}
+
+void ledRingSplited(delStruct cad1, delStruct cad2, delStruct cad3, delStruct cad4, uint8_t nbCadran){
+	int valPatchDEL = N_LEDS / 24; //Un patch pour contrer le bug de trame PWM
+
+	switch(nbCadran){
+		case 1:
+			for (int j=0;j<cad1.nbDel;j++)  //Tout le cadran, sens horaire
+			  {
+				if(j<12)
+					ws2812_set_color(j+12,cad1.valR,cad1.valG,cad1.valB);
+				else
+					ws2812_set_color(j-12,cad1.valR,cad1.valG,cad1.valB);
+			  }
+			for(int j=23; j>cad1.nbDel-1; j--)  //Effaçage
+			{
+				if(j<12)
+					ws2812_set_color(j+12, 0, 0, 0);
+				else
+					ws2812_set_color(j-12, 0, 0, 0);
+			}
+			break;
+		case 2:
+			//Cadran 1
+			for(int j=0; j<cad1.nbDel; j++)
+			{
+				if(j<6)
+					ws2812_set_color(j+18,cad1.valR,cad1.valG,cad1.valB);
+				else
+					ws2812_set_color(j-6,cad1.valR,cad1.valG,cad1.valB);
+			}
+			for(int j=12; j>cad1.nbDel-1; j--) //Effaçage
+			{
+				if(j<6)
+					ws2812_set_color(j+18, 0, 0, 0);
+				else
+					ws2812_set_color(j-6, 0, 0, 0);
+			}
+			//Cadran 2
+			for (int j=0;j<cad2.nbDel;j++) //Haut
+			  {
+				  ws2812_set_color(j + 6,cad2.valR,cad2.valG,cad2.valB);
+			  }
+			for(int j=11; j>cad2.nbDel-1; j--) //Effaçage
+			{
+				ws2812_set_color(j+6, 0, 0, 0);
+			}
+			break;
+		case 3:
+			//Cadran 1
+			for(int j=0; j<cad1.nbDel; j++)  //En haut à gauche
+			{
+				ws2812_set_color(j+18,cad1.valR,cad1.valG,cad1.valB);
+			}
+			for(int j=5; j>cad1.nbDel-1; j--) //Effaçage
+			{
+				ws2812_set_color(j+18, 0, 0, 0);
+			}
+			//Cadran 2
+			for(int j=0; j<cad2.nbDel; j++)  //Partie haut droite
+			{
+				ws2812_set_color(j,cad2.valR,cad2.valG,cad2.valB);
+			}
+			for(int j=5; j>cad2.nbDel-1; j--) //Effaçage
+			{
+				ws2812_set_color(j, 0, 0, 0);
+			}
+			//Cadran 3
+			for (int j=0;j<cad3.nbDel;j++) //Partie bas
+			  {
+				  ws2812_set_color(j + 6,cad3.valR,cad3.valG,cad3.valB);
+			  }
+			for(int j=11; j>cad3.nbDel-1; j--) //Effaçage
+			{
+				ws2812_set_color(j+6, 0, 0, 0);
+			}
+			break;
+		case 4:
+			//Cadran 1
+			for(int j=0; j<cad1.nbDel; j++)  //En haut à gauche
+			{
+				ws2812_set_color(j+18,cad1.valR,cad1.valG,cad1.valB);
+			}
+			for(int j=5; j>cad1.nbDel-1; j--) //Effaçage
+			{
+				ws2812_set_color(j+18, 0, 0, 0);
+			}
+			//Cadran 2
+			for(int j=0; j<cad2.nbDel; j++)  //Partie haut droite
+			{
+				ws2812_set_color(j,cad2.valR,cad2.valG,cad2.valB);
+			}
+			for(int j=5; j>cad2.nbDel-1; j--) //Effaçage
+			{
+				ws2812_set_color(j, 0, 0, 0);
+			}
+			//Cadran 3
+			for (int j=0;j<cad3.nbDel;j++) //Partie bas
+			  {
+				  ws2812_set_color(j + 6,cad3.valR,cad3.valG,cad3.valB);
+			  }
+			for(int j=5; j>cad3.nbDel-1; j--) //Effaçage
+			{
+				ws2812_set_color(j+6, 0, 0, 0);
+			}
+			//Cadran 4
+			for (int j=0;j<cad4.nbDel;j++) //Partie bas
+			  {
+				  ws2812_set_color(j + 12,cad4.valR,cad4.valG,cad4.valB);
+			  }
+			for(int j=5; j>cad4.nbDel-1; j--) //Effaçage
+			{
+				ws2812_set_color(j+12, 0, 0, 0);
+			}
+			break;
+	}
+
+	lightLedBar();
 }
 

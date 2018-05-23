@@ -13,6 +13,6 @@
 #include "stm32f7xx_hal.h"
 
 void initADC(void);
-
+void adcLogiqueAffichage();
 
 #endif /* ADC_H_ */

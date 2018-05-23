@@ -610,11 +610,13 @@ void Principale ()
 		lv_obj_set_size(dataGraph, 350, 350);
 		lv_obj_set_style(dataGraph, &dataGraph_Style);
 		lv_obj_align(dataGraph, NULL, LV_ALIGN_CENTER, 0, 0);
-		lv_chart_set_type(dataGraph, LV_CHART_TYPE_POINT | LV_CHART_TYPE_LINE);   /*Show lines and points too*/
+		lv_chart_set_type(dataGraph, LV_CHART_TYPE_LINE);  //LV_CHART_TYPE_POINT | LV_CHART_TYPE_LINE);   /*Show lines and points too*/
 		lv_chart_set_series_opa(dataGraph, LV_OPA_70);                            /*Opacity of the data series*/
 		lv_chart_set_series_width(dataGraph, 10);
+		lv_page_set_sb_mode(tab_princ_graph, LV_SB_MODE_OFF);
 
-		lv_chart_set_range(dataGraph, 0, 255);
+		lv_chart_set_range(dataGraph, 0, 4095);
+		lv_chart_set_point_count(dataGraph,30);
 
 		ser1 = lv_chart_add_series(dataGraph, LV_COLOR_RED);
 
