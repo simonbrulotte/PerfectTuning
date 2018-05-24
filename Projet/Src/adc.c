@@ -12,7 +12,6 @@
 #include "ledDriver.h"
 
 /*------------------- Prototypes -------------------*/
-extern void afficheGraphData_CanBus(uint32_t graphPointY);
 
 /*------------------- Variables globales -------------------*/
 ADC_HandleTypeDef hadc1;
@@ -20,6 +19,8 @@ uint8_t boucleAdcLogique=0;
 extern ADC_HandleTypeDef hadc1;
 extern bool can_mode_master;
 extern bool led_flag;
+
+uint32_t valeurADC = 0;
 
 void initADC()
 {
@@ -56,7 +57,7 @@ void initADC()
 }
 
 void adcLogiqueAffichage(){
-	if(boucleAdcLogique>=20){  //20 == 100ms
+	if(boucleAdcLogique>=10){  //20 == 100ms
 		if(can_mode_master == true){
 			HAL_ADC_Start_IT(&hadc1);
 		}
@@ -67,22 +68,13 @@ void adcLogiqueAffichage(){
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
-<<<<<<< HEAD
+
 //	afficheGraphData_CanBus(HAL_ADC_GetValue(hadc));
-=======
-	uint32_t valeurADC = HAL_ADC_GetValue(hadc);
+	valeurADC = HAL_ADC_GetValue(hadc);
 
 	if(can_mode_master == true){
 		uint8_t data[2] = {(valeurADC & 0xFF), (valeurADC & 0xF00)>>8};
 		canbusWrite(CANBUS_ID_TYPE_GRAPH_DATA, data, sizeof(data));
 	}
-	afficheGraphData_CanBus(valeurADC);
 
-	m_cad1.nbDel = (m_cad1.nbDel >= 6) ? 0 : m_cad1.nbDel + 1;
-	m_cad2.nbDel = (m_cad2.nbDel >= 6) ? 0 : m_cad2.nbDel + 1;
-	m_cad3.nbDel = (m_cad3.nbDel >= 6) ? 0 : m_cad3.nbDel + 1;
-	m_cad4.nbDel = (m_cad4.nbDel >= 6) ? 0 : m_cad4.nbDel + 1;
-
-	led_flag = true;
->>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 }

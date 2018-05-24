@@ -13,6 +13,7 @@
 #include "ledDriver.h"
 #include "main.h"
 #include "canbus.h"
+#include "lvgl/lvgl.h"
 
 /* Defines  ------------------------------------------------------------------*/
 
@@ -24,12 +25,18 @@ DMA_HandleTypeDef hdma_tim3_ch3;
 uint32_t ws2812BitBuf[BIT_BUF_SIZE]; //uint32_t ws2812BitBuf[BIT_BUF_SIZE];  //Code du fichier ws2812_handler.c
 
 uint8_t boucleLedLogique = 0;
-
+uint8_t nb_secteur = 1;
 extern bool can_mode_master;
 extern bool led_flag;
 extern uint8_t val_SliderR;
 extern uint8_t val_SliderG;
 extern uint8_t val_SliderB;
+extern uint8_t val_SliderI;
+extern lv_obj_t * sliderR;
+extern lv_obj_t * sliderG;
+extern lv_obj_t * sliderB;
+extern lv_obj_t * sliderI;
+extern void set_leds();
 
 /* Private function prototypes -----------------------------------------------*/
 static void MX_TIM3_Init(void);
@@ -67,13 +74,15 @@ void ledDriver_init()
 }
 
 void ledDriverLogique(){
-	if(boucleLedLogique >= 20){
+	if(boucleLedLogique >= 10){
 		if (led_flag)
 		  {
 			  if(can_mode_master == true){
-				  uint8_t dataCan[] = {val_SliderR,
-									   val_SliderG,
-									   val_SliderB};
+				  uint8_t dataCan[] = {lv_slider_get_value(sliderR),
+									  lv_slider_get_value(sliderG),
+									  lv_slider_get_value(sliderB),
+									  lv_slider_get_value(sliderI)
+															  };
 				  canbusWrite(CANBUS_ID_TYPE_LED_DATA ,dataCan, sizeof(dataCan)); //lenghtof(data));
 			  }
 
@@ -82,7 +91,7 @@ void ledDriverLogique(){
 				  ws2812_set_color(i, val_SliderR, val_SliderG, val_SliderB);
 			  }
 			  */
-			  ledRingSplited(m_cad1, m_cad2, m_cad3, m_cad4, 4);
+			  ledRingSplited(m_cad1, m_cad2, m_cad3, m_cad4, nb_secteur);
 			  lightLedBar();
 			  led_flag = false;
 		  }

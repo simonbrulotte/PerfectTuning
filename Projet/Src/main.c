@@ -63,6 +63,7 @@
 #include "ledDriver.h"
 #include "canbus.h"
 #include "adc.h"
+#include <math.h>
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -95,6 +96,7 @@ static void MX_USART3_UART_Init(void);
 static void MX_FMC_Init(void);
 static void MX_DFSDM1_Init(void);
 static void MX_SAI1_Init(void);
+uint32_t rgb(double hue);
 
 /* USER CODE BEGIN PFP */
 extern void DMA_TransferError(DMA_HandleTypeDef *hdma);
@@ -128,6 +130,10 @@ extern lv_obj_t * label_Cadran2_Valeur3;
 extern lv_obj_t * label_Cadran3_Valeur3;
 extern int active_tab;
 extern lv_obj_t * DEBUG_TB;
+extern uint32_t valeurADC;
+extern uint8_t nb_secteur;
+extern lv_obj_t * gauge;
+extern void afficheGraphData_CanBus(uint32_t graphPointY);
 
 int main(void)
 {
@@ -194,8 +200,12 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   int h=0;
   int i=0;
-  int k=0;
+  int k=1;
   char buffer[50];
+  uint32_t valeur_couleur=0;
+  bool sens_compteur = true;
+  uint32_t adc_mem = 0;
+
   while (1)
   {
 
@@ -204,104 +214,190 @@ int main(void)
   /* USER CODE BEGIN 3 */
 	  HAL_Delay(5);  //Un délai pour la librairie graphique
 	  lv_task_handler();  //L'ordonneur de tâches de la librairie graphique
-<<<<<<< HEAD
-	  i++;
-	  h++;
-	  if (i>=10)
-	  {
-		  if (led_flag)
-		  {
-			  if(can_mode_master == false){
-				  for (int j=0;j<N_LEDS;j++)
-				  {
-					  ws2812_set_color(j,val_SliderR,val_SliderG,val_SliderB);
-				  }
-				 // lightLedBar();
-				  i=0;
-			  }
-			  else{
-				  uint8_t dataCan[] = {val_SliderR,
-						  	  	  	   val_SliderG,
-									   val_SliderB};
-				  //canbusWrite(CANBUS_ID_TYPE_LED_DATA ,dataCan, sizeof(dataCan)); //lenghtof(data));
-			  }
-
-			  led_flag = false;
-		  }
-
-		  //Gestion ADC
-		 // HAL_ADC_Start_IT(&hadc1);
-	  }
-=======
 	  adcLogiqueAffichage();
 	  canbusLogiqueAffichage();
 	  ledDriverLogique();
 
 	  //Partie compteur sur interface
 	  h++;
->>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
-
 	  if (h>=1)
 	  {
-		  if (k >= 500)
+		  if (k >= 500 || k <= 0)
 		  {
-<<<<<<< HEAD
-			  k=0;
-			  itoa(k,buffer,10);
+			  sens_compteur = !sens_compteur;
+		  }
+		  if (sens_compteur == true)
+		  {
+			  k++;
 		  }
 		  else
 		  {
-			  itoa(k,buffer,10);
-			  k++;
-=======
-			  if (k >= 500)
-			  {
-				  k=0;
-				  itoa(k,buffer,10);
-				  lv_label_set_text(txt,buffer);
-
-			  }
-			  else
-			  {
-				  itoa(k,buffer,10);
-				  lv_label_set_text(txt,buffer);
-				  k++;
-			  }
-			  h=0;
->>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
+			  k--;
 		  }
+		  itoa(k,buffer,10);
 		  h=0;
 	  }
 	  active_tab = lv_tabview_get_tab_act(tv_Princ);
 	  switch (active_tab)
 	  {
-	  	  case 2:
-	  	  	  break;
+	  	  case 1:
+	  		if (led_flag){
+				m_cad1.valR = val_SliderR;
+				m_cad1.valG = val_SliderG;
+				m_cad1.valB = val_SliderB;
+				m_cad1.nbDel = 24;
+				nb_secteur = 1;
+	  		}
+
+			break;
+
 	  	  case 3:
-			  lv_label_set_text(txt,buffer);
-	  		  break;
+			lv_label_set_text(txt,buffer);
+			valeur_couleur = rgb((k*1.0) / 500.0);
+			m_cad1.valR = valeur_couleur & 0xff;
+			m_cad1.valG = (valeur_couleur & 0xff00) >> 8;
+			m_cad1.valB = (valeur_couleur & 0xff0000) >> 16;
+			m_cad1.nbDel = round((24.0*(k*1.0))/500.0);
+			led_flag = true;
+			nb_secteur = 1;
+			break;
 	  	  case 4:
+	  		  if (adc_mem != valeurADC)
+	  		  {
+	  		  	valeur_couleur = rgb((valeurADC*1.0) / 4096.0);
+				m_cad1.valR = valeur_couleur & 0xff;
+				m_cad1.valG = (valeur_couleur & 0xff00) >> 8;
+				m_cad1.valB = (valeur_couleur & 0xff0000) >> 16;
+				m_cad1.nbDel = round((24.0*(valeurADC*1.0))/4096.0);
+				led_flag = true;
+				nb_secteur = 1;
+				lv_gauge_set_value(gauge,0,(valeurADC*2));
+				adc_mem = valeurADC;
+	  		  }
+
+//	  		  ledRingSplited(((valeurADC*255)/4095),0,0,0,1);
 	  		  break;
+
 	  	  case 5:
 			  lv_label_set_text(label_Cadran1_Valeur,buffer);
 			  lv_label_set_text(label_Cadran2_Valeur,buffer);
 			  lv_label_set_text(label_Cadran3_Valeur,buffer);
 			  lv_label_set_text(label_Cadran4_Valeur,buffer);
-	  		  break;
+
+				lv_label_set_text(txt,buffer);
+
+				m_cad1.valR = 255;
+				m_cad1.valG = 0;
+				m_cad1.valB = 0;
+				m_cad1.nbDel = round((6.0*(k*1.0))/500.0);
+
+				m_cad2.valR = 0;
+				m_cad2.valG = 255;
+				m_cad2.valB = 0;
+				m_cad2.nbDel = round((6.0*(k*1.0))/500.0);
+
+				m_cad3.valR = 0;
+				m_cad3.valG = 0;
+				m_cad3.valB = 255;
+				m_cad3.nbDel = round((6.0*(k*1.0))/500.0);
+
+				m_cad4.valR = 128;
+				m_cad4.valG = 128;
+				m_cad4.valB = 0;
+				m_cad4.nbDel = round((6.0*(k*1.0))/500.0);
+
+				led_flag = true;
+				nb_secteur = 4;
+
+//			  ledRingSplited(((valeurADC*255)/4095),0,0,0,1);
+
+			  break;
 	  	  case 6:
 			  lv_label_set_text(label_Cadran1_Valeur2,buffer);
 			  lv_label_set_text(label_Cadran2_Valeur2,buffer);
-	  		  break;
+
+
+			m_cad1.valR = 255;
+			m_cad1.valG = 0;
+			m_cad1.valB = 0;
+			m_cad1.nbDel = round((12.0*(k*1.0))/500.0);
+
+			m_cad2.valR = 0;
+			m_cad2.valG = 255;
+			m_cad2.valB = 0;
+			m_cad2.nbDel = round((12.0*(k*1.0))/500.0);
+
+			led_flag = true;
+			nb_secteur = 2;
+
+
+	//		  ledRingSplited(((valeurADC*255)/4095),0,0,0,1);
+
+			  break;
 	  	  case 7:
 			  lv_label_set_text(label_Cadran1_Valeur3,buffer);
 			  lv_label_set_text(label_Cadran2_Valeur3,buffer);
 			  lv_label_set_text(label_Cadran3_Valeur3,buffer);
+
+			m_cad1.valR = 255;
+			m_cad1.valG = 0;
+			m_cad1.valB = 0;
+			m_cad1.nbDel = round((6.0*(k*1.0))/500.0);
+
+			m_cad2.valR = 0;
+			m_cad2.valG = 255;
+			m_cad2.valB = 0;
+			m_cad2.nbDel = round((6.0*(k*1.0))/500.0);
+
+			m_cad3.valR = 0;
+			m_cad3.valG = 0;
+			m_cad3.valB = 255;
+			m_cad3.nbDel = round((12.0*(k*1.0))/500.0);
+
+			led_flag = true;
+			nb_secteur = 3;
+
+
+		//	  ledRingSplited(((valeurADC*255)/4095),0,0,0,1);
+
+			  break;
+	  	  case 8:
+	  		  if(adc_mem != valeurADC)
+	  		  {
+					valeur_couleur = rgb((valeurADC*1.0) / 4096.0);
+					m_cad1.valR = valeur_couleur & 0xff;
+					m_cad1.valG = (valeur_couleur & 0xff00) >> 8;
+					m_cad1.valB = (valeur_couleur & 0xff0000) >> 16;
+					m_cad1.nbDel = round((24.0*(valeurADC*1.0))/4096.0);
+					led_flag = true;
+					nb_secteur = 1;
+				  afficheGraphData_CanBus(valeurADC);
+				adc_mem = valeurADC;
+	  		  }
+	  		//  ledRingSplited(((valeurADC*255)/4095),0,0,0,1);
 	  		  break;
 	  }
    }
 }
 
+uint32_t rgb(double hue)
+{
+	int h = (int)(hue * 256 * 6);
+	int x = h % 0x100;
 
+	uint8_t r = 0, g = 0, b = 0;
+    switch (h / 256)
+    {
+    case 0: r = 255; g = x;       break;
+    case 1: g = 255; r = 255 - x; break;
+    case 2: g = 255; b = x;       break;
+    case 3: b = 255; g = 255 - x; break;
+    case 4: b = 255; r = x;       break;
+    case 5: r = 255; b = 255 - x; break;
+    }
+
+    return r + (g << 8) + (b << 16);
+}
 
 /** System Clock Configuration
 */

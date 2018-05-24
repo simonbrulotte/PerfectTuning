@@ -28,8 +28,8 @@
 
 // Gauge
 
-#define RANGE_GAUGE 6000
-#define RED_LINE 4500
+#define RANGE_GAUGE 9000
+#define RED_LINE 7800
 #define gaugeKPH 1
 
 /**********************
@@ -92,7 +92,7 @@ lv_obj_t * ctnParamDEBUG;
 
 
 //composant de la page d'accueil
-lv_obj_t * btnParametre;
+
 lv_obj_t * btnGauges;
 lv_obj_t * btnVehicule;
 lv_obj_t * btnLock;
@@ -308,7 +308,7 @@ void Principale ()
 		lv_obj_set_size(tv_Princ,LV_HOR_RES,525); /// 130 car la longueur des boutons est de 130
 		lv_obj_set_pos(tv_Princ,0,-135);
 		lv_page_set_sb_mode(tv_Princ,LV_SB_MODE_OFF);
-		lv_obj_set_style(tv_Princ,&style_invisible);
+//		lv_obj_set_style(tv_Princ,&style_invisible);
 
 		tab_princ = lv_tabview_add_tab(tv_Princ,"PRINC"); // TAB POUR LA CONFIGURATION
 			lv_page_set_scrl_fit(tab_princ,false,false);
@@ -341,26 +341,23 @@ void Principale ()
 			lv_page_set_scrl_height(tab_princ_stat, lv_obj_get_height(tab_princ_stat));
 			lv_page_set_scrl_width(tab_princ_stat, lv_obj_get_width(tab_princ_stat));
 			lv_page_set_sb_mode(tab_princ_stat,LV_SB_MODE_OFF);
-
 		tab_princ_stat2 = lv_tabview_add_tab(tv_Princ,"Stats");
 			lv_page_set_scrl_fit(tab_princ_stat2,false,false);
 			lv_page_set_scrl_height(tab_princ_stat2, lv_obj_get_height(tab_princ_stat2));
 			lv_page_set_scrl_width(tab_princ_stat2, lv_obj_get_width(tab_princ_stat2));
 			lv_page_set_sb_mode(tab_princ_stat2,LV_SB_MODE_OFF);
-
 		tab_princ_stat3 = lv_tabview_add_tab(tv_Princ,"Stats");
 			lv_page_set_scrl_fit(tab_princ_stat3,false,false);
 			lv_page_set_scrl_height(tab_princ_stat3, lv_obj_get_height(tab_princ_stat3));
 			lv_page_set_scrl_width(tab_princ_stat3, lv_obj_get_width(tab_princ_stat3));
 			lv_page_set_sb_mode(tab_princ_stat3,LV_SB_MODE_OFF);
-
 		tab_princ_graph = lv_tabview_add_tab(tv_Princ, "GRAPH");
 			lv_page_set_scrl_fit(tab_princ_graph,false,false);
 			lv_page_set_scrl_height(tab_princ_graph, lv_obj_get_height(tab_princ_graph));
 			lv_page_set_scrl_width(tab_princ_graph, lv_obj_get_width(tab_princ_graph));
 
 		lv_tabview_set_sliding(tv_Princ,true);
-//		lv_tabview_set_style(tv_Princ,LV_TABVIEW_STYLE_BG,&style_btnParam);
+//		lv_tabview_set_style(tv_Princ,LV_TABVIEW_STYLE_BG,&style_invisible);
 
 
 
@@ -370,7 +367,7 @@ void Principale ()
 			lv_obj_set_click(Image_config,true);
 			lv_obj_set_signal_func(Image_config,click_Parametres);
 
-	switch_tab(tv_Princ,5);
+	switch_tab(tv_Princ,1);
 	HAL_Delay(100);
 	lv_obj_set_hidden(tv_Princ,false);
 
@@ -585,9 +582,9 @@ void Principale ()
 
 	toggleCan_Master_Slave = lv_sw_create(tab_princ_debug,NULL);
 		lv_obj_set_size(toggleCan_Master_Slave,80,50);
-		lv_obj_set_pos(toggleCan_Master_Slave,120,260);
+		lv_obj_set_pos(toggleCan_Master_Slave,70,60);
 		lv_sw_set_action(toggleCan_Master_Slave,sw_master_slave);
-		lv_obj_align(toggleCan_Master_Slave,tab_princ_debug,LV_ALIGN_OUT_TOP_LEFT,DEBUG_TB->coords.x1,100);
+//		lv_obj_align(toggleCan_Master_Slave,tab_princ_debug,LV_ALIGN_OUT_TOP_LEFT,DEBUG_TB->coords.x1,100);
 
 
 	DEBUG_TB = lv_ta_create(tab_princ_debug,NULL);
@@ -713,10 +710,6 @@ void Principale ()
 			lv_btn_set_action(btn_valeur_pos,LV_BTN_ACTION_CLICK,position_label);
 */
 
-
-
-
-
 	label_Cadran1_titre = lv_label_create(tab_princ_stat,NULL);
 		lv_obj_set_style(label_Cadran1_titre,&style_cadran_titre);
 		lv_obj_set_pos(label_Cadran1_titre,55,42);
@@ -801,7 +794,6 @@ void Principale ()
 			lv_label_set_text(label_Cadran2_titre2,"Turbo");
 			lv_obj_align(label_Cadran2_titre2,tab_princ_stat2,LV_ALIGN_CENTER,0,50);
 
-
 		label_Cadran1_unit2 = lv_label_create(tab_princ_stat2,NULL);
 			lv_obj_set_style(label_Cadran1_unit2,&style_cadran_unit);
 			lv_label_set_text(label_Cadran1_unit2,"AFR");
@@ -826,15 +818,11 @@ void Principale ()
 		lv_label_set_align(label_Cadran2_Valeur2,LV_LABEL_ALIGN_CENTER);
 
 /*----------------------LABELS DU CADRANS tab3-----------------------*/
-/*
-
-*/
 
 		label_Cadran1_titre3 = lv_label_create(tab_princ_stat3,NULL);
 			lv_obj_set_style(label_Cadran1_titre3,&style_cadran_titre);
 			lv_obj_set_pos(label_Cadran1_titre3,55,42);
 			lv_label_set_text(label_Cadran1_titre3,"AFR");
-
 
 		label_Cadran2_titre3 = lv_label_create(tab_princ_stat3,NULL);
 			lv_obj_set_style(label_Cadran2_titre3,&style_cadran_titre);
@@ -889,6 +877,7 @@ void Principale ()
 		lv_label_set_align(label_Cadran3_Valeur3,LV_LABEL_ALIGN_CENTER);
 
 /*------------------- Tab Graphique -------------------*/
+
 		static lv_style_t dataGraph_Style;
 		lv_style_copy(&dataGraph_Style, &lv_style_pretty);
 		dataGraph_Style.body.shadow.width = 6;
@@ -896,7 +885,7 @@ void Principale ()
 		dataGraph_Style.line.color = LV_COLOR_GRAY;
 
 		dataGraph = lv_chart_create(tab_princ_graph, NULL);
-		lv_obj_set_size(dataGraph, 350, 350);
+		lv_obj_set_size(dataGraph, 320, 350);
 		lv_obj_set_style(dataGraph, &dataGraph_Style);
 		lv_obj_align(dataGraph, NULL, LV_ALIGN_CENTER, 0, 0);
 		lv_chart_set_type(dataGraph, LV_CHART_TYPE_LINE);  //LV_CHART_TYPE_POINT | LV_CHART_TYPE_LINE);   /*Show lines and points too*/
@@ -990,13 +979,12 @@ static lv_res_t sw_master_slave(lv_obj_t * sw)
 
 static lv_res_t click_Parametres(lv_obj_t * child)
 {
-
 	switch_tab(tv_Param,1);
-	HAL_Delay(150);
+	HAL_Delay(50);
 	lv_obj_set_hidden(tv_Princ,true);
 	lv_obj_set_hidden(tv_Param,false);
-	HAL_Delay(150);
-
+	switch_tab(tv_Princ,1);
+	HAL_Delay(50);
 }
 
 static lv_res_t position_label (lv_obj_t * child)

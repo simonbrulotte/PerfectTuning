@@ -122,10 +122,8 @@
 #define USE_LV_FONT_DEJAVU_40_LATIN_SUP    0
 #define USE_LV_FONT_DEJAVU_40_CYRILLIC     0
 #define USE_LV_FONT_SYMBOL_40              0
-
-
-#define USE_LV_FONT_DEJAVU_60              8 // ajout d'une fonte
-#define USE_LV_FONT_DEJAVU_240             4 // ajout d'une fonte
+#define USE_LV_FONT_DEJAVU_60              8 // ajout d'une police
+#define USE_LV_FONT_DEJAVU_240             4 // ajout d'une police
 
 
 /*===================

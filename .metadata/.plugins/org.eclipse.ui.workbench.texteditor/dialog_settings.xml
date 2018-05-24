@@ -2,19 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="drag" key="selection"/>
+		<item value="RED_LINE" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="RED_LINE"/>
+			<item value="redline"/>
+			<item value="red"/>
+			<item value="style_"/>
+			<item value="btnPa"/>
 			<item value="drag"/>
 			<item value="itoa"/>
 			<item value="USE_LV_FONT_DEJAVU_40 == 4"/>
-			<item value="_create("/>
-			<item value="ctnParametre"/>
-			<item value="lv_cont_create"/>
-			<item value="current_X"/>
 		</list>
 		<list key="replacehistory">
 			<item value="lv_page_create"/>

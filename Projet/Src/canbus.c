@@ -9,7 +9,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include "canbus.h"
-
+#include "lvgl/lvgl.h"
 /*------------------- Defines -------------------*/
 
 
@@ -31,7 +31,12 @@ extern uint8_t val_SliderG;
 extern uint8_t val_SliderB;
 extern bool can_mode_master;
 extern bool led_flag;
-
+extern lv_obj_t * sliderR;
+extern lv_obj_t * sliderG;
+extern lv_obj_t * sliderB;
+extern lv_obj_t * sliderI;
+extern void set_leds();
+extern uint32_t valeurADC;
 uint8_t boucleCanLogique = 0;
 
 /*------------------- Entré du programme -------------------*/
@@ -212,38 +217,21 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 		  switch(RxHeader.StdId){
 			  case CANBUS_ID_TYPE_LED_DATA:  //Traitement des DEL
 				 if(can_mode_master == false){
-					  if(RxHeader.DLC == 3){  //Valeur de trois bytes (RGB)
-						  val_SliderR = RxData[0];  //Modifie les valeurs présentes dans le main
-						  val_SliderG = RxData[1];
-						  val_SliderB = RxData[2];
+					  if(RxHeader.DLC == 4){  //Valeur de trois bytes (RGB)
+						  lv_slider_set_value(sliderI,RxData[3]);
+						  lv_slider_set_value(sliderR,RxData[0]);
+						  lv_slider_set_value(sliderG,RxData[1]);
+						  lv_slider_set_value(sliderB,RxData[2]);
+						  set_leds();
 					  }
 				  }
-				  led_flag = true;
 				  break;
 			  case CANBUS_ID_TYPE_GRAPH_DATA:  //Traitement d'un point de graphique
 				  for(int i=0; i<2; i++){
-					  dataGraph |= (RxData[i] << (i*8));
+					  dataGraph += RxData[i] << i*8;
 				  }
-<<<<<<< HEAD
-			  }
-			  led_flag = true;
-			  break;
-	  	  case CANBUS_ID_TYPE_GRAPH_DATA:  //Traitement d'un point de graphique
-	  		  for(int i=0; i<8; i++){
-	  			  dataGraph += RxData[i] << i*4;
-	  		  }
-//	  		  afficheGraphData_CanBus(dataGraph);//Appel fonction qui traite le tableau
-	  		  led_flag = true;
-	  		  break;
-	  	  case CANBUS_ID_TYPE_GAUGE_DATA:
-	  		  //FonctionAdd(TypeDef TypeDeDonnee, uint8 data[] (x4))
-	  		  break;
-	  	  case CANBUS_ID_TYPE_MESSAGE:
-	  		  break;
-	  	  default:
-	  		  break;
-=======
-				  afficheGraphData_CanBus(dataGraph);//Appel fonction qui traite le tableau
+				  valeurADC = dataGraph;
+	//	  		  afficheGraphData_CanBus(dataGraph);//Appel fonction qui traite le tableau
 				  break;
 			  case CANBUS_ID_TYPE_GAUGE_DATA:
 				  //FonctionAdd(TypeDef TypeDeDonnee, uint8 data[] (x4))
@@ -253,6 +241,5 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 			  default:
 				  break;
 		  }
->>>>>>> 20cdffedabe079a4f6d1d5d8e837d16bf141d9e3
 	  }
 }
